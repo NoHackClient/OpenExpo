@@ -17,16 +17,6 @@ import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.scoreboard.ScorePlayerTeam;
 
-
-
-
-
-
-
-
-
-
-
 public class AntiBot extends Module implements EventSubscriber {
    public static BooleanSetting tablistCheck;
    private static long a;
@@ -34,16 +24,11 @@ public class AntiBot extends Module implements EventSubscriber {
    private static String[] c;
    private static CopyOnWriteArrayList<String> b;
 
-   private static void a() {
-   }
-
    static {
       a = 67041402973696L;
       b = new CopyOnWriteArrayList<>();
       F = MinecraftRef.c((byte)0, 0L);
    }
-
-
 
    public void onPreLivingUpdate(PreLivingUpdateEvent var1) {
       CopyOnWriteArrayList var2 = new CopyOnWriteArrayList();
@@ -87,7 +72,6 @@ public class AntiBot extends Module implements EventSubscriber {
 
    public AntiBot(int var1, int var2, short var3) {
       super(((((((long)((var1)) << 32) | (((long)((var2)) << 48) >>> 32)) | (((long)((var3)) << 48) >>> 48)) ^ a) ^ 125956485188596L));
-      // add code
       this.declare("AntiBot", Category.Misc, "Detect bots");
    }
 
@@ -95,11 +79,7 @@ public class AntiBot extends Module implements EventSubscriber {
       AntiBotBinder.t(var3, this);
    }
 
-
-
-
    static {
-      // add code
       tablistCheck = new BooleanSetting("Tablist-check", false);
    }
 }

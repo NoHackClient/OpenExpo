@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.world.AutoTool;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoToolPreMouseInputInvoker implements EventInvoker {
    final AutoTool g;
 

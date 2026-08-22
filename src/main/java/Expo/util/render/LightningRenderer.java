@@ -14,23 +14,11 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 
-
-
-
-
-
-
-
-
-
-
 public class LightningRenderer {
    private static Minecraft E;
    private static String[] c;
    private static String[] b;
    private static long a;
-
-
 
    private static void l(Entity var0) {
       E.theWorld.addWeatherEffect(new EntityLightningBolt(E.theWorld, var0.posX, var0.posY, var0.posZ));
@@ -42,16 +30,12 @@ public class LightningRenderer {
       E.effectRenderer.emitParticleAtEntity(var0, var1);
    }
 
-
-
    private static void K(Entity var0, int var1) {
       BlockPos var4 = new BlockPos(var0.posX, var0.posY + var0.getEyeHeight(), var0.posZ);
       E.renderGlobal.playAuxSFX(null, 2001, var4, var1);
       E.renderGlobal.playAuxSFX(null, 2001, var4, var1);
       E.renderGlobal.playAuxSFX(null, 2001, var4, var1);
    }
-
-
 
    private static void f(double var0, double var2, long var4, double var6, double var8, int var10) {
       BlockPos var11 = new BlockPos(var0, var2 + var8, var6);
@@ -68,8 +52,6 @@ public class LightningRenderer {
    }
 
    public static void f(int var0, long var1, double var3, double var5, double var7, double var9) {
-
-
       switch (var0) {
          case 0:
          default:
@@ -121,6 +103,4 @@ public class LightningRenderer {
             l(var1);
       }
    }
-
-
 }

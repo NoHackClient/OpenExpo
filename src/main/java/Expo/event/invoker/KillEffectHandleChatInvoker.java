@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.HandleChatEvent;
 import Expo.module.impl.visual.KillEffect;
 
-
-
-
-
-
-
-
-
-
-
 public final class KillEffectHandleChatInvoker implements EventInvoker {
    final KillEffect v;
 

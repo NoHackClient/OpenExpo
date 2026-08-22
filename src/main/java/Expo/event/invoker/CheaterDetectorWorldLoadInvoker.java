@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.WorldLoadEvent;
 import Expo.internal.CheaterDetector;
 
-
-
-
-
-
-
-
-
-
-
 public final class CheaterDetectorWorldLoadInvoker implements EventInvoker {
    final CheaterDetector E;
 

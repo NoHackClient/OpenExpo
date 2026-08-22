@@ -16,16 +16,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
-
-
-
-
-
-
-
-
-
 public class Freelook extends Module {
    public static boolean G;
    private int T;
@@ -42,7 +32,6 @@ public class Freelook extends Module {
 
    static {
       a = 47083344118779L;
-      // add code
       zkm$clinit();
    }
 
@@ -103,7 +92,6 @@ public class Freelook extends Module {
 
    public Freelook(long var1) {
       super(((a ^ (var1)) ^ 23928364651878L));
-      // add code
       this.declare("Freelook", Category.Visual, "Allows you to move your camera without moving your head");
       var1 = a ^ var1;
    }
@@ -134,7 +122,6 @@ public class Freelook extends Module {
    }
 
    static {
-      // add code
       mode = new ModeSetting("Mode", true, "HOLD", "HOLD", "TOGGLE");
    }
 }

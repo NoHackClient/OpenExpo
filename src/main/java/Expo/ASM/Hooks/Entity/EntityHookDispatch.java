@@ -17,16 +17,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class EntityHookDispatch {
    private static final long a = 120659725893006L;
 

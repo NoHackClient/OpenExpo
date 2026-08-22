@@ -5,16 +5,6 @@ import Expo.event.events.PreMouseInputEvent;
 import Expo.event.invoker.AutoToolPreMouseInputInvoker;
 import Expo.module.impl.world.AutoTool;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoToolBinder {
    private static final long a = 8124821190601L;
 

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.AttackEntityEvent;
 import Expo.module.impl.combat.KeepSprint;
 
-
-
-
-
-
-
-
-
-
-
 public final class KeepSprintAttackEntityInvoker implements EventInvoker {
    final KeepSprint d;
 

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.HeldItemChangeEvent;
 import Expo.module.impl.world.BlockIn;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlockInHeldItemChangeInvoker implements EventInvoker {
    final BlockIn v;
 

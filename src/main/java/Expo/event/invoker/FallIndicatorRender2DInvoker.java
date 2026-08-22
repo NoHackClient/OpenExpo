@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.module.impl.visual_utility.FallIndicator;
 
-
-
-
-
-
-
-
-
-
-
 public final class FallIndicatorRender2DInvoker implements EventInvoker {
    final FallIndicator l;
 

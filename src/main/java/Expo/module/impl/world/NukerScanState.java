@@ -2,13 +2,6 @@ package Expo.module.impl.world;
 
 import Expo.internal.synthetic.NukerCtorMarker;
 
-
-
-
-
-
-
-
 public class NukerScanState {
    private final int F;
    private final int B;

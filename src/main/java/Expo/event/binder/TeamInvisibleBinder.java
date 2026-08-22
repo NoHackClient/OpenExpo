@@ -15,16 +15,6 @@ import Expo.event.invoker.TeamInvisiblePreRenderCapeInvoker;
 import Expo.event.invoker.TeamInvisiblePreRenderModelBipedInvoker;
 import Expo.module.impl.visual.TeamInvisible;
 
-
-
-
-
-
-
-
-
-
-
 public final class TeamInvisibleBinder {
    private static final long a = 107658549533327L;
 

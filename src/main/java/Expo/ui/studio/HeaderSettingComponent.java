@@ -6,16 +6,6 @@ import Expo.util.render.FontUtil;
 import Expo.util.render.RenderUtil;
 import java.awt.Color;
 
-
-
-
-
-
-
-
-
-
-
 public class HeaderSettingComponent extends AbstractSettingComponent<HeaderSetting> {
    private static long a;
 
@@ -64,7 +54,6 @@ public class HeaderSettingComponent extends AbstractSettingComponent<HeaderSetti
    static {
       a = 71972391866718L;
    }
-
 
    public float O() {
       return 10.5F;

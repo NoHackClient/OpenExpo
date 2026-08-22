@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.module.impl.world.BedNuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedNukerPreTickInvoker implements EventInvoker {
    final BedNuker e;
 

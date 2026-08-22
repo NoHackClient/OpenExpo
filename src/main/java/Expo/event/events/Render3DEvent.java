@@ -3,16 +3,6 @@ package Expo.event.events;
 import Expo.event.Event;
 import net.minecraft.client.gui.ScaledResolution;
 
-
-
-
-
-
-
-
-
-
-
 public class Render3DEvent extends Event {
    public final ScaledResolution O;
    public float j;

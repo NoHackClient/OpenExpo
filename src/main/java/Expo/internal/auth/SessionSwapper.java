@@ -5,7 +5,6 @@ import java.util.UUID;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Session;
 
-
 public class SessionSwapper {
    private static long a;
 
@@ -14,9 +13,7 @@ public class SessionSwapper {
       return UUID.nameUUIDFromBytes(var3.getBytes()).toString().replace("-", "");
    }
 
-
    private static void t(Session var0) {
-
       try {
          Minecraft var3 = Minecraft.getMinecraft();
          Field var4 = Minecraft.class.getDeclaredField("session");
@@ -32,9 +29,6 @@ public class SessionSwapper {
    }
 
    public static boolean D(String var0, long var1) {
-
-
-
       if (var0 != null && !var0.trim().isEmpty()) {
          AltManager.e((short)0, 76783016628697L, var0);
          String var10 = E(var0);
@@ -46,6 +40,4 @@ public class SessionSwapper {
          return false;
       }
    }
-
-
 }

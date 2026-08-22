@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformEntityPlayer extends TransformerBase {
    private static long d;
 
@@ -57,7 +56,6 @@ public class TransformEntityPlayer extends TransformerBase {
    public TransformEntityPlayer() {
       super("net/minecraft/entity/player/EntityPlayer");
    }
-
 
    static {
       d = 36532662932892L;

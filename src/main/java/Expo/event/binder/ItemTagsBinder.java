@@ -7,16 +7,6 @@ import Expo.event.invoker.ItemTagsPostTickInvoker;
 import Expo.event.invoker.ItemTagsRender3DInvoker;
 import Expo.module.impl.visual_utility.ItemTags;
 
-
-
-
-
-
-
-
-
-
-
 public final class ItemTagsBinder {
    private static final long a = 12501548942805L;
 
@@ -24,7 +14,6 @@ public final class ItemTagsBinder {
       var0.R(var3, PostTickEvent.class, 3, new ItemTagsPostTickInvoker(var3));
       var0.R(var3, Render3DEvent.class, 3, new ItemTagsRender3DInvoker(var3));
    }
-
 
    private ItemTagsBinder() {
    }

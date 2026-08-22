@@ -17,7 +17,6 @@ import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 
-
 public class RaytraceUtil {
    private static String[] e;
    private static final double c = 0.15;
@@ -108,6 +107,7 @@ public class RaytraceUtil {
             double var41 = var34.distanceTo(var28);
             double var43 = var35 * 1.5 + var41 * 0.55 + var37 * 0.8 + var39 * 0.65;
             if (var43 < var30) {
+               var30 = var43;
                var29 = var34;
             }
          }
@@ -560,7 +560,6 @@ public class RaytraceUtil {
       return new Vec3(var2, var4, var6);
    }
 
-
    public static Vec3 p(AxisAlignedBB var0, long var1, double var3) {
       var1 = a ^ var1;
       int var5 = (int)((var1 ^ 69768517882322L) >>> 48);
@@ -575,7 +574,6 @@ public class RaytraceUtil {
    }
 
    public static double i(Entity var0) {
-
       return M(65711117411872L, var0, 0.0, false);
    }
 
@@ -658,7 +656,6 @@ public class RaytraceUtil {
       long var9 = var7 ^ 4893334898285L;
       return d(var1, f(), var2, var5, var9);
    }
-
 
    public static Vec3 d(AxisAlignedBB var0, Vec3 var1, double var2, boolean var4, long var5) {
       var5 = a ^ var5;
@@ -743,6 +740,4 @@ public class RaytraceUtil {
       double var5 = D(var0, var1, var2, var3);
       return s(var0, var1, var5);
    }
-
-
 }

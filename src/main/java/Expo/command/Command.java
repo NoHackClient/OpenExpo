@@ -8,16 +8,6 @@ import java.util.List;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
-
-
-
-
-
-
-
-
-
 public class Command {
    public native boolean J();
 

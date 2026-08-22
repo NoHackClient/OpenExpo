@@ -3,16 +3,6 @@ package Expo.event.events;
 import Expo.event.Event;
 import net.minecraft.client.network.NetworkPlayerInfo;
 
-
-
-
-
-
-
-
-
-
-
 public class PlayerGetNameEvent extends Event {
    private String q;
    public final String h;

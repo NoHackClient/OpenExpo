@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.module.impl.visual.KeyStrokes;
 import java.awt.event.MouseEvent;
 
-
-
-
-
-
-
-
-
-
-
 public final class KeyStrokesMouseInvoker implements EventInvoker {
    final KeyStrokes b;
 

@@ -20,16 +20,6 @@ import net.minecraft.scoreboard.ScorePlayerTeam;
 import net.minecraft.scoreboard.Team;
 import net.minecraft.util.StringUtils;
 
-
-
-
-
-
-
-
-
-
-
 public class TeamPrefixUtil {
    private static Pattern j;
    private static long a;
@@ -67,13 +57,10 @@ public class TeamPrefixUtil {
    }
 
    public static MegaWallsClass F(long var0, String var2) {
-
-
       return MegaWallsClass.s(var2, 126433336288858L);
    }
 
    static {
-      // add code
       try {
          a = 33284923163101L;
          long var4 = a ^ 74951454775908L;
@@ -139,5 +126,4 @@ public class TeamPrefixUtil {
    public static String u(String var0) {
       return var0 == null ? "" : StringUtils.stripControlCodes(var0);
    }
-
 }

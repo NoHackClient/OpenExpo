@@ -23,7 +23,6 @@ import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 
-
 public class MiningBlockScanner {
    private static int o;
    private static List<BlockPos> v;
@@ -427,7 +426,6 @@ public class MiningBlockScanner {
       return c[var3];
    }
 
-
    public static MiningAxisScanResult l(long var0, int var2) {
       long var3 = var0 ^ 128616321187327L;
       EntityPlayerSP var7 = R.thePlayer;
@@ -591,5 +589,4 @@ public class MiningBlockScanner {
 
    private MiningBlockScanner() {
    }
-
 }

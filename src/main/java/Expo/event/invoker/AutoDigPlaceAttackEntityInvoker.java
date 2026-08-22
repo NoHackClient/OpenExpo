@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.AttackEntityEvent;
 import Expo.module.impl.world.AutoDigPlace;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoDigPlaceAttackEntityInvoker implements EventInvoker {
    final AutoDigPlace V;
 

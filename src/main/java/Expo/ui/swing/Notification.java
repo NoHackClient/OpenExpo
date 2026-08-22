@@ -5,16 +5,6 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-
-
-
-
-
-
-
-
-
-
 public class Notification {
    private static final String title = "Expo - This is not the proper installation method.";
    private static final List<String> message = Arrays.asList(
@@ -42,7 +32,6 @@ public class Notification {
       try {
          UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
       } catch (Exception var2) {
-         Expo.internal.restore.ExpoDiag.attribute(var2, "Notification.main/1#0");
          return;
       }
 

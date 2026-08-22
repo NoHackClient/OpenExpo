@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.visual_utility.BedPlates;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedPlatesPreUpdateInvoker implements EventInvoker {
    final BedPlates p;
 

@@ -12,7 +12,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import org.lwjgl.opengl.GL11;
 
-
 public class RavenColorRow extends AbstractRavenSettingRow {
    private ColorSetting Q;
    private Module J;
@@ -36,15 +35,12 @@ public class RavenColorRow extends AbstractRavenSettingRow {
    }
 
    private static int Q(String var0) {
-
       try {
          return Integer.parseInt(var0.replace("#", ""), 16) & 16777215;
       } catch (Exception var4) {
-         Expo.internal.restore.ExpoDiag.attribute(var4, "RavenColorRow.Q/2#0");
          return 16777215;
       }
    }
-
 
    private static int a(int var0,int var3, float var4) {
       float var5 = (var0 >> 16 & 255) / 255.0F;
@@ -58,7 +54,6 @@ public class RavenColorRow extends AbstractRavenSettingRow {
       int var13 = Math.round((var7 * (1.0F - var4) + var10 * var4) * 255.0F);
       return var11 << 16 | var12 << 8 | var13;
    }
-
 
    public void U(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       long var3 = var1 ^ 11699446097668L;
@@ -139,7 +134,6 @@ public class RavenColorRow extends AbstractRavenSettingRow {
       }
    }
 
-
    public void f(int var1, int var2, int var3, int var4, short var5, int var6) {
       this.c = false;
    }
@@ -172,7 +166,6 @@ public class RavenColorRow extends AbstractRavenSettingRow {
    }
 
    static {
-
       d = 34400892697301L;
    }
 

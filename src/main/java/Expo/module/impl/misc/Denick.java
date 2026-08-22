@@ -24,7 +24,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import net.minecraft.client.network.NetworkPlayerInfo;
 
-
 public class Denick extends Module implements EventSubscriber {
    private static long[] p;
    private static String[] d;
@@ -46,16 +45,12 @@ public class Denick extends Module implements EventSubscriber {
    private static Map e;
    private final Map<UUID, String> k;
 
-
-
    public String g(long var1) {
       return mode.Y();
    }
 
-
    public Denick(long var1) {
       super(((a ^ (var1)) ^ 95197287573292L));
-      // add code
       this.declare("Denick", Category.Misc, "Resolve Hypixel tablist nicknames");
       var1 = a ^ var1;
       this.k = new ConcurrentHashMap<>();
@@ -67,7 +62,6 @@ public class Denick extends Module implements EventSubscriber {
    public void i(long var1) {
       this.c(true,0L);
    }
-
 
    private Map<UUID, String> l$r1() {
       HashMap var1 = new HashMap();
@@ -82,8 +76,6 @@ public class Denick extends Module implements EventSubscriber {
       return var1;
    }
 
-
-
    private void w(boolean var3) {
       this.O++;
       this.o = false;
@@ -95,7 +87,6 @@ public class Denick extends Module implements EventSubscriber {
          MojangApiClient.S();
       }
    }
-
 
    private void o(short var1, short var2, int var3) {
       long var4 = ((long)var1 << 48 | (long)var2 << 48 >>> 16 | (long)var3 << 32 >>> 32) ^ a;
@@ -149,7 +140,6 @@ public class Denick extends Module implements EventSubscriber {
                            this.F(var20, var16, var6xx, var7, (short)var8xx, var17x, null);
                         });
                      } catch (Exception var18x) {
-                        Expo.internal.restore.ExpoDiag.attribute(var18x, "Denick.o/3#0");
                         var12.put(var16, var13x);
                         f.addScheduledTask(() -> {
                            long var5x = 126046718054918L;
@@ -211,10 +201,6 @@ public class Denick extends Module implements EventSubscriber {
    }
 
    public void onPostTick(PostTickEvent var1, long var2) {
-
-
-
-
       long var9 = System.currentTimeMillis();
       if (var9 >= this.G) {
          this.w(true);
@@ -225,8 +211,6 @@ public class Denick extends Module implements EventSubscriber {
          this.o((short)0, (short)23979, -153849110);
       }
    }
-
-
 
    private void u(int var1, Map var2, Map var3, Map var4, Map var5, Set var6) {
       this.o = false;
@@ -256,7 +240,6 @@ public class Denick extends Module implements EventSubscriber {
       }
    }
 
-
    public void onPlayerGetName(long var1, PlayerGetNameEvent var3) {
       UUID var4 = var3.u.getGameProfile().getId();
       if (var4 != null) {
@@ -269,18 +252,15 @@ public class Denick extends Module implements EventSubscriber {
       }
    }
 
-
    private long p() {
       return refreshRate == null ? 5000L : Math.max(500L, (long)refreshRate.L());
    }
-
 
    private void c(boolean var1, long var2) {
       this.w(var1);
       this.c.clear();
       this.u.clear();
    }
-
 
    public final void x(long var1, EventBus var3) {
       int var4 = (int)((var1 ^ 76843792400006L) >>> 48);
@@ -299,17 +279,10 @@ public class Denick extends Module implements EventSubscriber {
       this.c(true,0L);
    }
 
-
-
-
-
-
    static {
-      // add code
       refreshRate = new NumberSetting("Refresh-rate", 5000.0F, 500.0F, 15000.0F, 100.0F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", "DUPLICATE");
    }
 }

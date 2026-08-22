@@ -5,16 +5,6 @@ import Expo.event.events.PostTickEvent;
 import Expo.event.invoker.SpeedMinePostTickInvoker;
 import Expo.module.impl.world.SpeedMine;
 
-
-
-
-
-
-
-
-
-
-
 public final class SpeedMineBinder {
    private static final long a = 98100373438868L;
 
@@ -24,5 +14,4 @@ public final class SpeedMineBinder {
 
    private SpeedMineBinder() {
    }
-
 }

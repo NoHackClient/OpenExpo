@@ -3,7 +3,6 @@ package Expo.ASM;
 import net.minecraft.launchwrapper.IClassTransformer;
 import org.apache.logging.log4j.LogManager;
 
-
 public class EncryptedClassMarkerHook implements IClassTransformer {
    private static final String U = "Expo.";
    private static Class<?> o;

@@ -2,16 +2,6 @@ package Expo.enums;
 
 import java.awt.Color;
 
-
-
-
-
-
-
-
-
-
-
 public enum GradientPalette {
    RAINBOW(
       new Color(255, 0, 0),
@@ -197,7 +187,6 @@ public enum GradientPalette {
       return this.name();
    }
 
-
    public Color a() {
       return this.c;
    }
@@ -276,7 +265,6 @@ public enum GradientPalette {
       return T(this.c, var1, var3);
    }
 
-
    public int M(double var1, long var3, double var5) {
       return T(this.y, var1, var5);
    }
@@ -307,5 +295,4 @@ public enum GradientPalette {
 
       return var1;
    }
-
 }

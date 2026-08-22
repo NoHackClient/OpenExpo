@@ -4,16 +4,6 @@ import Expo.event.Event;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 
-
-
-
-
-
-
-
-
-
-
 public class RenderItemInFirstPersonEvent extends Event {
    public final EnumAction d;
    public final float C;

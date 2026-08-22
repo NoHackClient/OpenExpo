@@ -15,16 +15,6 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.EntityLivingBase;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class Chams extends Module implements EventSubscriber {
    private boolean I;
    public static BooleanSetting bosses;
@@ -47,7 +37,6 @@ public class Chams extends Module implements EventSubscriber {
 
    public Chams(long var1) {
       super(((a ^ (var1)) ^ 81600828246724L));
-      // add code
       this.declare("Chams", Category.Visual, "Allows you to see entities through blocks");
       var1 = a ^ var1;
       this.b = false;
@@ -60,13 +49,11 @@ public class Chams extends Module implements EventSubscriber {
       this.H = false;
    }
 
-
    public final void x(long var1, EventBus var3) {
       ChamsBinder.I(var3, this);
    }
 
    public void onPreRender(PreRenderEvent var1) {
-
       this.b = players.c();
       this.u = mobs.c();
       this.Y = animals.c();
@@ -81,17 +68,13 @@ public class Chams extends Module implements EventSubscriber {
       }
    }
 
-
    public static boolean L(
       EntityLivingBase var0, boolean var1, boolean var2, boolean var3, boolean var4, long var5, boolean var7, boolean var8, boolean var9, boolean var10
    ) {
-
-
       return EntityUtil.q(var0, var1, var2, var3, var4, var7, var8, var9, var10, 21816078198602L);
    }
 
    public void onPostRender(PostRenderEvent var3) {
-
       if (var3.z instanceof EntityPlayerSP || L(var3.z, this.b, this.u, this.Y, this.C, 51651182070909L, this.I, this.y, this.x, this.H)) {
          GL11.glDisable(32823);
          GL11.glPolygonOffset(1.0F, 2500000.0F);
@@ -103,7 +86,6 @@ public class Chams extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       teammates = new BooleanSetting("Teammates", true);
       enemies = new BooleanSetting("Enemies", true);
       bosses = new BooleanSetting("Bosses", false);
@@ -114,7 +96,6 @@ public class Chams extends Module implements EventSubscriber {
       friends = new BooleanSetting("Friends", true);
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

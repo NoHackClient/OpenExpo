@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ReceivePacketEvent;
 import Expo.module.impl.combat.Velocity;
 
-
-
-
-
-
-
-
-
-
-
 public final class VelocityReceivePacketInvoker implements EventInvoker {
    final Velocity n;
 

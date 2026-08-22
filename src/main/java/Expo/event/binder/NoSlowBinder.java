@@ -5,16 +5,6 @@ import Expo.event.events.RedirectIsUsingItemEvent;
 import Expo.event.invoker.NoSlowRedirectIsUsingItemInvoker;
 import Expo.module.impl.movement.NoSlow;
 
-
-
-
-
-
-
-
-
-
-
 public final class NoSlowBinder {
    private static final long a = 41986967085982L;
 

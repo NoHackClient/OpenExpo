@@ -9,16 +9,6 @@ import Expo.event.invoker.KillAuraRender3DInvoker;
 import Expo.event.invoker.KillAuraSetAnglesInvoker;
 import Expo.module.impl.combat.KillAura;
 
-
-
-
-
-
-
-
-
-
-
 public final class KillAuraBinder {
    private static final long a = 49257202388509L;
 

@@ -39,6 +39,10 @@ ExpoClient 是由来自**美利坚留学生**蔡子豪(又称精神美利坚人)
 
 最终在使用 **Opus5™ 和 Fable5™** 对本项目经过修复，便得到了这份源码。
 
+<p align="center">
+  <img src="./img/killphantomshield.png" alt="1" width="40%" />
+</p>
+
 ## 假如给我三天圈钱
 注意，本客户端**可能**因为蔡子豪不会编写绕过和视觉(自己写的部分纯属ai意淫出来的，skid的也由ai完成打滑)，在病症观察过程中所做出来的言行举止可能患有[智力发育障碍](https://zh.wikipedia.org/wiki/智能障礙)，且售价不应该是一个这样子的垃圾打滑客户端所拥有的，远远高于其得到的价值，所以我们决定将其开源。
 
@@ -164,6 +168,8 @@ ExpoClient 是由来自**美利坚留学生**蔡子豪(又称精神美利坚人)
 
 可以把产物直接丢进任意 1.8.9 Forge 启动器的 `mods/`。
 
+**如果你是残疾人，可以让ai帮你。**
+
 ## IntelliJ IDEA
 
 1. 打开工程目录，等 gradle 同步完成
@@ -182,7 +188,7 @@ ExpoClient 是由来自**美利坚留学生**蔡子豪(又称精神美利坚人)
 
 ## 致谢
 
-- **原始混淆客户端：** Expo 2.4.5 (在还原的过程时发布了2.4.6，*可能?* 打滑了同样来自[**我们团队**](https://github.com/NoHackClient)开源[**openrise**](https://github.com/NoHackClient/Rise-6.9.5)的KeepSprint。如果需要请自行skid)
+- **原始混淆客户端：** Expo 2.4.5 (在还原的过程时发布了2.4.6和2.4.7，更新已合并到当前开源源码。)
 - **反混淆、符号恢复、还原：** 由 Claude™ 在人工监督下完成（精神美利坚人蔡子豪麻烦报销一下Claude™的token费用）
 - **脱壳、去虚拟化、反混淆工具：** [**NoHackClient**](https://github.com/NoHackClient)™
 - **Java Deobfuscator**

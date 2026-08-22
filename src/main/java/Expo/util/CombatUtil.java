@@ -44,24 +44,12 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.WorldSettings.GameType;
 
-
-
-
-
-
-
-
-
-
-
 public class CombatUtil {
    private static String[] b;
    private static long[] e;
    private static long a;
    private static String[] c;
    private static Minecraft w;
-
-
 
    public static float D(EntityLivingBase var0) {
       return var0.getAbsorptionAmount();
@@ -263,8 +251,6 @@ public class CombatUtil {
       }
    }
 
-
-
    private static void s(Entity var0, long var1) {
       long var7 = var1 ^ 11117804227521L;
       if (var0.canAttackWithItem() && !var0.hitByEntity(w.thePlayer)) {
@@ -358,8 +344,6 @@ public class CombatUtil {
       }
    }
 
-
-
    public static String h(EntityLivingBase var0, long var1, ItemStack var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       long var4 = var1 ^ 73665897172445L;
       int var6 = (int)Math.ceil(Y(var4, var0, var3));
@@ -375,6 +359,4 @@ public class CombatUtil {
          }
       }
    }
-
-
 }

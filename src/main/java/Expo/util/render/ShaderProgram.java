@@ -3,7 +3,6 @@ package Expo.util.render;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
 
-
 public class ShaderProgram {
    private static long a;
    public final int S;
@@ -23,7 +22,6 @@ public class ShaderProgram {
       }
    }
 
-
    public ShaderProgram(long var1, String var3) {
       var1 = a ^ var1;
       int var6 = GL20.glCreateProgram();
@@ -41,7 +39,6 @@ public class ShaderProgram {
 
       this.S = var6;
    }
-
 
    public void O(String var1, float... var2) {
       int var3 = GL20.glGetUniformLocation(this.S, var1);
@@ -76,12 +73,10 @@ public class ShaderProgram {
    }
 
    static {
-
       a = 13990146093428L;
    }
 
    public void r() {
       GL20.glUseProgram(this.S);
    }
-
 }

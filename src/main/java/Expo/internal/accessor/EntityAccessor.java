@@ -3,16 +3,6 @@ package Expo.internal.accessor;
 import java.io.UnsupportedEncodingException;
 import net.minecraft.entity.Entity;
 
-
-
-
-
-
-
-
-
-
-
 public final class EntityAccessor {
    private static TypedValueStore c;
    private static TypedValueStore v;
@@ -29,7 +19,4 @@ public final class EntityAccessor {
    public static float X(Entity var0, long var1) {
       return c.V(var0);
    }
-
-
-
 }

@@ -61,7 +61,6 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.WorldSettings.GameType;
 
-
 public class Scaffold extends PriorityModule implements EventSubscriber {
    public static PercentageSetting keepYJumpForwardChance;
    private boolean e;
@@ -132,10 +131,7 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       return !this.dV.isEmpty() ? this.dV.get(this.dV.size() - 1).a() : null;
    }
 
-
-
    private void U() {
-
       if (!this.dw) {
          KeyBindUtil.o(99363263780575L, f.gameSettings.keyBindJump.getKeyCode());
          this.dw = true;
@@ -155,7 +151,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
          this.M(var11);
       }
    }
-
 
    private void i(long var1, MoveInputEvent var3) {
       int var8 = f.thePlayer.ticksExisted;
@@ -217,7 +212,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private void Q(float var1) {
-
       switch (moveFix.Y()) {
          case "SILENT":
             RotationManager.n(RotationMode.SILENT);
@@ -246,7 +240,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private void v(PlacementTarget var1,float var4) {
-
       switch (moveFix.Y()) {
          case "SILENT":
             RotationManager.n(RotationMode.SILENT);
@@ -281,7 +274,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private void H() {
       if (autoItem.c() && !OutgoingPacketState.P && !OutgoingPacketState.h) {
          if (!this.b) {
@@ -312,13 +304,10 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private float[] atan2(long var1, String var3, BlockPos var4, EnumFacing var5, boolean var6) {
-
       long var10001 = 41812496666049L;
-
 
       int var9 = (int)(var10001 << 48 >>> 48);
       var10001 = 48056310104396L;
-
 
       int var15 = 6279;
 
@@ -405,11 +394,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private void v(long var1, MoveInputEvent var3) {
-
-
-
-
-
       if (mode.R("LEGIT") && f.currentScreen == null && !f.thePlayer.capabilities.isFlying && ItemUtil.u(f.thePlayer.getHeldItem()) && this.Y()) {
          if (KeyBindUtil.V(f.gameSettings.keyBindSneak.getKeyCode(), 64165991731362L)) {
             this.a();
@@ -464,7 +448,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    public void onMoveInput(long var1, MoveInputEvent var3) {
-
       if (this.h) {
          var3.O(true);
          this.h = false;
@@ -473,15 +456,11 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       this.v(46907066512003L, var3);
    }
 
-
-
    private void t(MoveInputEvent var1) {
       var1.x(true);
       this.d = true;
       this.T = -1;
    }
-
-
 
    public void onRender3D(int var1, short var2, Render3DEvent var3, int var4) {
       long var5 = ((long)var1 << 32 | (long)var2 << 48 >>> 32 | (long)var4 << 48 >>> 48) ^ bb;
@@ -535,20 +514,11 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private float[] J(BlockPos var1, long var2, EnumFacing var4) {
-
-
       return this.T(var1, var4, false, 10744777957284L);
    }
 
    private void Y(long var1) {
-
-
-
-
-
-
       if (f.thePlayer.onGround && this.G) {
          if (!this.N) {
             EntityLivingBaseStateAccessor.x(14848, f.thePlayer, 0);
@@ -579,12 +549,10 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private boolean isGetBlockPos(PlacementTarget var1, float var2, float var3) {
       MovingObjectPosition var4 = BlockUtil.F(new float[]{var2, var3}, 4.0);
       return var4.typeOfHit != MovingObjectType.BLOCK ? false : BlockUtil.p(var4.getBlockPos(), var1.q) && (!strictAimCheck.c() || var4.sideHit == var1.Z);
    }
-
 
    public void A(long var1) {
       long var5 = var1 ^ 138156628231589L;
@@ -635,35 +603,19 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private float[] T(BlockPos var1, EnumFacing var2, boolean var3, long var4) {
-
-
-
       return this.atan2(54672650222099L, this.d(39148151720929L), var1, var2, var3);
    }
-
 
    public String g(long var1) {
       long var3 = var1 ^ 44713956543479L;
       return mode.R("KEEP_Y") && keepYOnRightClick.c() && !KeyBindUtil.V(f.gameSettings.keyBindUseItem.getKeyCode(), var3) ? "NORMAL" : mode.Y();
    }
 
-
    private float q(BlockPos var1, EnumFacing var2, long var3) {
-
-
-
-
-
       return RotationUtil.S((char)0, 1931007915, (char)52931, var1, var2)[1];
    }
 
-
    private void N() {
-
-
-
-
-
       if (this.k && !f.thePlayer.onGround) {
          this.K = -1;
          this.dt = true;
@@ -718,12 +670,8 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    public void onHeldItemChange(HeldItemChangeEvent var1, long var2) {
-
-
       var1.I(21307, 3074332907L);
    }
-
-
 
    private double q(AxisAlignedBB var1) {
       AxisAlignedBB var2 = new AxisAlignedBB(
@@ -749,9 +697,7 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       return var8;
    }
 
-
    public void onPreMouseInput(long var1, PreMouseInputEvent var3) {
-
       this.e = false;
       if (!this.Y()) {
          this.T(false);
@@ -802,7 +748,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private void isKeyDown() {
-
       this.F = x$r1(44418900924704L) ? (int)diagonalJumpBlocks.L() : (int)straightJumpBlocks.L();
       if (!f.gameSettings.keyBindForward.isKeyDown()
          && !f.gameSettings.keyBindLeft.isKeyDown()
@@ -833,12 +778,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    public void onRender2D(long var1, Render2DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
       if (itemCounter.c()) {
          int var20;
          switch (espColor.Y()) {
@@ -913,10 +852,8 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       return H(false, (char)var2, var3, var4);
    }
 
-
    public Scaffold(long var1) {
       super((((bb ^ (var1)) ^ 25905238840540L) >>> 16), (char)((int)(((((bb ^ (var1)) ^ 25905238840540L) << 48) >>> 48))));
-      // add code
       this.declare("Scaffold", Category.World, "Bridge automatically for you");
       var1 = bb ^ var1;
       this.dW = new TimerUtil();
@@ -950,9 +887,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private String d(long var1) {
-
-
-
       String var7;
       switch (mode.Y()) {
          case "LEGIT":
@@ -975,7 +909,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private boolean M(PlacementTarget var1) {
-
       if (!OutgoingPacketState.Y()) {
          return false;
       }
@@ -1025,9 +958,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
    }
 
    private AxisAlignedBB K(long var1) {
-
-
-
       AxisAlignedBB var6 = f.thePlayer.getEntityBoundingBox();
       if (MoveUtil.f() == 0 && MoveUtil.K() == 0) {
          return var6.offset(f.thePlayer.motionX, 0.0, f.thePlayer.motionZ);
@@ -1042,16 +972,12 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       return var6.offset(var12, 0.0, var14);
    }
 
-
-
    static {
-      // add code
       keepYJumpForwardChance = new PercentageSetting("Keep-Y-jump-forward-chance", 100);
       rotationSmoothing = new PercentageSetting("Rotation-smoothing", 0);
       customColor = new ColorSetting("Custom-color", "FFFFFF");
    }
    static {
-      // add code
       aimCheck = new BooleanSetting("Aim-check", true);
       strictAimCheck = new BooleanSetting("Strict-aim-check", true);
       swing = new BooleanSetting("Swing", true);
@@ -1068,7 +994,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       outlineFadeOut = new BooleanSetting("Outline-fade-out", true);
    }
    static {
-      // add code
       offsetRotationOffset = new NumberSetting("Offset-rotation-offset", 0.15F, 0.0F, 1.0F, 0.01F);
       legitModeEdgeOffset = new NumberSetting("Legit-mode-edge-offset", 0.0F, 0.0F, 0.3F, 0.01F);
       legitModeUnsneakDelay = new NumberSetting("Legit-mode-unsneak-delay", 50.0F, 50.0F, 300.0F, 5.0F);
@@ -1079,7 +1004,6 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       angleStep = new NumberSetting("Angle-step", 90.0F, 1.0F, 180.0F, 1.0F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", "NORMAL", "LEGIT", "KEEP_Y");
       normalModeRotation = new ModeSetting("Normal-mode-rotation", false, "DIAGONAL", "BACK", "NORMAL", "OFFSET", "DIAGONAL");
       legitModeRotation = new ModeSetting("Legit-mode-rotation", false, "DIAGONAL", "BACK", "NORMAL", "OFFSET", "DIAGONAL");

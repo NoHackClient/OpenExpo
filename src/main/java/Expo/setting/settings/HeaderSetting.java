@@ -6,22 +6,11 @@ import Expo.module.impl.configuration.Language;
 import Expo.setting.Setting;
 import Expo.util.MathUtil;
 
-
-
-
-
-
-
-
-
-
-
 public class HeaderSetting extends Setting {
    private static long a;
    public String I;
 
    public HeaderSetting(String var1) {
-      // add code
       this.q = var1;
       this.I = var1;
    }
@@ -30,7 +19,6 @@ public class HeaderSetting extends Setting {
       return this.I;
    }
 
-   // add code
    public static java.util.List<Setting> prune(java.util.List<Setting> var0) {
       java.util.ArrayList<Setting> var1 = new java.util.ArrayList<Setting>(var0.size());
 
@@ -44,10 +32,6 @@ public class HeaderSetting extends Setting {
       return var1;
    }
 
-   // add code
-   // A section band with nothing under it is noise, and the settings list is
-   // reordered by ExpoModuleSettings after construction, so this has to be asked
-   // at render time rather than filtered out of the list.
    public static boolean occupied(java.util.List<Setting> var0, int var1) {
       if (var0 == null) {
          return false;
@@ -80,10 +64,7 @@ public class HeaderSetting extends Setting {
       return var3 instanceof MacroModule ? Language.z("setting.Macro." + var6,0L) : Language.z("setting." + var3.b() + "." + var6,0L);
    }
 
-
    public void B(String var1) {
       this.I = var1;
    }
-
-
 }

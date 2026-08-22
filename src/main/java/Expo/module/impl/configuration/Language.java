@@ -9,30 +9,19 @@ import Expo.setting.settings.ModeSetting;
 import java.io.UnsupportedEncodingException;
 import java.text.MessageFormat;
 
-
-
-
-
-
-
-
-
-
-
 public class Language extends Module {
    public static BooleanSetting applyForArraylist;
    public static BooleanSetting applyForCategory;
    private static long b;
-   public static HeaderSetting H;
+   public static HeaderSetting theseOptionsOnlyAffectClickGui;
    public static ModeSetting language;
-   public static HeaderSetting t;
+   public static HeaderSetting thisOptionOnlyAffectsArrayList;
    public static BooleanSetting applyForDescriptions;
    public static BooleanSetting applyForName;
    public static BooleanSetting applyForSettings;
 
    public static String z(String var0, long var1) {
       String var8 = s(var0);
-      // add code
       return var8 != null ? var8 : var0;
    }
 
@@ -46,7 +35,6 @@ public class Language extends Module {
 
    public Language(char var1, int var2, int var3) {
       super(((((((long)((var1)) << 48) | (((long)((var2)) << 32) >>> 16)) | (((long)((var3)) << 48) >>> 48)) ^ b) ^ 58318042895466L));
-      // add code
       this.declare("Language", Category.Configuration, "Configuration of language");
    }
 
@@ -83,8 +71,6 @@ public class Language extends Module {
       }
    }
 
-
-
    public static void G(String var0) {
       var0 = var0.toUpperCase();
       language.i(var0);
@@ -103,17 +89,15 @@ public class Language extends Module {
    }
 
    static {
-      // add code
       applyForArraylist = new BooleanSetting("Apply-for-arraylist", false);
       // update new version
-      H = new HeaderSetting("These options only affect ClickGui");
+      theseOptionsOnlyAffectClickGui = new HeaderSetting("These options only affect ClickGui");
       // update new version
-      t = new HeaderSetting("This option only affects ArrayList");
+      thisOptionOnlyAffectsArrayList = new HeaderSetting("This option only affects ArrayList");
       applyForCategory = new BooleanSetting("Apply-for-category", true);
       applyForSettings = new BooleanSetting("Apply-for-settings", true);
       applyForName = new BooleanSetting("Apply-for-name", true);
       applyForDescriptions = new BooleanSetting("Apply-for-descriptions", true);
-      // add code
       language = new ModeSetting("Language", "ENGLISH");
    }
 }

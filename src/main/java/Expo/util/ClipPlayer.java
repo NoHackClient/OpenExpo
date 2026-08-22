@@ -6,16 +6,6 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-
-
-
-
-
-
-
-
-
-
 public class ClipPlayer {
    public static void x(String var0) {
       try (InputStream var1 = ClipPlayer.class.getResourceAsStream(var0)) {
@@ -27,7 +17,6 @@ public class ClipPlayer {
             var5.start();
          }
       } catch (Exception var17) {
-         Expo.internal.restore.ExpoDiag.attribute(var17, "ClipPlayer.x/1#0");
       }
    }
 }

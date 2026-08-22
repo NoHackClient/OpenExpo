@@ -9,16 +9,6 @@ import net.minecraft.client.gui.GuiButtonLanguage;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 
-
-
-
-
-
-
-
-
-
-
 public class SenrenBankaMainMenu {
    private static long a;
    private static String[] c;
@@ -30,8 +20,6 @@ public class SenrenBankaMainMenu {
       Gui.drawRect(0, 0, var0, var1, -1);
       Gui.drawModalRectWithCustomSizedTexture(0, 0, 0.0F, 0.0F, var0, (int)(var0 * 0.5625F), var0, var0 * 0.5625F);
    }
-
-
 
    public static void l(int var0, int var1, long var2, List var4) {
       long var5 = var2 ^ 73161443938117L;
@@ -70,5 +58,4 @@ public class SenrenBankaMainMenu {
       a = 32583009526144L;
       F = MinecraftRef.c((byte)0, 0L);
    }
-
 }

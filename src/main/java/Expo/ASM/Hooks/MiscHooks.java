@@ -34,7 +34,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 
-
 public class MiscHooks {
    private static boolean U;
    private static boolean O;
@@ -81,11 +80,6 @@ public class MiscHooks {
    }
 
    public static void guiMainMenuInit(GuiMainMenu var0, CallbackInfo var1) {
-
-
-
-
-
       try {
          List var12 = buttonList(var0);
          GuiMainMenuHooks.onInitGUI(var12, var0.width, var0.height);
@@ -96,16 +90,16 @@ public class MiscHooks {
          Minecraft var13 = MinecraftRef.c((byte)0,0L);
          DynamicTexture var14 = new DynamicTexture(256, 256);
          ResourceLocation var15 = var13.getTextureManager().getDynamicTextureLocation("background", var14);
-         writeField(var0, GuiMainMenu.class, var14, "viewportTexture", "viewportTexture", "u");
-         writeField(var0, GuiMainMenu.class, var15, "backgroundTexture", "backgroundTexture", "J");
+         writeField(var0, GuiMainMenu.class, var14, "viewportTexture", "field_73977_n", "u");
+         writeField(var0, GuiMainMenu.class, var15, "backgroundTexture", "field_110351_G", "J");
          Calendar var16 = Calendar.getInstance();
          var16.setTime(new Date());
          if (var16.get(2) + 1 == 12 && var16.get(5) == 24) {
-            writeField(var0, GuiMainMenu.class, "Merry X-mas!", "splashText", "splashText", "r");
+            writeField(var0, GuiMainMenu.class, "Merry X-mas!", "splashText", "field_73975_c", "r");
          } else if (var16.get(2) + 1 == 1 && var16.get(5) == 1) {
-            writeField(var0, GuiMainMenu.class, "Happy new year!", "splashText", "splashText", "r");
+            writeField(var0, GuiMainMenu.class, "Happy new year!", "splashText", "field_73975_c", "r");
          } else if (var16.get(2) + 1 == 10 && var16.get(5) == 31) {
-            writeField(var0, GuiMainMenu.class, "OOoooOOOoooo! Spooky!", "splashText", "splashText", "r");
+            writeField(var0, GuiMainMenu.class, "OOoooOOOoooo! Spooky!", "splashText", "field_73975_c", "r");
          }
 
          MainMenuTheme.r(var0.width, var0.height, 3666, (byte)89, var12, 4438180);
@@ -144,10 +138,6 @@ public class MiscHooks {
    }
 
    public static void guiMainMenuDraw(GuiMainMenu var0, int var1, int var2, float var3, CallbackInfo var4) {
-
-
-
-
       try {
          if (!MainMenuTheme.X(0L)) {
             return;
@@ -184,16 +174,13 @@ public class MiscHooks {
       var4.set(var0, var2);
    }
 
-
    public static void minecraftSendClickBlockHead(CallbackInfo var0) {
       if (O) {
          var0.cancel();
       }
    }
 
-
    public static void itemRendererUpdateEquippedItem(ItemRenderer var0, CallbackInfo var1) {
-
       try {
          if (!ItemRendererHooks.onUpdateEquippedItemLastPartAllowed()) {
             return;
@@ -203,7 +190,7 @@ public class MiscHooks {
          float var5 = (Float)readField(var0, ItemRenderer.class, "equippedProgress", "field_78454_c", "e");
          ItemStack var6 = (ItemStack)readField(var0, ItemRenderer.class, "itemToRender", "field_78453_b", "d");
          int var7 = (Integer)readField(var0, ItemRenderer.class, "equippedItemSlot", "field_78450_g", "i");
-         writeField(var0, ItemRenderer.class, var5, "prevEquippedProgress", "prevEquippedProgress", "f");
+         writeField(var0, ItemRenderer.class, var5, "prevEquippedProgress", "field_78451_d", "f");
          EntityPlayerSP var8 = var4.thePlayer;
          ItemStack var9 = ItemRendererHooks.spoofScaffoldItemStack(var4, var8.inventory.getCurrentItem());
          int var10 = ItemRendererHooks.spoofScaffoldItemSlot(var4, var8.inventory.currentItem);
@@ -211,8 +198,8 @@ public class MiscHooks {
          if (var6 != null && var9 != null) {
             if (!var6.getIsItemStackEqual(var9)) {
                if (!MethodAccessors.n(var6.getItem(), var6, var9, var7 != var10)) {
-                  writeField(var0, ItemRenderer.class, var9, "itemToRender", "itemToRender", "d");
-                  writeField(var0, ItemRenderer.class, var10, "equippedItemSlot", "equippedItemSlot", "i");
+                  writeField(var0, ItemRenderer.class, var9, "itemToRender", "field_78453_b", "d");
+                  writeField(var0, ItemRenderer.class, var10, "equippedItemSlot", "field_78450_g", "i");
                   var1.cancel();
                   return;
                }
@@ -227,10 +214,10 @@ public class MiscHooks {
          float var13 = var11 ? 0.0F : 1.0F;
          float var14 = MathHelper.clamp_float(var13 - var5, -var12, var12);
          var5 += var14;
-         writeField(var0, ItemRenderer.class, var5, "equippedProgress", "equippedProgress", "e");
+         writeField(var0, ItemRenderer.class, var5, "equippedProgress", "field_78454_c", "e");
          if (ItemRendererHooks.onUpdateEquippedItemLastPart(var5)) {
-            writeField(var0, ItemRenderer.class, var9, "itemToRender", "itemToRender", "d");
-            writeField(var0, ItemRenderer.class, var10, "equippedItemSlot", "equippedItemSlot", "i");
+            writeField(var0, ItemRenderer.class, var9, "itemToRender", "field_78453_b", "d");
+            writeField(var0, ItemRenderer.class, var10, "equippedItemSlot", "field_78450_g", "i");
          }
 
          var1.cancel();
@@ -242,7 +229,7 @@ public class MiscHooks {
       Boolean var8 = EntityRendererHooks.orientCamera(var1, var2, var3, var4);
       if (var8 != null) {
          try {
-            writeField(var0, EntityRenderer.class, var8, "cloudFog", "cloudFog", "B");
+            writeField(var0, EntityRenderer.class, var8, "cloudFog", "field_78500_U", "B");
          } catch (Throwable var10) {
          }
 
@@ -265,7 +252,6 @@ public class MiscHooks {
    public static boolean minecraftShouldCancelStoppedUsingItem(PlayerControllerMP var0, EntityPlayer var1) {
       return W;
    }
-
 
    private static Method findMethod(Class<?> var0, String... var1) throws Exception {
       for (Class var2 = var0; var2 != null; var2 = var2.getSuperclass()) {
@@ -322,5 +308,4 @@ public class MiscHooks {
 
       throw new NoSuchFieldException(String.join("/", var1));
    }
-
 }

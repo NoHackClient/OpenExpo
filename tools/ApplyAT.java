@@ -77,8 +77,6 @@ public final class ApplyAT {
         }
         z.close();
         out.close();
-        System.out.println("[ApplyAT] widened " + n[0] + " member(s) across "
-                + want.size() + " declared owner(s)");
     }
 
     static int pub(int a) {

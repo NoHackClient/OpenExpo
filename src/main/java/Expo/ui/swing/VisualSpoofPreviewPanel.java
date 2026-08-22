@@ -20,16 +20,6 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import javax.swing.JPanel;
 
-
-
-
-
-
-
-
-
-
-
 class VisualSpoofPreviewPanel extends JPanel {
    private static long[] c;
    private static String b;
@@ -100,7 +90,6 @@ class VisualSpoofPreviewPanel extends JPanel {
    }
 
    static {
-      // add code
       try {
          a = 44558175713610L;
          long var11 = a ^ 10678190580043L;
@@ -181,5 +170,4 @@ class VisualSpoofPreviewPanel extends JPanel {
 
    private VisualSpoofPreviewPanel() {
    }
-
 }

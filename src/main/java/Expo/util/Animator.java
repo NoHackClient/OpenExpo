@@ -2,16 +2,6 @@ package Expo.util;
 
 import Expo.enums.Easing;
 
-
-
-
-
-
-
-
-
-
-
 public class Animator {
    private long P;
    private static long b;
@@ -71,7 +61,6 @@ public class Animator {
 
    static {
       a = 108012701916305L;
-      // add code
       b = -58884813376978944L;
    }
 
@@ -130,5 +119,4 @@ public class Animator {
    public double Z() {
       return this.u;
    }
-
 }

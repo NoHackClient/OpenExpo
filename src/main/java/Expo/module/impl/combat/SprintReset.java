@@ -30,16 +30,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.play.server.S19PacketEntityStatus;
 
-
-
-
-
-
-
-
-
-
-
 public class SprintReset extends Module implements EventSubscriber {
    private boolean K;
    private final TimerUtil o;
@@ -55,7 +45,6 @@ public class SprintReset extends Module implements EventSubscriber {
    private boolean g;
    public static NumberSetting interval;
    private boolean H;
-
 
    public void A(long var1) {
       long var3 = var1 ^ 17179273251418L;
@@ -83,7 +72,6 @@ public class SprintReset extends Module implements EventSubscriber {
    }
 
    public void onPostTick(PostTickEvent var1) {
-
       if (this.H && this.o.A(duration.L())) {
          KeyBindUtil.o(99363263780575L, f.gameSettings.keyBindForward.getKeyCode());
          this.H = false;
@@ -93,7 +81,6 @@ public class SprintReset extends Module implements EventSubscriber {
    public final void x(long var1, EventBus var3) {
       SprintResetBinder.G(var3, this);
    }
-
 
    public void onReceivePacket(short var1, int var2, ReceivePacketEvent var3, char var4) {
       if (this.C && this.E != null && var3.d instanceof S19PacketEntityStatus) {
@@ -106,7 +93,6 @@ public class SprintReset extends Module implements EventSubscriber {
    }
 
    public void onAttackEntity(AttackEntityEvent var1) {
-
       if (this.U.A(interval.L())) {
          Entity var6 = var1.O();
          if (var6 instanceof EntityLivingBase) {
@@ -151,10 +137,8 @@ public class SprintReset extends Module implements EventSubscriber {
       }
    }
 
-
    public SprintReset(int var1, char var2, short var3) {
       super(((((((long)((var1)) << 32) | (((long)((var2)) << 48) >>> 32)) | (((long)((var3)) << 48) >>> 48)) ^ a) ^ 73452483024062L));
-      // add code
       this.declare("SprintReset", Category.Combat, "Reset sprint state during combat to give more knockback to opponent");
       this.o = new TimerUtil();
       this.U = new TimerUtil();
@@ -168,7 +152,6 @@ public class SprintReset extends Module implements EventSubscriber {
    }
 
    public void onMoveInput(MoveInputEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (mode.R("LEGIT") && this.u) {
          this.o.W();
          KeyBindUtil.A(82009306480869L, f.gameSettings.keyBindForward.getKeyCode(), false);
@@ -194,13 +177,11 @@ public class SprintReset extends Module implements EventSubscriber {
       }
    }
 
-
    public String g(long var1) {
       return mode.Y();
    }
 
    static {
-      // add code
       mode = new ModeSetting("Mode", "NO_STOP", "LEGIT");
       interval = new NumberSetting("Interval", 400.0F, 0.0F, 2000.0F, 1.0F);
       requireTargetDamage = new BooleanSetting("Require-target-damage", true);

@@ -10,16 +10,6 @@ import java.security.spec.InvalidKeySpecException;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChestESPRender3DInvoker implements EventInvoker {
    final ChestESP j;
 

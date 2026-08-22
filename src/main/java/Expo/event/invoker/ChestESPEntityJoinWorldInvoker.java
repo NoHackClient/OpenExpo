@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.EntityJoinWorldEvent;
 import Expo.module.impl.visual_utility.ChestESP;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChestESPEntityJoinWorldInvoker implements EventInvoker {
    final ChestESP z;
 

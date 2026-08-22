@@ -2,13 +2,6 @@ package Expo.module.impl.visual_utility;
 
 import Expo.internal.synthetic.ItemTagsCtorMarker;
 
-
-
-
-
-
-
-
 public class ItemTagsRenderPos {
    private final float K;
    private final float T;

@@ -48,16 +48,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class TargetHUD extends Module implements EventSubscriber {
    public static BooleanSetting bots;
    public static BooleanSetting mobs;
@@ -98,12 +88,7 @@ public class TargetHUD extends Module implements EventSubscriber {
    public static NumberSetting stayTime;
    public static BooleanSetting bosses;
 
-
-
-
-
    public void onAttackTargetEntity(long var1, AttackTargetEntityEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (targetMode.R("HIT") && var3.w instanceof EntityLivingBase && this.A(1893608662326L, (EntityLivingBase)var3.w)) {
          this.E = this.K;
          this.K = (EntityLivingBase)var3.w;
@@ -113,9 +98,6 @@ public class TargetHUD extends Module implements EventSubscriber {
 
    public final void x(long var1, EventBus var3) {
       TargetHUDBinder.Y(var3, this);
-   }
-
-   private static void a() {
    }
 
    private void C(float var1, float var2, float var3, float var4, long var5, int var7) {
@@ -191,14 +173,11 @@ public class TargetHUD extends Module implements EventSubscriber {
    }
 
    private boolean A(long var1, EntityLivingBase var3) {
-
-
       return EntityUtil.q(var3, players.c(), mobs.c(), animals.c(), bosses.c(), friends.c(), enemies.c(), teammates.c(), bots.c(), 21816078198602L);
    }
 
    public TargetHUD(long var1) {
       super(((c ^ (var1)) ^ 135513913802190L));
-      // add code
       this.declare("TargetHUD", Category.Visual_utility, "Show basic information about the current attacking target");
       var1 = c ^ var1;
       this.v = new TimerUtil();
@@ -597,10 +576,7 @@ public class TargetHUD extends Module implements EventSubscriber {
       return targetMode.Y();
    }
 
-
-
    public void onPreUpdate(PreUpdateEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (KillAura.H6 != null) {
          if (this.A(1893608662326L, KillAura.H6)) {
             this.E = this.K;
@@ -637,8 +613,6 @@ public class TargetHUD extends Module implements EventSubscriber {
       }
    }
 
-
-
    static {
       c = 126705739374527L;
       L = new DecimalFormat("0.0", new DecimalFormatSymbols(Locale.US));
@@ -658,9 +632,7 @@ public class TargetHUD extends Module implements EventSubscriber {
       this.K = null;
    }
 
-
    static {
-      // add code
       style = new ModeSetting("Style", "HEAD", "VANILLA", "MODEL");
       backgroundOpacity = new PercentageSetting("Background-opacity", 50);
       enemies = new BooleanSetting("Enemies", true);
@@ -688,7 +660,6 @@ public class TargetHUD extends Module implements EventSubscriber {
       mobs = new BooleanSetting("Mobs", false);
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

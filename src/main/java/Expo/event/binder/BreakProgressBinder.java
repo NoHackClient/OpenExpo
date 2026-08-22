@@ -7,16 +7,6 @@ import Expo.event.invoker.BreakProgressPostTickInvoker;
 import Expo.event.invoker.BreakProgressRender3DInvoker;
 import Expo.module.impl.visual.BreakProgress;
 
-
-
-
-
-
-
-
-
-
-
 public final class BreakProgressBinder {
    private static final long a = 40957638788398L;
 

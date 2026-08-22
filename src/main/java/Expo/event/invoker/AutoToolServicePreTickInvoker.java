@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.util.AutoToolService;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoToolServicePreTickInvoker implements EventInvoker {
    final AutoToolService U;
 

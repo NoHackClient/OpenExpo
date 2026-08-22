@@ -6,25 +6,12 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
-
-
-
-
-
-
-
-
-
 public class TransformEntityPlayerSP extends TransformerBase {
    private static long d;
 
    public TransformEntityPlayerSP() {
       super("net/minecraft/client/entity/EntityPlayerSP");
    }
-
-
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;

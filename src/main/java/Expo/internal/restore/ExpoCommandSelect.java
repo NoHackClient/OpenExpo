@@ -9,9 +9,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-
 public final class ExpoCommandSelect {
-
    static final String ALL = "all";
 
    static final List<String> UNRESOLVED = new ArrayList<String>();

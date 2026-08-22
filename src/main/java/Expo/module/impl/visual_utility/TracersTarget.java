@@ -3,16 +3,6 @@ package Expo.module.impl.visual_utility;
 import Expo.internal.synthetic.TracersCtorMarker;
 import net.minecraft.entity.EntityLivingBase;
 
-
-
-
-
-
-
-
-
-
-
 public class TracersTarget {
    private final int O;
    private final EntityLivingBase K;

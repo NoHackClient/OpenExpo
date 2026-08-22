@@ -24,16 +24,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.client.C03PacketPlayer.C04PacketPlayerPosition;
 import net.minecraft.util.AxisAlignedBB;
 
-
-
-
-
-
-
-
-
-
-
 public class AntiVoid extends Module implements EventSubscriber {
    private double[] s;
    private boolean D;
@@ -156,8 +146,6 @@ public class AntiVoid extends Module implements EventSubscriber {
       this.k = this.D;
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
-
-
    public String g(long var1) {
       return String.valueOf(blinkFallDistance.L());
    }
@@ -168,7 +156,6 @@ public class AntiVoid extends Module implements EventSubscriber {
 
    public AntiVoid(long var1) {
       super(((a ^ (var1)) ^ 95315799941131L));
-      // add code
       this.declare("AntiVoid", Category.World, "Prevent you from falling into the void");
       var1 = a ^ var1;
       this.D = false;
@@ -177,8 +164,6 @@ public class AntiVoid extends Module implements EventSubscriber {
       this.U = false;
       this.t = false;
    }
-
-
 
    static {
       a = 54765974288452L;
@@ -194,15 +179,10 @@ public class AntiVoid extends Module implements EventSubscriber {
       this.j(var3, (short)var4, (short)var5);
    }
 
-
-
-
    static {
-      // add code
       blinkFallDistance = new NumberSetting("Blink-fall-distance", 4.0F, 0.0F, 8.0F, 0.1F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", false, "TOGGLE_STUCK", "TOGGLE_SCAFFOLD", "TOGGLE_STUCK", "BLINK");
    }
 }

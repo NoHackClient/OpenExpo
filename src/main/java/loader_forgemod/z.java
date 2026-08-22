@@ -14,16 +14,6 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-
-
-
-
-
-
-
-
-
-
 public class z extends JPanel {
    private final ResourceBundle l;
    private final JFrame m;

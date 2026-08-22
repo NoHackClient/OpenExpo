@@ -5,16 +5,6 @@ import Expo.module.Category;
 import Expo.module.Module;
 import net.minecraft.client.entity.EntityOtherPlayerMP;
 
-
-
-
-
-
-
-
-
-
-
 public class FreeCam extends Module {
    private EntityOtherPlayerMP r;
    private static final long a = 60812830000416L;
@@ -27,7 +17,6 @@ public class FreeCam extends Module {
 
    public FreeCam(long var1) {
       super(((a ^ (var1)) ^ 123297006585977L));
-      // add code
       this.declare("FreeCam", Category.Player, "This module is currently disabled");
       var1 = a ^ var1;
    }}

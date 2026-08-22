@@ -15,16 +15,6 @@ import java.util.Map;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 
-
-
-
-
-
-
-
-
-
-
 public class AutoClicker extends Module implements EventSubscriber {
    private static Map g;
    private static long[] c;
@@ -55,7 +45,6 @@ public class AutoClicker extends Module implements EventSubscriber {
 
    public AutoClicker(short var1, char var2, int var3) {
       super(((((((long)((var1)) << 48) | (((long)((var2)) << 48) >>> 16)) | (((long)((var3)) << 32) >>> 32)) ^ a) ^ 82626899401928L));
-      // add code
       this.declare("AutoClicker", Category.Combat, "Automatically left click");
       this.o = 0L;
       this.M = 0L;
@@ -64,11 +53,6 @@ public class AutoClicker extends Module implements EventSubscriber {
    }
 
    public void onPreTick(long var1, PreTickEvent var3) {
-
-
-
-
-
       if (this.o > 0L) {
          this.o = this.o - 50L;
       }
@@ -113,8 +97,6 @@ public class AutoClicker extends Module implements EventSubscriber {
       }
    }
 
-
-
    public String g(long var1) {
       if (mincps.L() != maxcps.L()) {
          return Math.round(mincps.L()) == mincps.L() && Math.round(maxcps.L()) == maxcps.L() ? Math.round(mincps.L()) + "-" + Math.round(maxcps.L()) : mincps.L() + "-" + maxcps.L();
@@ -128,14 +110,7 @@ public class AutoClicker extends Module implements EventSubscriber {
       I = false;
    }
 
-   private static void a() {
-   }
-
-
-
-
    static {
-      // add code
       sagBlockingTicks = new NumberSetting("Sag-blocking-ticks", 4.0F, 0.0F, 20.0F, 1.0F);
       sag = new BooleanSetting("Sag", false);
       sagUnblockDuration = new NumberSetting("Sag-unblock-duration", 0.0F, 0.0F, 20.0F, 1.0F);

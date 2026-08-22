@@ -4,17 +4,12 @@ import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
-
 public class KeyBindUtil {
    private static long a;
 
    public static int m(long var0, int var2) {
-
-
-
       return var2 >= 1000 ? w((char)0, var2 - 1000, 132797583844084L) : var2;
    }
-
 
    public static void T(int var0, short var1, int var2, short var3) {
       long var4 = ((long)var0 << 32 | (long)var1 << 48 >>> 32 | (long)var3 << 48 >>> 48) ^ a;
@@ -37,8 +32,6 @@ public class KeyBindUtil {
    }
 
    public static boolean V(int var0, long var1) {
-
-
       int var5 = m(32881896332787L, var0);
       if (var5 == 0) {
          return false;
@@ -48,9 +41,6 @@ public class KeyBindUtil {
    }
 
    public static int a(long var0, String var2) {
-
-
-
       if (var2 == null) {
          return -2147483648;
       }
@@ -214,14 +204,12 @@ public class KeyBindUtil {
    }
 
    static {
-
       a = 119759750653330L;
    }
 
    public static int w(char var0, int var1, long var2) {
       return -100 + var1;
    }
-
 
    public static int x(int var0, long var1) {
       long var3 = var1 ^ 69080664825661L;
@@ -235,8 +223,6 @@ public class KeyBindUtil {
    }
 
    public static void A(long var0, int var2, boolean var3) {
-
-
       KeyBinding.setKeyBindState(m(32881896332787L, var2), var3);
    }
 
@@ -249,8 +235,6 @@ public class KeyBindUtil {
    }
 
    public static boolean d(int var0, int var1, long var2) {
-
-
       return m(32881896332787L, var0) == m(32881896332787L, var1);
    }
 
@@ -269,5 +253,4 @@ public class KeyBindUtil {
          return var11 != null && !var11.trim().isEmpty() ? var11 : "UNKNOWN";
       }
    }
-
 }

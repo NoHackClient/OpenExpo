@@ -23,7 +23,6 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.opengl.GL11;
 
-
 public class FontUtil {
    private static Map g;
    private static long[] e;
@@ -100,7 +99,6 @@ public class FontUtil {
       GL11.glPopMatrix();
    }
 
-
    private static String a(byte[] var0) {
       int var1 = 0;
       int var2;
@@ -157,8 +155,6 @@ public class FontUtil {
    }
 
    public static void N(CustomFont var0, long var1, String var3, float var4, float var5, float var6, int var7) {
-
-
       GL11.glPushMatrix();
       GL11.glScalef(var6, var6, 1.0F);
       var0.T(37697014677608L, var3, var4 / var6, var5 / var6, var7);
@@ -229,8 +225,6 @@ public class FontUtil {
    }
 
    public static String s(CustomFont var0, long var1, String var3, float var4) {
-
-
       if (var3 == null) {
          return "";
       }
@@ -303,8 +297,6 @@ public class FontUtil {
    }
 
    public static float A(CustomFont var0, String var1, float var2, long var3) {
-
-
       return var0.R(var1, 52019766876817L) * var2;
    }
 
@@ -343,5 +335,4 @@ public class FontUtil {
          Math.round(var0.getAlpha() * var3 + var1.getAlpha() * var2)
       );
    }
-
 }

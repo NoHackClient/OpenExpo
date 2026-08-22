@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.visual_utility.FallIndicator;
 
-
-
-
-
-
-
-
-
-
-
 public final class FallIndicatorPostTickInvoker implements EventInvoker {
    final FallIndicator U;
 

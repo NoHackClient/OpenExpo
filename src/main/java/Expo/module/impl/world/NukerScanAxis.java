@@ -2,13 +2,6 @@ package Expo.module.impl.world;
 
 import Expo.internal.synthetic.NukerCtorMarker;
 
-
-
-
-
-
-
-
 public class NukerScanAxis {
    private final int J;
    private final int S;

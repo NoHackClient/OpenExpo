@@ -5,16 +5,6 @@ import Expo.event.events.UpdateWalkingPlayerEvent;
 import Expo.event.invoker.FastFallUpdateWalkingPlayerInvoker;
 import Expo.module.impl.movement.FastFall;
 
-
-
-
-
-
-
-
-
-
-
 public final class FastFallBinder {
    private static final long a = 88653331019355L;
 
@@ -24,5 +14,4 @@ public final class FastFallBinder {
 
    private FastFallBinder() {
    }
-
 }

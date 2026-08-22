@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.MoveInputEvent;
 import Expo.util.RotationManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class RotationManagerMoveInputInvoker implements EventInvoker {
    final RotationManager S;
 

@@ -37,25 +37,11 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class PlayerControllerHooks {
    private static final Minecraft V;
    private static final long a = 66600080902543L;
 
    public static void onAttackEntity(Entity var0, CallbackInfo var1) {
-
-
-
-
       AttackEntityEvent var9 = new AttackEntityEvent(var0, (char)0, (short)21630, -261330477);
       ExpoClient.w.e(var9, 18670087776179L);
       if (var9.a()) {
@@ -64,14 +50,12 @@ public class PlayerControllerHooks {
    }
 
    public static void clickBlockReturn(BlockPos var0, CallbackInfoReturnable<Boolean> var1) {
-
       if ((Boolean)var1.getReturnValue()) {
          ExpoClient.w.e(new ClickBlockReturnEvent(var0), 18670087776179L);
       }
    }
 
    public static void onPreStoppedUsingItem(CallbackInfo var0) {
-
       if (MiscHooks.minecraftShouldCancelStoppedUsingItem()) {
          var0.cancel();
       } else {
@@ -84,17 +68,10 @@ public class PlayerControllerHooks {
    }
 
    public static void onPostStoppedUsingItem() {
-
-
-
-
       ExpoClient.w.e(new PostStoppedUsingItemEvent((char)0, (short)23334, 1287003355), 18670087776179L);
    }
 
    public static void onDamageBlock(BlockPos var0, EnumFacing var1, PlayerControllerMP var2, CallbackInfoReturnable<Boolean> var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (V.thePlayer.isUsingItem()) {
          var3.setReturnValue(false);
          var3.cancel();
@@ -155,12 +132,10 @@ public class PlayerControllerHooks {
    }
 
    public static void tryHarvestBlockHead(BlockPos var0) {
-
       ExpoClient.w.e(new TryHarvestBlockHeadEvent(var0), 18670087776179L);
    }
 
    public static void onPlayerRightClick(WorldClient var0, ItemStack var1, BlockPos var2, EnumFacing var3, Vec3 var4, CallbackInfoReturnable<Boolean> var5) {
-
       PlayerRightClickEvent var12 = new PlayerRightClickEvent(var0, var1, var2, var3, var4);
       ExpoClient.w.e(var12, 18670087776179L);
       if (var12.a()) {

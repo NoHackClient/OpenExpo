@@ -7,16 +7,6 @@ import Expo.event.invoker.CommandLinePreUpdateInvoker;
 import Expo.event.invoker.CommandLineRender2DInvoker;
 import Expo.module.impl.misc.CommandLine;
 
-
-
-
-
-
-
-
-
-
-
 public final class CommandLineBinder {
    private static final long a = 67733885639777L;
 

@@ -10,19 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.lwjgl.input.Keyboard;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandList extends Command {
-
    private static final String SEP = "§8-----------------------------";
 
    @Override

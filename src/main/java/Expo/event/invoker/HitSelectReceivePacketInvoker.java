@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ReceivePacketEvent;
 import Expo.module.impl.combat.HitSelect;
 
-
-
-
-
-
-
-
-
-
-
 public final class HitSelectReceivePacketInvoker implements EventInvoker {
    final HitSelect t;
 

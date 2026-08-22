@@ -2,13 +2,6 @@ package Expo.util;
 
 import Expo.enums.AnimationDirection;
 
-
-
-
-
-
-
-
 public class SmoothStepAnimation extends EasedAnimation {
    public SmoothStepAnimation(int var1, double var2, AnimationDirection var4) {
       super(var1, var2, var4);

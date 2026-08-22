@@ -51,7 +51,6 @@ import net.minecraft.network.play.server.S23PacketBlockChange;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 
-
 public class CheaterDetector extends Module implements EventSubscriber {
    private static long a;
    private static Map o;
@@ -69,11 +68,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
    private static Map k;
 
    public void onPostTick(long var1, PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
       int var12 = 0;
 
       for (int var13 = f.theWorld.playerEntities.size(); var12 < var13; var12++) {
@@ -205,14 +199,11 @@ public class CheaterDetector extends Module implements EventSubscriber {
       return var6 >= 1;
    }
 
-
    public void A(long var1) {
       c.clear();
    }
 
    private void P(long var1, S18PacketEntityTeleport var3) {
-
-
       if (f.theWorld != null) {
          Entity var6 = f.theWorld.getEntityByID(var3.getEntityId());
          if (var6 instanceof EntityPlayer && var6 != f.thePlayer) {
@@ -287,7 +278,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
          var3.subList(0, var3.size() - 40).clear();
       }
    }
-
 
    private boolean Z(long var1, List var3, int var4, DetectedAction var5, int var6) {
       var1 = a ^ var1;
@@ -387,7 +377,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
    }
 
    public void onReceivePacket(ReceivePacketEvent var1, long var2) {
-
       int var6 = 6780733;
 
       int var11 = 53536;
@@ -410,7 +399,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
    }
 
    private boolean S(List var1, long var2, long var4, long var6) {
-
       int var8 = 0;
 
       for (CheaterDetectionSample var10 : (Iterable<CheaterDetectionSample>)(var1)) {
@@ -667,13 +655,10 @@ public class CheaterDetector extends Module implements EventSubscriber {
    }
 
    private void V(S0BPacketAnimation var1, long var2) {
-
-
       if (f.theWorld != null && var1.getAnimationType() == 0) {
          Entity var7 = f.theWorld.getEntityByID(var1.getEntityID());
          if (var7 instanceof EntityPlayer && var7 != f.thePlayer) {
             CheaterRegistry var8 = R.computeIfAbsent(((EntityPlayer)var7).getGameProfile().getId(), var0 -> {
-
                return new CheaterRegistry(139461843194438L);
             });
             this.L((short)0, var8, new CheaterDetectionSample(DetectedAction.SWING, this.J, 0.0F, 0.0F, Math.abs(var7.rotationPitch), true, var7.onGround, 0.0));
@@ -698,13 +683,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
    }
 
    public void V(EntityPlayer var1, long var2, CheaterRegistry var4) {
-
-
-
-
-
-
-
       if (var4.Y > 0L) {
          var4.Y--;
       } else {
@@ -793,12 +771,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
    }
 
    private boolean S(List var1, int var2, long var3, long var5) {
-
-
-
-
-
-
       long var12 = var3 - 30L;
       long var14 = var3 + 12L;
       int var16 = 0;
@@ -931,8 +903,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
    }
 
    public void q(EntityPlayer var1, CheaterRegistry var2, long var3) {
-
-
       if (var1.isUsingItem()) {
          var2.f++;
          if (var2.f >= 3 && var1.isSwingInProgress && var1.swingProgressInt == 1) {

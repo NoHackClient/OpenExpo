@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.MoveEntityWithHeadingEvent;
 import Expo.module.impl.movement.Stuck;
 
-
-
-
-
-
-
-
-
-
-
 public final class StuckMoveEntityWithHeadingInvoker implements EventInvoker {
    final Stuck U;
 

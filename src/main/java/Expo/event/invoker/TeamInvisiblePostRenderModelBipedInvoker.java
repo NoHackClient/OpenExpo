@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostRenderModelBipedEvent;
 import Expo.module.impl.visual.TeamInvisible;
 
-
-
-
-
-
-
-
-
-
-
 public final class TeamInvisiblePostRenderModelBipedInvoker implements EventInvoker {
    final TeamInvisible R;
 

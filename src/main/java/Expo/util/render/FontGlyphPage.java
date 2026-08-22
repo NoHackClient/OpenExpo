@@ -19,16 +19,6 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class FontGlyphPage {
    private FontGlyphPage h;
    private final GlyphTexture x;
@@ -191,11 +181,6 @@ public class FontGlyphPage {
    }
 
    public void j(String var1, double var2, long var4, float var6, int var7, boolean var8, GlyphDrawer var9) {
-
-
-
-
-
       if (var8) {
          this.V(var1, var2 + 0.5, var6 + 0.5F, var7, true, (short)0, 8.2F, true, 1908211717, (char)34487, var9);
       }
@@ -203,11 +188,7 @@ public class FontGlyphPage {
       this.V(var1, var2, var6, var7, false, (short)0, 8.2F, true, 1908211717, (char)34487, var9);
    }
 
-
-
    private void v(long var1, GlyphTexture var3, Font var4, Graphics2D var5, boolean var6) {
-
-
       int var9 = 0;
       int var10 = 0;
       int var11 = 1;
@@ -330,12 +311,14 @@ public class FontGlyphPage {
          char var19 = var1.charAt(var18);
          float var20 = this.q((byte)var9, var19, var10, var11);
          if (var16) {
+            var16 = false;
             if (var19 == 108 || var19 == 76) {
                var17 = true;
             } else if (var19 == 114 || var19 == 82) {
                var17 = false;
             }
          } else if (var20 < 0.0F) {
+            var16 = true;
          } else {
             var13 += var20;
             if (var17) {
@@ -368,7 +351,6 @@ public class FontGlyphPage {
    }
 
    public void V(char var1, int var2, String var3, char var4, float var5, float var6, Color var7) {
-
       this.a(var3, var5, var6, var7.getRGB(), 84933894394513L, false);
    }
 
@@ -417,7 +399,6 @@ public class FontGlyphPage {
                   var39 = this.Z(var40,0L);
                }
             } catch (Exception var42) {
-               Expo.internal.restore.ExpoDiag.attribute(var42, "FontGlyphPage.F/8#0");
             }
 
             if (var39 >= 0 && var39 <= 15) {
@@ -431,6 +412,7 @@ public class FontGlyphPage {
                   var39 += 16;
                }
 
+               v((short)0, 0, (short)0);
                var32 = T[var39];
                RenderUtil.O(var32, var31,0L);
             } else {
@@ -494,8 +476,6 @@ public class FontGlyphPage {
       return (float)(var2 / 2.0);
    }
 
-
-
    private void y(String var1, float var2, long var3, float var5) {
       var3 = a ^ var3;
       this.F.clear();
@@ -516,11 +496,6 @@ public class FontGlyphPage {
    }
 
    private void G(long var1, GlyphTexture var3) {
-
-
-
-
-
       BufferedImage var7 = new BufferedImage(1, 1, 2);
       Graphics2D var8 = (Graphics2D)var7.getGraphics();
       Font var9 = GlyphTexture.k(var3) == 0 ? this.S : this.S.deriveFont(GlyphTexture.k(var3));
@@ -794,6 +769,4 @@ public class FontGlyphPage {
    static {
       a = 39575492712087L;
    }
-
-
 }

@@ -9,16 +9,6 @@ import Expo.event.invoker.BridgeAssistPreMouseInputInvoker;
 import Expo.event.invoker.BridgeAssistSendPacketInvoker;
 import Expo.module.impl.world.BridgeAssist;
 
-
-
-
-
-
-
-
-
-
-
 public final class BridgeAssistBinder {
    private static final long a = 132989643439386L;
 

@@ -6,16 +6,6 @@ import Expo.module.Module;
 import Expo.util.SmoothMouseHelper;
 import net.minecraft.util.MouseHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class RawInput extends Module {
    public static MouseHelper T;
    private SmoothMouseHelper M;
@@ -24,7 +14,6 @@ public class RawInput extends Module {
    public void A(long var1) {
       this.M.M();
       this.M = null;
-      // add code
       MouseHelper var3 = T;
       f.mouseHelper = var3 != null ? var3 : new MouseHelper();
    }
@@ -32,7 +21,6 @@ public class RawInput extends Module {
    public void i(long var1) {
       long var3 = var1 ^ 2275773467482L;
       long var5 = var1 ^ 9176379383215L;
-      // add code
       MouseHelper var7 = f.mouseHelper;
       if (!(var7 instanceof SmoothMouseHelper)) {
          T = var7;
@@ -43,7 +31,6 @@ public class RawInput extends Module {
 
    public RawInput(long var1) {
       super(((a ^ (var1)) ^ 82691098210477L));
-      // add code
       this.declare("RawInput", Category.Misc, "Fix your mouse input");
       var1 = a ^ var1;
    }}

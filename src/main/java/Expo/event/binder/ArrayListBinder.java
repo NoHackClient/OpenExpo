@@ -7,16 +7,6 @@ import Expo.event.invoker.ArrayListPostTickInvoker;
 import Expo.event.invoker.ArrayListRender2DInvoker;
 import Expo.module.impl.visual.ArrayList;
 
-
-
-
-
-
-
-
-
-
-
 public final class ArrayListBinder {
    private static final long a = 8442273873410L;
 
@@ -27,5 +17,4 @@ public final class ArrayListBinder {
 
    private ArrayListBinder() {
    }
-
 }

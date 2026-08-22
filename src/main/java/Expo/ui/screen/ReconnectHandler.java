@@ -31,7 +31,6 @@ import net.minecraft.client.multiplayer.ServerData;
 import net.minecraft.client.renderer.GlStateManager;
 import org.apache.commons.lang3.StringUtils;
 
-
 public class ReconnectHandler implements EventSubscriber {
    private static Map d;
    private static long[] h;
@@ -42,13 +41,11 @@ public class ReconnectHandler implements EventSubscriber {
    private static String[] c;
    private static Minecraft T;
 
-
    private static GuiButton V(GuiScreen var0) {
       return h(GuiScreenButtonList.J(var0));
    }
 
    public void onPreDrawScreen(PreDrawScreenEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (c(var1.Q)) {
          String var9 = ChatFormatting.y(String.format("&7Username: &3%s&r", SessionAccessor.d().getUsername()));
          GlStateManager.disableLighting();
@@ -57,13 +54,7 @@ public class ReconnectHandler implements EventSubscriber {
       }
    }
 
-
    public void onGuiMouse(GuiMouseEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
       if (c(var1.j)) {
          d(35828833225014L, var1.j, null);
          if (var1.y) {
@@ -75,7 +66,6 @@ public class ReconnectHandler implements EventSubscriber {
          }
       }
    }
-
 
    private static void d(long var0, GuiScreen var2, List var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       if (c(var2)) {
@@ -95,12 +85,7 @@ public class ReconnectHandler implements EventSubscriber {
       }
    }
 
-
    public void onActionPerformed(ActionPerformedEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       if (c(var1.O) && var1.Q != null && var1.Q.id == 69) {
          T.displayGuiScreen(new AccountManagerScreen(81800336346822L, var1.O));
          var1.I(21307, 3074332907L);
@@ -139,12 +124,6 @@ public class ReconnectHandler implements EventSubscriber {
    }
 
    private static void z(long var0, long var2) {
-
-
-
-
-
-
       AltManager.Q(17200, (short)3883, (short)55813);
 
       for (Account var10 : AltManager.Q) {
@@ -171,8 +150,6 @@ public class ReconnectHandler implements EventSubscriber {
    }
 
    public void onDisconnectedInit(long var1, DisconnectedInitEvent var3) {
-
-
       if (var3.O instanceof GuiDisconnected && var3.X != null) {
          String var8 = var3.X.getFormattedText().split("\n\n")[0];
          if (!var8.equals("§r§cYou are permanently banned from this server!") && !var8.equals("§r§cYour account has been blocked.")) {
@@ -190,8 +167,6 @@ public class ReconnectHandler implements EventSubscriber {
    }
 
    public void onInitGui(InitGuiEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       d(35828833225014L, var1.A, var1.B);
    }
 
@@ -225,7 +200,6 @@ public class ReconnectHandler implements EventSubscriber {
       }
    }
 
-
    private static boolean d(GuiButton var0, int var1, int var2) {
       return var0.enabled
          && var0.visible
@@ -236,8 +210,6 @@ public class ReconnectHandler implements EventSubscriber {
    }
 
    public void onServerJoin(long var1, ServerJoinEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       ServerData var6 = var3.u;
       if (var6 != null) {
          String var7 = var6.serverIP;
@@ -246,6 +218,4 @@ public class ReconnectHandler implements EventSubscriber {
          }
       }
    }
-
-
 }

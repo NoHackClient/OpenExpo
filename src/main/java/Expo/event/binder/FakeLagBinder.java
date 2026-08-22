@@ -11,16 +11,6 @@ import Expo.event.invoker.FakeLagRender2DInvoker;
 import Expo.event.invoker.FakeLagSendPacketInvoker;
 import Expo.module.impl.combat.FakeLag;
 
-
-
-
-
-
-
-
-
-
-
 public final class FakeLagBinder {
    private static final long a = 115000528628494L;
 
@@ -33,5 +23,4 @@ public final class FakeLagBinder {
 
    private FakeLagBinder() {
    }
-
 }

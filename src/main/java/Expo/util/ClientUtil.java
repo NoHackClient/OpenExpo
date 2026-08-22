@@ -19,16 +19,6 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Timer;
 
-
-
-
-
-
-
-
-
-
-
 public class ClientUtil {
    private static Map<Integer, Boolean> G;
    private static String[] c;
@@ -46,8 +36,6 @@ public class ClientUtil {
    public static void I(String var0) {
       ConfigManagerWindow.D.add(var0);
    }
-
-
 
    public static void t(long var0, String var2) {
       long var3 = var0 ^ 63955945367536L;
@@ -74,9 +62,6 @@ public class ClientUtil {
    }
 
    public static boolean b(int var0, long var1) {
-
-
-
       int var7 = KeyBindUtil.m(32881896332787L, var0);
       boolean var8 = KeyBindUtil.V(var7, 64165991731362L);
       boolean var9 = var8 && !G.getOrDefault(var7, false);
@@ -111,8 +96,6 @@ public class ClientUtil {
       ConfigManagerWindow.D.add("------------");
    }
 
-
-
    public static boolean I() {
       return l.thePlayer != null && l.theWorld != null && l.getNetHandler() != null;
    }
@@ -128,6 +111,4 @@ public class ClientUtil {
    public static Timer b(long var0) {
       return MinecraftAccessor.o( l);
    }
-
-
 }

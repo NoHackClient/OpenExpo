@@ -19,7 +19,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 
-
 public class MiningState {
    private static Color r;
    private final Set<BlockPos> p;
@@ -53,8 +52,6 @@ public class MiningState {
    }
 
    public void v(long var1) {
-
-
       int var5 = (int)MiningConstants.H;
       int var6 = (int)M.thePlayer.posX;
       int var7 = (int)M.thePlayer.posY;
@@ -129,8 +126,6 @@ public class MiningState {
    }
 
    public void T(long var1) {
-
-
       MovingObjectPosition var5 = M.objectMouseOver;
       if (var5 != null && var5.typeOfHit == MovingObjectType.BLOCK) {
          j = var5.getBlockPos();
@@ -154,7 +149,6 @@ public class MiningState {
    public void A() {
       this.S = System.currentTimeMillis();
    }
-
 
    private boolean N() {
       if (!MiningConstants.Z) {
@@ -337,5 +331,4 @@ public class MiningState {
 
       this.E = null;
    }
-
 }

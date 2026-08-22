@@ -38,16 +38,6 @@ import net.minecraft.network.play.server.S12PacketEntityVelocity;
 import net.minecraft.network.play.server.S19PacketEntityStatus;
 import net.minecraft.network.play.server.S27PacketExplosion;
 
-
-
-
-
-
-
-
-
-
-
 public class Velocity extends Module implements EventSubscriber {
    public static BooleanSetting animals;
    private boolean k;
@@ -87,11 +77,8 @@ public class Velocity extends Module implements EventSubscriber {
    public static PercentageSetting chance;
    public static BooleanSetting requireMoving;
 
-
-
    public Velocity(int var1, byte var2, int var3) {
       super(((((((long)((var1)) << 32) | (((long)((var2)) << 56) >>> 32)) | (((long)((var3)) << 40) >>> 40)) ^ c) ^ 128865969691450L));
-      // add code
       this.declare("Velocity", Category.Combat, "Modify the velocity received");
       this.E = false;
       this.I = false;
@@ -106,8 +93,6 @@ public class Velocity extends Module implements EventSubscriber {
    }
 
    public void onPreTick(PreTickEvent var1, long var2) {
-
-
       this.y(49587205232658L);
       if (this.k) {
          this.v++;
@@ -173,7 +158,6 @@ public class Velocity extends Module implements EventSubscriber {
    }
 
    public void onKnockback(long var1, KnockbackEvent var3) {
-
       if (this.E) {
          this.E = false;
       } else {
@@ -197,9 +181,6 @@ public class Velocity extends Module implements EventSubscriber {
          this.a = reduceVelocity.c();
          this.v = 0;
       }
-   }
-
-   private static void a() {
    }
 
    public void A(long var1) {
@@ -228,18 +209,11 @@ public class Velocity extends Module implements EventSubscriber {
       return MathUtil.Q(chance.k(),0L) && (!disableWhileHoldingS.c() || !KeyBindUtil.V(f.gameSettings.keyBindBack.getKeyCode(), var7)) && !this.O.isEmpty() && (!requireMoving.c() || MoveUtil.o());
    }
 
-
-
    public void onPreLivingUpdate(long var1, PreLivingUpdateEvent var3) {
-
       this.y(49587205232658L);
    }
 
    private void k(long var1, ReceivePacketEvent var3) {
-
-
-
-
       S12PacketEntityVelocity var9 = (S12PacketEntityVelocity)var3.d;
       if (this.I) {
          IncomingPacketHold.p().add(var9);
@@ -304,8 +278,6 @@ public class Velocity extends Module implements EventSubscriber {
          }
       }
    }
-
-
 
    private void y(long var1) {
       var1 = c ^ var1;
@@ -374,9 +346,7 @@ public class Velocity extends Module implements EventSubscriber {
       }
    }
 
-
    static {
-      // add code
       enemies = new BooleanSetting("Enemies", true);
       delayReleaseOnReduce = new BooleanSetting("Delay-release-on-reduce", true);
       disableWhileHoldingS = new BooleanSetting("Disable-while-holding-S", true);
@@ -402,7 +372,6 @@ public class Velocity extends Module implements EventSubscriber {
       delayReleaseOnGround = new BooleanSetting("Delay-release-on-ground", true);
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

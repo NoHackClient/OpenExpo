@@ -2,15 +2,6 @@ package Expo.util;
 
 import Expo.enums.AnimationDirection;
 
-
-
-
-
-
-
-
-
-
 public abstract class EasedAnimation {
    public TimerUtil t = new TimerUtil();
    protected AnimationDirection E;

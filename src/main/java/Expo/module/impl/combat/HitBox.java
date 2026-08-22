@@ -9,16 +9,6 @@ import Expo.setting.settings.NumberSetting;
 import Expo.util.EntityUtil;
 import net.minecraft.entity.EntityLivingBase;
 
-
-
-
-
-
-
-
-
-
-
 public class HitBox extends Module {
    public static HeaderSetting targetSettings;
    public static BooleanSetting friends;
@@ -37,7 +27,6 @@ public class HitBox extends Module {
 
    public HitBox(long var1) {
       super(((c ^ (var1)) ^ 37508820998615L));
-      // add code
       this.declare("HitBox", Category.Combat, "Modify entities hitbox to help reach target easier");
       var1 = c ^ var1;
    }
@@ -57,11 +46,9 @@ public class HitBox extends Module {
    }
 
    static {
-      // add code
       expand = new NumberSetting("Expand", 0.1F, 0.0F, 1.0F, 0.01F);
    }
    static {
-      // add code
       animals = new BooleanSetting("Animals", false);
       enemies = new BooleanSetting("Enemies", true);
       mobs = new BooleanSetting("Mobs", false);
@@ -72,7 +59,6 @@ public class HitBox extends Module {
       teammates = new BooleanSetting("Teammates", false);
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

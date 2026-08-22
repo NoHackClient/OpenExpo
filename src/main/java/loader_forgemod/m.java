@@ -3,16 +3,6 @@ package loader_forgemod;
 import java.io.IOException;
 import java.io.Reader;
 
-
-
-
-
-
-
-
-
-
-
 public class m {
    private static final int a = 1000;
    private static final int b = 10;

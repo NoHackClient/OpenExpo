@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreRenderEvent;
 import Expo.module.impl.visual.Chams;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChamsPreRenderInvoker implements EventInvoker {
    final Chams j;
 

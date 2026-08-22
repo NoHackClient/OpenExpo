@@ -3,14 +3,11 @@ package Expo.ui.screen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiSlot;
 
-
 class MainMenuStyleList extends GuiSlot {
    private static long a;
    final MainMenuStyleScreen b;
 
-
    static {
-
       a = 80767251755621L;
    }
 
@@ -34,7 +31,6 @@ class MainMenuStyleList extends GuiSlot {
       }
    }
 
-
    protected void drawSlot(int var1, int var2, int var3, int var4, int var5, int var6) {
       String var9 = MainMenuTheme.mode.S().get(var1);
       String var10 = var9;
@@ -52,7 +48,7 @@ class MainMenuStyleList extends GuiSlot {
    }
 
    public MainMenuStyleList(MainMenuStyleScreen var1, long var2, Minecraft var4) {
-      super(   // add code
+      super(
          var4,
          var1.width,
          var1.height,
@@ -70,5 +66,4 @@ class MainMenuStyleList extends GuiSlot {
    protected int getContentHeight() {
       return MainMenuTheme.mode.S().size() * 20;
    }
-
 }

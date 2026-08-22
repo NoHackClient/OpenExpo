@@ -10,16 +10,6 @@ import net.minecraft.client.gui.GuiButtonLanguage;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 
-
-
-
-
-
-
-
-
-
-
 public class RiddleJokerMainMenu {
    private static String[] c;
    private static long a;
@@ -89,10 +79,4 @@ public class RiddleJokerMainMenu {
          }
       }
    }
-
-
-
-
-
-
 }

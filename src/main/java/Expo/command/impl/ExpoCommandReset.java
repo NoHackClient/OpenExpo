@@ -12,19 +12,7 @@ import com.google.gson.JsonObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandReset extends Command {
-
    private static final String DEFAULTS = "default.json";
    private static final String VISIBILITY = "visibility";
    private static final String SUFFIX = "suffix";

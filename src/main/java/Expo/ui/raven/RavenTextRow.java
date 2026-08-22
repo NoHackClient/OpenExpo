@@ -8,16 +8,6 @@ import Expo.setting.settings.TextSetting;
 import java.text.MessageFormat;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class RavenTextRow extends AbstractRavenSettingRow {
    private Module p;
    private static long d;
@@ -83,5 +73,4 @@ public class RavenTextRow extends AbstractRavenSettingRow {
       super(var2);
       this.V(var1, var2, var3);
    }
-
 }

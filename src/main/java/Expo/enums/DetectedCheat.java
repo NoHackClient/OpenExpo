@@ -1,16 +1,5 @@
 package Expo.enums;
 
-
-
-
-
-
-
-
-
-
-
-
 public enum DetectedCheat {
    AUTOBLOCK((int)zkm$g0()[0], zkm$g11()[3]),
    SCAFFOLD((int)zkm$g0()[1], zkm$g11()[2]),
@@ -24,8 +13,6 @@ public enum DetectedCheat {
       this.FLAG_VL = var3;
       this.colorFormatCode = var4;
    }
-
-
 
    private static long[] zkm$g0() {
       return new long[]{-459581626888749036L, 137313523247087626L};

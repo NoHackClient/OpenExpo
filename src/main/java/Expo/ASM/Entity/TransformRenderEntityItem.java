@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformRenderEntityItem extends TransformerBase {
    private static long d;
 
@@ -43,7 +42,6 @@ public class TransformRenderEntityItem extends TransformerBase {
       );
    }
 
-
    static {
       d = 99512118562804L;
    }
@@ -51,6 +49,4 @@ public class TransformRenderEntityItem extends TransformerBase {
    public TransformRenderEntityItem() {
       super("net/minecraft/client/renderer/entity/RenderEntityItem");
    }
-
-
 }

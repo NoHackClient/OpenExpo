@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.IsPressedEvent;
 import Expo.module.impl.world.BedNuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedNukerIsPressedInvoker implements EventInvoker {
    final BedNuker N;
 

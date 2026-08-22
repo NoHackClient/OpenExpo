@@ -2,16 +2,6 @@ package Expo.util;
 
 import java.util.HashMap;
 
-
-
-
-
-
-
-
-
-
-
 public final class EnchantmentAbbreviations extends HashMap<Integer, EnchantmentAbbreviation> {
    private static long a;
 
@@ -46,6 +36,4 @@ public final class EnchantmentAbbreviations extends HashMap<Integer, Enchantment
    static {
       a = 36940233155126L;
    }
-
-
 }

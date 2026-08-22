@@ -13,16 +13,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.Minecraft;
 
-
-
-
-
-
-
-
-
-
-
 public abstract class AbstractSettingComponent<T extends Setting> {
    private static long b;
    protected float n;
@@ -99,7 +89,6 @@ public abstract class AbstractSettingComponent<T extends Setting> {
    public void A(float var1, float var2) {
    }
 
-
    public abstract float O();
 
    public void H(float var1, float var2, float var3) {
@@ -112,5 +101,4 @@ public abstract class AbstractSettingComponent<T extends Setting> {
    static {
       b = 58681122439128L;
    }
-
 }

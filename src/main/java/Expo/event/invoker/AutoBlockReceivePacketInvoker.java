@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ReceivePacketEvent;
 import Expo.module.impl.combat.AutoBlock;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoBlockReceivePacketInvoker implements EventInvoker {
    final AutoBlock c;
 

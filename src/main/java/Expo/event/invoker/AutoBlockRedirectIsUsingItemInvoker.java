@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.RedirectIsUsingItemEvent;
 import Expo.module.impl.combat.AutoBlock;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoBlockRedirectIsUsingItemInvoker implements EventInvoker {
    final AutoBlock u;
 

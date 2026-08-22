@@ -37,7 +37,6 @@ import net.minecraft.network.play.client.C0BPacketEntityAction.Action;
 import net.minecraft.network.play.client.C0BPacketEntityAction;
 import net.minecraft.util.MovementInputFromOptions;
 
-
 public class EntityPlayerSPHooks {
    private static long b;
    private static long a;
@@ -54,10 +53,6 @@ public class EntityPlayerSPHooks {
    }
 
    public static void onPreUpdate(CallbackInfo var0) {
-
-
-
-
       RotationManager.L = RotationManager.I;
       RotationManager.F = RotationManager.K;
       PreUpdateEvent var8 = new PreUpdateEvent(20258, 53049, 64041);
@@ -68,9 +63,6 @@ public class EntityPlayerSPHooks {
    }
 
    public static void onSendChatMessage(String var0, CallbackInfo var1) {
-
-
-
       if (var0 != null) {
          Module var7 = Modules.J(CommandLine.class);
          if (var7 != null && var7.o()) {
@@ -85,32 +77,12 @@ public class EntityPlayerSPHooks {
       }
    }
 
-   private static void a() {
-      c[0] = "$\t(t\u0004M/";
-      c[1] = float.class;
-      d[1] = "java/lang/Float";
-      c[2] = long.class;
-      d[2] = "java/lang/Long";
-      c[3] = void.class;
-      d[3] = "java/lang/Void";
-      c[4] = "z?#\u0007\u0016zq02Hwtz;6\u0012";
-      c[5] = "y-\u0015\u0019q@:s\u0004r1.5b\u0000NrT(z\rr";
-      c[6] = "O?\u0018eUV\fa\t\u000e\u00178Gc\u0002~R\u0001\u0004p\u0019nm\u0002Eu\tg\fVBm\u001a\u000e";
-      c[7] = "jtx\\7\u001d)*i7ts&;m\u000b4\t;#`7";
-   }
-
    public static void onPreSuperLivingUpdate() {
-
-
       PreSuperLivingUpdateEvent var7 = new PreSuperLivingUpdateEvent((char)0);
       ExpoClient.w.e(var7, 18670087776179L);
    }
 
    public static void onPreLivingUpdate(EntityPlayerSP var0, CallbackInfo var1) {
-
-
-
-
       Q(var0);
       PreLivingUpdateEvent var9 = new PreLivingUpdateEvent(4433, (byte)215, 4672537);
       ExpoClient.w.e(var9, 18670087776179L);
@@ -120,7 +92,6 @@ public class EntityPlayerSPHooks {
    }
 
    private static void Q(EntityPlayerSP var0) {
-
       if (var0 != null && var0.movementInput == null) {
          Minecraft var6 = MinecraftRef.c((byte)0,0L);
          GameSettings var7 = var6 == null ? null : var6.gameSettings;
@@ -131,7 +102,6 @@ public class EntityPlayerSPHooks {
    }
 
    public static void redirectIsUsingItem(EntityPlayerSP var0) {
-
       if (var0 != null && var0.movementInput != null) {
          RedirectIsUsingItemEvent var7 = new RedirectIsUsingItemEvent(0.2F);
          ExpoClient.w.e(var7, 18670087776179L);
@@ -143,12 +113,7 @@ public class EntityPlayerSPHooks {
    }
 
    public static void onUpdateWalkingPlayer(EntityPlayerSP var0, CallbackInfo var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       int var31 = 32593;
-
 
       UpdateWalkingPlayerEvent var45 = new UpdateWalkingPlayerEvent(
          var0.posX,
@@ -242,15 +207,11 @@ public class EntityPlayerSPHooks {
    }
 
    public static void onPostUpdate() {
-
-
       RotationManager.r(8215146884547L);
       ExpoClient.w.e(new PostUpdateEvent(), 18670087776179L);
    }
 
    public static void onCloseScreen() {
-
       ExpoClient.w.e(new CloseScreenEvent(), 18670087776179L);
    }
-
 }

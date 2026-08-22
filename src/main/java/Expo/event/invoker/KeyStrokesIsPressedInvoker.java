@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.IsPressedEvent;
 import Expo.module.impl.visual.KeyStrokes;
 
-
-
-
-
-
-
-
-
-
-
 public final class KeyStrokesIsPressedInvoker implements EventInvoker {
    final KeyStrokes S;
 

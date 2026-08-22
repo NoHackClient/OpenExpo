@@ -2,16 +2,6 @@ package Expo.internal.accessor;
 
 import net.minecraft.entity.EntityLivingBase;
 
-
-
-
-
-
-
-
-
-
-
 public final class EntityLivingBaseAccessor {
    private static Accessor f;
 
@@ -22,7 +12,4 @@ public final class EntityLivingBaseAccessor {
    static {
       f = MethodAccessors.C(EntityLivingBase.class, new Class[0], new String[]{"getJumpUpwardsMotion", "getJumpUpwardsMotion"});
    }
-
-
-
 }

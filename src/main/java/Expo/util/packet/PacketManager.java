@@ -27,7 +27,6 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.INetHandlerPlayClient;
 import net.minecraft.network.play.INetHandlerPlayServer;
 
-
 public class PacketManager implements EventSubscriber {
    public static Set<Packet<INetHandlerPlayServer>> a;
    private static Minecraft T;
@@ -45,15 +44,12 @@ public class PacketManager implements EventSubscriber {
          a.add(s(var0));
          var0.processPacket(T.getNetHandler());
       } catch (Throwable var2) {
-         Expo.internal.restore.ExpoDiag.attribute(var2, "PacketManager.M/1#0");
       }
    }
-
 
    public final void x(long var1, EventBus var3) {
       PacketManagerBinder.N(var3, this);
    }
-
 
    public static void M(boolean var0) {
       Z = var0;
@@ -64,10 +60,8 @@ public class PacketManager implements EventSubscriber {
          v.add(s(var0));
          T.getNetHandler().addToSendQueue(var0);
       } catch (Throwable var2) {
-         Expo.internal.restore.ExpoDiag.attribute(var2, "PacketManager.X/1#0");
       }
    }
-
 
    public static void k(Packet<INetHandlerPlayClient> var0) {
       try {
@@ -77,14 +71,10 @@ public class PacketManager implements EventSubscriber {
 
          var0.processPacket(T.getNetHandler());
       } catch (Throwable var2) {
-         Expo.internal.restore.ExpoDiag.attribute(var2, "PacketManager.k/1#0");
       }
    }
 
    public void onSendPacket(long var1, SendPacketEvent var3) {
-
-
-
       if (ClientUtil.I() && !T.isSingleplayer()) {
          if (Z) {
             OutgoingPacketState.D(0L, var3.B);
@@ -102,7 +92,6 @@ public class PacketManager implements EventSubscriber {
       try {
          T.getNetHandler().addToSendQueue(var0);
       } catch (Throwable var2) {
-         Expo.internal.restore.ExpoDiag.attribute(var2, "PacketManager.b/1#0");
       }
    }
 
@@ -121,15 +110,12 @@ public class PacketManager implements EventSubscriber {
             u.remove(var1);
          }
       } catch (Throwable var2) {
-         Expo.internal.restore.ExpoDiag.attribute(var2, "PacketManager.j/0#0");
       }
    }
-
 
    public static <H extends INetHandler> Packet<H> s(Packet<?> var0) {
       return (Packet<H>)var0;
    }
-
 
    static void $jnicClinit() throws InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException, NoSuchPaddingException {
       b = 116394823986266L;

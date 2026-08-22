@@ -4,7 +4,6 @@ import Expo.ASM.Util.BytecodeHelper;
 import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformLayerCape extends TransformerBase {
    private static long d;
 
@@ -34,9 +33,7 @@ public class TransformLayerCape extends TransformerBase {
       d = 99281639214915L;
    }
 
-
    public TransformLayerCape() {
       super("net/minecraft/client/renderer/entity/layers/LayerCape");
    }
-
 }

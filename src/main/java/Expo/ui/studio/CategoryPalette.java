@@ -4,16 +4,6 @@ import Expo.internal.synthetic.CategoryPaletteSwitchMapCategory;
 import Expo.module.Category;
 import java.awt.Color;
 
-
-
-
-
-
-
-
-
-
-
 public class CategoryPalette {
    public final Color i;
    private static long a;
@@ -29,7 +19,6 @@ public class CategoryPalette {
    static {
       a = 96952875612767L;
    }
-
 
    public static CategoryPalette o(Category var2) {
       switch (CategoryPaletteSwitchMapCategory.S[var2.ordinal()]) {
@@ -89,5 +78,4 @@ public class CategoryPalette {
             );
       }
    }
-
 }

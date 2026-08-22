@@ -5,9 +5,7 @@ import java.awt.GraphicsEnvironment;
 import java.util.HashSet;
 import java.util.Set;
 
-
 public final class ExpoGuiText {
-
    public static final String TITLE = "Expo";
 
    public static final String TAB_INFORMATION = "Information";

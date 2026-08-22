@@ -78,7 +78,6 @@ import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 
-
 public class BlockUtil {
    private static long a;
    private static long[] f;
@@ -102,6 +101,7 @@ public class BlockUtil {
                if (!var11.intersectsWith(var12)) {
                   double var13 = var10.distanceSqToCenter(var1.getX() + 0.5, var1.getY() + 0.5, var1.getZ() + 0.5);
                   if (var5 == null || var13 < var3 || var13 == var3 && var9 == EnumFacing.UP) {
+                     var3 = var13;
                      var5 = var9;
                   }
                }
@@ -517,7 +517,6 @@ public class BlockUtil {
    }
 
    public static boolean a(long var0, double var2) {
-
       Vec3 var6 = Q.thePlayer.getPositionEyes(ClientUtil.H(0L));
       Vec3 var7 = Q.thePlayer.getLookVec();
       Vec3 var8 = var6.addVector(var7.xCoord * var2, var7.yCoord * var2, var7.zCoord * var2);
@@ -543,7 +542,6 @@ public class BlockUtil {
       MovingObjectPosition var5 = Q.theWorld.rayTraceBlocks(var0, var4, false, false, false);
       return var5 == null ? new MovingObjectPosition(MovingObjectType.MISS, var4, EnumFacing.UP, new BlockPos(var4)) : var5;
    }
-
 
    public static float g(Block var0, ItemStack var1, boolean var2, boolean var3) {
       float var4 = var0.getBlockHardness(Q.theWorld, null);
@@ -571,11 +569,11 @@ public class BlockUtil {
          BlockPos var10 = var0.offset(var9);
          double var11 = var10.distanceSqToCenter(var1.xCoord, var1.yCoord, var1.zCoord);
          if (var11 < var2) {
+            var2 = var11;
             var4 = var9;
          }
       }
 
       return var4;
    }
-
 }

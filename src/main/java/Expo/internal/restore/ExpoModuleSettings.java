@@ -15,9 +15,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public final class ExpoModuleSettings {
-
    private static final List<String> COMMON = new ArrayList<String>();
 
    static {
@@ -71,10 +69,13 @@ public final class ExpoModuleSettings {
 
             if (block != null) {
                relabelModule = m.b();
-               int[] r = relabel(block, declared);
-               renamed += r[0];
-               revalued += r[1];
-               unresolved += r[2];
+               if (System.getProperty("expo.settings.relabel") != null) {
+                  int[] r = relabel(block, declared);
+                  renamed += r[0];
+                  revalued += r[1];
+                  unresolved += r[2];
+               }
+
                byName.clear();
 
                for (Setting s : declared) {
@@ -102,10 +103,6 @@ public final class ExpoModuleSettings {
                }
             }
 
-            // add code
-            // A setting the on-disk config predates is not in `order`, and appending
-            // it put BlockHit's Allow-NoSlow after the target checkboxes. Insert it
-            // after whatever it was declared behind so it stays with its group.
             Setting prev = null;
 
             for (Setting s : declared) {
@@ -139,7 +136,6 @@ public final class ExpoModuleSettings {
          }
 
          if (!deficits.isEmpty()) {
-            System.out.println("[EXPODIAG] settings DEFICIT (module: got/expected) = " + deficits);
          }
 
          note = "Expo.settings filled " + filled + "/" + modules + " modules with "

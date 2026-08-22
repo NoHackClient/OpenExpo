@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.EntityJoinWorldEvent;
 import Expo.module.impl.player.ChestAura;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChestAuraEntityJoinWorldInvoker implements EventInvoker {
    final ChestAura f;
 

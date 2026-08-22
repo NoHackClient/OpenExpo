@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.module.impl.visual.Ambience;
 
-
-
-
-
-
-
-
-
-
-
 public final class AmbienceRender2DInvoker implements EventInvoker {
    final Ambience w;
 

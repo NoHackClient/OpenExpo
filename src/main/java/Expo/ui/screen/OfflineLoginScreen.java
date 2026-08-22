@@ -8,16 +8,6 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.GuiTextField;
 
-
-
-
-
-
-
-
-
-
-
 public class OfflineLoginScreen extends GuiScreen {
    private static long a;
    private GuiTextField b;
@@ -31,13 +21,11 @@ public class OfflineLoginScreen extends GuiScreen {
       super.mouseClicked(var1, var2, var3);
    }
 
-
    static {
       a = 46768291833639L;
    }
 
    protected void actionPerformed(GuiButton var1) {
-
       if (var1 != null && var1.enabled) {
          switch (var1.id) {
             case 0:
@@ -123,9 +111,6 @@ public class OfflineLoginScreen extends GuiScreen {
    }
 
    private void m(long var1) {
-
-
-
       String var7 = this.b.getText().trim();
       if (var7.isEmpty()) {
       } else {
@@ -139,10 +124,8 @@ public class OfflineLoginScreen extends GuiScreen {
 
    private void U() {
       CompletableFuture.runAsync(() -> {
-
          String var5 = RandomUsernamePool.x(77049211506207L);
          SwingUtilities.invokeLater(() -> this.b.setText(var5));
       });
    }
-
 }

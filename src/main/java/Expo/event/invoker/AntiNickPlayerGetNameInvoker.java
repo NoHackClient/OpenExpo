@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PlayerGetNameEvent;
 import Expo.module.impl.misc.AntiNick;
 
-
-
-
-
-
-
-
-
-
-
 public final class AntiNickPlayerGetNameInvoker implements EventInvoker {
    final AntiNick G;
 

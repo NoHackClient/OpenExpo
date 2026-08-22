@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.world.BedNuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedNukerPreMouseInputInvoker implements EventInvoker {
    final BedNuker i;
 

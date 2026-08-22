@@ -25,16 +25,6 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import org.lwjgl.input.Keyboard;
 
-
-
-
-
-
-
-
-
-
-
 public class ClickGUI extends Module {
    public static NumberSetting scale;
    public static VestigeClickGuiScreen B;
@@ -103,15 +93,10 @@ public class ClickGUI extends Module {
    }
 
    public static boolean a(long var0) {
-
-
       return KeyBindUtil.a(81924588974218L, keybind.X()) != (int)e;
    }
 
    public static String r(long var0) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       return a(28525798576885L) ? Keyboard.getKeyName(KeyBindUtil.a(133307858789426L, keybind.X())) : b(15966, 5262084930954866114L);
    }
 
@@ -120,7 +105,6 @@ public class ClickGUI extends Module {
 
    public ClickGUI(long var1) {
       super(((a ^ (var1)) ^ 117393621110351L));
-      // add code
       this.declare("ClickGUI", Category.Configuration, "Manager ClickGUI settings");
       var1 = a ^ var1;
    }
@@ -160,7 +144,6 @@ public class ClickGUI extends Module {
       return new String(var3, 0, var1);
    }
    static {
-      // add code
       scale = new NumberSetting("Scale", 1.0F, 0.1F, 5.0F, 0.01F);
       keybind = new TextSetting("Keybind", "RSHIFT");
       mode = new ModeSetting("Mode", true, "STUDIO", "STUDIO", "RAVEN", "VESTIGE");

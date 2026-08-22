@@ -9,16 +9,6 @@ import Expo.util.render.RenderUtil;
 import java.awt.Color;
 import org.lwjgl.input.Mouse;
 
-
-
-
-
-
-
-
-
-
-
 public class NumberSettingComponent extends AbstractSettingComponent<NumberSetting> {
    private final Animation B;
    private static long a;
@@ -130,7 +120,6 @@ public class NumberSettingComponent extends AbstractSettingComponent<NumberSetti
    public void k(long var1) {
       this.W = false;
    }
-
 
    public boolean V(long var1, float var3, float var4, int var5) {
       float var6 = this.n + 8.0F;

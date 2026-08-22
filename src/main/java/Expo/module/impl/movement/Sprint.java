@@ -18,16 +18,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.Minecraft;
 
-
-
-
-
-
-
-
-
-
-
 public class Sprint extends Module implements EventSubscriber {
    private static String[] d;
    private static long b;
@@ -45,13 +35,11 @@ public class Sprint extends Module implements EventSubscriber {
 
    public Sprint(short var1, int var2, short var3) {
       super(((((((long)((var1)) << 48) | (((long)((var2)) << 32) >>> 16)) | (((long)((var3)) << 48) >>> 48)) ^ a) ^ 84177168357013L));
-      // add code
       this.declare("Sprint", Category.Movement, "Automatically sprint");
    }
 
    static {
       a = 130957744460578L;
-      // add code
       H = MinecraftRef.c((byte)0, 0L);
       c = new Object[7];
       d = new String[7];
@@ -60,18 +48,6 @@ public class Sprint extends Module implements EventSubscriber {
 
    public final void x(long var1, EventBus var3) {
       SprintBinder.J(var3, this);
-   }
-
-   private static void a() {
-      c[0] = "<c{{J&\u0017";
-      c[1] = long.class;
-      d[1] = "java/lang/Long";
-      c[2] = "\u001c\u0002?#$U+\u0015;)iq<\u001ea5";
-      c[3] = "Y(\"\u0004C\u001ax";
-      c[4] = void.class;
-      d[4] = "java/lang/Void";
-      c[5] = "i c\u001c``b/rS\u0001ni$v\t";
-      c[6] = "A1\u0015\u0007Y\bM}|#)Q\u0012?\u0017PK\u0004\u0017k\u0001a\u0010\fPbAZ[XW?|[KVU9E\u001e\u0014XM\u0000G\fH\tR?C\u0011PU,";
    }
 
    public void onPreUpdate(short var1, PreUpdateEvent var2, char var3, int var4) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
@@ -90,5 +66,4 @@ public class Sprint extends Module implements EventSubscriber {
       long var3 = var1 ^ 34459795889248L;
       KeyBindUtil.A(var3, H.gameSettings.keyBindSprint.getKeyCode(), H.gameSettings.keyBindSprint.isPressed());
    }
-
 }

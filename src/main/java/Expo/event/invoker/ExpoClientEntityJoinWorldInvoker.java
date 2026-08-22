@@ -4,16 +4,6 @@ import Expo.ExpoClient;
 import Expo.event.EventInvoker;
 import Expo.event.events.EntityJoinWorldEvent;
 
-
-
-
-
-
-
-
-
-
-
 public final class ExpoClientEntityJoinWorldInvoker implements EventInvoker {
    final ExpoClient y;
 

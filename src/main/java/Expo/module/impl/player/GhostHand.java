@@ -15,16 +15,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 
-
-
-
-
-
-
-
-
-
-
 public class GhostHand extends Module {
    public static BooleanSetting blacklistEnemy;
    public static BooleanSetting playersOnly;
@@ -40,13 +30,11 @@ public class GhostHand extends Module {
 
    public GhostHand(long var1) {
       super(((a ^ (var1)) ^ 68687997558019L));
-      // add code
       this.declare("GhostHand", Category.Player, "Allows you to interact through entity");
       var1 = a ^ var1;
    }
 
    private static boolean w(Entity var0) {
-
       return !(var0 instanceof EntityLivingBase)
             || !blacklistEnemy.c()
             || (!(var0 instanceof EntityPlayer) || AntiBot.T((short)0, (EntityPlayer)var0) || Teams.g(0L, var0)) && !Teams.Y(var0)
@@ -62,7 +50,6 @@ public class GhostHand extends Module {
       N = MinecraftRef.c((byte)var2,0L);
    }
    static {
-      // add code
       teammatesOnly = new BooleanSetting("Teammates-only", true);
       disableWhileHoldingSword = new BooleanSetting("Disable-while-holding-sword", true);
       toolsOnly = new BooleanSetting("Tools-only", false);

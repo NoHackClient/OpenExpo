@@ -7,6 +7,7 @@ import Expo.event.events.PostTickEvent;
 import Expo.event.events.Render2DEvent;
 import Expo.module.Category;
 import Expo.module.Module;
+import Expo.module.Modules;
 import Expo.module.ModuleManager;
 import Expo.module.impl.configuration.Font;
 import Expo.module.impl.configuration.Theme;
@@ -37,7 +38,6 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
-
 
 public class ArrayList extends Module implements EventSubscriber {
    public static TextSetting customText;
@@ -75,12 +75,6 @@ public class ArrayList extends Module implements EventSubscriber {
    private static long[] m;
 
    private static void N(CustomFont var0, String var1, float var2, float var3, int var4, boolean var5, float var6, long var7, double var9) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
       String var16 = textColor.Y();
       boolean var17 = gradientMode != null
          && gradientMode.R("LEFT_RIGHT")
@@ -97,8 +91,6 @@ public class ArrayList extends Module implements EventSubscriber {
    }
 
    private void D(float var1, float var2, float var3, float var4, int var5, float var6, boolean var7, boolean var8, boolean var9, boolean var10, long var11) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       boolean var15 = !var10;
       boolean var16 = !var9;
       boolean var17 = !var8;
@@ -136,12 +128,7 @@ public class ArrayList extends Module implements EventSubscriber {
       return null;
    }
 
-
    private void m(float var1, float var2, float var3, long var4, float var6, int var7, float var8, ArrayListRect var9, ArrayListRect var10, float var11, boolean var12) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       float var19 = 0.05F;
       boolean var20 = var9 != null && Math.abs(Expo.module.impl.visual.ArrayListRect.J(var9) - var2) <= var19;
       float var21 = 0.0F;
@@ -230,6 +217,7 @@ public class ArrayList extends Module implements EventSubscriber {
                   boolean var48 = var45 && !var33;
                   boolean var49 = var45 && !var35;
                   this.K(119483497834473L, var36, var42, var38, var43, var7, var8, var46, var48, var49, var47);
+                  var36 = var38;
                }
             }
 
@@ -251,14 +239,9 @@ public class ArrayList extends Module implements EventSubscriber {
    }
 
    private static void m(CustomFont var0, String var1, float var2, long var3, float var5, int var6, boolean var7, float var8, double var9, boolean var11) {
-
-
-
       float var16 = MathUtil.q(var8, 0.0F, 1.0F);
       float var17 = Math.max(1.0F, var0.R(var1, 52019766876817L));
       var0.A(var1, var2, var5, var6, 103391699357661L, var7, (var5x, var6x, var7x, var8x) -> {
-
-
          if (var8x != null) {
             return u(var8x, var16);
          }
@@ -274,7 +257,6 @@ public class ArrayList extends Module implements EventSubscriber {
    }
 
    public void onPostTick(PostTickEvent var1, int var2, long var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       this.N(131948769169783L);
    }
 
@@ -291,14 +273,11 @@ public class ArrayList extends Module implements EventSubscriber {
    }
 
    private void N(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       long var10001 = 59909721217249L;
-
 
       int var5 = (int)(var10001 << 48 >>> 48);
 
       var10001 = 116568669000716L;
-
 
       CustomFont var17 = Font.Q(73094284682035L);
       float var18 = scale.L();
@@ -395,15 +374,10 @@ public class ArrayList extends Module implements EventSubscriber {
    }
 
    private void s(float var1, float var2, float var3, float var4, int var5, long var6, String var8) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       this.f(var1, var2, 49215341321510L, var3, var4, var5, var8, null, null);
    }
 
    private void K(long var1, float var3, float var4, float var5, float var6, int var7, float var8, boolean var9, boolean var10, boolean var11, boolean var12) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (var8 <= 0.0F) {
          Expo.util.render.RenderUtil.c(125644905353792L, var3, var4, var5, var6, var7);
       } else {
@@ -431,9 +405,6 @@ public class ArrayList extends Module implements EventSubscriber {
    }
 
    private void f(float var1, float var2, long var3, float var5, float var6, int var7, String var8, ArrayListRect var9, ArrayListRect var10) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (var8.contains("CURVE")) {
          this.m(var1, var2, var5, 83626183259914L, var6, var7, 0.75F, var9, var10, 0.5F, var8.contains("RIGHT"));
       } else {
@@ -442,22 +413,11 @@ public class ArrayList extends Module implements EventSubscriber {
    }
 
    public void onRender2D(Render2DEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
       long var10001 = 124394953261363L;
-
 
       int var22 = (int)(var10001 << 56 >>> 56);
 
-
-
       var10001 = 116568669000716L;
-
 
       CustomFont var38 = Font.Q(73094284682035L);
       GlStateManager.pushMatrix();
@@ -611,6 +571,8 @@ public class ArrayList extends Module implements EventSubscriber {
                   GlStateManager.popMatrix();
                }
 
+               var68 = var99;
+               var59 = var98;
             }
          }
       }
@@ -624,7 +586,6 @@ public class ArrayList extends Module implements EventSubscriber {
       return 1.0F - var1 * var1 * var1;
    }
 
-
    private void z(java.util.ArrayList<Float> var1, float var2, float var3, float var4) {
       var1.add(Math.max(var3, Math.min(var4, var2)));
    }
@@ -636,7 +597,6 @@ public class ArrayList extends Module implements EventSubscriber {
 
    public ArrayList(long var1) {
       super(((a ^ (var1)) ^ 99038012877194L));
-      // add code
       this.declare("ArrayList", Category.Visual, "Show a list of modules on screen");
       var1 = a ^ var1;
       this.U = new java.util.ArrayList<>();
@@ -848,7 +808,6 @@ public class ArrayList extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       customText = new TextSetting("Custom-text", "");
       bar = new BooleanSetting("Bar", true);
       scale = new NumberSetting("Scale", 0.8F, 0.25F, 3.0F, 0.01F);

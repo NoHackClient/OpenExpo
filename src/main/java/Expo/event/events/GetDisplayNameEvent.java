@@ -5,16 +5,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.IChatComponent;
 
-
-
-
-
-
-
-
-
-
-
 public class GetDisplayNameEvent extends Event {
    private static final long a = 77882100772787L;
    public final EntityPlayer u;

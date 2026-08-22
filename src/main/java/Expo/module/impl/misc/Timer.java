@@ -15,7 +15,6 @@ import Expo.util.Sneaky;
 import java.util.HashMap;
 import java.util.Map;
 
-
 public class Timer extends Module implements EventSubscriber {
    private static Map g;
    private boolean a;
@@ -27,26 +26,12 @@ public class Timer extends Module implements EventSubscriber {
    private boolean d;
    public static NumberSetting speed;
 
-
    public final void x(long var1, EventBus var3) {
       TimerBinder.C(var3, this);
    }
 
-   private static void a() {
-      h[0] = "9\u001e;\u0004\u001415";
-      h[1] = long.class;
-      k[1] = "java/lang/Long";
-      h[2] = "\u0018`=6\u000b\u000e/w9<F*8|c ";
-      h[3] = "lSQ\u001f\u0005D|";
-      h[4] = void.class;
-      k[4] = "java/lang/Void";
-      h[5] = "\fjs\u0002;\u0004\u0007ebMZ\n\fnf\u0017";
-      h[6] = "R+>\u000eha[-1?E\u0002Ey`\u0003p~\u00054/?7lG*9O4gTv^\u0005nxFy.B1bUHeRwr\u0004.9T1p?";
-   }
-
    static {
       b = 125743794480863L;
-      // add code
       h = new Object[7];
       k = new String[7];
       g = new HashMap(13);
@@ -79,7 +64,6 @@ public class Timer extends Module implements EventSubscriber {
 
    public Timer(long var1) {
       super(((b ^ (var1)) ^ 21543830494215L));
-      // add code
       this.declare("Timer", Category.Misc, "Modify your game running speed");
       var1 = b ^ var1;
       this.d = false;
@@ -88,7 +72,6 @@ public class Timer extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       speed = new NumberSetting("Speed", 1.0F, 0.0F, 5.0F, 0.01F);
    }
 }

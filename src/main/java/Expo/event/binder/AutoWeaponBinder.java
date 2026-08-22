@@ -5,16 +5,6 @@ import Expo.event.events.PreUpdateEvent;
 import Expo.event.invoker.AutoWeaponPreUpdateInvoker;
 import Expo.module.impl.player.AutoWeapon;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoWeaponBinder {
    private static final long a = 90205362079952L;
 
@@ -24,5 +14,4 @@ public final class AutoWeaponBinder {
    public static void N(EventBus var0, AutoWeapon var1) {
       var0.R(var1, PreUpdateEvent.class, 3, new AutoWeaponPreUpdateInvoker(var1));
    }
-
 }

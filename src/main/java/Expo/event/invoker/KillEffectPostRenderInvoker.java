@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostRenderEvent;
 import Expo.module.impl.visual.KillEffect;
 
-
-
-
-
-
-
-
-
-
-
 public final class KillEffectPostRenderInvoker implements EventInvoker {
    final KillEffect z;
 

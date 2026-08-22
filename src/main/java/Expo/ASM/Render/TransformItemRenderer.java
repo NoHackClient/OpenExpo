@@ -21,7 +21,6 @@ import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.VarInsnNode;
 
-
 public class TransformItemRenderer extends TransformerBase {
    private static long d;
    private static Map G;
@@ -106,7 +105,6 @@ public class TransformItemRenderer extends TransformerBase {
 
       return new String(var3, 0, var1);
    }
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;

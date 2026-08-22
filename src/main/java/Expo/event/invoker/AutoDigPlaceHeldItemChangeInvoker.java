@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.HeldItemChangeEvent;
 import Expo.module.impl.world.AutoDigPlace;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoDigPlaceHeldItemChangeInvoker implements EventInvoker {
    final AutoDigPlace G;
 

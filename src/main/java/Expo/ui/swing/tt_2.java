@@ -16,16 +16,6 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import javax.swing.Timer;
 
-
-
-
-
-
-
-
-
-
-
 class tt_2 extends MouseAdapter {
    private static long b;
    final ConfigManagerWindow K;
@@ -36,7 +26,6 @@ class tt_2 extends MouseAdapter {
    }
 
    static {
-      // add code
       try {
          a = 81768748997297L;
          long var0 = a ^ 34858547437581L;
@@ -83,5 +72,4 @@ class tt_2 extends MouseAdapter {
    public void mouseReleased(MouseEvent var1) {
       new Timer((int)b, this::lambda$mouseReleased$0).start();
    }
-
 }

@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class IsPressedEvent extends Event {
    public final boolean a;
    public final int o;

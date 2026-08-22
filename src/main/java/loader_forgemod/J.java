@@ -3,16 +3,6 @@ package loader_forgemod;
 import java.io.IOException;
 import java.io.Writer;
 
-
-
-
-
-
-
-
-
-
-
 class J {
    private static final int c = 31;
    private static char[] d;

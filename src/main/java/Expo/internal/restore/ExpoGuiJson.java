@@ -6,9 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public final class ExpoGuiJson {
-
    private final String s;
    private int i;
 

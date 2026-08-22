@@ -18,16 +18,13 @@ import java.util.List;
 import java.util.Map;
 import net.minecraft.client.Minecraft;
 
-
 public final class ExpoCommandData {
-
    public static final String MENU = "menu.txt";
    public static final String MENU_MUSIC = "menu_music.txt";
    public static final String FRIENDS = "friends.txt";
    public static final String ENEMIES = "enemies.txt";
    public static final String CURRENT = "current.json";
    static final String CHAT_BINDS = "chatBinds";
-
 
    private ExpoCommandData() {
    }
@@ -200,7 +197,6 @@ public final class ExpoCommandData {
       return var2 != null && var2.isJsonObject() ? var2.getAsJsonObject() : null;
    }
 
-
    public static boolean saveFriends() {
       try {
          return writeLines(FRIENDS, Teams.a());
@@ -251,7 +247,6 @@ public final class ExpoCommandData {
          return false;
       }
    }
-
 
    public static void load() {
    }

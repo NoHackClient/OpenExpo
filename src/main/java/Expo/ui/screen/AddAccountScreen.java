@@ -12,7 +12,6 @@ import javax.crypto.NoSuchPaddingException;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 
-
 public class AddAccountScreen extends GuiScreen {
    private final GuiScreen s;
    private static long a;
@@ -20,9 +19,7 @@ public class AddAccountScreen extends GuiScreen {
    public void onGuiClosed() {
    }
 
-
    static void $jnicClinit() throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException, NoSuchPaddingException {
-
       a = 12041044611841L;
    }
 
@@ -32,9 +29,6 @@ public class AddAccountScreen extends GuiScreen {
 
    protected void actionPerformed(GuiButton var1) {
        try {long var2 = 35240121263301L;
-
-
-
 
       if (var1 != null) {
          switch (var1.id) {
@@ -75,7 +69,6 @@ public class AddAccountScreen extends GuiScreen {
    public AddAccountScreen(GuiScreen var1) {
       this.s = var1;
    }
-
 
    public void initGui() {
        try {long var1 = 59250142702415L;
@@ -147,7 +140,6 @@ public class AddAccountScreen extends GuiScreen {
          );
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
-
    static {
       try {
          $jnicClinit();
@@ -155,5 +147,4 @@ public class AddAccountScreen extends GuiScreen {
          throw new RuntimeException(var0);
       }
    }
-
 }

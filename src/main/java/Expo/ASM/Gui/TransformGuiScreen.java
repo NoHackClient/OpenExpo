@@ -23,7 +23,6 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.JumpInsnNode;
 import org.objectweb.asm.tree.LabelNode;
 
-
 public class TransformGuiScreen extends TransformerBase {
    private static Object[] P;
    private static String[] l;
@@ -134,7 +133,6 @@ public class TransformGuiScreen extends TransformerBase {
    public TransformGuiScreen() {
       super("net/minecraft/client/gui/GuiScreen");
    }
-
 
    static {
       d = 122206050968871L;

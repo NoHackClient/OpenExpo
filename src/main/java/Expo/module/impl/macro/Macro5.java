@@ -12,7 +12,6 @@ import Expo.setting.settings.ModeSetting;
 import Expo.setting.settings.NumberSetting;
 import Expo.setting.settings.TextSetting;
 
-
 public class Macro5 extends MacroModule implements EventSubscriber {
    public static NumberSetting minHealth;
    public static TextSetting chatMessage;
@@ -23,23 +22,19 @@ public class Macro5 extends MacroModule implements EventSubscriber {
 
    public Macro5(long var1) {
       super(((a ^ (var1)) ^ 47786366378549L));
-      // add code
       this.declare("Macro5", Category.Macro, "Macro slot 5 (Must be bound to use)");
       var1 = a ^ var1;
    }
 
    public void onPreTick(PreTickEvent var1) {
-
       this.y(mode, projectilesDuration, 40065435448518L, minHealth, swapBack, chatMessage);
    }
-
 
    public final void x(long var1, EventBus var3) {
       Macro5Binder.j(var3, this);
    }
 
    static {
-      // add code
       projectilesDuration = new NumberSetting("Projectiles-duration", 100.0F, 30.0F, 1000.0F, 1.0F);
       swapBack = new BooleanSetting("Swap-back", true);
       mode = new ModeSetting("Mode", "PROJECTILES", "ROD", "POT", "GOLDEN_HEAD", "PEARL", "WATER_BUCKET", "LAVA_BUCKET", "CHAT");

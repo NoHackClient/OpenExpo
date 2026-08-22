@@ -10,16 +10,6 @@ import Expo.util.render.RenderUtil;
 import java.util.Map;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class RavenSliderRow extends AbstractRavenSettingRow {
    private static long[] j;
    private PercentageSetting v;
@@ -37,8 +27,6 @@ public class RavenSliderRow extends AbstractRavenSettingRow {
    public void f(int var1, int var2, int var3, int var4, short var5, int var6) {
       this.X = ((0 & 1) != 0);
    }
-
-
 
    public RavenSliderRow(short var1, PercentageSetting var2, RavenModuleRow var3, char var4, int var5, int var6) {
       super((var3));
@@ -155,8 +143,6 @@ public class RavenSliderRow extends AbstractRavenSettingRow {
       c = 61800043307808L;
    }
 
-
-
    public boolean N(int var1, int var4) {
       return var1 > this.J + this.O.O.t() / 2 && var1 < this.J + this.O.O.t() && var4 > this.Y && var4 < this.Y + 16;
    }
@@ -166,7 +152,7 @@ public class RavenSliderRow extends AbstractRavenSettingRow {
    }
 
    public RavenSliderRow(NumberSetting var1, long var2, RavenModuleRow var4, int var5) {
-      super(var4);   // add code
+      super(var4);
       var2 = c ^ var2;
       this.X = ((0 & 1) != 0);
       this.H(var1, var4, var5);
@@ -196,6 +182,4 @@ public class RavenSliderRow extends AbstractRavenSettingRow {
    public void i(int var1, int var2, int var3, byte var4) {
       this.z = var1;
    }
-
-
 }

@@ -17,7 +17,6 @@ import java.util.Map;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
 public class ModeSetting extends Setting {
    private static long a;
    protected String Y;
@@ -69,9 +68,6 @@ public class ModeSetting extends Setting {
    public int G() {
       return this.p;
    }
-
-
-
 
    public List o(char var1, int var2, Module var3, int var4) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       if (!Language.applyForSettings.c()) {
@@ -151,5 +147,4 @@ public class ModeSetting extends Setting {
    public boolean R(String var1) {
       return this.Y.equalsIgnoreCase(var1);
    }
-
 }

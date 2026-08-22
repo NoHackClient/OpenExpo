@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PlayerRightClickEvent;
 import Expo.module.impl.player.NoInteract;
 
-
-
-
-
-
-
-
-
-
-
 public final class NoInteractPlayerRightClickInvoker implements EventInvoker {
    final NoInteract s;
 

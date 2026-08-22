@@ -7,16 +7,6 @@ import Expo.event.invoker.MegaWallsDetectorPlayerGetNameInvoker;
 import Expo.event.invoker.MegaWallsDetectorPostTickInvoker;
 import Expo.module.impl.visual_utility.MegaWallsDetector;
 
-
-
-
-
-
-
-
-
-
-
 public final class MegaWallsDetectorBinder {
    private static final long a = 80543477038354L;
 
@@ -27,5 +17,4 @@ public final class MegaWallsDetectorBinder {
       var0.R(var4, PostTickEvent.class, 3, new MegaWallsDetectorPostTickInvoker(var4));
       var0.R(var4, PlayerGetNameEvent.class, 3, new MegaWallsDetectorPlayerGetNameInvoker(var4));
    }
-
 }

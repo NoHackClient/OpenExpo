@@ -2,13 +2,6 @@ package Expo.util.render;
 
 import Expo.internal.synthetic.GlyphTextureCtorMarker;
 
-
-
-
-
-
-
-
 public class Glyph {
    private int T;
    private int c;

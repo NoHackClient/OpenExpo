@@ -6,7 +6,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
 
-
 public class SenrenBankaMenuButton extends GuiButton {
    private boolean h;
    private final float a;
@@ -14,8 +13,6 @@ public class SenrenBankaMenuButton extends GuiButton {
    private static long b;
 
    private void U(String var1, float var2, float var3, long var4) {
-
-
       Minecraft var9 = MinecraftRef.c((byte)0,0L);
       String var10 = var1.replaceAll("(?i)§[\\da-f]", "");
       var9.fontRendererObj.drawString(var10, var2 + 1.0F, var3, -2894893, false);
@@ -30,8 +27,6 @@ public class SenrenBankaMenuButton extends GuiButton {
    }
 
    private void B(String var1, float var2, float var3, long var4) {
-
-
       Minecraft var9 = MinecraftRef.c((byte)0,0L);
       String var10 = var1.replaceAll("(?i)§[\\da-f]", "");
       var9.fontRendererObj.drawString(var10, var2 + 1.0F, var3, -96, false);
@@ -44,7 +39,6 @@ public class SenrenBankaMenuButton extends GuiButton {
       var9.fontRendererObj.drawString(var10, var2 - 1.0F, var3 - 1.0F, -96, false);
       var9.fontRendererObj.drawString(var1, var2, var3, -29696, false);
    }
-
 
    public SenrenBankaMenuButton(int var1, int var2, long var3, int var5, int var6, int var7, String var8) {
       super(
@@ -61,15 +55,10 @@ public class SenrenBankaMenuButton extends GuiButton {
    }
 
    static {
-
       b = 96817688816412L;
    }
 
-
    public void drawButton(Minecraft var1, int var2, int var3) {
-
-
-
       if (this.visible) {
          GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
          this.hovered = var2 >= this.xPosition
@@ -111,5 +100,4 @@ public class SenrenBankaMenuButton extends GuiButton {
    public void N(int var1) {
       this.k = var1;
    }
-
 }

@@ -31,7 +31,6 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.network.play.server.S02PacketChat;
 import net.minecraft.util.EnumChatFormatting;
 
-
 public class LeapModeHUD extends Module implements EventSubscriber {
    public static PercentageSetting backgroundOpacity;
    private static String D;
@@ -58,13 +57,9 @@ public class LeapModeHUD extends Module implements EventSubscriber {
 
    public LeapModeHUD(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       super(((a ^ (var1)) ^ 83070117867148L));
-      // add code
       this.declare("LeapModeHUD", Category.Visual_utility, "Show the current Spider leap mode on screen");
       var1 = a ^ var1;
       this.h = EnumChatFormatting.GOLD + "Arrow";
-   }
-
-   private static void a() {
    }
 
    public void A(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
@@ -109,9 +104,7 @@ public class LeapModeHUD extends Module implements EventSubscriber {
       this.j$r1(var3);
    }
 
-
    public void onRender2D(long var1, Render2DEvent var3) {
-
       if (f.thePlayer != null && TeamPrefixUtil.i()) {
          if (TeamPrefixUtil.F(22611545248530L, f.thePlayer.getName()) == MegaWallsClass.SPIDER) {
             String var6 = "Leap Mode: " + this.h;
@@ -189,7 +182,6 @@ public class LeapModeHUD extends Module implements EventSubscriber {
       return new String(var3, 0, var1);
    }
    static {
-      // add code
       offsetX = new NumberSetting("Offset-X", 4.0F, 0.0F, 1000.0F, 1.0F);
       scale = new NumberSetting("Scale", 0.9F, 0.5F, 3.0F, 0.01F);
       backgroundOpacity = new PercentageSetting("Background-opacity", 40);

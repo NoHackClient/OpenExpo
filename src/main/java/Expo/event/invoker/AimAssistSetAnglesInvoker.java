@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SetAnglesEvent;
 import Expo.module.impl.combat.AimAssist;
 
-
-
-
-
-
-
-
-
-
-
 public final class AimAssistSetAnglesInvoker implements EventInvoker {
    final AimAssist E;
 

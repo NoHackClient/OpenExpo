@@ -4,10 +4,8 @@ import Expo.ASM.TransformerBase;
 import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformBlockGrass extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       return TransformerBase.G(
@@ -28,6 +26,4 @@ public class TransformBlockGrass extends TransformerBase {
    static {
       d = 96898560477241L;
    }
-
-
 }

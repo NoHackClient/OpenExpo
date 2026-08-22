@@ -11,19 +11,7 @@ import java.util.List;
 import java.util.Map;
 import org.lwjgl.input.Keyboard;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandBindChat extends Command {
-
    private static final String DESC =
       "§eBind a chat message to a specific key to send it later (Support \\n)";
    private static final String USAGE_HEADER = "Usage: ";

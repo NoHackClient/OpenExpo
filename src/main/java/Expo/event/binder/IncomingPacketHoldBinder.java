@@ -7,16 +7,6 @@ import Expo.event.invoker.IncomingPacketHoldReceivePacketInvoker;
 import Expo.event.invoker.IncomingPacketHoldSendPacketInvoker;
 import Expo.util.packet.IncomingPacketHold;
 
-
-
-
-
-
-
-
-
-
-
 public final class IncomingPacketHoldBinder {
    private static final long a = 130626195930143L;
 
@@ -27,5 +17,4 @@ public final class IncomingPacketHoldBinder {
 
    private IncomingPacketHoldBinder() {
    }
-
 }

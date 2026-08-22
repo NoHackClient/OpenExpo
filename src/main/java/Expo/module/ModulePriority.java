@@ -27,16 +27,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
-
-
-
-
-
-
-
-
-
 public class ModulePriority {
    public static List<ModulePriorityEntry> l;
    public static Map<Class<? extends PriorityModule>, ModulePriorityEntry> C;
@@ -70,8 +60,6 @@ public class ModulePriority {
 
    private static void zkm$clinit() {
       try {
-
-
          Cipher var1;
          byte[] var10003 = new byte[]{(byte)0L, 0, 0, 0, 0, 0, 0, 0};
 

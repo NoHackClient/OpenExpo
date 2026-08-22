@@ -7,7 +7,6 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.VarInsnNode;
 
-
 public class TransformGuiChat extends TransformerBase {
    private static long d;
    private static long w;
@@ -15,7 +14,6 @@ public class TransformGuiChat extends TransformerBase {
    public TransformGuiChat() {
       super("net/minecraft/client/gui/GuiChat");
    }
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;

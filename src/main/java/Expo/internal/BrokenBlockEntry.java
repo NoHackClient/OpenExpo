@@ -4,7 +4,6 @@ import Expo.internal.synthetic.BrokenBlockTrackerCtorMarker;
 import Expo.util.MiningConstants;
 import net.minecraft.block.Block;
 
-
 public final class BrokenBlockEntry {
    Block l;
    public long H;
@@ -13,10 +12,8 @@ public final class BrokenBlockEntry {
    long[] Z;
 
    static {
-
       a = 23034907783007L;
    }
-
 
    public boolean q() {
       int var1 = (int)MiningConstants.K;
@@ -68,5 +65,4 @@ public final class BrokenBlockEntry {
       this.Z = new long[5];
       this.l = null;
    }
-
 }

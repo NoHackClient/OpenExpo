@@ -6,16 +6,6 @@ import Expo.internal.MiningEngine;
 import Expo.internal.MiningRenderSubscriber;
 import Expo.module.impl.world.AutoTunnel;
 
-
-
-
-
-
-
-
-
-
-
 public class TunnelEngine {
    private static long a;
    private static long[] e;
@@ -32,8 +22,6 @@ public class TunnelEngine {
          ExpoClient.w.s(new MiningRenderSubscriber(), var2);
       }
    }
-
-
 
    public static void V(long var0) {
       if (AutoTunnel.mode != null && AutoTunnel.sneakMode != null) {
@@ -86,6 +74,4 @@ public class TunnelEngine {
       a = 41608055129119L;
       j = false;
    }
-
-
 }

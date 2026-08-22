@@ -1,13 +1,5 @@
 package Expo.event;
 
-
-
-
-
-
-
-
-
 public final class ListenerBinding<E> {
    private final int Q;
    private final EventInvoker<E> p;

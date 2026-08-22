@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class MoveInputEvent extends Event {
    private double r;
    private float E;

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render3DEvent;
 import Expo.module.impl.world.Scaffold;
 
-
-
-
-
-
-
-
-
-
-
 public final class ScaffoldRender3DInvoker implements EventInvoker {
    final Scaffold o;
 

@@ -12,9 +12,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public final class ExpoTruthNames {
-
    private static final String[] ORDERS = {
       "AutoGG|Delay,Message",
       "FKCounter|Background-opacity,Offset-X,Offset-Y,Scale",

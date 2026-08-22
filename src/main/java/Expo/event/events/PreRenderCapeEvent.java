@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import net.minecraft.client.entity.AbstractClientPlayer;
 
-
-
-
-
-
-
-
-
-
-
 public class PreRenderCapeEvent extends StoppableEvent {
    public final AbstractClientPlayer F;
    private static final long a = 35671248390426L;

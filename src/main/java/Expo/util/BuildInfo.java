@@ -5,16 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-
-
-
-
-
-
-
-
-
 public class BuildInfo {
    private static String[] b;
    public static String q;
@@ -43,7 +33,6 @@ public class BuildInfo {
       K = "Expo";
       Z = "Release";
       g = "NoHackClient";
-      // add code
       L = "OpenSource";
       q = "OpenSource";
       B = "© 2026 NoHackClient. All rights reserved.";
@@ -60,8 +49,6 @@ public class BuildInfo {
    public static String l() {
       return "Expo".charAt(0) + "§r§f" + "Expo".substring(1);
    }
-
-
 
    private static String z(short var0) {
       StringBuilder var5 = new StringBuilder();
@@ -83,5 +70,4 @@ public class BuildInfo {
 
       return var5.toString();
    }
-
 }

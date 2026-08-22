@@ -13,16 +13,6 @@ import Expo.event.invoker.BlockHitPreUpdateInvoker;
 import Expo.event.invoker.BlockHitReceivePacketInvoker;
 import Expo.module.impl.combat.BlockHit;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlockHitBinder {
    private static final long a = 33634135460793L;
 
@@ -37,5 +27,4 @@ public final class BlockHitBinder {
       // update new version
       var2.R(var3, UpdateCameraAndRenderEvent.class, 3, new BlockHitUpdateCameraAndRenderInvoker(var3));
    }
-
 }

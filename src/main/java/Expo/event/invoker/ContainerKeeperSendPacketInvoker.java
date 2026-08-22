@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SendPacketEvent;
 import Expo.module.impl.misc.ContainerKeeper;
 
-
-
-
-
-
-
-
-
-
-
 public final class ContainerKeeperSendPacketInvoker implements EventInvoker {
    final ContainerKeeper r;
 

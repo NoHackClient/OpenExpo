@@ -11,16 +11,6 @@ import Expo.event.invoker.InvMovePreUpdateInvoker;
 import Expo.event.invoker.InvMoveSendPacketInvoker;
 import Expo.module.impl.movement.InvMove;
 
-
-
-
-
-
-
-
-
-
-
 public final class InvMoveBinder {
    private static final long a = 62649266949183L;
 
@@ -33,5 +23,4 @@ public final class InvMoveBinder {
 
    private InvMoveBinder() {
    }
-
 }

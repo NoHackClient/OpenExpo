@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ClickMouseEvent;
 import Expo.module.impl.world.BedNuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedNukerClickMouseInvoker implements EventInvoker {
    final BedNuker t;
 

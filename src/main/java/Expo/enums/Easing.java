@@ -4,16 +4,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.function.Function;
 import org.apache.commons.lang3.StringUtils;
 
-
-
-
-
-
-
-
-
-
-
 public enum Easing {
    LINEAR(var0 -> var0),
    EASE_IN_QUAD(var0 -> var0 * var0),
@@ -95,33 +85,6 @@ public enum Easing {
       this.b = var3;
    }
 
-   private static String a(byte[] var0) {
-      int var1 = 0;
-      int var2;
-      char[] var3 = new char[var2 = var0.length];
-
-      for (int var4 = 0; var4 < var2; var4++) {
-         int var5;
-         if ((var5 = 255 & var0[var4]) < 192) {
-            var3[var1++] = (char)var5;
-         } else if (var5 < 224) {
-            char var6 = (char)((char)(var5 & 31) << 6);
-            int var8 = var0[++var4];
-            var6 = (char)(var6 | (char)(var8 & 63));
-            var3[var1++] = var6;
-         } else if (var4 < var2 - 2) {
-            char var12 = (char)((char)(var5 & 15) << '\f');
-            int var9 = var0[++var4];
-            var12 = (char)(var12 | (char)(var9 & 63) << 6);
-            var9 = var0[++var4];
-            var12 = (char)(var12 | (char)(var9 & 63));
-            var3[var1++] = var12;
-         }
-      }
-
-      return new String(var3, 0, var1);
-   }
-
    private static void zkm$pre() {
       zkm$v11 = new String[]{"EASE_IN_BACK", "EASE_IN_QUART", "EASE_IN_OUT_SINE", "SIGMOID", "EASE_IN_CIRC", "EASE_OUT_QUINT", "EASE_IN_OUT_QUAD", "EASE_IN_OUT_CIRC", "EASE_OUT_CUBIC", "EASE_OUT_QUAD", "EASE_IN_QUINT", "EASE_OUT_CIRC", "EASE_IN_EXPO", "EASE_IN_CUBIC", "EASE_IN_OUT_QUART", "EASE_IN_OUT_CUBIC", "EASE_IN_OUT_EXPO", "LINEAR", "EASE_IN_OUT_QUINT", "EASE_OUT_QUART", "EASE_OUT_EXPO", "EASE_IN_SINE", "EASE_OUT_SINE", "EASE_OUT_ELASTIC", "DECELERATE", "EASE_IN_QUAD"};
       zkm$v0 = new long[]{-4498073971555565544L, -4922700783767519215L, 9187938526598004761L, 8964489606028328971L, -6863759601918017513L, -1903910228668186604L, 2415805970266456089L, -3209800438085844966L, -3758188936250261498L, -1614335222810148844L, 5493553485603405832L, -6208827202956427241L, 8745819966151852053L, -879099957754200046L, -6931985359278440439L, 1499549369966264330L, 8284773085400268817L, -6096960832657162233L, 8878542122114875405L, 3902166268760817680L, -3659392499325075450L, 1056636304994861075L, 6771224020424589323L, -3547059704167399410L, -5018844275228540915L, -8996775832970067953L, -3283323530799742961L, -7247874521657507830L, -2374763473239277556L, 2420774620362702872L, 3989115549501095945L, 4635766491306786835L, 1270031514578452496L, 6590793621140668428L, -237348598675668970L, 2162914864199106578L, 5598437506094727175L, 1398262736772661256L, 7667346995157139470L, 9161453069601341462L, 5102281359347417109L};
@@ -135,5 +98,4 @@ public enum Easing {
 
       return zkm$v0;
    }
-
 }

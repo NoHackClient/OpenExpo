@@ -7,21 +7,10 @@ import Expo.util.render.FontUtil;
 import Expo.util.render.RenderUtil;
 import java.awt.Color;
 
-
-
-
-
-
-
-
-
-
-
 public class BooleanSettingComponent extends AbstractSettingComponent<BooleanSetting> {
    private static long a;
    private final Animation c;
    private final Animation L;
-
 
    public void Z(int var1, float var2, char var3, float var4, float var5, float var6, short var7, CategoryPalette var8) {
       long var9 = (long)var1 << 32 | (long)var3 << 48 >>> 32 | (long)var7 << 48 >>> 48;

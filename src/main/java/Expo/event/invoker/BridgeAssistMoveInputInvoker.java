@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.MoveInputEvent;
 import Expo.module.impl.world.BridgeAssist;
 
-
-
-
-
-
-
-
-
-
-
 public final class BridgeAssistMoveInputInvoker implements EventInvoker {
    final BridgeAssist N;
 

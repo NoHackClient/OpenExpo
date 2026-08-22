@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostUpdateEvent;
 import Expo.module.impl.combat.AutoBlock;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoBlockPostUpdateInvoker implements EventInvoker {
    final AutoBlock Z;
 

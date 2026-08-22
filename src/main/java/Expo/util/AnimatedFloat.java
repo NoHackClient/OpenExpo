@@ -2,13 +2,6 @@ package Expo.util;
 
 import Expo.enums.AnimationDirection;
 
-
-
-
-
-
-
-
 public class AnimatedFloat {
    private EasedAnimation w = new SmoothStepAnimation(0, 0.0, AnimationDirection.BACKWARDS);
    private float Y;

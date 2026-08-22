@@ -19,21 +19,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 
-
-
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandDebug extends Command {
-
    private static final String SCOREBOARD_DUMP = "debug_scoreboard.txt";
    private static final String DISPLAYNAME_DUMP = "debug_displayname.txt";
 

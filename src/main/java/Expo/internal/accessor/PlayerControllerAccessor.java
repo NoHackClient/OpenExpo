@@ -3,16 +3,6 @@ package Expo.internal.accessor;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public final class PlayerControllerAccessor {
    private static Accessor j;
    private static Accessor C;
@@ -26,10 +16,7 @@ public final class PlayerControllerAccessor {
       Accessor.v(j, new Object[]{var0});
    }
 
-
-
    public static boolean E(PlayerControllerMP var0, BlockPos var1) {
       return Accessor.A(C, new Object[]{var0, var1});
    }
-
 }

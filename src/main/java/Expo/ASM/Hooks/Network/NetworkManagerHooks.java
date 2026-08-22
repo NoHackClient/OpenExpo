@@ -14,24 +14,10 @@ import java.util.Set;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.C01PacketChatMessage;
 
-
-
-
-
-
-
-
-
-
-
 public class NetworkManagerHooks {
    private static final long a = 10022116776078L;
 
    public static void onSendPacket(Packet<?> var0, CallbackInfo var1) {
-
-
-
-
       if (var0 != null) {
          if (isKnownPacket(PacketAccessor.U, var0)) {
             if (var0 instanceof C01PacketChatMessage && Modules.J(CommandLine.class).o() && ((C01PacketChatMessage)var0).getMessage().startsWith(".")) {
@@ -55,7 +41,6 @@ public class NetworkManagerHooks {
    }
 
    public static void onReceivePacket(Packet<?> var0, CallbackInfo var1) {
-
       if (var0 != null) {
          if (isKnownPacket(PacketAccessor.m, var0)) {
             if (PacketManager.a.contains(var0)) {

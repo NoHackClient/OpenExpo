@@ -5,16 +5,6 @@ import Expo.event.events.Render3DEvent;
 import Expo.event.invoker.MiningRenderSubscriberRender3DInvoker;
 import Expo.internal.MiningRenderSubscriber;
 
-
-
-
-
-
-
-
-
-
-
 public final class MiningRenderSubscriberBinder {
    private static final long a = 84621309874761L;
 

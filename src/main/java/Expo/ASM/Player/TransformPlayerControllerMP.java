@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformPlayerControllerMP extends TransformerBase {
    private static long d;
 
@@ -144,7 +143,6 @@ public class TransformPlayerControllerMP extends TransformerBase {
          );
    }
 
-
    static {
       d = 109293909667439L;
    }
@@ -152,6 +150,4 @@ public class TransformPlayerControllerMP extends TransformerBase {
    public TransformPlayerControllerMP() {
       super("net/minecraft/client/multiplayer/PlayerControllerMP");
    }
-
-
 }

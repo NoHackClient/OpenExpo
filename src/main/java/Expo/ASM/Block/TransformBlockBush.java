@@ -4,10 +4,8 @@ import Expo.ASM.TransformerBase;
 import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformBlockBush extends TransformerBase {
    private static long d;
-
 
    static {
       d = 63269248874563L;
@@ -25,9 +23,7 @@ public class TransformBlockBush extends TransformerBase {
       );
    }
 
-
    public TransformBlockBush() {
       super("net/minecraft/block/BlockBush");
    }
-
 }

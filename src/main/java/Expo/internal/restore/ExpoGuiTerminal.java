@@ -24,9 +24,7 @@ import javax.swing.text.Document;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 
-
 public final class ExpoGuiTerminal extends JPanel {
-
    private static final long serialVersionUID = 1L;
 
    private static final Map<Character, Color> COLORS = new HashMap<Character, Color>();

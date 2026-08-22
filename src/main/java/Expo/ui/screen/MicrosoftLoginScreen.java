@@ -16,7 +16,6 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import org.apache.commons.lang3.RandomStringUtils;
 
-
 public class MicrosoftLoginScreen extends GuiScreen {
    private GuiButton H;
    private final GuiScreen J;
@@ -34,7 +33,6 @@ public class MicrosoftLoginScreen extends GuiScreen {
    private static long c;
 
    public void updateScreen() {
-
       if (this.v) {
          this.mc
             .displayGuiScreen(
@@ -144,7 +142,6 @@ public class MicrosoftLoginScreen extends GuiScreen {
       }
    }
 
-
    public void onGuiClosed() {
       if (this.P != null && !this.P.isDone()) {
          this.P.cancel(true);
@@ -154,8 +151,6 @@ public class MicrosoftLoginScreen extends GuiScreen {
 
    public void initGui() {
       this.buttonList.clear();
-
-
 
       int var6 = this.width / 2;
       int var7 = var6 - 200 / 2;
@@ -227,10 +222,8 @@ public class MicrosoftLoginScreen extends GuiScreen {
    }
 
    static {
-
       c = 11783191072859L;
    }
-
 
    public MicrosoftLoginScreen(GuiScreen var1) {
       this.H = null;
@@ -247,5 +240,4 @@ public class MicrosoftLoginScreen extends GuiScreen {
       this.o = System.currentTimeMillis();
       this.m = 0;
    }
-
 }

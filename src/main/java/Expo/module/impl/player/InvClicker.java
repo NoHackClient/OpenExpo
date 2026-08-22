@@ -16,7 +16,6 @@ import java.util.Map;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.gui.inventory.GuiInventory;
 
-
 public class InvClicker extends Module implements EventSubscriber {
    private static long a;
    private static Map d;
@@ -27,20 +26,7 @@ public class InvClicker extends Module implements EventSubscriber {
    public static NumberSetting cps;
    public static BooleanSetting alwaysClick;
 
-   private static void a() {
-      e[0] = "\"g'B@&";
-      e[1] = long.class;
-      g[1] = "java/lang/Long";
-      e[2] = "Q^LA\t\u0018fIHKD<qB\u0012W";
-      e[3] = "\u0010f\u0017g\u0010S\u001e";
-      e[4] = void.class;
-      g[4] = "java/lang/Void";
-      e[5] = "IQ\u0012^/@B^\u0003\u0011NNIU\u0007K";
-      e[6] = "[Hh\t(\u0013U\beqJo\u0007Le\nj\u0015\u0002\u001dwA\u0016V^\u0019dH+\u0015X\byq,\u0004P\u001dc\u001fq\u0015N\u0016\u0019J'V_\u000f&J|\u0015Yt";
-   }
-
    public void onPreUpdate(long var1, PreUpdateEvent var3) {
-
       if (this.p > 0) {
          this.p = this.p - 50;
       }
@@ -76,18 +62,15 @@ public class InvClicker extends Module implements EventSubscriber {
 
    public InvClicker(long var1) {
       super(((a ^ (var1)) ^ 31981580547189L));
-      // add code
       this.declare("InvClicker", Category.Player, "Automatically click in inventory when you press shift");
       var1 = a ^ var1;
       this.p = 0;
    }
 
-
    public void A(long var1) {
       this.p = 0;
    }
    static {
-      // add code
       alwaysClick = new BooleanSetting("Always-click", true);
       cps = new NumberSetting("CPS", 10.0F, 0.0F, 20.0F, 1.0F);
    }

@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformBlockRendererDispatcher extends TransformerBase {
    private static long d;
 
@@ -31,11 +30,9 @@ public class TransformBlockRendererDispatcher extends TransformerBase {
       );
    }
 
-
    public TransformBlockRendererDispatcher() {
       super("net/minecraft/client/renderer/BlockRendererDispatcher");
    }
-
 
    static {
       d = 38228327796908L;

@@ -20,18 +20,6 @@ import net.minecraft.client.gui.GuiTextField;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
-
-
 public class RavenClickGuiScreen extends GuiScreen {
    private static long[] e;
    public static Map<Category, RavenCategoryPanel> P;
@@ -66,7 +54,6 @@ public class RavenClickGuiScreen extends GuiScreen {
    }
 
    public void keyTyped(char var1, int var2) {
-
       if (var2 == 1 && !this.D()) {
          this.mc.displayGuiScreen(null);
          Modules.c(0L);
@@ -95,7 +82,6 @@ public class RavenClickGuiScreen extends GuiScreen {
    }
 
    public void onGuiClosed() {
-
       this.F = null;
       if (this.C != null) {
          this.C.cancel(true);
@@ -112,7 +98,6 @@ public class RavenClickGuiScreen extends GuiScreen {
    }
 
    public void handleMouseInput() {
-
       super.handleMouseInput();
       int var6 = Mouse.getDWheel();
       if (var6 != 0) {
@@ -132,8 +117,6 @@ public class RavenClickGuiScreen extends GuiScreen {
       (this.w = new RavenAnimation(500.0F)).y();
       this.C = A.schedule(() -> (this.F = new RavenAnimation(650.0F)).y(), 650L, TimeUnit.MILLISECONDS);
    }
-
-
 
    public RavenClickGuiScreen(long var1) {
       var1 = a ^ var1;
@@ -159,9 +142,6 @@ public class RavenClickGuiScreen extends GuiScreen {
        try {long var4 = 118078875334807L;
 
       int var12 = (int)((var4 ^ 70362990281711L) << 48 >>> 48);
-
-
-
 
       double var24 = ClickGUI.scale.L();
       if (this.y != 0) {
@@ -230,8 +210,6 @@ public class RavenClickGuiScreen extends GuiScreen {
       GL11.glPopMatrix();
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
-
-
    public boolean doesGuiPauseGame() {
       return false;
    }
@@ -239,21 +217,15 @@ public class RavenClickGuiScreen extends GuiScreen {
    public void mouseClicked(int var1, int var2, int var3) {
        try {long var4 = 38062450391851L;
 
-
-
-
-
-
-
       double var16 = ClickGUI.scale.L();
       int var18 = (int)(var1 / var16);
       int var19 = (int)(var2 / var16);
       Iterator var20 = h.stream().map(var0 -> P.get(var0)).iterator();
 
+      RavenCategoryPanel var21 = null;
+
       label74:
       while (true) {
-         RavenCategoryPanel var21 = null;
-
          while (var20.hasNext()) {
             var21 = (RavenCategoryPanel)var20.next();
             if (var21.w(var18, var19) && !var21.g(12208444526123L, var18, var19) && !var21.p(var18, var19, 40203282441482L) && var3 == 0) {
@@ -288,9 +260,6 @@ public class RavenClickGuiScreen extends GuiScreen {
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
    public void mouseReleased(int var1, int var2, int var3) {
-
-
-
       double var9 = ClickGUI.scale.L();
       int var11 = (int)(var1 / var9);
       int var12 = (int)(var2 / var9);
@@ -305,7 +274,4 @@ public class RavenClickGuiScreen extends GuiScreen {
          }
       }
    }
-
-
-
 }

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.DrawScreenEvent;
 import Expo.module.impl.player.InvManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class InvManagerDrawScreenInvoker implements EventInvoker {
    final InvManager y;
 

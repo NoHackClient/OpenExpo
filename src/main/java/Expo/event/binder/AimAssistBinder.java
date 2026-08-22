@@ -7,16 +7,6 @@ import Expo.event.invoker.AimAssistPostTickInvoker;
 import Expo.event.invoker.AimAssistSetAnglesInvoker;
 import Expo.module.impl.combat.AimAssist;
 
-
-
-
-
-
-
-
-
-
-
 public final class AimAssistBinder {
    private static final long a = 58905755702421L;
 

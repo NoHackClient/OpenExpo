@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.WorldLoadEvent;
 import Expo.module.impl.combat.Velocity;
 
-
-
-
-
-
-
-
-
-
-
 public final class VelocityWorldLoadInvoker implements EventInvoker {
    final Velocity O;
 

@@ -9,7 +9,6 @@ import java.security.spec.InvalidKeySpecException;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
 final class TypedValueStore {
    private static long a;
    private final Field w;
@@ -28,7 +27,6 @@ final class TypedValueStore {
       var2.setInt(var0, var1);
       return null;
    }
-
 
    private static Double lambda$getDouble$8(Object var0, Field var1) throws IllegalAccessException, Throwable {
       return var1.getDouble(var0);
@@ -108,7 +106,6 @@ final class TypedValueStore {
       return this.Q(zkm$fld -> lambda$getBoolean$2(var3, zkm$fld), "boolean field");
    }
 
-
    public void O(Object var1, boolean var4) {
       this.Q(zkm$fld -> lambda$setBoolean$3(var1, var4, zkm$fld), "boolean field");
    }
@@ -153,5 +150,4 @@ final class TypedValueStore {
    public int m(Object var1) {
       return this.Q(zkm$fld -> lambda$getInt$4(var1, zkm$fld), "int field");
    }
-
 }

@@ -4,16 +4,6 @@ import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.renderer.ItemRenderer;
 
-
-
-
-
-
-
-
-
-
-
 public final class ItemRendererAccessor {
    private static Accessor C;
    private static Accessor h;
@@ -25,8 +15,6 @@ public final class ItemRendererAccessor {
    private static Accessor y;
    private static Accessor O;
    private static Accessor v;
-
-
 
    public static void x(ItemRenderer var0, EntityPlayerSP var1, float var2) {
       Accessor.v(W, new Object[]{var0, var1, var2});
@@ -80,5 +68,4 @@ public final class ItemRendererAccessor {
    public static void z(ItemRenderer var0, float var1, float var2) {
       Accessor.v(T, new Object[]{var0, var1, var2});
    }
-
 }

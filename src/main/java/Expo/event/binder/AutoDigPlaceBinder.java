@@ -11,16 +11,6 @@ import Expo.event.invoker.AutoDigPlacePreMouseInputInvoker;
 import Expo.event.invoker.AutoDigPlaceSendPacketInvoker;
 import Expo.module.impl.world.AutoDigPlace;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoDigPlaceBinder {
    private static final long a = 91532413199012L;
 

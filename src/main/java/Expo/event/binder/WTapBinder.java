@@ -11,16 +11,6 @@ import Expo.event.invoker.WTapPreMouseInputInvoker;
 import Expo.event.invoker.WTapReceivePacketInvoker;
 import Expo.module.impl.combat.WTap;
 
-
-
-
-
-
-
-
-
-
-
 public final class WTapBinder {
    private static final long a = 425175557905L;
 
@@ -33,5 +23,4 @@ public final class WTapBinder {
 
    private WTapBinder() {
    }
-
 }

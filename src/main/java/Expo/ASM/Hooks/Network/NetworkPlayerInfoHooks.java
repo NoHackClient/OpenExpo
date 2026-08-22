@@ -8,7 +8,6 @@ import com.mojang.authlib.GameProfile;
 import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.util.ResourceLocation;
 
-
 public class NetworkPlayerInfoHooks {
    private static String b;
    private static long a;
@@ -19,7 +18,6 @@ public class NetworkPlayerInfoHooks {
    }
 
    public static void getLocationCape(ResourceLocation var0, GameProfile var1, NetworkPlayerInfo var2, CallbackInfoReturnable<ResourceLocation> var3) {
-
       if (var1.getId().equals(MinecraftRef.c((byte)0,0L).thePlayer.getGameProfile().getId()) && !CustomCape.cape.R(b)) {
          var3.setReturnValue(CustomCape.d(0L));
          var3.cancel();
@@ -29,7 +27,4 @@ public class NetworkPlayerInfoHooks {
          }
       }
    }
-
-
-
 }

@@ -4,7 +4,6 @@ import Expo.ASM.TransformerBase;
 import Expo.ASM.Util.BytecodeHelper;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformBlockStateMapper extends TransformerBase {
    private static long d;
 
@@ -15,7 +14,6 @@ public class TransformBlockStateMapper extends TransformerBase {
          });
       }, "putAllStateModelLocations", "putAllStateModelLocations");
    }
-
 
    public TransformBlockStateMapper() {
       super("net/minecraft/client/renderer/block/statemap/BlockStateMapper");

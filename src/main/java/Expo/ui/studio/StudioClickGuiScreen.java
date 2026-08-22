@@ -32,7 +32,6 @@ import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
-
 public class StudioClickGuiScreen extends GuiScreen {
    private float y;
    private String K;
@@ -227,7 +226,6 @@ public class StudioClickGuiScreen extends GuiScreen {
       }
    }
 
-
    public float y() {
       return this.y;
    }
@@ -262,10 +260,8 @@ public class StudioClickGuiScreen extends GuiScreen {
    }
 
    public void initGui() {
-
       super.initGui();
       Z();
-      // add code
       Expo.internal.restore.ExpoClickGui.beginDisplaySort();
       try {
          this.z(9394818575647L);
@@ -279,7 +275,6 @@ public class StudioClickGuiScreen extends GuiScreen {
    }
 
    protected void mouseReleased(int var1, int var2, int var3) {
-
       super.mouseReleased(var1, var2, var3);
       float var8 = ClickGUI.scale.L() * 0.94F;
       float var9 = var1 / var8;
@@ -324,9 +319,6 @@ public class StudioClickGuiScreen extends GuiScreen {
    public void drawScreen(int var1, int var2, float var3) {
        try {long var4 = 65742445683630L;
 
-
-
-
       this.W();
       float var13 = ClickGUI.scale.L() * 0.94F;
       float var14 = var1 / var13;
@@ -367,10 +359,6 @@ public class StudioClickGuiScreen extends GuiScreen {
 
    protected void mouseClicked(int var1, int var2, int var3) {
        try {long var4 = 21258311689151L;
-
-
-
-
 
       super.mouseClicked(var1, var2, var3);
       if (this.i != null && var3 > 1) {
@@ -433,10 +421,6 @@ public class StudioClickGuiScreen extends GuiScreen {
    }
 
    protected void keyTyped(char var1, int var2) {
-
-
-
-
       if (this.i != null) {
          this.i.E().z(118276941480361L, var2 != 211 && var2 != 1 ? var2 : 0);
          this.i = null;
@@ -461,8 +445,6 @@ public class StudioClickGuiScreen extends GuiScreen {
    }
 
    private void z(long var1) {
-
-
       this.k.clear();
 
       for (Category var8 : Category.values()) {
@@ -579,11 +561,6 @@ public class StudioClickGuiScreen extends GuiScreen {
    }
 
    private void C(long var1) {
-
-
-
-
-
       if (this.K != null) {
          Expo.util.render.RenderUtil.m(28813, this.K, (int)this.Z, 53203, (short)7294, (int)this.v);
       }
@@ -635,9 +612,6 @@ public class StudioClickGuiScreen extends GuiScreen {
    }
 
    public void onGuiClosed() {
-
-
-
       super.onGuiClosed();
       if (this.P != null) {
          this.n(this.P, 89965113873812L);
@@ -660,5 +634,4 @@ public class StudioClickGuiScreen extends GuiScreen {
          throw new RuntimeException(var0);
       }
    }
-
 }

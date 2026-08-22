@@ -41,16 +41,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import org.lwjgl.input.Mouse;
 
-
-
-
-
-
-
-
-
-
-
 public class ItemUtil {
    private static long a;
    private static String[] c;
@@ -61,7 +51,6 @@ public class ItemUtil {
    private static Object[] h;
    private static Map d;
 
-   // add code
    public static boolean d() {
       return z.thePlayer != null
              && z.thePlayer.getHeldItem() != null
@@ -128,7 +117,6 @@ public class ItemUtil {
    }
 
    public static int M(long var0) {
-
       for (int var2 = 0; var2 < 9; var2++) {
          ItemStack var3 = z.thePlayer.inventory.mainInventory[var2];
          if (var3 != null && var3.getItem() instanceof ItemPotion) {
@@ -290,23 +278,7 @@ public class ItemUtil {
       return var3;
    }
 
-   private static void a() {
-      h[0] = ";Fjr\u0019@\fQnxTd\u001bZ4it";
-      h[1] = ">Z\u0017>\nA>Z\u0000b\u0006N$\u0011\u0000|\u000eM>KM}\u0012D$V\u0013|\u0006Q5MM@\u000bI)Z\u0011S\bF$M\f|\u000bM\"r3";
-      h[2] = void.class;
-      i[2] = "java/lang/Void";
-      h[3] = "v`:L\u0005ej";
-      h[4] = long.class;
-      i[4] = "java/lang/Long";
-      h[5] = int.class;
-      i[5] = "java/lang/Integer";
-      h[6] = "Z\u0007=RetQ\b,\u001d\u0004zZ\u0003(G";
-      h[7] = "q\u0015d\u0000\u001c\u0012o\nex(b.\u00036\u0018\u000f\u0003e\u0011*\u001aq[j\u0012e\u0006\u0018S'\u0004&x";
-      h[8] = "Y<1B'\u000e\u0007=5X\u001f8c6tO \u000f\u0000b?Qn`X|~\u0001$\u0004\r`!X\u001fY\u001euq@vQSc2>";
-   }
-
    public static int j(int var0, int var1, char var2, boolean var3) {
-
       for (int var8 = 0; var8 < 9; var8++) {
          ItemStack var9 = z.thePlayer.inventory.mainInventory[var8];
          if (var9 != null
@@ -443,7 +415,6 @@ public class ItemUtil {
    }
 
    public static boolean H(long var0) {
-
       for (int var2 = 9; var2 < 45; var2++) {
          if (z.thePlayer.inventoryContainer.getSlot(var2).getStack() == null) {
             return false;
@@ -454,7 +425,6 @@ public class ItemUtil {
    }
 
    public static int N(long var0) {
-
       for (int var2 = 0; var2 < 9; var2++) {
          ItemStack var3 = z.thePlayer.inventory.mainInventory[var2];
          if (var3 != null && var3.getItem() instanceof ItemEnderPearl) {
@@ -464,8 +434,6 @@ public class ItemUtil {
 
       return -1;
    }
-
-
 
    public static List D(IInventory var0, short var1) {
       ArrayList var8 = new ArrayList();
@@ -594,6 +562,7 @@ public class ItemUtil {
          if (var6 != null) {
             float var7 = l(var6, var2);
             if (var7 > var3) {
+               var3 = var7;
                var4 = var5;
             }
          }
@@ -601,8 +570,6 @@ public class ItemUtil {
 
       return var4;
    }
-
-
 
    public static Pair<ItemStack, Integer> W(IInventory var0) {
       Pair var1 = new Pair(null, null);
@@ -618,7 +585,6 @@ public class ItemUtil {
    }
 
    public static int w(int var0, char var1, short var2) {
-
       for (int var5 = 0; var5 < 9; var5++) {
          ItemStack var6 = z.thePlayer.inventory.mainInventory[var5];
          if (var6 != null && var6.getDisplayName().toLowerCase().contains("golden head")) {
@@ -672,6 +638,4 @@ public class ItemUtil {
 
       return var2;
    }
-
-
 }

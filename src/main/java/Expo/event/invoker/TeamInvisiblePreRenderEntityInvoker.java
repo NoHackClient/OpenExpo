@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreRenderEntityEvent;
 import Expo.module.impl.visual.TeamInvisible;
 
-
-
-
-
-
-
-
-
-
-
 public final class TeamInvisiblePreRenderEntityInvoker implements EventInvoker {
    final TeamInvisible Q;
 

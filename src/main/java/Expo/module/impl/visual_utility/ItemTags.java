@@ -41,7 +41,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.StringUtils;
 import org.lwjgl.opengl.GL11;
 
-
 public class ItemTags extends Module implements EventSubscriber {
    public static BooleanSetting renderBlocks;
    public static BooleanSetting renderSwordsAndBows;
@@ -69,9 +68,7 @@ public class ItemTags extends Module implements EventSubscriber {
       }
    }
 
-
    private void y(long var1, EntityItem var3, ItemStack var4) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       Item var22 = var4.getItem();
       String var23 = var4.getDisplayName();
       String var24 = StringUtils.stripControlCodes(var23);
@@ -110,7 +107,6 @@ public class ItemTags extends Module implements EventSubscriber {
       return (var2 - var1) * var3 + var1;
    }
 
-
    private void o(long var1) {
       GL11.glEnable(2929);
       GL11.glDisable(3042);
@@ -119,14 +115,11 @@ public class ItemTags extends Module implements EventSubscriber {
       GlStateManager.popMatrix();
    }
 
-
    public void A(long var1) {
       this.S.clear();
    }
 
    private void a(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       this.S.clear();
       List var5 = f.theWorld.loadedEntityList;
 
@@ -142,16 +135,11 @@ public class ItemTags extends Module implements EventSubscriber {
       }
    }
 
-
    private float F(CustomFont var1, String var2, long var3) {
-
-
       return -var1.R(var2, 52019766876817L) / 2.0F - 4.6F;
    }
 
    private void m(CustomFont var3, String var4, float var5, int var6) {
-
-
       float var11 = var3.R(var4, 52019766876817L);
       int var12 = 255 * backgroundOpacity.k() / 100;
       int var13 = new Color(0, 0, 0, var12).getRGB();
@@ -185,10 +173,8 @@ public class ItemTags extends Module implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       this.a(32528519039452L);
    }
-
 
    private ItemTagsRenderPos getRenderManager(Entity var1, float var2) {
       float var3 = this.W((float)var1.lastTickPosX, (float)var1.posX, var2) - (float)f.getRenderManager().viewerPosX;
@@ -197,16 +183,13 @@ public class ItemTags extends Module implements EventSubscriber {
       return new ItemTagsRenderPos(var3, var4, var5, null);
    }
 
-
    private void P(long var1, EntityItem var3, String var4, boolean var5, int var6) {
       this.w(var3, var4, var5 ? var6 : 16777215);
    }
 
    static void $jnicClinit() throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException, NoSuchPaddingException {
-
       a = 67299170408461L;
    }
-
 
    private int A(long var1, EntityItem var3) {
       if (!this.M()) {
@@ -216,9 +199,7 @@ public class ItemTags extends Module implements EventSubscriber {
       }
    }
 
-
    public void onRender3D(long var1, Render3DEvent var3) {
-
       CustomFont var8 = Font.s(0L);
 
       for (int var9 = 0; var9 < this.S.size(); var9++) {
@@ -229,18 +210,14 @@ public class ItemTags extends Module implements EventSubscriber {
 
    public ItemTags(long var1) {
       super(((a ^ (var1)) ^ 98074705143150L));
-      // add code
       this.declare("ItemTags", Category.Visual_utility, "Render text bar on dropped items");
       var1 = a ^ var1;
       this.S = new ArrayList<>();
    }
 
    private void b(CustomFont var1, String var2, int var3, float var4, long var5, int var7) {
-
-
       var1.v(var2, var4 + 4.0F, -12.5F - var7, var3, 88827598794260L, false);
    }
-
 
    public String g(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       if (nbtOnly.c()) {
@@ -278,7 +255,6 @@ public class ItemTags extends Module implements EventSubscriber {
       ItemTagsBinder.b(var3, (char)var4, (short)var5, this);
    }
 
-
    private float getDistanceToEntity(Entity var1, float var2) {
       float var3 = var2 / 3.0F;
       float var4 = f.thePlayer.getDistanceToEntity(var1) / 10.0F;
@@ -292,10 +268,6 @@ public class ItemTags extends Module implements EventSubscriber {
    }
 
    private void S(CustomFont var1, ItemTagsEntry var2, float var3, float var4, long var5) {
-
-
-
-
       float var19 = this.getDistanceToEntity(ItemTagsEntry.H(var2), var4);
       ItemTagsRenderPos var20 = this.getRenderManager(ItemTagsEntry.H(var2), var3);
       int var21 = this.A(0L, ItemTagsEntry.H(var2));
@@ -306,16 +278,13 @@ public class ItemTags extends Module implements EventSubscriber {
       this.o(0L);
    }
 
-
    private boolean M() {
       return Modules.J(ItemScale.class).o();
    }
 
-
    private boolean c(Item var1) {
       return var1 == Items.diamond_boots || var1 == Items.diamond_leggings || var1 == Items.diamond_helmet || var1 == Items.diamond_chestplate;
    }
-
 
    private void z(EntityItem var1, ItemStack var2, long var3, String var5) {
       if (ItemUtil.u(var2)) {
@@ -328,11 +297,6 @@ public class ItemTags extends Module implements EventSubscriber {
    }
 
    private void y(ItemTagsRenderPos var1, float var2, long var3) {
-
-
-
-
-
       GL11.glPushMatrix();
       GL11.glTranslatef(ItemTagsRenderPos.B(var1), ItemTagsRenderPos.Z(var1) + 0.5F, ItemTagsRenderPos.M(var1));
       GL11.glRotatef(-f.getRenderManager().playerViewY, 0.0F, 1.0F, 0.0F);
@@ -402,7 +366,6 @@ public class ItemTags extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       renderSwordsAndBows = new BooleanSetting("Render-swords-and-bows", false);
       backgroundOpacity = new PercentageSetting("Background-opacity", 20);
       nbtOnly = new BooleanSetting("NBT-only", false);

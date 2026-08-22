@@ -12,16 +12,6 @@ import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class ColorUtil {
    private static Map d;
    private static Map g;
@@ -29,8 +19,6 @@ public class ColorUtil {
    private static Map<EnumChatFormatting, Color> B;
    private static long a;
    private static String[] b;
-
-
 
    public static Color M(char var0) {
       return P.getOrDefault(var0, Color.WHITE);
@@ -202,10 +190,6 @@ public class ColorUtil {
       return b(var2,0L, var3, var2.getAlpha());
    }
 
-
-
-
-
    public static String R(long var0, char var2) {
       Color var3 = M(var2);
       return String.format("#%02X%02X%02X", var3.getRed(), var3.getGreen(), var3.getBlue());
@@ -227,6 +211,4 @@ public class ColorUtil {
          var4
       );
    }
-
-
 }

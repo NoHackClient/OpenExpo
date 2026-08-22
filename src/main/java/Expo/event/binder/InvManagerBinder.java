@@ -9,16 +9,6 @@ import Expo.event.invoker.InvManagerPickUpItemInvoker;
 import Expo.event.invoker.InvManagerPreUpdateInvoker;
 import Expo.module.impl.player.InvManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class InvManagerBinder {
    private static final long a = 22852846999536L;
 

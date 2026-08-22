@@ -3,16 +3,6 @@ package Expo.module.impl.visual_utility;
 import Expo.internal.synthetic.ItemTagsCtorMarker;
 import net.minecraft.entity.item.EntityItem;
 
-
-
-
-
-
-
-
-
-
-
 public class ItemTagsEntry {
    private final EntityItem f;
    private final int y;

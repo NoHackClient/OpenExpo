@@ -2,13 +2,6 @@ package Expo.util;
 
 import Expo.internal.synthetic.TrajectoriesSwitchMapAxis;
 
-
-
-
-
-
-
-
 public class Vector3d {
    private double P;
    private double G;

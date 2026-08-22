@@ -27,16 +27,6 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.scoreboard.ScorePlayerTeam;
 import net.minecraft.util.IChatComponent;
 
-
-
-
-
-
-
-
-
-
-
 public class Teams extends Module {
    private static LinkedHashSet<String> x;
    private static String[] b;
@@ -139,13 +129,6 @@ public class Teams extends Module {
       t = MinecraftRef.c((byte)0, 0L);
    }
 
-   private static void c() {
-   }
-
-
-
-
-
    public static void E(String var0) {
       if (var0 != null) {
          if (!var0.trim().isEmpty()) {
@@ -191,7 +174,6 @@ public class Teams extends Module {
 
    public Teams(long var1, short var3) {
       super((((0L | (((long)((var3)) << 48) >>> 48)) ^ a) ^ 87664267557833L));
-      // add code
       this.declare("Teams", Category.Configuration, "Manage the teaming system");
    }
 
@@ -236,8 +218,6 @@ public class Teams extends Module {
       return s;
    }
 
-
-
    private static char getFormattedText(IChatComponent var0) {
       if (var0 == null) {
          return '\u0000';
@@ -261,9 +241,7 @@ public class Teams extends Module {
       return '\u0000';
    }
 
-
    static {
-      // add code
       customPatternRegex = new TextSetting("Custom-pattern-regex", "\\[[A-Z]\\]");
       sortMode = new ModeSetting("Sort-mode", "NAME_COLOR", "PATTERN", "ARMOR_COLOR", "VANILLA", "NONE");
    }

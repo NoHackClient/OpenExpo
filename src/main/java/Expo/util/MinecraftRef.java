@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 import net.minecraft.client.Minecraft;
 
-
 public class MinecraftRef {
    private static volatile Minecraft z;
    private static String[] q;
@@ -16,7 +15,6 @@ public class MinecraftRef {
    private static String[] b;
    private static long a;
    private static String[] c;
-
 
    private MinecraftRef() {
    }
@@ -30,8 +28,6 @@ public class MinecraftRef {
       q = new String[]{"theMinecraft", "theMinecraft", "S"};
    }
 
-
-
    private static Minecraft d() {
       Class<Minecraft> var0 = Minecraft.class;
 
@@ -44,7 +40,6 @@ public class MinecraftRef {
                return (Minecraft)var6;
             }
          } catch (Throwable var8) {
-            Expo.internal.restore.ExpoDiag.attribute(var8, "MinecraftRef.d/0#0");
          }
       }
 
@@ -57,7 +52,6 @@ public class MinecraftRef {
                   return (Minecraft)var13;
                }
             } catch (Throwable var7) {
-               Expo.internal.restore.ExpoDiag.attribute(var7, "MinecraftRef.d/0#1");
             }
          }
       }
@@ -147,7 +141,6 @@ public class MinecraftRef {
                return (Minecraft)var6;
             }
          } catch (Throwable var8) {
-            Expo.internal.restore.ExpoDiag.attribute(var8, "MinecraftRef.D/0#0");
          }
       }
 
@@ -160,12 +153,10 @@ public class MinecraftRef {
                   return (Minecraft)var13;
                }
             } catch (Throwable var7) {
-               Expo.internal.restore.ExpoDiag.attribute(var7, "MinecraftRef.D/0#1");
             }
          }
       }
 
       return null;
    }
-
 }

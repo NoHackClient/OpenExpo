@@ -2,13 +2,6 @@ package Expo.module.impl.visual_utility;
 
 import Expo.internal.synthetic.TrajectoriesSwitchMapAxis;
 
-
-
-
-
-
-
-
 public class TrajectoryProjectileSpec {
    private final float D;
    private final boolean V;

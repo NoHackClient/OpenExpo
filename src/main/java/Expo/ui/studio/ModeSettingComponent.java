@@ -15,16 +15,6 @@ import java.util.List;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
-
-
-
-
-
-
-
-
-
 public class ModeSettingComponent extends AbstractSettingComponent<ModeSetting> {
    private static long a;
    private final Animation E;
@@ -237,7 +227,6 @@ public class ModeSettingComponent extends AbstractSettingComponent<ModeSetting> 
          }
       }
    }
-
 
    public ModeSettingComponent(int var1, StudioClickGuiScreen var2, StudioModuleFrame var3, int var4, byte var5, ModeSetting var6) {
       super(

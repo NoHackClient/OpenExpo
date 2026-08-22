@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.module.impl.visual_utility.Indicators;
 
-
-
-
-
-
-
-
-
-
-
 public final class IndicatorsRender2DInvoker implements EventInvoker {
    final Indicators Z;
 

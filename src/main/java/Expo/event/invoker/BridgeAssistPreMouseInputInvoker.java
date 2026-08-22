@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.world.BridgeAssist;
 
-
-
-
-
-
-
-
-
-
-
 public final class BridgeAssistPreMouseInputInvoker implements EventInvoker {
    final BridgeAssist w;
 

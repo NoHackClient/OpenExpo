@@ -7,16 +7,6 @@ import Expo.event.invoker.InventoryHUDPostTickInvoker;
 import Expo.event.invoker.InventoryHUDRender2DInvoker;
 import Expo.module.impl.visual_utility.InventoryHUD;
 
-
-
-
-
-
-
-
-
-
-
 public final class InventoryHUDBinder {
    private static final long a = 69365049311914L;
 

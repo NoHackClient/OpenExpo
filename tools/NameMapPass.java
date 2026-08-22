@@ -126,8 +126,6 @@ public final class NameMapPass {
             throw new IllegalStateException("post-write verification found " + verified
                     + " mapped site(s), expected " + expected);
         }
-        System.out.println("[NameMapPass] rewrote and verified " + patched
-                + " Class.forName site(s) across " + targets.size() + " class(es)");
     }
 
     private static byte[] transform(byte[] data) {

@@ -21,16 +21,6 @@ import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public class BreakProgress extends Module implements EventSubscriber {
    private BlockPos p;
    private String g;
@@ -38,7 +28,6 @@ public class BreakProgress extends Module implements EventSubscriber {
    private double B;
 
    public void onRender3D(Render3DEvent var1) {
-
       if (this.B != 0.0 && this.p != null) {
          double var10 = this.p.getX() + 0.5 - f.getRenderManager().viewerPosX;
          double var12 = this.p.getY() + 0.5 - f.getRenderManager().viewerPosY;
@@ -65,7 +54,6 @@ public class BreakProgress extends Module implements EventSubscriber {
 
    public BreakProgress(long var1) {
       super(((a ^ (var1)) ^ 96405790857882L));
-      // add code
       this.declare("BreakProgress", Category.Visual, "Display the current breaking percentage right on the current breaking block");
       var1 = a ^ var1;
    }

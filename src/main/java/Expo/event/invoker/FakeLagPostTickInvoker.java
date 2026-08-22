@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.combat.FakeLag;
 
-
-
-
-
-
-
-
-
-
-
 public final class FakeLagPostTickInvoker implements EventInvoker {
    final FakeLag N;
 

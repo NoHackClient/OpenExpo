@@ -19,7 +19,6 @@ import javax.sound.sampled.FloatControl.Type;
 import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.SourceDataLine;
 
-
 class OggStreamPlayer implements Runnable {
    private volatile boolean c;
    private static String b;
@@ -126,7 +125,6 @@ class OggStreamPlayer implements Runnable {
                            try {
                               Thread.sleep(g);
                            } catch (InterruptedException var48) {
-                              Expo.internal.restore.ExpoDiag.attribute(var48, "OggStreamPlayer.r/3#0");
                               this.c = true;
                               Thread.currentThread().interrupt();
                               return;
@@ -199,7 +197,6 @@ class OggStreamPlayer implements Runnable {
             }
          }
       } catch (Throwable var49) {
-         Expo.internal.restore.ExpoDiag.attribute(var49, "OggStreamPlayer.r/3#1");
       } finally {
          if (var13 != null) {
             var13.drain();
@@ -231,7 +228,6 @@ class OggStreamPlayer implements Runnable {
                var1.close();
             }
          } catch (IOException var47) {
-            Expo.internal.restore.ExpoDiag.attribute(var47, "OggStreamPlayer.r/3#2");
          }
       }
    }
@@ -241,11 +237,9 @@ class OggStreamPlayer implements Runnable {
    }
 
    public void run() {
-
       try {
          this.r(this.J,this.p);
       } catch (Throwable var6) {
-         Expo.internal.restore.ExpoDiag.attribute(var6, "OggStreamPlayer.run/0#0");
          SoundEngine.l().remove(this);
          if (!this.c && this.W != null) {
             this.W.s();
@@ -271,9 +265,7 @@ class OggStreamPlayer implements Runnable {
       this.p = var4;
    }
 
-
    OggStreamPlayer(int var1, short var2, InputStream var3, char var4, float var5, OggStreamPlayerCtorMarker var6) {
-      // add code
       this((((long)var1 << 32 | (long)var2 << 48 >>> 32 | (long)var4 << 48 >>> 48) ^ a) ^ 121138181207423L, var3, var5);
    }
 
@@ -281,13 +273,11 @@ class OggStreamPlayer implements Runnable {
       try {
          var0.stop();
       } catch (Throwable var3) {
-         Expo.internal.restore.ExpoDiag.attribute(var3, "OggStreamPlayer.g/1#0");
       }
 
       try {
          var0.close();
       } catch (Throwable var2) {
-         Expo.internal.restore.ExpoDiag.attribute(var2, "OggStreamPlayer.g/1#1");
       }
    }
 
@@ -314,12 +304,9 @@ class OggStreamPlayer implements Runnable {
                var2.setValue(var3);
             }
          } catch (Throwable var4) {
-            Expo.internal.restore.ExpoDiag.attribute(var4, "OggStreamPlayer.l/2#0");
          }
       }
    }
-
-
 
    public boolean E() {
       return this.c;
@@ -340,5 +327,4 @@ class OggStreamPlayer implements Runnable {
       d = new long[]{4083265199998620853L, -7804156243392218070L, -5450520617468154535L, -3206907126933529369L, -2007018012284532477L, -5091787317120875423L, -5512749978260152769L, 2390692812596265243L, -7667186462599823788L, 9069488050007130747L, 5934094339055260779L, -983851958378323050L, 7096782722566740143L, 7599962049540685148L, 2899210336350044887L, -6552084433110130406L, -4140279938191877032L};
       g = 10L;
    }
-
 }

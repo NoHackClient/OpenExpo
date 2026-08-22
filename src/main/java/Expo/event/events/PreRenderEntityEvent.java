@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import net.minecraft.entity.Entity;
 
-
-
-
-
-
-
-
-
-
-
 public class PreRenderEntityEvent extends StoppableEvent {
    public final Entity O;
    private static final long a = 122292175497410L;

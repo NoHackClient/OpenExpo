@@ -3,16 +3,6 @@ package Expo.module.impl.world;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 
-
-
-
-
-
-
-
-
-
-
 public class BridgeAssistPlacement {
    public final BlockPos Z;
    public final EnumFacing U;

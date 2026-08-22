@@ -45,7 +45,6 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 
-
 public class VestigeClickGuiScreen extends GuiScreen {
    private static int c;
    private static Color k;
@@ -81,7 +80,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    private TextSetting K;
    private boolean I;
 
-
    public VestigeClickGuiScreen() {
       this.D = 20;
       this.M = 18;
@@ -92,10 +90,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    protected void keyTyped(char var1, int var2) {
-
-
-
-
       if (var2 == 1) {
          if (this.K != null) {
             this.Q();
@@ -129,9 +123,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private int I(Module var1, long var2, int var4, int var5, int var6, int var7, int var8, int var9) throws Throwable {
-
-
-
       List var14 = this.z(var1);
       int var15 = 0;
 
@@ -202,12 +193,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private void g(Module var1, Setting var2, int var3, int var4, int var5, int var6, long var7) throws Throwable {
-
-
-
-
-
-
       if (var2 instanceof BooleanSetting) {
          ((BooleanSetting)var2).W(112370683098682L);
       } else if (var2 instanceof ModeSetting) {
@@ -274,7 +259,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
          .getRGB();
    }
 
-
    private void N(Module var1, ColorSetting var2, int var3, short var4, int var5, int var6, int var7, int var8, int var9, int var10) {
       long var11 = ((long)var3 << 32 | (long)var4 << 48 >>> 32 | (long)var10 << 48 >>> 48) ^ a;
       long var13 = var11 ^ 106136566550234L;
@@ -310,25 +294,13 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private void d(Module var1, HeaderSetting var2, int var3, int var4, int var5, int var6, long var7) {
-
-
-
-
-
       CustomFont var17 = this.s(13213047758594L);
       Gui.drawRect(var3, var4, var5, var6, q.getRGB());
       var17.T(37697014677608L, this.a(var2.U(133728681395781L, var1), var5 - var3 - 10, 38580066682603L), var3 + 5, var4 + 3, h.getRGB());
    }
 
    private void U(Module var1, Setting var2, int var3, long var4, int var6, int var7, int var8, int var9) {
-
-
       int var14 = 20296;
-
-
-
-
-
 
       int var27 = 2086799432;
 
@@ -352,12 +324,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private void F(Module var1, BooleanSetting var2, int var3, int var4, int var5, long var6, int var8) {
-
-
-
-
-
-
       CustomFont var18 = this.s(13213047758594L);
       Gui.drawRect(var3, var4, var5, var8, q.getRGB());
       int var19 = var2.c() ? k.getRGB() : t.getRGB();
@@ -366,13 +332,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
 
    public void drawScreen(int var1, int var2, float var3) {
        try {long var4 = 17448604102766L;
-
-
-
-
-
-
-
 
       Y(2549667498153L);
       M();
@@ -465,18 +424,10 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private String q(Category var1, long var2) {
-
-
-
-
-
       return var1.x(12139, 2577, (short)47391).replace((char)95, (char)32);
    }
 
    private void Y(long var1, int var3) {
-
-
-
       if (this.o != null) {
          this.o.z(118276941480361L, var3);
          this.o = null;
@@ -494,11 +445,7 @@ public class VestigeClickGuiScreen extends GuiScreen {
       var1.o((byte)var7, var8, var12 * (var1.F() - var1.i()) + var1.i());
    }
 
-
    private void C(PercentageSetting var1, int var2, long var3, int var5, int var6) {
-
-
-
       double var10 = var5 - var2;
       double var12 = MathUtil.R(var6 - var2, 0.0, var10);
       int var14 = (int)Math.round(var12 / var10 * 100.0);
@@ -540,38 +487,25 @@ public class VestigeClickGuiScreen extends GuiScreen {
          }
       }
 
-      // add code
       return HeaderSetting.prune(var2);
    }
 
    public void onGuiClosed() {
-
-
-
       super.onGuiClosed();
       this.j(1310, 48485, (char)41992);
    }
 
    private CustomFont s(long var1) {
-
-
       return Font.m(23209167808904L);
    }
 
    private void B(Module var1, Setting var2, int var3, int var4, int var5, long var6, int var8) {
-
-
-
-
-
-
       CustomFont var18 = this.s(13213047758594L);
       Gui.drawRect(var3, var4, var5, var8, q.getRGB());
       var18.T(37697014677608L, this.a(var2.e((byte)0, var1, 121580628905660L), var5 - var3 - 10, 38580066682603L), var3 + 5, var4 + 3, t.getRGB());
    }
 
    public void initGui() {
-
       super.initGui();
       Y(2549667498153L);
       M();
@@ -666,7 +600,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
       }
    }
 
-
    private static void M() {
       if (E.isEmpty()) {
          for (Category var3 : Category.values()) {
@@ -684,12 +617,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private int g(Module var1, int var2, int var3, long var4, int var6, int var7) {
-
-
-
-
-
-
       List var13 = this.z(var1);
       int var14 = 0;
 
@@ -736,12 +663,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
 
    protected void mouseClicked(int var1, int var2, int var3) {
        try {long var4 = 41053911563077L;
-
-
-
-
-
-
 
       super.mouseClicked(var1, var2, var3);
       if (this.o != null && var3 > 2) {
@@ -797,8 +718,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private void B(long var1) {
-
-
       this.K(139064014055973L, this.mc.gameSettings.keyBindForward);
       this.K(139064014055973L, this.mc.gameSettings.keyBindLeft);
       this.K(139064014055973L, this.mc.gameSettings.keyBindRight);
@@ -858,24 +777,12 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private static void Y(long var0) {
-
-
-
-
-
       if (L.size() != Category.values().length) {
          q(11538, (char)22135, (short)25573);
       }
    }
 
    private void I(Module var1, PercentageSetting var2, int var3, int var4, int var5, int var6, int var7, long var8) {
-
-
-
-
-
-
-
       CustomFont var21 = this.s(13213047758594L);
       double var22 = var5 - var3;
       double var24 = var3 + var2.k() * var22 / 100.0;
@@ -895,9 +802,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private void X(Module var1, long var2, int var4) {
-
-
-
       if (this.o == null) {
          this.o = var1;
       } else {
@@ -910,21 +814,15 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private void K(long var1, KeyBinding var3) {
-
-
       KeyBindUtil.A(82009306480869L, var3.getKeyCode(), GameSettings.isKeyDown(var3));
    }
 
    private int S(long var1, int var3) {
-
-
       int var6 = -252851571;
       return this.H( 4.0F, -var3 * 3L);
    }
 
    private void n(long var1) {
-
-
       if (this.mc.thePlayer == null) {
          this.F = System.currentTimeMillis();
       } else {
@@ -992,11 +890,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    }
 
    private void q(Category var1, int var2, long var3, int var5, int var6, int var7) {
-
-
-
-
-
       CustomFont var16 = this.s(13213047758594L);
 
       for (int var17 = var2; var17 < var6; var17++) {
@@ -1009,6 +902,4 @@ public class VestigeClickGuiScreen extends GuiScreen {
    private boolean O(Module var1) {
       return p.getOrDefault(var1, false);
    }
-
-
 }

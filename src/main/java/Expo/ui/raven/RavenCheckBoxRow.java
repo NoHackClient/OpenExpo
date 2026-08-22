@@ -5,24 +5,12 @@ import Expo.setting.Setting;
 import Expo.setting.settings.BooleanSetting;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class RavenCheckBoxRow extends AbstractRavenSettingRow {
    private Module d;
    private static long c;
    private static String[] i;
    private BooleanSetting u;
    private static String[] f;
-
-
 
    public static void h(long var0) {
       GL11.glEnable(3553);
@@ -54,8 +42,6 @@ public class RavenCheckBoxRow extends AbstractRavenSettingRow {
          );
       GL11.glPopMatrix();
    }
-
-
 
    public static void a(float var0, float var1, float var2, float var3, long var4, int var6) {
       var4 = c ^ var4;
@@ -133,6 +119,4 @@ public class RavenCheckBoxRow extends AbstractRavenSettingRow {
       this.g = this.O.O.T() + this.y;
       this.h = this.O.O.X();
    }
-
-
 }

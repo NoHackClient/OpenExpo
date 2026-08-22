@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.module.impl.combat.BackTrack;
 
-
-
-
-
-
-
-
-
-
-
 public final class BackTrackRender2DInvoker implements EventInvoker {
    final BackTrack O;
 

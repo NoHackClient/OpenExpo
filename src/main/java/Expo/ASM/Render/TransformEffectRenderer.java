@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformEffectRenderer extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -30,7 +28,6 @@ public class TransformEffectRenderer extends TransformerBase {
    public TransformEffectRenderer() {
       super("net/minecraft/client/particle/EffectRenderer");
    }
-
 
    static {
       d = 72291789126318L;

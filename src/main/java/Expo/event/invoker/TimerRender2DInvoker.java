@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.module.impl.misc.Timer;
 
-
-
-
-
-
-
-
-
-
-
 public final class TimerRender2DInvoker implements EventInvoker {
    final Timer b;
 

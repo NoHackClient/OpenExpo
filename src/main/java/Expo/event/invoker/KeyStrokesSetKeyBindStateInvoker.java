@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SetKeyBindStateEvent;
 import Expo.module.impl.visual.KeyStrokes;
 
-
-
-
-
-
-
-
-
-
-
 public final class KeyStrokesSetKeyBindStateInvoker implements EventInvoker {
    final KeyStrokes S;
 

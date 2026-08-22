@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.module.impl.combat.AutoClicker;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoClickerPreTickInvoker implements EventInvoker {
    final AutoClicker k;
 

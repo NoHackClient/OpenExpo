@@ -7,16 +7,6 @@ import Expo.event.invoker.AutoGGHandleChatInvoker;
 import Expo.event.invoker.AutoGGPostTickInvoker;
 import Expo.module.impl.misc.AutoGG;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoGGBinder {
    private static final long a = 9398358130312L;
 

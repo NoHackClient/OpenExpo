@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.util.RotationManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class RotationManagerPreMouseInputInvoker implements EventInvoker {
    final RotationManager d;
 

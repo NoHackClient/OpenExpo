@@ -7,18 +7,14 @@ import java.util.List;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiMainMenu;
 
-
 public class GuiMainMenuHooks {
    private static long a;
-
-
 
    static {
       a = 83392787864308L;
    }
 
    public static void onActionPerformed(GuiButton var0, CallbackInfo var1) {
-
       if (!"User".equals("Injection")) {
          if (var0.id == 20) {
             MinecraftRef.c((byte)0,0L).displayGuiScreen(new MainMenuStyleScreen(new GuiMainMenu()));
@@ -41,6 +37,4 @@ public class GuiMainMenuHooks {
          );
       }
    }
-
-
 }

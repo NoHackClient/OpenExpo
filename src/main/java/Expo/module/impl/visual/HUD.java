@@ -39,7 +39,6 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 
-
 public class HUD extends Module implements EventSubscriber {
    private static String[] k;
    private static String[] c;
@@ -93,18 +92,7 @@ public class HUD extends Module implements EventSubscriber {
       r = new ResourceLocation("watermark/logo.png");
    }
 
-
    public void onRender2D(Render2DEvent var1, long var2) {
-
-
-
-
-
-
-
-
-
-
       CustomFont var25 = Font.F(0L);
       ScaledResolution var26 = var1.C;
       String var27 = "";
@@ -167,7 +155,7 @@ public class HUD extends Module implements EventSubscriber {
          case "LOGO":
             var44 *= 0.7F;
             if (watermark.c()) {
-               Expo.util.render.RenderUtil.g((char)0, (char)25892, r, -336833984, 1.0F / var44, 1.0F / var44, 30.0F, var44, Theme.S(0.0, 35338930340239L));
+               Expo.util.render.RenderUtil.g((char)0, (char)25892, r, -336833984, 1.0F, 1.0F, 30.0F, 1.0F / var44, Theme.S(0.0, 35338930340239L));
             }
 
             float var46 = watermark.c() ? 35.0F * var44 : 1.0F;
@@ -252,7 +240,6 @@ public class HUD extends Module implements EventSubscriber {
 
    public HUD(long var1) {
       super(((a ^ (var1)) ^ 139999288410231L));
-      // add code
       this.declare("HUD", Category.Visual, "Aka \"Heads up display\"");
       var1 = a ^ var1;
    }
@@ -364,7 +351,6 @@ public class HUD extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       health = new BooleanSetting("Health", false);
       fps = new BooleanSetting("FPS", true);
       scale = new NumberSetting("Scale", 1.0F, 0.25F, 3.0F, 0.01F);

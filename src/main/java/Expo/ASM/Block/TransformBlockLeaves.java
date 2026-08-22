@@ -7,17 +7,14 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.InsnNode;
 
-
 public class TransformBlockLeaves extends TransformerBase {
    private static long w;
    private static long d;
-
 
    static {
       d = 39735817187027L;
       w = -5190937494450863952L;
    }
-
 
    public boolean s(ClassNode var1) {
       return BytecodeHelper.t(var1, "()" + SrgNames.X("net/minecraft/util/EnumWorldBlockLayer"), (var1x, var2x) -> {
@@ -31,7 +28,6 @@ public class TransformBlockLeaves extends TransformerBase {
          return true;
       }, "getBlockLayer", "getBlockLayer");
    }
-
 
    public TransformBlockLeaves() {
       super("net/minecraft/block/BlockLeaves");

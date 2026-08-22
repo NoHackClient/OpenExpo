@@ -4,16 +4,6 @@ import java.lang.reflect.Field;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Session;
 
-
-
-
-
-
-
-
-
-
-
 public class SessionAccessor {
    private static Field t = null;
    private static final Minecraft u = Minecraft.getMinecraft();

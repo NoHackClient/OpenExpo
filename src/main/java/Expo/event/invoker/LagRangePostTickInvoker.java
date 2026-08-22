@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.combat.LagRange;
 
-
-
-
-
-
-
-
-
-
-
 public final class LagRangePostTickInvoker implements EventInvoker {
    final LagRange n;
 

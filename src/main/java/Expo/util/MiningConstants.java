@@ -13,16 +13,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
-
-
-
-
-
-
-
-
-
 public class MiningConstants {
    public static boolean G;
    public static float s;
@@ -65,7 +55,6 @@ public class MiningConstants {
 
    private static void zkm$clinit() {
       try {
-
          Cipher var1;
          byte[] var10003 = new byte[]{(byte)0L, 0, 0, 0, 0, 0, 0, 0};
 

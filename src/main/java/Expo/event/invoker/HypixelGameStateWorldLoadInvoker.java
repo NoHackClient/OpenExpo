@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.WorldLoadEvent;
 import Expo.util.HypixelGameState;
 
-
-
-
-
-
-
-
-
-
-
 public final class HypixelGameStateWorldLoadInvoker implements EventInvoker {
    final HypixelGameState c;
 

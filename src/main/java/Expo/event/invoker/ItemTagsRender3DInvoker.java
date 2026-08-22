@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render3DEvent;
 import Expo.module.impl.visual_utility.ItemTags;
 
-
-
-
-
-
-
-
-
-
-
 public final class ItemTagsRender3DInvoker implements EventInvoker {
    final ItemTags Y;
 

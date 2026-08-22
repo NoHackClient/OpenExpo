@@ -18,16 +18,6 @@ import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
-
-
-
-
-
-
-
-
-
-
 public class AutoWeapon extends Module implements EventSubscriber {
    private static final long a = 28055302659721L;
    private static final String[] c = new String[10];
@@ -69,6 +59,7 @@ public class AutoWeapon extends Module implements EventSubscriber {
 
             var10 += var12;
             if (var10 > var6) {
+               var6 = var10;
                var5 = var8;
             }
          }
@@ -100,8 +91,6 @@ public class AutoWeapon extends Module implements EventSubscriber {
    }
 
    public void onPreUpdate(PreUpdateEvent var3) {
-
-
       if (E.objectMouseOver.entityHit != null && KeyBindUtil.V(E.gameSettings.keyBindAttack.getKeyCode(), 64165991731362L)) {
          ItemUtil.P( M(93384294372710L));
       }
@@ -109,12 +98,10 @@ public class AutoWeapon extends Module implements EventSubscriber {
 
    public AutoWeapon(long var1) {
       super(((a ^ (var1)) ^ 109000085513128L));
-      // add code
       this.declare("AutoWeapon", Category.Player, "Switch to the best weapon in hotbar during combat");
       var1 = a ^ var1;
    }
    static {
-      // add code
       axeIsWeapon = new BooleanSetting("Axe-is-weapon", false);
       stickIsWeapon = new BooleanSetting("Stick-is-weapon", false);
       fishingrodIsWeapon = new BooleanSetting("FishingRod-is-weapon", false);

@@ -5,16 +5,6 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-
-
-
-
-
-
-
-
-
-
 public class SoundEngine {
    private static long a;
    private SoundCallback e;
@@ -33,7 +23,6 @@ public class SoundEngine {
    }
 
    public static void G(int var0) {
-
       for (OggStreamPlayer var8 : V) {
          var8.L();
       }
@@ -68,9 +57,6 @@ public class SoundEngine {
    }
 
    public static void c(long var0) {
-
-
-
       for (OggStreamPlayer var5 : V) {
          var5.b(129455148608165L);
       }
@@ -83,13 +69,10 @@ public class SoundEngine {
    }
 
    static {
-      // add code
-
       a = 19188549812115L;
 
       V = new CopyOnWriteArrayList<>();
    }
-
 
    public static void B(String var0, long var1, float var3) {
       long var4 = var1 ^ 6527503770779L;
@@ -107,7 +90,6 @@ public class SoundEngine {
          InputStream var7 = var6.openStream();
          D(var7, var3, var4);
       } catch (IOException var8) {
-         Expo.internal.restore.ExpoDiag.attribute(var8, "SoundEngine.B/3#0");
       }
    }
 
@@ -117,5 +99,4 @@ public class SoundEngine {
       int var5 = (int)((var0 ^ 120840991663794L) << 48 >>> 48);
       d(var2, var3, (char)var5, 0.0F);
    }
-
 }

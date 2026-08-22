@@ -9,16 +9,6 @@ import Expo.event.invoker.BrokenBlockTrackerPostTickInvoker;
 import Expo.event.invoker.BrokenBlockTrackerTryHarvestBlockHeadInvoker;
 import Expo.internal.BrokenBlockTracker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BrokenBlockTrackerBinder {
    private static final long a = 43283131921251L;
 
@@ -30,5 +20,4 @@ public final class BrokenBlockTrackerBinder {
       var0.R(var1, TryHarvestBlockHeadEvent.class, 3, new BrokenBlockTrackerTryHarvestBlockHeadInvoker(var1));
       var0.R(var1, PostTickEvent.class, 3, new BrokenBlockTrackerPostTickInvoker(var1));
    }
-
 }

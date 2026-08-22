@@ -12,16 +12,6 @@ import net.minecraft.network.play.client.C08PacketPlayerBlockPlacement;
 import net.minecraft.network.play.client.C09PacketHeldItemChange;
 import net.minecraft.network.play.client.C0APacketAnimation;
 
-
-
-
-
-
-
-
-
-
-
 public class OutgoingPacketState {
    public static boolean C;
    private static Minecraft l;
@@ -114,6 +104,4 @@ public class OutgoingPacketState {
    public static void J(long var0) {
       d = true;
    }
-
-
 }

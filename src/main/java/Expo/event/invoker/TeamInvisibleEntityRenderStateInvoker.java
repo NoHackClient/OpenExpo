@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.EntityRenderStateEvent;
 import Expo.module.impl.visual.TeamInvisible;
 
-
-
-
-
-
-
-
-
-
-
 public final class TeamInvisibleEntityRenderStateInvoker implements EventInvoker {
    final TeamInvisible o;
 

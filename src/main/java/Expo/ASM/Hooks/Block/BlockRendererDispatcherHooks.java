@@ -7,16 +7,6 @@ import net.minecraft.block.BlockBed;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public class BlockRendererDispatcherHooks {
    public static void onRenderBlock(IBlockState var0, BlockPos var1) {
       if (var0.getBlock() instanceof BlockBed && var0.getValue(BlockBed.PART) == EnumPartType.HEAD) {

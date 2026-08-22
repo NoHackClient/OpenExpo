@@ -38,16 +38,6 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 
-
-
-
-
-
-
-
-
-
-
 public class ChestESP extends Module implements EventSubscriber {
    public static ModeSetting color;
    public static BooleanSetting showTargetShade;
@@ -60,9 +50,6 @@ public class ChestESP extends Module implements EventSubscriber {
    public static ColorSetting customColor;
 
    private void B(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       this.I.clear();
       List var6 = f.theWorld.loadedTileEntityList;
       boolean var7 = ignoreOpened.c();
@@ -145,11 +132,6 @@ public class ChestESP extends Module implements EventSubscriber {
    }
 
    public void onRender3D(long var1, Render3DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
       int var19;
       switch (color.Y()) {
          case "THEME":
@@ -184,21 +166,17 @@ public class ChestESP extends Module implements EventSubscriber {
       }
    }
 
-
    public void onPostTick(PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       this.B(129551973060899L);
    }
 
    public ChestESP(long var1) {
       super(((a ^ (var1)) ^ 98396349626058L));
-      // add code
       this.declare("ChestESP", Category.Visual_utility, "ESP for chests");
       var1 = a ^ var1;
       this.v = new HashSet<>();
       this.I = new ArrayList<>();
    }
-
 
    public void A(long var1) {
       this.v.clear();
@@ -210,7 +188,6 @@ public class ChestESP extends Module implements EventSubscriber {
    }
 
    public void onPlayerRightClick(PlayerRightClickEvent var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       BlockPos var6 = var1.a$r2();
       if (f.theWorld.getBlockState(var6).getBlock() == Blocks.chest) {
          this.v.add(var6);
@@ -218,9 +195,7 @@ public class ChestESP extends Module implements EventSubscriber {
       }
    }
 
-
    static {
-      // add code
       opacity = new PercentageSetting("Opacity", 25);
       ignoreOpened = new BooleanSetting("Ignore-opened", false);
       showTargetOutline = new BooleanSetting("Show-target-outline", true);

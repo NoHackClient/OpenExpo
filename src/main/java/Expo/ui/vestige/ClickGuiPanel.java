@@ -2,16 +2,6 @@ package Expo.ui.vestige;
 
 import Expo.internal.synthetic.VestigeClickGuiScreenCtorMarker;
 
-
-
-
-
-
-
-
-
-
-
 public class ClickGuiPanel {
    private boolean S;
    private static long b;
@@ -36,10 +26,7 @@ public class ClickGuiPanel {
 
    static {
       a = 117470247942599L;
-      // add code
    }
-
-
 
    public static int set_z(ClickGuiPanel var0, int var1) {
       return var0.z = var1;
@@ -130,5 +117,4 @@ public class ClickGuiPanel {
    public static int set_d(ClickGuiPanel var0, int var1) {
       return var0.d = var1;
    }
-
 }

@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformRendererLivingEntity extends TransformerBase {
    private static long d;
 
@@ -35,10 +34,7 @@ public class TransformRendererLivingEntity extends TransformerBase {
       }, "canRenderName", "canRenderName");
    }
 
-
    static {
       d = 48482666421625L;
    }
-
-
 }

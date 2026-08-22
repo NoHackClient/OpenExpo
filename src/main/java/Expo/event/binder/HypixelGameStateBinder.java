@@ -7,16 +7,6 @@ import Expo.event.invoker.HypixelGameStatePostTickInvoker;
 import Expo.event.invoker.HypixelGameStateWorldLoadInvoker;
 import Expo.util.HypixelGameState;
 
-
-
-
-
-
-
-
-
-
-
 public final class HypixelGameStateBinder {
    private static final long a = 12737479543531L;
 

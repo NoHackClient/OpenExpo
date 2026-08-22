@@ -18,9 +18,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 
-
 public final class ExpoSettingStatics {
-
    private static final List<String> COMMON = new ArrayList<String>();
 
    static {
@@ -218,7 +216,6 @@ public final class ExpoSettingStatics {
    }
 
    private static final class Envelope {
-
       private final List<Float> floats = new ArrayList<Float>();
       private final List<Integer> ints = new ArrayList<Integer>();
       private final List<String> strings = new ArrayList<String>();

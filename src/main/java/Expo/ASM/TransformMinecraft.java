@@ -13,12 +13,8 @@ import org.objectweb.asm.tree.LabelNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 
-
 public class TransformMinecraft extends TransformerBase {
    private static long d;
-
-
-
 
    static {
       d = 56557798079205L;
@@ -27,7 +23,6 @@ public class TransformMinecraft extends TransformerBase {
    public TransformMinecraft() {
       super("net/minecraft/client/Minecraft");
    }
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -127,7 +122,6 @@ public class TransformMinecraft extends TransformerBase {
          });
       }, "loadWorld", "loadWorld");
    }
-
 
    private boolean A(MethodNode var1) {
       boolean var4 = false;

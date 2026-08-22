@@ -10,16 +10,6 @@ import java.security.spec.InvalidKeySpecException;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
-
-
-
-
-
-
-
-
-
 public final class BindGUIPostTickInvoker implements EventInvoker {
    final BindGUI t;
 

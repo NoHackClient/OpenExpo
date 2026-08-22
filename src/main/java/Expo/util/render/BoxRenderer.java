@@ -12,16 +12,6 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class BoxRenderer {
    private static long a;
    private static Minecraft M;
@@ -75,11 +65,8 @@ public class BoxRenderer {
 
    static {
       a = 76566711834522L;
-      // add code
       M = MinecraftRef.c((byte)0, 0L);
    }
-
-
 
    private static void F(double var0, double var2, double var4, double var6, double var8, double var10, Color var12) {
       GL11.glLineWidth(2.0F);
@@ -112,8 +99,6 @@ public class BoxRenderer {
       GL11.glEnd();
       GL11.glLineWidth(1.0F);
    }
-
-
 
    private static void o() {
       GlStateManager.enableTexture2D();
@@ -153,7 +138,6 @@ public class BoxRenderer {
 ,
          var3
 
-
 );
    }
 
@@ -164,5 +148,4 @@ public class BoxRenderer {
       F(var7.minX, var7.minY, var7.minZ, var7.maxX, var7.maxY, var7.maxZ, var3);
       o();
    }
-
 }

@@ -15,7 +15,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
 public enum MinecraftColor {
    BLACK((char)48, -16777216),
    DARK_BLUE((char)49, -16777046),
@@ -108,7 +107,6 @@ public enum MinecraftColor {
       return new String(new char[]{(char)167, this.G});
    }
 
-
    public static String C(String var0) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       char[] var3 = var0.toCharArray();
 
@@ -130,7 +128,6 @@ public enum MinecraftColor {
       this.G = var3;
       this.I = var4;
    }
-
 
    public int U() {
       return this.I;
@@ -288,5 +285,4 @@ public enum MinecraftColor {
          throw new RuntimeException(var22);
       }
    }
-
 }

@@ -52,16 +52,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 
-
-
-
-
-
-
-
-
-
-
 public class BridgeAssist extends Module implements EventSubscriber {
    private int s;
    private boolean G;
@@ -399,6 +389,7 @@ public class BridgeAssist extends Module implements EventSubscriber {
 
                      float var30 = Math.abs(var39 - var2);
                      if (var30 < var31) {
+                        var31 = var30;
                         var32 = var39;
                         var33 = var29.Z;
                         var34 = var29.U;
@@ -435,7 +426,6 @@ public class BridgeAssist extends Module implements EventSubscriber {
       try {
          if (var8 != 'Y' && var8 != 226 && var8 != 'F' && var8 != 255) {
             var11 = d(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/module/impl/world/BridgeAssist.java", var8, var4, var6, var11); // add code
             Class var17 = var11.getDeclaringClass();
             String var19 = var11.getName();
             MethodType var20 = MethodType.methodType(var11.getReturnType(), var11.getParameterTypes());
@@ -448,7 +438,6 @@ public class BridgeAssist extends Module implements EventSubscriber {
             }
          } else {
             var10 = c(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/module/impl/world/BridgeAssist.java", var8, var4, var6, var10); // add code
             Class var12 = var10.getDeclaringClass();
             String var18 = var10.getName();
             Class var14 = var10.getType();
@@ -624,7 +613,6 @@ public class BridgeAssist extends Module implements EventSubscriber {
          if (var16 < var13) {
             var14[var16] = var15;
          }
-
       }
 
       Class var23 = var8;
@@ -750,7 +738,6 @@ public class BridgeAssist extends Module implements EventSubscriber {
 
    public BridgeAssist(long var1) {
       super(((a ^ (var1)) ^ 8068768226746L));
-      // add code
       this.declare("BridgeAssist", Category.World, "Sneak when you get close to the edge of the blocks");
       var1 = a ^ var1;
       this.y = -1;
@@ -783,7 +770,6 @@ public class BridgeAssist extends Module implements EventSubscriber {
    }
 
    private void m(MoveInputEvent var1, long var2) {
-
       if (this.R && this.isGetKeyCode(106499145851495L)) {
          KeyBinding.setKeyBindState(f.gameSettings.keyBindSneak.getKeyCode(), true);
          var1.x(true);
@@ -793,11 +779,6 @@ public class BridgeAssist extends Module implements EventSubscriber {
    }
 
    public void onMoveInput(MoveInputEvent var1, long var2) {
-
-
-
-
-
       if (f.currentScreen == null && !f.thePlayer.capabilities.isFlying) {
          boolean var19 = this.isGetKeyCode(106499145851495L);
          boolean var20 = requireSneak.c();
@@ -967,7 +948,6 @@ public class BridgeAssist extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       silentRotation = new BooleanSetting("Silent-rotation", false);
       requireSneak = new BooleanSetting("Require-sneak", false);
       requireHoldingBlocks = new BooleanSetting("Require-holding-blocks", false);
@@ -975,7 +955,6 @@ public class BridgeAssist extends Module implements EventSubscriber {
       notMovingForward = new BooleanSetting("Not-moving-forward", false);
    }
    static {
-      // add code
       edgeOffset = new NumberSetting("Edge-offset", 0.0F, 0.0F, 0.3F, 0.01F);
       unsneakDelay = new NumberSetting("Unsneak-delay", 50.0F, 50.0F, 300.0F, 5.0F);
       sneakOnJumpTime = new NumberSetting("Sneak-on-jump-time", 0.0F, 0.0F, 500.0F, 5.0F);

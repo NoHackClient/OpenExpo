@@ -8,16 +8,6 @@ import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.SortingIndex;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin.TransformerExclusions;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
-
-
-
-
-
-
-
-
-
-
 @MCVersion("1.8.9")
 @TransformerExclusions("Expo.ASM")
 @SortingIndex(Integer.MAX_VALUE)
@@ -43,5 +33,4 @@ public class CoreMod implements IFMLLoadingPlugin {
    public String getAccessTransformerClass() {
       return null;
    }
-
 }

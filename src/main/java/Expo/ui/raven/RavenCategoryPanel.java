@@ -34,7 +34,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.lwjgl.opengl.GL11;
 
-
 public class RavenCategoryPanel {
    private boolean x;
    private static long b;
@@ -68,13 +67,6 @@ public class RavenCategoryPanel {
    }
 
    public void T(CustomFont var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
       int var17 = 86;
 
       int var22 = 48816;
@@ -207,7 +199,6 @@ public class RavenCategoryPanel {
       this.K(var7, var2);
    }
 
-   // add code
    public RavenCategoryPanel(Category var1, int var2) {
       Q = new Color(0, 0, 0, 110).getRGB();
       a = new Color(220, 220, 220).getRGB();
@@ -233,17 +224,14 @@ public class RavenCategoryPanel {
       this.H = new Animator(Easing.EASE_OUT_QUART, i);
    }
 
-   // add code
    public int ravenWidth() {
       return this.U;
    }
 
-   // add code
    public int ravenHeader() {
       return this.q;
    }
 
-   // add code
    public static long ravenAnimationMillis() {
       return i;
    }
@@ -256,12 +244,6 @@ public class RavenCategoryPanel {
    }
 
    private void K(long var1, Category var3) {
-
-
-
-
-
-
       Q = new Color(0, 0, 0, 110).getRGB();
       a = new Color(220, 220, 220).getRGB();
       C = new Color(250, 95, 85).getRGB();
@@ -396,7 +378,6 @@ public class RavenCategoryPanel {
       this.P = var1;
    }
 
-
    public boolean g() {
       return this.s;
    }
@@ -408,5 +389,4 @@ public class RavenCategoryPanel {
    public boolean D() {
       return this.x;
    }
-
 }

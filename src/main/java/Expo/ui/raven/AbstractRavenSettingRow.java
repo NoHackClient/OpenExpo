@@ -11,16 +11,6 @@ import Expo.setting.settings.TextSetting;
 import Expo.util.Sneaky;
 import java.awt.Color;
 
-
-
-
-
-
-
-
-
-
-
 public abstract class AbstractRavenSettingRow implements RavenElement {
    protected int P;
    protected int N;
@@ -56,16 +46,7 @@ public abstract class AbstractRavenSettingRow implements RavenElement {
       return var3 > this.h && var3 < this.h + this.C().O.t() && var4 > this.g && var4 < this.g + 8;
    }
 
-
-
    public static AbstractRavenSettingRow e(Setting var0, RavenModuleRow var1, long var2, int var4) {
-
-
-
-
-
-
-
       if (var0 instanceof HeaderSetting) {
          return new RavenTextRow((HeaderSetting)var0, var1, var4);
       } else if (var0 instanceof ModeSetting) {
@@ -96,7 +77,4 @@ public abstract class AbstractRavenSettingRow implements RavenElement {
    public RavenModuleRow C() {
       return this.O;
    }
-
-
-
 }

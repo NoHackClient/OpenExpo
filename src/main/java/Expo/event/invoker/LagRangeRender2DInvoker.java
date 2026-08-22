@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.module.impl.combat.LagRange;
 
-
-
-
-
-
-
-
-
-
-
 public final class LagRangeRender2DInvoker implements EventInvoker {
    final LagRange v;
 

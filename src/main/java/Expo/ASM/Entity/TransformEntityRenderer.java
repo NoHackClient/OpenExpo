@@ -11,7 +11,6 @@ import org.objectweb.asm.tree.InsnNode;
 import org.objectweb.asm.tree.JumpInsnNode;
 import org.objectweb.asm.tree.LabelNode;
 
-
 public class TransformEntityRenderer extends TransformerBase {
    private static String[] P;
    private static Object[] O;
@@ -232,12 +231,9 @@ public class TransformEntityRenderer extends TransformerBase {
          );
    }
 
-
-
    public TransformEntityRenderer() {
       super("net/minecraft/client/renderer/EntityRenderer");
    }
-
 
    private static void b() {
       O[0] = "\u001ftG3oM\tA\u0019\u000ex";

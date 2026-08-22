@@ -9,16 +9,6 @@ import Expo.util.render.RenderUtil;
 import java.awt.Color;
 import org.lwjgl.input.Mouse;
 
-
-
-
-
-
-
-
-
-
-
 public class ColorSettingComponent extends AbstractSettingComponent<ColorSetting> {
    private final Animation r;
    private static long a;
@@ -208,11 +198,9 @@ public class ColorSettingComponent extends AbstractSettingComponent<ColorSetting
    }
 
    private Color T() {
-
       try {
          return new Color(Integer.parseInt(this.O.Q(), 16));
       } catch (Exception var4) {
-         Expo.internal.restore.ExpoDiag.attribute(var4, "ColorSettingComponent.T/1#0");
          return Color.WHITE;
       }
    }
@@ -299,6 +287,4 @@ public class ColorSettingComponent extends AbstractSettingComponent<ColorSetting
             )
          );
    }
-
-
 }

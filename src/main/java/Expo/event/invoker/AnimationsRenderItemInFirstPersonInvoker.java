@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.RenderItemInFirstPersonEvent;
 import Expo.module.impl.visual.Animations;
 
-
-
-
-
-
-
-
-
-
-
 public final class AnimationsRenderItemInFirstPersonInvoker implements EventInvoker {
    final Animations u;
 

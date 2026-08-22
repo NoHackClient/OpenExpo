@@ -3,16 +3,6 @@ package Expo.command.impl;
 import Expo.command.Command;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
 public class StockCommandToggle extends Command {
    private static String[] a;
    private static String[] b;
@@ -24,6 +14,4 @@ public class StockCommandToggle extends Command {
    public native void h(long var1);
 
    public native List g(String[] var1, int var2, long var3);
-
-   private static native String a(int var0, int var1, int var2);
 }

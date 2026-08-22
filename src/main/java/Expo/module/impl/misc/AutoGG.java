@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-
 public class AutoGG extends Module implements EventSubscriber {
    private static Map d;
    private static long[] e;
@@ -31,21 +30,16 @@ public class AutoGG extends Module implements EventSubscriber {
 
    public AutoGG(long var1) {
       super(((a ^ (var1)) ^ 19575684994774L));
-      // add code
       this.declare("AutoGG", Category.Misc, "Send a \"GG\" message when a Hypixel game ends");
       var1 = a ^ var1;
       this.n = -1;
    }
 
    private void t(long var1) {
-
-
       if (this.n < 0) {
          this.n = t((short)0,(int)delay.L());
       }
    }
-
-
 
    public void onPostTick(short var1, PostTickEvent var2, char var3, int var4) {
       if (this.n >= 0) {
@@ -64,7 +58,6 @@ public class AutoGG extends Module implements EventSubscriber {
       AutoGGBinder.X(var3, this);
    }
 
-
    static {
       a = 58515000138946L;
       d = new HashMap(13);
@@ -75,12 +68,7 @@ public class AutoGG extends Module implements EventSubscriber {
       H = new ArrayList<>();
    }
 
-   private static void a() {
-   }
-
-
    public void onHandleChat(long var1, HandleChatEvent var3) {
-
       String var6 = var3.A.getUnformattedText();
 
       for (Pattern var8 : H) {
@@ -91,7 +79,6 @@ public class AutoGG extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       message = new TextSetting("Message", "GG");
       delay = new NumberSetting("Delay", 1000.0F, 0.0F, 5000.0F, 10.0F);
    }

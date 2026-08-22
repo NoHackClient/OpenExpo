@@ -2,13 +2,6 @@ package Expo.module.impl.visual_utility;
 
 import Expo.internal.synthetic.TracersCtorMarker;
 
-
-
-
-
-
-
-
 public class TracersFilterFlags {
    private final boolean M;
    private final boolean A;

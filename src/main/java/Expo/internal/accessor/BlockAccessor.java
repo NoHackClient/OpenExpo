@@ -3,16 +3,6 @@ package Expo.internal.accessor;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBucket;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlockAccessor {
    private static TypedValueStore c;
 
@@ -20,10 +10,7 @@ public final class BlockAccessor {
       return (Block)c.v(var1);
    }
 
-
-
    static {
       c = FieldAccessors.X(ItemBucket.class, "isFull", "isFull");
    }
-
 }

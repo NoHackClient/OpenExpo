@@ -9,16 +9,6 @@ import java.nio.ByteOrder;
 import java.nio.IntBuffer;
 import net.minecraft.client.renderer.WorldRenderer;
 
-
-
-
-
-
-
-
-
-
-
 public class WorldRendererHooks {
    private static final long a = 91233847165584L;
 

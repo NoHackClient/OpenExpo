@@ -9,19 +9,7 @@ import Expo.module.ModuleManager;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandHelp extends Command {
-
    private static final String TITLE = "Here's a list of commands";
    private static final String LINE_PREFIX = "  §l.";
    private static final String ALIAS_SEP = "§r, §l.";
@@ -79,7 +67,6 @@ public final class ExpoCommandHelp extends Command {
       ExpoCommands.chat(FOOTER_HELP);
       ExpoCommands.chat(FOOTER_MODULE);
 
-      // add code
       ExpoCommands.chat("§8[restored] " + var3 + " of " + (var3 + var4)
                         + " commands have a restored body"
                         + (var4 == 0 ? "." : "; the other " + var4 + " print the stock "

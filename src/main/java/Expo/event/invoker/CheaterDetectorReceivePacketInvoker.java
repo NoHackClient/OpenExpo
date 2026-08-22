@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ReceivePacketEvent;
 import Expo.internal.CheaterDetector;
 
-
-
-
-
-
-
-
-
-
-
 public final class CheaterDetectorReceivePacketInvoker implements EventInvoker {
    final CheaterDetector C;
 

@@ -2,16 +2,6 @@ package Expo.internal.synthetic;
 
 import net.minecraft.item.EnumAction;
 
-
-
-
-
-
-
-
-
-
-
 public class AnimationsSwitchMapEnumAction {
    public static final int[] j = new int[EnumAction.values().length];
 

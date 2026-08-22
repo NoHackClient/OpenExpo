@@ -23,19 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 import net.minecraft.client.Minecraft;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandConfig extends Command {
-
    private static final String SUFFIX = ".json";
 
    @Override
@@ -43,13 +31,11 @@ public final class ExpoCommandConfig extends Command {
       return false;
    }
 
-   // add code
    @Override
    public String[] e(long var1) {
       return new String[]{"config", "c", "cfg"};
    }
 
-   // add code
    @Override
    public void h(long var1) {
       ExpoCommands.chat("§7Usage:");
@@ -66,7 +52,6 @@ public final class ExpoCommandConfig extends Command {
                         + "load here always cover every named module.");
    }
 
-   // add code
    private static void folder() {
       File var0 = dir();
 
@@ -89,7 +74,6 @@ public final class ExpoCommandConfig extends Command {
       }
    }
 
-   // add code
    private static void description(String[] var0) {
       JsonObject var1 = ExpoCommandData.readJson(ExpoCommandData.CURRENT);
 
@@ -122,7 +106,6 @@ public final class ExpoCommandConfig extends Command {
    public void j(String[] var1, long var2) {
       String var4 = var1[0];
 
-      // add code
       if ("folder".equalsIgnoreCase(var4)) {
          folder();
       } else if ("description".equalsIgnoreCase(var4)) {

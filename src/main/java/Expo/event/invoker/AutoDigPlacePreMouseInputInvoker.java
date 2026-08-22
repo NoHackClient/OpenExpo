@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.world.AutoDigPlace;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoDigPlacePreMouseInputInvoker implements EventInvoker {
    final AutoDigPlace v;
 

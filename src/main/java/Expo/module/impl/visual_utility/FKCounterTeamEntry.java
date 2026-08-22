@@ -2,13 +2,6 @@ package Expo.module.impl.visual_utility;
 
 import Expo.internal.synthetic.FKCounterCtorMarker;
 
-
-
-
-
-
-
-
 public class FKCounterTeamEntry {
    private final int F;
    private final int x;

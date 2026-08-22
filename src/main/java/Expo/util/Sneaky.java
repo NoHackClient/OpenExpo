@@ -1,6 +1,5 @@
 package Expo.util;
 
-// add code
 /**
  * Rethrows a checked exception without declaring it.
  *
@@ -11,7 +10,6 @@ package Expo.util;
  * exception java.lang.Throwable". The duplication is what can go.
  */
 public final class Sneaky {
-
    private Sneaky() {
    }
 

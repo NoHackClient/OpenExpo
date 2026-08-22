@@ -7,17 +7,12 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.VarInsnNode;
 
-
 public class TransformModelBiped extends TransformerBase {
    private static long d;
 
    static {
       d = 120187238387434L;
    }
-
-
-
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;

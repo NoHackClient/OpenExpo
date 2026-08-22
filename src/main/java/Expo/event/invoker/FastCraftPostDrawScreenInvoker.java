@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostDrawScreenEvent;
 import Expo.module.impl.player.FastCraft;
 
-
-
-
-
-
-
-
-
-
-
 public final class FastCraftPostDrawScreenInvoker implements EventInvoker {
    final FastCraft z;
 

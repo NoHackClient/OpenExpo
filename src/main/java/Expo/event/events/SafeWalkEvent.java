@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class SafeWalkEvent extends Event {
    private static long b;
    private boolean S;
@@ -30,5 +20,4 @@ public class SafeWalkEvent extends Event {
    public boolean O() {
       return this.S;
    }
-
 }

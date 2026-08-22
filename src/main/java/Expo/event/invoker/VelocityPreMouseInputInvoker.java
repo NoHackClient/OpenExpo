@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.combat.Velocity;
 
-
-
-
-
-
-
-
-
-
-
 public final class VelocityPreMouseInputInvoker implements EventInvoker {
    final Velocity w;
 

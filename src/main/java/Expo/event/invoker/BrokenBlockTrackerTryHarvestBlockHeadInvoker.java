@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.TryHarvestBlockHeadEvent;
 import Expo.internal.BrokenBlockTracker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BrokenBlockTrackerTryHarvestBlockHeadInvoker implements EventInvoker {
    final BrokenBlockTracker u;
 

@@ -14,16 +14,6 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import org.lwjgl.opengl.Display;
 
-
-
-
-
-
-
-
-
-
-
 public class VisualSpoofWindow {
    private final JFrame P;
    private int a;

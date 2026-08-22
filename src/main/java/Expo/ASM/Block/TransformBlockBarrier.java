@@ -5,7 +5,6 @@ import Expo.ASM.Util.BytecodeHelper;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformBlockBarrier extends TransformerBase {
    private static long d;
 
@@ -19,7 +18,6 @@ public class TransformBlockBarrier extends TransformerBase {
       }, "getRenderType", "getRenderType");
    }
 
-
    static {
       d = 117845053442826L;
    }
@@ -27,5 +25,4 @@ public class TransformBlockBarrier extends TransformerBase {
    public TransformBlockBarrier() {
       super("net/minecraft/block/BlockBarrier");
    }
-
 }

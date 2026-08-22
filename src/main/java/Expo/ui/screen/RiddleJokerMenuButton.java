@@ -8,7 +8,6 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
 
-
 public class RiddleJokerMenuButton extends GuiButton {
    private static long a;
    private static Map e;
@@ -17,9 +16,7 @@ public class RiddleJokerMenuButton extends GuiButton {
    private static String b;
    private static long[] c;
 
-
    public void drawButton(Minecraft var1, int var2, int var3) {
-
       if (this.visible) {
          FontRenderer var8 = var1.fontRendererObj;
          GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
@@ -66,8 +63,6 @@ public class RiddleJokerMenuButton extends GuiButton {
    public void n(int var1) {
       this.g = var1;
    }
-
-
 
    public RiddleJokerMenuButton(int var1, int var2, short var3, int var4, int var5, int var6, int var7, String var8, short var9) {
       super(

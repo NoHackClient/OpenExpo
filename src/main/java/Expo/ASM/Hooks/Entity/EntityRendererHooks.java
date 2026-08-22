@@ -38,16 +38,6 @@ import net.minecraft.potion.Potion;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class EntityRendererHooks {
    private static Box<Integer> s = null;
    private static final String[] c = new String[6];
@@ -66,10 +56,6 @@ public class EntityRendererHooks {
          m = true;
          new Thread(() -> {
              try {long var0 = 85534997054632L;
-
-
-
-
 
             try {
                Thread.sleep(500L);
@@ -112,10 +98,6 @@ public class EntityRendererHooks {
    }
 
    public static void onRender2D(float var0) throws Throwable {
-
-
-
-
       if (!VisualSpoofRenderer.x()) {
          if (!VisualSpoofRenderer.H()) {
             VisualSpoofRenderer.l(var0);
@@ -137,10 +119,7 @@ public class EntityRendererHooks {
    }
 
    public static void updateCameraAndRender() throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       int var10 = -1274601225;
-
 
       VisualSpoofRenderer.P();
       if (Y.thePlayer != null && ItemUtil.d()) {
@@ -156,7 +135,6 @@ public class EntityRendererHooks {
    }
 
    public static void onGetMouseOverList(Minecraft var0, List<Entity> var1) {
-
       if (ModuleManager.Q.o() && BlockUtil.a(3484929262775L, var0.playerController.getBlockReachDistance())) {
          GhostHand.T(var1);
       }
@@ -257,7 +235,6 @@ public class EntityRendererHooks {
    }
 
    public static void onRender3D(EntityRenderer var0, float var1) throws Throwable {
-
       if (!VisualSpoofRenderer.x()) {
          if (!VisualSpoofRenderer.H()) {
             VisualSpoofRenderer.f();
@@ -268,5 +245,4 @@ public class EntityRendererHooks {
          }
       }
    }
-
 }

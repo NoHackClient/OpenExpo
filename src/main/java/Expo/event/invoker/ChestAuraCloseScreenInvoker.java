@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.CloseScreenEvent;
 import Expo.module.impl.player.ChestAura;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChestAuraCloseScreenInvoker implements EventInvoker {
    final ChestAura G;
 

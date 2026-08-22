@@ -9,10 +9,8 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.InsnNode;
 
-
 public class TransformEntity extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -63,7 +61,6 @@ public class TransformEntity extends TransformerBase {
          });
       }, "moveEntity", "moveEntity");
       return var4 | BytecodeHelper.t(var1, "(DDD)V", (var0, var1x) -> {
-
          for (AbstractInsnNode var4x = var1x.instructions.getFirst(); var4x != null; var4x = var4x.getNext()) {
             if (var4x.getOpcode() == 54) {
                InsnList var5x = new InsnList();
@@ -79,12 +76,9 @@ public class TransformEntity extends TransformerBase {
       }, "moveEntity", "moveEntity");
    }
 
-
    public TransformEntity() {
       super("net/minecraft/entity/Entity");
    }
-
-
 
    static {
       d = 10424132520708L;

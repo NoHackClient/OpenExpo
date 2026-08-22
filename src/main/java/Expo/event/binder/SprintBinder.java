@@ -5,16 +5,6 @@ import Expo.event.events.PreUpdateEvent;
 import Expo.event.invoker.SprintPreUpdateInvoker;
 import Expo.module.impl.movement.Sprint;
 
-
-
-
-
-
-
-
-
-
-
 public final class SprintBinder {
    private static final long a = 96578155195197L;
 

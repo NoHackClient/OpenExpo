@@ -5,21 +5,9 @@ import Expo.module.Module;
 import Expo.module.impl.configuration.Language;
 import Expo.util.MathUtil;
 
-
-
-
-
-
-
-
-
-
-
 public class Setting {
    private static long b;
    public String q;
-
-
 
    public String e(byte var1, Module var2, long var3) {
       if (!Language.applyForSettings.c()) {
@@ -45,5 +33,4 @@ public class Setting {
    public void H(String var1) {
       this.q = var1;
    }
-
 }

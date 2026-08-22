@@ -8,19 +8,7 @@ import Expo.module.Module;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandVisible extends Command {
-
    private final boolean visible;
    private final String desc;
    private final String[] aliases;

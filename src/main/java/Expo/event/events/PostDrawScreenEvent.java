@@ -4,16 +4,6 @@ import Expo.event.Event;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 
-
-
-
-
-
-
-
-
-
-
 public class PostDrawScreenEvent extends Event {
    private static final long a = 74606617970778L;
    public final ScaledResolution s;

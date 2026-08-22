@@ -4,16 +4,6 @@ import Expo.module.Category;
 
 import Expo.module.Module;
 
-
-
-
-
-
-
-
-
-
-
 public class BarrierVisible extends Module {
    private static final long a = 54421956347826L;
 
@@ -23,7 +13,6 @@ public class BarrierVisible extends Module {
 
    public BarrierVisible(long var1) {
       super(((a ^ (var1)) ^ 34943837037887L));
-      // add code
       this.declare("BarrierVisible", Category.Visual, "Render barriers as glasses");
       var1 = a ^ var1;
    }

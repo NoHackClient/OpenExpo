@@ -2,13 +2,6 @@ package Expo.module.impl.visual_utility;
 
 import Expo.internal.synthetic.BedESPCtorMarker;
 
-
-
-
-
-
-
-
 public class BedESPViewerOffset {
    private final double S;
    private final double b;

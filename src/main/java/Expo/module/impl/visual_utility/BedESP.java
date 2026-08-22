@@ -42,7 +42,6 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 
-
 public class BedESP extends Module implements EventSubscriber {
    private static String[] c;
    public static ColorSetting customColor;
@@ -63,13 +62,10 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    private boolean c(BlockPos var1, long var2) {
-
-
       return RaytraceUtil.Y(var1, range.L(), 119767551018300L);
    }
 
    private void L(AxisAlignedBB var1, int var2, long var3) {
-
       int var16 = ColorUtil.l(var2,0L);
       int var17 = ColorUtil.U(0L, var2);
       int var18 = ColorUtil.d(0L, var2);
@@ -83,13 +79,11 @@ public class BedESP extends Module implements EventSubscriber {
 
    public BedESP(long var1) {
       super(((a ^ (var1)) ^ 103498836165696L));
-      // add code
       this.declare("BedESP", Category.Visual_utility, "Show ESP on beds");
       var1 = a ^ var1;
    }
 
    private void w(long var1, AxisAlignedBB var3) {
-
       if (outline.c()) {
          Expo.util.render.RenderUtil.X(var3, 170, 0, 170, 255, 1.5F);
       }
@@ -98,8 +92,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    private void E(BlockPos var1, BlockPos var2, BedESPViewerOffset var3, long var4) {
-
-
       AxisAlignedBB var8 = this.z(var1, var2);
       this.w(48528503391664L, this.P(var8, var3));
    }
@@ -109,9 +101,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    private void h(long var1, BlockPos var3, BedESPViewerOffset var4) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       IBlockState var9 = f.theWorld.getBlockState(var3);
       BlockPos var10 = this.C(var3, var9);
       if (this.I(var10)) {
@@ -145,9 +134,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    private void X(BlockPos var1, BlockPos var2, long var3, BedESPViewerOffset var5) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       for (EnumFacing var11 : this.I$r1()) {
          BlockPos var12 = var1.offset(var11);
          BlockPos var13 = var2.offset(var11);
@@ -172,8 +158,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    private BedESPViewerOffset getRenderManager(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       return new BedESPViewerOffset(RenderManagerAccessor.k(0L, f.getRenderManager()), RenderManagerAccessor.y(13236, f.getRenderManager()), RenderManagerAccessor.W(0L, f.getRenderManager()), null);
    }
 
@@ -183,8 +167,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    private void H(BlockPos var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (outline.c()) {
          Expo.util.render.RenderUtil.n(var1, 1.0, 170, 0, 170, 114394550953247L, 255, 1.5F);
       }
@@ -241,10 +223,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    private int z(long var1) {
-
-
-
-
       switch (color.Y()) {
          case "THEME":
             return Theme.S(0.0, 35338930340239L);
@@ -264,9 +242,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    private void h(BlockPos var1, BlockPos var2, long var3, BedESPViewerOffset var5) {
-
-
-
       AxisAlignedBB var10 = this.s(var1, var2);
       AxisAlignedBB var11 = this.P(var10, var5);
       int var12 = this.z(81352373870158L);
@@ -274,9 +249,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    public void onRender3D(long var1, Render3DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       BedESPViewerOffset var12 = this.getRenderManager(23715203077604L);
       Expo.util.render.RenderUtil.L();
       ArrayList var13 = new ArrayList();
@@ -294,7 +266,6 @@ public class BedESP extends Module implements EventSubscriber {
       this.forEach(var13);
       Expo.util.render.RenderUtil.w();
    }
-
 
    private void forEach(List<BlockPos> var1) {
       if (!var1.isEmpty()) {
@@ -442,7 +413,6 @@ public class BedESP extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       backgroundOpacity = new PercentageSetting("Background-opacity", 40);
       color = new ModeSetting("Color", "THEME", "THEME_CUSTOM", "CUSTOM");
       customColor = new ColorSetting("Custom-color", "FF0000");

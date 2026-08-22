@@ -5,7 +5,6 @@ import Expo.module.impl.configuration.Theme;
 import Expo.util.KeyBindUtil;
 import org.lwjgl.opengl.GL11;
 
-
 public class RavenBindRow extends AbstractRavenSettingRow {
    public boolean Y;
    private int i;
@@ -33,10 +32,8 @@ public class RavenBindRow extends AbstractRavenSettingRow {
    }
 
    static {
-
       c = 38487870290381L;
    }
-
 
    public void i(int var1, int var2, int var3, byte var4) {
       this.v = var1;
@@ -103,5 +100,4 @@ public class RavenBindRow extends AbstractRavenSettingRow {
       );
       GL11.glPopMatrix();
    }
-
 }

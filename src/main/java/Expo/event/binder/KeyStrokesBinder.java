@@ -11,16 +11,6 @@ import Expo.event.invoker.KeyStrokesSetKeyBindStateInvoker;
 import Expo.module.impl.visual.KeyStrokes;
 import java.awt.event.MouseEvent;
 
-
-
-
-
-
-
-
-
-
-
 public final class KeyStrokesBinder {
    private static final long a = 34608198279165L;
 

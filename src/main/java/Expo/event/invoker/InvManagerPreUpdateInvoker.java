@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.player.InvManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class InvManagerPreUpdateInvoker implements EventInvoker {
    final InvManager y;
 

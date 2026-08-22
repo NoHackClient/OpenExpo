@@ -47,16 +47,6 @@ import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class MiningEngine implements EventSubscriber {
    private static Map gb;
    private final MiningState K;
@@ -125,56 +115,6 @@ public class MiningEngine implements EventSubscriber {
    private BlockPos M;
    private boolean Z;
 
-   private static int b(int var0, long var1) {
-      int var3 = var0 ^ (int)(var1 & 32767L) ^ 26728;
-      if (fb[var3] == null) {
-         byte[] var4 = new byte[]{
-            (byte)(var1 >>> 56),
-            (byte)(var1 >>> 48),
-            (byte)(var1 >>> 40),
-            (byte)(var1 >>> 32),
-            (byte)(var1 >>> 24),
-            (byte)(var1 >>> 16),
-            (byte)(var1 >>> 8),
-            (byte)var1
-         };
-         long var5 = eb[var3];
-         byte[] var7 = new byte[]{
-            (byte)(var5 >>> 56),
-            (byte)(var5 >>> 48),
-            (byte)(var5 >>> 40),
-            (byte)(var5 >>> 32),
-            (byte)(var5 >>> 24),
-            (byte)(var5 >>> 16),
-            (byte)(var5 >>> 8),
-            (byte)var5
-         };
-         Long var8 = Thread.currentThread().getId();
-         Object[] var9 = (Object[])gb.get(var8);
-
-         byte[] var10;
-         try {
-            if (var9 == null) {
-               var9 = new Object[]{Cipher.getInstance("DES/CBC/NoPadding"), SecretKeyFactory.getInstance("DES"), new IvParameterSpec(new byte[8])};
-               gb.put(var8, var9);
-            }
-
-            DESKeySpec var11 = new DESKeySpec(var4);
-            SecretKey var12 = ((SecretKeyFactory)var9[1]).generateSecret(var11);
-            Cipher var13 = (Cipher)var9[0];
-            var13.init(2, var12, (IvParameterSpec)var9[2]);
-            var10 = var13.doFinal(var7);
-         } catch (Exception var14) {
-            throw new RuntimeException("Expo/internal/MiningEngine", var14);
-         }
-
-         int var15 = (var10[4] & 255) << 24 | (var10[5] & 255) << 16 | (var10[6] & 255) << 8 | var10[7] & 255;
-         fb[var3] = var15;
-      }
-
-      return fb[var3];
-   }
-
    public void b(long var1) {
       var1 = ab ^ var1;
       long var3 = var1 ^ 111700754433030L;
@@ -224,9 +164,6 @@ public class MiningEngine implements EventSubscriber {
    }
 
    private boolean z(long var1, long var3) {
-
-
-
       if (!this.w) {
          return false;
       }
@@ -319,17 +256,6 @@ public class MiningEngine implements EventSubscriber {
    }
 
    public void v(long var1) {
-
-
-
-
-
-
-
-
-
-
-
       int var26 = 2524;
       if (this.D) {
          this.K.V(94183755216258L);
@@ -509,9 +435,6 @@ public class MiningEngine implements EventSubscriber {
    }
 
    private boolean x(EntityPlayerSP var1, long var2) {
-
-
-
       if (!this.f() || this.j || this.M == null) {
          return false;
       } else if (this.t(116121547939723L, this.M) && this.R(F, var1, 113596981294470L, this.M)) {
@@ -749,12 +672,6 @@ public class MiningEngine implements EventSubscriber {
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
    private void c(long var1) {
-
-
-
-
-
-
       this.C(9749, (char)24068, (char)9748);
       switch (this.U) {
          case 0:
@@ -1125,9 +1042,6 @@ public class MiningEngine implements EventSubscriber {
    }
 
    private void n(long var1) {
-
-
-
       if (F.thePlayer != null) {
          float var7 = this.B - this.v;
 
@@ -1176,6 +1090,9 @@ public class MiningEngine implements EventSubscriber {
                   || var23 == var16 && var22 < var17 - 0.001F
                   || var23 == var16 && Math.abs(var22 - var17) < 0.001F && var24 < var18) {
                   var15 = var21;
+                  var16 = var23;
+                  var17 = var22;
+                  var18 = var24;
                }
             }
          }
@@ -1469,13 +1386,6 @@ public class MiningEngine implements EventSubscriber {
    }
 
    private boolean C(long var1, EntityPlayerSP var3, long var4) {
-
-
-
-
-
-
-
       if (this.f() && !this.J) {
          List var15 = this.D(0L);
          BlockPos var16 = this.C(F, var3, 8189, var15, (short)32783, this.w(this.m(var3)), 70.0F, (char)8391);
@@ -1774,46 +1684,30 @@ public class MiningEngine implements EventSubscriber {
    }
 
    public void onPreTick(PreTickEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       long var10001 = 120463243594918L;
-
 
       int var8 = (int)(var10001 << 48 >>> 48);
 
       var10001 = 39350982965954L;
 
-
       int var13 = (int)(var10001 << 48 >>> 48);
 
-
-
       var10001 = 2682888230589L;
-
 
       int var24 = (int)(var10001 << 48 >>> 48);
       var10001 = 18200678687241L;
 
-
       int var29 = (int)(var10001 << 48 >>> 48);
       var10001 = 55106932204454L;
-
 
       int var34 = (int)(var10001 << 48 >>> 48);
       var10001 = 67791441774702L;
 
-
       int var37 = (int)(var10001 << 32 >>> 32);
-
-
 
       var10001 = 30892599371991L;
 
-
       int var52 = (int)(var10001 << 40 >>> 40);
-
-
-
 
       if (this.D && !this.p) {
          KeyBindUtil.A(82009306480869L, F.gameSettings.keyBindAttack.getKeyCode(), true);
@@ -2046,8 +1940,6 @@ public class MiningEngine implements EventSubscriber {
                if (MiningConstants.x && !this.p && this.K.I()) {
                   this.p = true;
                   new Thread(() -> {
-
-
                      try {
                         KeyBindUtil.A(82009306480869L, F.gameSettings.keyBindForward.getKeyCode(), false);
                         KeyBindUtil.A(82009306480869L, F.gameSettings.keyBindBack.getKeyCode(), true);
@@ -2410,5 +2302,4 @@ public class MiningEngine implements EventSubscriber {
          throw new RuntimeException(var39);
       }
    }
-
 }

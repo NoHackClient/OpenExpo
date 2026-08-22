@@ -35,7 +35,6 @@ import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.WorldSettings.GameType;
 
-
 public class MegaWallsDetector extends Module implements EventSubscriber {
    private static Object[] t;
    private final Set<String> E;
@@ -93,8 +92,6 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (!TeamPrefixUtil.i()) {
          this.S$r1();
       } else {
@@ -134,11 +131,7 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
       MegaWallsDetectorBinder.X(var3, var4, this);
    }
 
-
-
    private boolean m(long var1, String var3) {
-
-
       MegaWallsClass var6 = TeamPrefixUtil.F(22611545248530L, var3);
       if (var6 == MegaWallsClass.PHOENIX) {
          this.E.add(var3);
@@ -157,7 +150,6 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
 
    public MegaWallsDetector(long var1) {
       super(((b ^ (var1)) ^ 54051925699248L));
-      // add code
       this.declare("MegaWallsDetector", Category.Visual_utility, "Detect potion heals and phoenix resurrection from tab health");
       var1 = b ^ var1;
       this.F = new HashMap<>();
@@ -180,9 +172,6 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
    }
 
    private void c() {
-
-
-
       this.B();
 
       for (NetworkPlayerInfo var12 : f.getNetHandler().getPlayerInfoMap()) {
@@ -251,12 +240,10 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
             return var2.getValueFromObjective(var1, var3).getScorePoints();
          }
       } catch (Exception var4) {
-         Expo.internal.restore.ExpoDiag.attribute(var4, "MegaWallsDetector.V/1#0");
       }
 
       return 0;
    }
-
 
    private void s(char var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       long var4 = ((long)var1 << 48 | 89532643044307L) ^ b;
@@ -297,7 +284,6 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
    }
 
    private void w(String var3, int var4) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       this.o.put(var3, this.o.getOrDefault(var3, 0) + 1);
       if (potionChatNotify != null && potionChatNotify.c()) {
          EnumChatFormatting var7 = var4 == 10 ? EnumChatFormatting.LIGHT_PURPLE : EnumChatFormatting.AQUA;
@@ -319,7 +305,6 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
       p = 6;
       B = 60;
    }
-
 
    private void B() {
       if (!this.h.isEmpty()) {
@@ -344,21 +329,7 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
       this.clear();
    }
 
-   private static void a() {
-      t[0] = "\u000f\u0018E\b\u0001\u0007!";
-      t[1] = "{$d-\u0018 L3`'U\u0004[8:;";
-      t[2] = int.class;
-      u[2] = "java/lang/Integer";
-      t[3] = short.class;
-      u[3] = "java/lang/Short";
-      t[4] = " bkC[\u0003\f";
-      t[5] = void.class;
-      u[5] = "java/lang/Void";
-      t[6] = "\u0010]5\u001b X\u001bR$TAV\u0010Y \u000e";
-      t[7] = "xi6$\u000b\u0018+yhVjvx<4oT\u000b+hng:O&<i7G\u001fy6hV\u0000\u001d>?7:\n\u001f*zPo]Lxg-?\u0002Fy\u0006j)\u0004\u000e9\u007f(:\u000b\u0004A= 9\u0004L}g :Jv";
-   }
    static {
-      // add code
       potionCountsInTab = new BooleanSetting("Potion-counts-in-tab", true);
       phoenixChatNotify = new BooleanSetting("Phoenix-chat-notify", true);
       potionDetector = new BooleanSetting("Potion-detector", true);

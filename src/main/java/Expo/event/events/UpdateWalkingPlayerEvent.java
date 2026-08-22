@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class UpdateWalkingPlayerEvent extends Event {
    private boolean E;
    private double B;

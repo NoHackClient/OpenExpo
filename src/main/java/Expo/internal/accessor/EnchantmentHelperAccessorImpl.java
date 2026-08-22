@@ -4,16 +4,6 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.item.ItemStack;
 
-
-
-
-
-
-
-
-
-
-
 public final class EnchantmentHelperAccessorImpl {
    private static Accessor N;
 
@@ -24,7 +14,4 @@ public final class EnchantmentHelperAccessorImpl {
    public static float P(ItemStack var0, EnumCreatureAttribute var1) {
       return Accessor.t(N, new Object[]{var0, var1});
    }
-
-
-
 }

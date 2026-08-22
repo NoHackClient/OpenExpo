@@ -16,16 +16,6 @@ import Expo.event.invoker.ExpoClientSetKeyBindStateInvoker;
 import Expo.event.invoker.j_2;
 import Expo.event.invoker.oX;
 
-
-
-
-
-
-
-
-
-
-
 public final class ExpoClientBinder {
    private static final long a = 111088129942612L;
 
@@ -41,5 +31,4 @@ public final class ExpoClientBinder {
       var2.R(var3, EntityJoinWorldEvent.class, 3, new ExpoClientEntityJoinWorldInvoker(var3));
       var2.R(var3, ReceivePacketEvent.class, 3, new ExpoClientReceivePacketInvoker(var3));
    }
-
 }

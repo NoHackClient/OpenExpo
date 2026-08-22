@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.visual_utility.Indicators;
 
-
-
-
-
-
-
-
-
-
-
 public final class IndicatorsPostTickInvoker implements EventInvoker {
    final Indicators C;
 

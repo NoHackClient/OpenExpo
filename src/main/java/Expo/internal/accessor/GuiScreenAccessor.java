@@ -3,16 +3,6 @@ package Expo.internal.accessor;
 import java.io.IOException;
 import net.minecraft.client.gui.GuiScreen;
 
-
-
-
-
-
-
-
-
-
-
 public final class GuiScreenAccessor {
    private static Accessor V;
    private static Accessor e;
@@ -29,11 +19,8 @@ public final class GuiScreenAccessor {
       }
    }
 
-
-
    static {
       V = MethodAccessors.G(GuiScreen.class, "mouseClicked", "mouseClicked", new Class[]{int.class, int.class, int.class});
       e = MethodAccessors.G(GuiScreen.class, "keyTyped", "keyTyped", new Class[]{char.class, int.class});
    }
-
 }

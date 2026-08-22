@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformWorld extends TransformerBase {
    private static long d;
 
@@ -30,10 +29,7 @@ public class TransformWorld extends TransformerBase {
       super("net/minecraft/world/World");
    }
 
-
    static {
       d = 103346272902059L;
    }
-
-
 }

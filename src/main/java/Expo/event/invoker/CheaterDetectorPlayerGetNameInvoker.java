@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PlayerGetNameEvent;
 import Expo.internal.CheaterDetector;
 
-
-
-
-
-
-
-
-
-
-
 public final class CheaterDetectorPlayerGetNameInvoker implements EventInvoker {
    final CheaterDetector G;
 

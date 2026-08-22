@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ReceivePacketEvent;
 import Expo.module.impl.combat.SprintReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class SprintResetReceivePacketInvoker implements EventInvoker {
    final SprintReset I;
 

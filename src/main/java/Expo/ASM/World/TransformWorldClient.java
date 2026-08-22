@@ -5,10 +5,8 @@ import Expo.ASM.Util.BytecodeHelper;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformWorldClient extends TransformerBase {
    private static long d;
-
 
    public TransformWorldClient() {
       super("net/minecraft/client/multiplayer/WorldClient");
@@ -17,7 +15,6 @@ public class TransformWorldClient extends TransformerBase {
    static {
       d = 32551282002734L;
    }
-
 
    public boolean s(ClassNode var1) {
       return BytecodeHelper.t(var1, "(III)V", (var0, var1x) -> {

@@ -11,7 +11,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-
 class ConfigManagerBindPanel extends JPanel {
    private int e;
    private static Map i;
@@ -43,8 +42,6 @@ class ConfigManagerBindPanel extends JPanel {
 
    static native JTextField S(ConfigManagerBindPanel var0);
 
-   private static native String a(int var0, long var1);
-
    static native int g(ConfigManagerBindPanel var0, int var1);
 
    public native void g();
@@ -54,5 +51,4 @@ class ConfigManagerBindPanel extends JPanel {
    private native void u(long var1);
 
    static native List A(ConfigManagerBindPanel var0);
-
 }

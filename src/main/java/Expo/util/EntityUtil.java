@@ -17,13 +17,10 @@ import net.minecraft.entity.passive.IAnimals;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.scoreboard.ScorePlayerTeam;
 
-
 public class EntityUtil {
    private static String b;
    private static long a;
    private static Minecraft z;
-
-
 
    public static List x(
       List var0,
@@ -58,7 +55,6 @@ public class EntityUtil {
       return var15;
    }
 
-
    public static boolean c(long var0, EntityPlayer var2, boolean var3, boolean var4, boolean var5, boolean var6) {
       long var7 = var0 ^ 98569467475870L;
       return !EntityUtil.K( (Entity)var2)
@@ -89,7 +85,6 @@ public class EntityUtil {
       return var6.isEmpty() ? '\u0000' : Character.toLowerCase(var6.charAt(0));
    }
 
-
    public static List F(double var0, long var2, double var4) {
       var2 = a ^ var2;
       long var6 = var2 ^ 125673106620142L;
@@ -112,7 +107,6 @@ public class EntityUtil {
       return var2 instanceof EntityLivingBase && G((EntityLivingBase)var2);
    }
 
-
    public static List p(double var0, double var2, long var4) {
       var4 = a ^ var4;
       long var6 = var4 ^ 126070933336181L;
@@ -131,11 +125,7 @@ public class EntityUtil {
       return var13;
    }
 
-
    public static boolean g(Entity var0, boolean var1, boolean var2, boolean var3, boolean var4, long var5) {
-
-
-
       if (var0 instanceof EntityPlayerSP) {
          return false;
       }
@@ -182,12 +172,9 @@ public class EntityUtil {
       }
    }
 
-
    public static boolean q(
       Entity var0, boolean var1, boolean var2, boolean var3, boolean var4, boolean var5, boolean var6, boolean var7, boolean var8, long var9
    ) {
-
-
       if (!B(0L, var0)) {
          return false;
       } else {
@@ -210,7 +197,6 @@ public class EntityUtil {
       return var13;
    }
 
-
    public static boolean K( Entity var2) {
       return var2 instanceof EntityPlayer && B(0L, var2);
    }
@@ -231,7 +217,6 @@ public class EntityUtil {
 
       return var12;
    }
-
 
    public static List U( boolean var2) {
       List var7 = z.theWorld.playerEntities;
@@ -262,10 +247,8 @@ public class EntityUtil {
       }
    }
 
-
    static {
       a = 20782887609681L;
-      // add code
       z = MinecraftRef.c((byte)0, 0L);
       b = "Wither";
    }
@@ -290,11 +273,7 @@ public class EntityUtil {
       return var0 != z.thePlayer && !var0.isDead && var0.deathTime <= 0 && var0.getHealth() > 0.0F;
    }
 
-
    private static boolean G(long var0, Entity var2) {
-
-
-
       if (z.thePlayer == null || z.theWorld == null || var2 == null) {
          return false;
       }
@@ -340,5 +319,4 @@ public class EntityUtil {
 
       return var8;
    }
-
 }

@@ -20,16 +20,6 @@ import Expo.util.packet.IncomingPacketHold;
 import java.util.Map;
 import net.minecraft.entity.EntityLivingBase;
 
-
-
-
-
-
-
-
-
-
-
 public class BackTrack extends Module implements EventSubscriber {
    public static EntityLivingBase N;
    private static long[] m;
@@ -57,13 +47,6 @@ public class BackTrack extends Module implements EventSubscriber {
    public static NumberSetting maxInterval;
    public static BooleanSetting enemies;
    public static NumberSetting maxDelay;
-
-
-
-   private static void a() {
-   }
-
-
 
    public void onPreUpdate(char var1, int var2, PreUpdateEvent var3, short var4) {
       long var5 = ((long)var1 << 48 | (long)var2 << 32 >>> 16 | (long)var4 << 48 >>> 48) ^ b;
@@ -101,11 +84,7 @@ public class BackTrack extends Module implements EventSubscriber {
       return (int)minDelay.L() == (int)maxDelay.L() ? (int)minDelay.L() + "ms" : (int)minDelay.L() + "-" + (int)maxDelay.L() + "ms";
    }
 
-
-
    public void onAttackEntity(AttackEntityEvent var1, long var2) {
-
-
       if (N == null
          && var1.O() instanceof EntityLivingBase
          && EntityUtil.q(var1.O(), players.c(), mobs.c(), animals.c(), bosses.c(), friends.c(), enemies.c(), teammates.c(), bots.c(), 21816078198602L)
@@ -117,7 +96,6 @@ public class BackTrack extends Module implements EventSubscriber {
 
    public BackTrack(long var1) {
       super(((b ^ (var1)) ^ 136002511659636L));
-      // add code
       this.declare("BackTrack", Category.Combat, "Simulate network lags to get advantage at reaching enemies");
       var1 = b ^ var1;
       this.p = new TimerUtil();
@@ -140,9 +118,7 @@ public class BackTrack extends Module implements EventSubscriber {
       N = null;
    }
 
-
    static {
-      // add code
       minInterval = new NumberSetting("Min-interval", 0.0F, 0.0F, 500.0F, 1.0F);
       maxInterval = new NumberSetting("Max-interval", 0.0F, 0.0F, 500.0F, 1.0F);
       players = new BooleanSetting("Players", true);
@@ -159,7 +135,6 @@ public class BackTrack extends Module implements EventSubscriber {
       friends = new BooleanSetting("Friends", false);
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

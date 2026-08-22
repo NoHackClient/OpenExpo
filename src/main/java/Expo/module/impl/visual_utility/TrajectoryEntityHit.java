@@ -4,16 +4,6 @@ import Expo.internal.synthetic.TrajectoriesSwitchMapAxis;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MovingObjectPosition;
 
-
-
-
-
-
-
-
-
-
-
 public class TrajectoryEntityHit {
    private final MovingObjectPosition I;
    private final Entity k;

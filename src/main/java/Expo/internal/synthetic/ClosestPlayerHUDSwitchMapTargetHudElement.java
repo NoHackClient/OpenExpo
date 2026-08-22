@@ -14,7 +14,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
 public class ClosestPlayerHUDSwitchMapTargetHudElement {
    public static int[] b;
 
@@ -111,5 +110,4 @@ public class ClosestPlayerHUDSwitchMapTargetHudElement {
          throw new RuntimeException(var21);
       }
    }
-
 }

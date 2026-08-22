@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class MoveFlyingEvent extends Event {
    private float U;
    private float c;

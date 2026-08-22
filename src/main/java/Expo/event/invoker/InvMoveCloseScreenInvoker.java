@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.CloseScreenEvent;
 import Expo.module.impl.movement.InvMove;
 
-
-
-
-
-
-
-
-
-
-
 public final class InvMoveCloseScreenInvoker implements EventInvoker {
    final InvMove V;
 

@@ -2,15 +2,6 @@ package Expo.setting.settings;
 
 import Expo.util.render.VisualSpoofRenderer;
 
-
-
-
-
-
-
-
-
-
 public class DisableRenderVisualSetting extends BooleanSetting {
    public void v(boolean var1, long var2) throws Throwable {
       long var4 = 64895789836511L;

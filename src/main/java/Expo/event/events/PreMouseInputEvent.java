@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class PreMouseInputEvent extends Event {
    private boolean G;
    private boolean l;
@@ -73,5 +63,4 @@ public class PreMouseInputEvent extends Event {
    public void Q(boolean var1) {
       this.E = var1;
    }
-
 }

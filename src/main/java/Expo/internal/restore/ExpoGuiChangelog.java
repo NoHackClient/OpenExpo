@@ -10,9 +10,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
 public final class ExpoGuiChangelog extends JPanel {
-
    private static final long serialVersionUID = 1L;
 
    public static final List<String> ENTRIES = new ArrayList<String>(Arrays.asList(

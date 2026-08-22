@@ -8,16 +8,6 @@ import net.minecraft.launchwrapper.Launch;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-
-
-
-
-
-
-
-
-
 public class TransformerOrdering {
    private static final Logger m = LogManager.getLogger("Expo ASM Bootstrap");
    private static volatile boolean O;

@@ -34,7 +34,6 @@ import net.minecraft.network.play.client.C07PacketPlayerDigging.Action;
 import net.minecraft.network.play.client.C07PacketPlayerDigging;
 import net.minecraft.network.play.client.C08PacketPlayerBlockPlacement;
 
-
 public class LagRange extends Module implements EventSubscriber {
    public static NumberSetting disableRange;
    public static BooleanSetting s;
@@ -64,19 +63,12 @@ public class LagRange extends Module implements EventSubscriber {
 
    static {
       a = 120211912914588L;
-      // add code
       b = "ms";
       m = new HashMap(13);
       d = new long[]{3397638145785976630L, 921795783406817893L, -3875737584293005616L};
    }
 
-
-
    public void onPreLivingUpdate(PreLivingUpdateEvent var1, long var2) {
-
-
-
-
       this.E.clear();
       boolean var14 = players.c();
       boolean var15 = mobs.c();
@@ -108,7 +100,6 @@ public class LagRange extends Module implements EventSubscriber {
       }
    }
 
-
    public void onPostTick(int var1, int var2, char var3, PostTickEvent var4) {
       long var5 = ((long)var1 << 32 | (long)var2 << 48 >>> 32 | (long)var3 << 48 >>> 48) ^ a;
       long var7 = var5 ^ 53240425974766L;
@@ -126,11 +117,7 @@ public class LagRange extends Module implements EventSubscriber {
       }
    }
 
-   private static void a() {
-   }
-
    public void onRender2D(short var1, Render2DEvent var2, long var3) {
-
       if ((!f.thePlayer.isUsingItem() || f.thePlayer.isBlocking()) && (!s.c() || ItemUtil.d())) {
          if (this.E.isEmpty()) {
             this.H(111406552585898L);
@@ -171,7 +158,6 @@ public class LagRange extends Module implements EventSubscriber {
 
    public LagRange(long var1) {
       super(((a ^ (var1)) ^ 27280266245334L));
-      // add code
       this.declare("LagRange", Category.Combat, "Perform network lag when entities in range");
       var1 = a ^ var1;
       this.E = new HashSet<>();
@@ -192,7 +178,6 @@ public class LagRange extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       teammates = new BooleanSetting("Teammates", false);
       bots = new BooleanSetting("Bots", false);
       mobs = new BooleanSetting("Mobs", false);

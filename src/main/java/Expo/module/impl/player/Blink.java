@@ -26,7 +26,6 @@ import java.util.Map;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
 public class Blink extends Module implements EventSubscriber {
    public static NumberSetting pulseTicks;
    private static String[] x;
@@ -102,11 +101,8 @@ public class Blink extends Module implements EventSubscriber {
       }
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
-
-
    public Blink(long var1) {
       super(((a ^ (var1)) ^ 133916730177788L));
-      // add code
       this.declare("Blink", Category.Player, "Stop outgoing packet and release them at one time");
       var1 = a ^ var1;
       this.t = new TimerUtil();
@@ -121,20 +117,6 @@ public class Blink extends Module implements EventSubscriber {
       this.y = System.currentTimeMillis();
    }
 
-   private static void a() {
-      v[0] = "%V@5W\u001d";
-      v[1] = short.class;
-      x[1] = "java/lang/Short";
-      v[2] = int.class;
-      x[2] = "java/lang/Integer";
-      v[3] = ".#1GQc\u001945M\u001cG\u000e?oQ";
-      v[4] = "]J\u0011kn\r+";
-      v[5] = void.class;
-      x[5] = "java/lang/Void";
-      v[6] = "VS+0gx]\\:\u007f\u0006vVW>%";
-      v[7] = "\n\u001cIQ\u00145S]W.ME\u000e\\\nQ\u0017.^\t\rP*|J\tT^@uY\r\b.\u0010/F\\\u000bUE#N\u00185\u0017W/V\u0013_\u001eD+\nc\u000e\u0016\u0011!\\\u001bMQE,7XZTM)H[^\u0013NE";
-   }
-
    public void A(long var1) {
       this.s = 0L;
       this.k = true;
@@ -145,11 +127,9 @@ public class Blink extends Module implements EventSubscriber {
       }
    }
 
-
    public String g(long var1) {
       return mode.Y();
    }
-
 
    public final void x(long var1, EventBus var3) {
       int var4 = (int)((var1 ^ 46458091922866L) >>> 48);
@@ -157,8 +137,6 @@ public class Blink extends Module implements EventSubscriber {
    }
 
    public void onRender2D(long var1, Render2DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (showDelay.c() && this.J) {
          CustomFont var10 = Font.s(0L);
          if (this.k && this.t.L(10L, true)) {
@@ -175,18 +153,15 @@ public class Blink extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       showDelay = new BooleanSetting("Show-delay", true);
       turnOffOnHit = new BooleanSetting("Turn-off-on-hit", false);
       autoDisable = new BooleanSetting("Auto-disable", false);
    }
    static {
-      // add code
       pulseTicks = new NumberSetting("Pulse-ticks", 20.0F, 1.0F, 100.0F, 1.0F);
       autoDisableTicks = new NumberSetting("Auto-disable-ticks", 20.0F, 1.0F, 100.0F, 1.0F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", "NORMAL", "PULSE");
    }
 }

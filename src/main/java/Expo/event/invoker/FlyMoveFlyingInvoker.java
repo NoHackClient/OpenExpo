@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.MoveFlyingEvent;
 import Expo.module.impl.movement.Fly;
 
-
-
-
-
-
-
-
-
-
-
 public final class FlyMoveFlyingInvoker implements EventInvoker {
    final Fly x;
 

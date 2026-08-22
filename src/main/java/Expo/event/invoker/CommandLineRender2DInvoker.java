@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.module.impl.misc.CommandLine;
 
-
-
-
-
-
-
-
-
-
-
 public final class CommandLineRender2DInvoker implements EventInvoker {
    final CommandLine y;
 

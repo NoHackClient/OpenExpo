@@ -17,7 +17,6 @@ import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.client.renderer.GlStateManager;
 import org.lwjgl.opengl.GL11;
 
-
 public class ShaderRenderer {
    private static Map h;
    private static String[] c;
@@ -27,7 +26,6 @@ public class ShaderRenderer {
    private static ShaderProgram N;
    private static String a;
    private static Map e;
-
 
    public static void F(
       float var0, float var1, float var2, long var3, float var5, float var6, int var7, boolean var8, boolean var9, boolean var10, boolean var11
@@ -50,7 +48,6 @@ public class ShaderRenderer {
          GL11.glPopMatrix();
       }
    }
-
 
    private static float W(int var0) {
       return (var0 >> 8 & 255) / 255.0F;

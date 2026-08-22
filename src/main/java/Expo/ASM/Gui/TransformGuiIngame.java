@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformGuiIngame extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -59,7 +57,6 @@ public class TransformGuiIngame extends TransformerBase {
             "updateTick"
          );
    }
-
 
    public TransformGuiIngame() {
       super("net/minecraft/client/gui/GuiIngame");

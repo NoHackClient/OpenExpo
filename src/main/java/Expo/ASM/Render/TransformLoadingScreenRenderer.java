@@ -5,15 +5,12 @@ import Expo.ASM.Util.BytecodeHelper;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformLoadingScreenRenderer extends TransformerBase {
    private static long d;
-
 
    public TransformLoadingScreenRenderer() {
       super("net/minecraft/client/LoadingScreenRenderer");
    }
-
 
    static {
       d = 133475593182422L;

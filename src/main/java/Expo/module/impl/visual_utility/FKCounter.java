@@ -41,7 +41,6 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.EnumChatFormatting;
 
-
 public class FKCounter extends Module implements EventSubscriber {
    private static Map t;
    private final List<Map<String, Integer>> N;
@@ -142,8 +141,6 @@ public class FKCounter extends Module implements EventSubscriber {
    }
 
    public void onHandleChat(HandleChatEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (this.E()) {
          String var8 = var1.A.getUnformattedText();
          if (var8 != null && !var8.isEmpty()) {
@@ -177,8 +174,6 @@ public class FKCounter extends Module implements EventSubscriber {
    }
 
    private void T(long var1, String var3, String var4) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       String var10 = ScoreboardUtil.Z( (short)35653, var3, var4);
       if (!var10.isEmpty()) {
          if (this.i(var4, var10) != -1) {
@@ -189,7 +184,6 @@ public class FKCounter extends Module implements EventSubscriber {
 
    public FKCounter(long var1) {
       super(((d ^ (var1)) ^ 99314281517800L));
-      // add code
       this.declare("FKCounter", Category.Visual_utility, "Show MegaWalls deathmatch final kills per team");
       var1 = d ^ var1;
       this.D = new int[4];
@@ -202,8 +196,6 @@ public class FKCounter extends Module implements EventSubscriber {
    }
 
    private void M(long var1) {
-
-
       List var8 = ScoreboardUtil.b(0L);
 
       for (int var9 = 0; var9 < var8.size(); var9++) {
@@ -231,8 +223,6 @@ public class FKCounter extends Module implements EventSubscriber {
    }
 
    private void b(String var1, long var2, String var4, String var5) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       String var11 = ScoreboardUtil.Z( (short)35653, var1, var4);
       String var12 = ScoreboardUtil.Z( (short)35653, var1.replaceFirst(var4, ""), var5);
       if (!var11.isEmpty() && !var12.isEmpty()) {
@@ -244,10 +234,6 @@ public class FKCounter extends Module implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       if (!TeamPrefixUtil.i()) {
          this.g((byte)0, 66507525071674L);
       } else {
@@ -347,7 +333,6 @@ public class FKCounter extends Module implements EventSubscriber {
       this.n = 0;
    }
 
-
    private void clear(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       Arrays.fill(this.D, 0);
       this.g.clear();
@@ -359,7 +344,6 @@ public class FKCounter extends Module implements EventSubscriber {
       this.y.clear();
       this.v(0L);
    }
-
 
    public void onRender2D(Render2DEvent var1, long var2) {
       if (this.v() && !this.B.isEmpty()) {
@@ -629,7 +613,6 @@ public class FKCounter extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       offsetX = new NumberSetting("Offset-X", 4.0F, 0.0F, 1000.0F, 1.0F);
       scale = new NumberSetting("Scale", 1.0F, 0.5F, 3.0F, 0.01F);
       backgroundOpacity = new PercentageSetting("Background-opacity", 40);

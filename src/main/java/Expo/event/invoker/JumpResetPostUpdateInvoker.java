@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostUpdateEvent;
 import Expo.module.impl.combat.JumpReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class JumpResetPostUpdateInvoker implements EventInvoker {
    final JumpReset J;
 

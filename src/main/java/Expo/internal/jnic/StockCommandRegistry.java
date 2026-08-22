@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.Set;
 import org.apache.logging.log4j.Logger;
 
-
 public class StockCommandRegistry {
    private static Map g;
    private static long a;
@@ -23,14 +22,11 @@ public class StockCommandRegistry {
 
    public static native Command X(long var0, String var2);
 
-   private static native String a(int var0, long var1);
-
    public static boolean E(int var0, char var1, char var2, String var3) {
       return ExpoCommands.dispatch(var3);
    }
 
    static {
       L = new LinkedHashSet<Command>();
-
    }
 }

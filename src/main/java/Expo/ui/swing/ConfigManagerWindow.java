@@ -28,7 +28,6 @@ import javax.swing.JSpinner;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ListSelectionEvent;
 
-
 public class ConfigManagerWindow {
    public static List<String> D;
    private static Module M;
@@ -102,10 +101,7 @@ public class ConfigManagerWindow {
 
    private native void n(long var1);
 
-   private static native String a(int var0, long var1);
-
    private native void n(
       JButton var1, JList<Object> var2, Module[] var3, JLabel[] var4, JLabel[] var5, Map<Setting, JLabel> var6, Map<Setting, JComponent> var7, JPanel var8
    );
-
 }

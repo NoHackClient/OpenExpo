@@ -57,7 +57,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import org.lwjgl.opengl.GL11;
 
-
 public class KillAura extends PriorityModule implements EventSubscriber {
    public static ModeSetting mode;
    public static TimerUtil I;
@@ -98,12 +97,12 @@ public class KillAura extends PriorityModule implements EventSubscriber {
    public static BooleanSetting bots;
    public static ColorSetting showTargetDamageColor;
    private static Map ib;
-   public static HeaderSetting G;
+   public static HeaderSetting blinkAutoblocksOnlyWorksInHypixel;
    public static PercentageSetting showTargetOpacity;
    public static NumberSetting angleStep;
    public static ModeSetting showTargetColor;
    public static ModeSetting moveFix;
-   public static HeaderSetting h;
+   public static HeaderSetting targetSettings;
    public static ModeSetting sort;
    public static BooleanSetting friends;
    private static Map ob;
@@ -119,12 +118,8 @@ public class KillAura extends PriorityModule implements EventSubscriber {
    public static BooleanSetting mobs;
 
    public void onRender3D(Render3DEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       int var12 = 11654630;
       int var15 = 54127;
-
 
       if (showReachRing.c()) {
          Expo.util.render.RenderUtil.s(e.thePlayer, attackRange.L(), 45, 1.5F, -1, 24156, (char)1469, (char)var15);
@@ -201,7 +196,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private void q(EntityLivingBase var1, int var2, int var3) {
       long var4 = ((long)var2 << 32 | (long)var3 << 32 >>> 32) ^ bb;
       long var6 = var4 ^ 84560587536236L;
@@ -228,7 +222,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private double g(double var1, double var3) {
       double var5 = Math.max(var1, var3);
       return Math.max(var1, var3) > attackRange.L() ? var5 : attackRange.L();
@@ -254,9 +247,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
    }
 
    private boolean isGetKeyCode(long var1) {
-
-
-
       if (!this.Y()) {
          return false;
       }
@@ -313,11 +303,7 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private EntityLivingBase b(long var1) {
-
-
-
       double var7 = attackRange.L();
       HashSet var9 = new HashSet();
       List var10;
@@ -386,11 +372,9 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private double w$r1() {
       return this.g(swingRange.L(), this.g(swingRange.L(), attackRange.L()));
    }
-
 
    private boolean S(EntityLivingBase var1, int var2, short var3, char var4) {
       long var5 = ((long)var2 << 32 | (long)var3 << 48 >>> 32 | (long)var4 << 48 >>> 48) ^ bb;
@@ -448,7 +432,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
    private double[] N() {
       return new double[]{MathUtil.q(minAPS.L(), 1.0F, maxAPS.L()), MathUtil.q(maxAPS.L(), 1.0F, maxAPS.L())};
    }
-
 
    private boolean Y(long var1, EntityLivingBase var3) {
       var1 = bb ^ var1;
@@ -551,66 +534,7 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       GlStateManager.resetColor();
    }
 
-   private static long e(int var0, long var1) {
-      int var3 = var0 ^ (int)(var1 & 32767L) ^ 1620;
-      if (qb[var3] == null) {
-         byte[] var4 = new byte[]{
-            (byte)(var1 >>> 56),
-            (byte)(var1 >>> 48),
-            (byte)(var1 >>> 40),
-            (byte)(var1 >>> 32),
-            (byte)(var1 >>> 24),
-            (byte)(var1 >>> 16),
-            (byte)(var1 >>> 8),
-            (byte)var1
-         };
-         long var5 = pb[var3];
-         byte[] var7 = new byte[]{
-            (byte)(var5 >>> 56),
-            (byte)(var5 >>> 48),
-            (byte)(var5 >>> 40),
-            (byte)(var5 >>> 32),
-            (byte)(var5 >>> 24),
-            (byte)(var5 >>> 16),
-            (byte)(var5 >>> 8),
-            (byte)var5
-         };
-         Long var8 = Thread.currentThread().getId();
-         Object[] var9 = (Object[])rb.get(var8);
-
-         byte[] var10;
-         try {
-            if (var9 == null) {
-               var9 = new Object[]{Cipher.getInstance("DES/CBC/NoPadding"), SecretKeyFactory.getInstance("DES"), new IvParameterSpec(new byte[8])};
-               rb.put(var8, var9);
-            }
-
-            DESKeySpec var11 = new DESKeySpec(var4);
-            SecretKey var12 = ((SecretKeyFactory)var9[1]).generateSecret(var11);
-            Cipher var13 = (Cipher)var9[0];
-            var13.init(2, var12, (IvParameterSpec)var9[2]);
-            var10 = var13.doFinal(var7);
-         } catch (Exception var14) {
-            throw new RuntimeException("Expo/module/impl/combat/KillAura", var14);
-         }
-
-         long var15 = (var10[0] & 255L) << 56
-            | (var10[1] & 255L) << 48
-            | (var10[2] & 255L) << 40
-            | (var10[3] & 255L) << 32
-            | (var10[4] & 255L) << 24
-            | (var10[5] & 255L) << 16
-            | (var10[6] & 255L) << 8
-            | var10[7] & 255L;
-         qb[var3] = var15;
-      }
-
-      return qb[var3];
-   }
-
    public void onSetAngles(long var1, SetAnglesEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (!a || !rotation.R("LOCK")) {
          this.H7 = null;
       } else if (!Freelook.c() && this.H7 != null) {
@@ -696,14 +620,7 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       return Modules.J(KeepSprint.class).o() && KeepSprint.mode.R(b(14809, 3518532176668270889L ^ var0));
    }
 
-
    public void onPreMouseInput(long var1, PreMouseInputEvent var3) {
-
-
-
-
-
-
       int var13 = 3014;
       this.K(15041, 61729);
       boolean var14 = this.isGetKeyCode(64011875398272L);
@@ -720,7 +637,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
 
    public KillAura(long var1) {
       super((((bb ^ (var1)) ^ 113695299397976L) >>> 16), (char)((int)(((((bb ^ (var1)) ^ 113695299397976L) << 48) >>> 48))));
-      // add code
       this.declare("KillAura", Category.Combat, "Attack entities in range");
       var1 = bb ^ var1;
       this.B = ((0 & 1) != 0);
@@ -755,7 +671,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       int var6 = (int)((var2 ^ 54577294223149L) << 48 >>> 48);
       this.Y(var4, (char)var5, var6);
    }
-
 
    private void V(List<EntityLivingBase> var1) {
       var1.sort(
@@ -802,21 +717,18 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       return RaytraceUtil.i(var3, attackRange.L(), var4, !throughWall.c()) ? attackRange.L() : this.w$r1();
    }
 
-
    static {
-      // add code
       rotationSmoothing = new PercentageSetting("Rotation-smoothing", 0);
       customColor = new ColorSetting("Custom-color", "FFFFFF");
       showTargetDamageColor = new ColorSetting("Show-target-damage-color", "FF0000");
       showTargetOpacity = new PercentageSetting("Show-target-opacity", 25);
    }
    static {
-      // add code
       showReachRing = new BooleanSetting("Show-reach-ring", false);
       // update new version
-      G = new HeaderSetting("Blink autoblocks only works in Hypixel");
+      blinkAutoblocksOnlyWorksInHypixel = new HeaderSetting("Blink autoblocks only works in Hypixel");
       // update new version
-      h = new HeaderSetting("Target settings");
+      targetSettings = new HeaderSetting("Target settings");
       legit = new BooleanSetting("Legit", false);
       requireClick = new BooleanSetting("Require-click", false);
       requireSword = new BooleanSetting("Require-Sword", true);
@@ -834,7 +746,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       golems = new BooleanSetting("Golems", false);
    }
    static {
-      // add code
       fov = new NumberSetting("FOV", 360.0F, 1.0F, 360.0F, 1.0F);
       minAPS = new NumberSetting("Min-APS", 20.0F, 1.0F, 20.0F, 0.1F);
       maxAPS = new NumberSetting("Max-APS", 20.0F, 1.0F, 20.0F, 0.1F);
@@ -844,7 +755,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       angleStep = new NumberSetting("Angle-step", 90.0F, 0.0F, 180.0F, 1.0F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", "SINGLE", "SWITCH");
       sort = new ModeSetting("Sort", false, "VIEW", "DISTANCE", "HEALTH", "VIEW", "HURT_TIME", "ARMOR");
       rotation = new ModeSetting("Rotation", "SILENT", "NO_RENDER", "LOCK", "MANUAL", "NONE");

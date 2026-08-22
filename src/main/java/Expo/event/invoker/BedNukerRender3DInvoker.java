@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render3DEvent;
 import Expo.module.impl.world.BedNuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedNukerRender3DInvoker implements EventInvoker {
    final BedNuker H;
 

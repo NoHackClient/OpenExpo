@@ -22,7 +22,6 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.play.server.S19PacketEntityStatus;
 
-
 public class WTap extends Module implements EventSubscriber {
    private static String[] o;
    private static long a;
@@ -45,8 +44,6 @@ public class WTap extends Module implements EventSubscriber {
    public static BooleanSetting requireOnGround;
    public static BooleanSetting requireTargetDamage;
    private boolean J;
-
-
 
    public final void x(long var1, EventBus var3) {
       WTapBinder.U( var3, this);
@@ -88,20 +85,6 @@ public class WTap extends Module implements EventSubscriber {
       }
    }
 
-   private static void a() {
-      n[0] = "s~L\u001fK7o";
-      n[1] = short.class;
-      o[1] = "java/lang/Short";
-      n[2] = "\\VW\rM\u0013kAS\u0007\u00007|J\t\u001b";
-      n[3] = int.class;
-      o[3] = "java/lang/Integer";
-      n[4] = ";\u0013XO|3;";
-      n[5] = void.class;
-      o[5] = "java/lang/Void";
-      n[6] = "E\u0000\u0002\u0016\u0015aN\u000f\u0013YtoE\u0004\u0017\u0003";
-      n[7] = "^\u0010\u0001IU\u000e\u001c\u0018\f0nvZ\u0001\nZ\n\u001d\nV\u000eS3O\u001d\f\u0013\u000bON[\u000e\u00100\tG]\u0002\u0007KZ\u0012\u001f\nk\u000b\u000f\u001c[\u0005\u001b]Y\n\thQ\u0001\r\u001c\u000f\u0013\u0002TO\u0014cS\u0016W\b\r\u001d\u0010[YQv";
-   }
-
    public void onAttackEntity(long var1, AttackEntityEvent var3) {
       if (var3.O() instanceof EntityPlayer) {
          this.J = this.h == null;
@@ -112,8 +95,6 @@ public class WTap extends Module implements EventSubscriber {
    }
 
    public void onPreMouseInput(long var1, PreMouseInputEvent var3) {
-
-
       this.u = false;
       this.L = false;
       if (this.T > 0) {
@@ -157,7 +138,6 @@ public class WTap extends Module implements EventSubscriber {
 
    public WTap(long var1) {
       super(((a ^ (var1)) ^ 46295047080693L));
-      // add code
       this.declare("WTap", Category.Combat, "Pause moving during combat to help combo");
       var1 = a ^ var1;
       this.h = null;
@@ -184,7 +164,6 @@ public class WTap extends Module implements EventSubscriber {
       }
    }
 
-
    static {
       a = 9433001507230L;
       n = new Object[8];
@@ -194,7 +173,6 @@ public class WTap extends Module implements EventSubscriber {
       e = new long[]{3266210825553073490L, 5314742259686245813L, 4719741884499584443L, 6622068100265281457L, -2199634987435189256L, -9111339067620825184L, -2825596532523530443L};
    }
    static {
-      // add code
       useBlockInstead = new BooleanSetting("Use-block-instead", false);
       requireOnGround = new BooleanSetting("Require-on-ground", true);
       chance = new PercentageSetting("Chance", 100);

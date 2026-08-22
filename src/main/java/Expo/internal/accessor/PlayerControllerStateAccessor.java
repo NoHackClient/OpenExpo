@@ -9,16 +9,6 @@ import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.multiplayer.PlayerControllerMP;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public final class PlayerControllerStateAccessor {
    private static TypedValueStore D;
    private static TypedValueStore h;
@@ -50,8 +40,6 @@ public final class PlayerControllerStateAccessor {
       return O.m(var0);
    }
 
-
-
    public static boolean q( PlayerControllerMP var2) {
       return h.n(var2);
    }
@@ -71,5 +59,4 @@ public final class PlayerControllerStateAccessor {
    public static BlockPos Z(PlayerControllerMP var0) {
       return (BlockPos)d.v(var0);
    }
-
 }

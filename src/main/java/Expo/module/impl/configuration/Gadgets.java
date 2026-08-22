@@ -5,16 +5,6 @@ import Expo.module.Category;
 import Expo.module.Module;
 import Expo.setting.settings.BooleanSetting;
 
-
-
-
-
-
-
-
-
-
-
 public class Gadgets extends Module {
    public static BooleanSetting noScreenBackground;
    private static final long a = 31284398215526L;
@@ -22,7 +12,6 @@ public class Gadgets extends Module {
    public static BooleanSetting betterWorldSwapping;
 
    static {
-      // add code
       noMiningParticles = new BooleanSetting("No-mining-particles", false);
       betterWorldSwapping = new BooleanSetting("Better-world-swapping", true);
       noScreenBackground = new BooleanSetting("No-screen-background", true);
@@ -30,7 +19,6 @@ public class Gadgets extends Module {
 
    public Gadgets(long var1) {
       super(((a ^ (var1)) ^ 46172785993502L));
-      // add code
       this.declare("Gadgets", Category.Configuration, "Some useful items");
       var1 = a ^ var1;
    }}

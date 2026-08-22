@@ -6,5 +6,4 @@ public enum DetectedAction {
    PLACE;
 
    private static final DetectedAction[] X = new DetectedAction[]{ROTATION, SWING, PLACE};
-
 }

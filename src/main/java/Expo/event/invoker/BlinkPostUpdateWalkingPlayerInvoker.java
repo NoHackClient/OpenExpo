@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostUpdateWalkingPlayerEvent;
 import Expo.module.impl.player.Blink;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlinkPostUpdateWalkingPlayerInvoker implements EventInvoker {
    final Blink F;
 

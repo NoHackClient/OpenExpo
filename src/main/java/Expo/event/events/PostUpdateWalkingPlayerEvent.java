@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class PostUpdateWalkingPlayerEvent extends Event {
    private static final long a = 15790999129251L;
 

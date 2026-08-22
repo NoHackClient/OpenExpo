@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.movement.Speed;
 
-
-
-
-
-
-
-
-
-
-
 public final class SpeedPreUpdateInvoker implements EventInvoker {
    final Speed W;
 

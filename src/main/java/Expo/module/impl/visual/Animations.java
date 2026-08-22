@@ -23,12 +23,11 @@ import net.minecraft.item.ItemMap;
 import net.minecraft.util.MathHelper;
 import org.lwjgl.opengl.GL11;
 
-
 public class Animations extends Module implements EventSubscriber {
    private static Map n;
-   public static HeaderSetting h;
+   public static HeaderSetting offsetSettings;
    private static long a;
-   public static HeaderSetting c;
+   public static HeaderSetting scaleSettings;
    private static Map t;
    private static String[] x;
    public static NumberSetting offsetX;
@@ -38,7 +37,7 @@ public class Animations extends Module implements EventSubscriber {
    private static Object[] v;
    public static ModeSetting mode;
    public static NumberSetting rotationZ;
-   public static HeaderSetting H;
+   public static HeaderSetting rotationSettings;
    public static BooleanSetting noEquipReset;
    public static NumberSetting scaleZ;
    private static String[] d;
@@ -61,14 +60,11 @@ public class Animations extends Module implements EventSubscriber {
       return var1 / 2.0F * 400.0F - 200.0F;
    }
 
-
    public static void C() {
       GlStateManager.rotate(rotationX.L(), 1.0F, 0.0F, 0.0F);
       GlStateManager.rotate(rotationY.L(), 0.0F, 1.0F, 0.0F);
       GlStateManager.rotate(rotationZ.L(), 0.0F, 0.0F, 1.0F);
    }
-
-
 
    public static void U() {
       GlStateManager.scale(scaleX.L(), scaleY.L(), scaleZ.L());
@@ -78,21 +74,7 @@ public class Animations extends Module implements EventSubscriber {
       AnimationsBinder.A(var3, this);
    }
 
-   private static void a() {
-      v[0] = "\u0016I\u0002l\u000e\u00120";
-      v[1] = "\u001b-\u0000I}\u001a,:\u0004C0>;1^_";
-      v[2] = long.class;
-      x[2] = "java/lang/Long";
-      v[3] = "0\u0011\u0006 6n$";
-      v[4] = void.class;
-      x[4] = "java/lang/Void";
-      v[5] = "g[P\u001ee4lTAQ\u0004:g_E\u000b";
-      v[6] = "/61klT+71\u0004L)sx/y{\u0012t;1c\u0005\u0010:-wdxH),6\u0004?N1\u007f'|wU2$I>{J49'hw\u0016{G";
-   }
-
    public void onRenderItemInFirstPerson(long var1, RenderItemInFirstPersonEvent var3) {
-
-
       if (!(var3.e.getItem() instanceof ItemMap)) {
          if (var3.d.equals(EnumAction.BLOCK)) {
             if (!mode.R("1.7")) {
@@ -256,7 +238,6 @@ public class Animations extends Module implements EventSubscriber {
 
    public Animations(long var1) {
       super(((a ^ (var1)) ^ 29828256606173L));
-      // add code
       this.declare("Animations", Category.Visual, "Some 1.7 item using animations");
       var1 = a ^ var1;
    }
@@ -276,14 +257,13 @@ public class Animations extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       noRotationsEffect = new BooleanSetting("No-rotations-effect", true);
       // update new version
-      h = new HeaderSetting("Offset settings");
+      offsetSettings = new HeaderSetting("Offset settings");
       // update new version
-      c = new HeaderSetting("Scale settings");
+      scaleSettings = new HeaderSetting("Scale settings");
       // update new version
-      H = new HeaderSetting("Rotation settings");
+      rotationSettings = new HeaderSetting("Rotation settings");
       noEquipReset = new BooleanSetting("No-equip-reset", true);
       mode = new ModeSetting(
          "Mode", true, "NONE",
@@ -292,12 +272,10 @@ public class Animations extends Module implements EventSubscriber {
       );
    }
 
-
    public String g(long var1) {
       return mode.Y();
    }
    static {
-      // add code
       rotationY = new NumberSetting("Rotation-Y", 0.0F, -180.0F, 180.0F, 1.0F);
       scaleZ = new NumberSetting("Scale-Z", 1.0F, 0.0F, 2.0F, 0.01F);
       scaleY = new NumberSetting("Scale-Y", 1.0F, 0.0F, 2.0F, 0.01F);

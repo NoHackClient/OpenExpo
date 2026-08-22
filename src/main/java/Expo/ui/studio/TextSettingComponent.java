@@ -9,16 +9,6 @@ import java.awt.Color;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ChatAllowedCharacters;
 
-
-
-
-
-
-
-
-
-
-
 public class TextSettingComponent extends AbstractSettingComponent<TextSetting> {
    private final Animation s;
    private boolean m;
@@ -72,11 +62,9 @@ public class TextSettingComponent extends AbstractSettingComponent<TextSetting> 
       }
    }
 
-
    public boolean V() {
       return this.m;
    }
-
 
    public float O() {
       return 20.8F;
@@ -155,6 +143,5 @@ public class TextSettingComponent extends AbstractSettingComponent<TextSetting> 
    }
 
    static {
-
       a = 106220699075492L;
    }   }

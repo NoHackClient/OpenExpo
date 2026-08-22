@@ -8,7 +8,6 @@ import Expo.util.MinecraftRef;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiChest;
 
-
 public class GuiContainerHooks {
    private static final Minecraft A;
 

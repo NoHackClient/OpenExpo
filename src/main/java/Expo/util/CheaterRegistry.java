@@ -8,16 +8,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-
-
-
-
-
-
-
-
-
-
 public class CheaterRegistry {
    public List<CheaterDetectionSample> G;
    public final Map<DetectedCheat, Boolean> e;
@@ -33,8 +23,6 @@ public class CheaterRegistry {
    public float J;
    public int f;
    public boolean j;
-
-
 
    public void C(long var1, DetectedCheat var3) {
       this.e.put(var3, true);
@@ -73,10 +61,7 @@ public class CheaterRegistry {
 
    static {
       a = 85887610707744L;
-      // add code
    }
-
-
 
    public boolean V(DetectedCheat var1) {
       return this.e.get(var1);
@@ -85,5 +70,4 @@ public class CheaterRegistry {
    public void D(DetectedCheat var1, int var2) {
       this.c.put(var1, Math.max(this.c.get(var1) + var2, 0));
    }
-
 }

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.module.impl.combat.AntiFireball;
 
-
-
-
-
-
-
-
-
-
-
 public final class AntiFireballPreTickInvoker implements EventInvoker {
    final AntiFireball e;
 

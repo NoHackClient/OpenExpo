@@ -10,16 +10,6 @@ import java.security.spec.InvalidKeySpecException;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
-
-
-
-
-
-
-
-
-
 public final class NameTagsRender3DInvoker implements EventInvoker {
    final NameTags N;
 

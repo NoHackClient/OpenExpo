@@ -5,16 +5,6 @@ import Expo.event.events.PreTickEvent;
 import Expo.event.invoker.AutoToolServicePreTickInvoker;
 import Expo.util.AutoToolService;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoToolServiceBinder {
    private static final long a = 121902501407793L;
 
@@ -24,5 +14,4 @@ public final class AutoToolServiceBinder {
 
    private AutoToolServiceBinder() {
    }
-
 }

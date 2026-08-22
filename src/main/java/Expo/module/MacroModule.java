@@ -11,16 +11,6 @@ import java.util.Objects;
 import net.minecraft.item.ItemPotion;
 import net.minecraft.item.ItemStack;
 
-
-
-
-
-
-
-
-
-
-
 public class MacroModule extends Module {
    private static long k;
    private boolean Y;
@@ -53,11 +43,8 @@ public class MacroModule extends Module {
    }
 
    private boolean h(long var1, ModeSetting var3, NumberSetting var4) {
-
-
       int var11 = 61899;
       int var14 = 16552;
-
 
       this.U = -1;
       String var21 = var3.Y();
@@ -143,7 +130,6 @@ public class MacroModule extends Module {
       return true;
    }
 
-
    private int p(ModeSetting var1, NumberSetting var2) {
       switch (var1.Y()) {
          case "PROJECTILES":
@@ -155,15 +141,6 @@ public class MacroModule extends Module {
    }
 
    public void y(ModeSetting var1, NumberSetting var2, long var3, NumberSetting var5, BooleanSetting var6, TextSetting var7) {
-
-
-
-
-
-
-
-
-
       if (var1.R("CHAT")) {
          this.I(20724619369162L, false);
          if (!Objects.equals(var7.X(), "")) {
@@ -208,9 +185,6 @@ public class MacroModule extends Module {
    static {
       k = 100029549804245L;
    }
-
-
-
 
    private void N(boolean var3) {
       this.M = false;

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.ui.ModuleTagRenderer;
 
-
-
-
-
-
-
-
-
-
-
 public final class ModuleTagRendererRender2DInvoker implements EventInvoker {
    final ModuleTagRenderer F;
 

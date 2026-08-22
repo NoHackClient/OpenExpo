@@ -9,7 +9,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 
-
 public class RotationUtil {
    private static final long a = 116334093987398L;
    private static final Minecraft j;
@@ -23,7 +22,6 @@ public class RotationUtil {
       float var2 = RotationManager.b + (RotationManager.r - RotationManager.b) * var0;
       return d(var1, var2);
    }
-
 
    public static Vec3 h(BlockPos var0, EnumFacing var1, double var2) {
       double var4 = RaytraceUtil.f().xCoord;
@@ -98,7 +96,6 @@ public class RotationUtil {
       return new Vec3(var18, var12, var20);
    }
 
-
    public static float[] u(long var0, BlockPos var2, EnumFacing var3, double var4) {
       var0 = a ^ var0;
       long var6 = var0 ^ 8400881462379L;
@@ -140,13 +137,11 @@ public class RotationUtil {
       return L( RaytraceUtil.w(var0, var5, (short)var6, var3, (char)var7));
    }
 
-
    public static boolean b(long var0, Entity var2, double var3) {
       var0 = a ^ var0;
       long var5 = var0 ^ 45667781347317L;
       return e(var2, var5) <= var3;
    }
-
 
    public static float[] W(Vec3 var0, Vec3 var1) {
       double var2 = var1.xCoord;
@@ -217,11 +212,7 @@ public class RotationUtil {
       return n(0L, RaytraceUtil.Q((short)var3, var0, 2.147483647E9, (short)var4, false, var5));
    }
 
-
    public static double g(Entity var0) {
-
-
-
       float[] var6 = F(var0, (byte)0, 2595745, 2287551);
       float var7 = MathUtil.M(RotationManager.p(), var6[0]);
       float var8 = MathUtil.M(RotationManager.s(), var6[1]);
@@ -249,13 +240,11 @@ public class RotationUtil {
       return W(var2, RaytraceUtil.f());
    }
 
-
    public static boolean L(long var0, AxisAlignedBB var2, double var3) {
       var0 = a ^ var0;
       long var5 = var0 ^ 10857265435724L;
       return V(var2, var5) <= var3;
    }
-
 
    public static float[] h(int var0, AxisAlignedBB var1, byte var2, int var3) {
       long var4 = ((long)var0 << 32 | (long)var2 << 56 >>> 32 | (long)var3 << 40 >>> 40) ^ a;
@@ -263,13 +252,11 @@ public class RotationUtil {
       return y(var6, var1, 0.0);
    }
 
-
    public static float e(Entity var0, long var1) {
       var1 = a ^ var1;
       long var5 = var1 ^ 26243308180328L;
       return n(0L, RaytraceUtil.R(var0, var5, 2.147483647E9, false));
    }
-
 
    public static float[] V(long var0, BlockPos var2, EnumFacing var3, double var4) {
       var0 = a ^ var0;
@@ -282,5 +269,4 @@ public class RotationUtil {
       long var7 = var3 ^ 101370038530991L;
       return L( RaytraceUtil.R(var0, var7, var1, true));
    }
-
 }

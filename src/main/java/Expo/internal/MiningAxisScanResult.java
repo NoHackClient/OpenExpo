@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.util.BlockPos;
 
-
 public final class MiningAxisScanResult {
    private static long a;
    public List<BlockPos> z;
@@ -24,10 +23,7 @@ public final class MiningAxisScanResult {
       this.c = -1;
    }
 
-
    static {
-
       a = 55070367350149L;
    }
-
 }

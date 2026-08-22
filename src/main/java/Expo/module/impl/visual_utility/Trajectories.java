@@ -45,7 +45,6 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import org.lwjgl.opengl.GL11;
 
-
 public class Trajectories extends Module implements EventSubscriber {
    public static ColorSetting teammatesColor;
    public static ColorSetting baseColor;
@@ -101,7 +100,6 @@ public class Trajectories extends Module implements EventSubscriber {
          return nonePlayersColor.k(var9);
       }
    }
-
 
    private void p(TrajectoryStep var1, TrajectoryProjectileSpec var2, int var3, TrajectoriesViewerOffset var4, TrajectorySimulationResult var5, char var6, int var7) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       long var8 = ((long)var3 << 32 | (long)var6 << 48 >>> 32 | (long)var7 << 48 >>> 48) ^ a;
@@ -184,32 +182,12 @@ public class Trajectories extends Module implements EventSubscriber {
       }
    }
 
-   private static void a() {
-      e[0] = "\"Z~IL\u0012)";
-      e[1] = float.class;
-      k[1] = "java/lang/Float";
-      e[2] = "9\u001f98di,";
-      e[3] = char.class;
-      k[3] = "java/lang/Character";
-      e[4] = "GO\fN$\u0015pX\bDi1gSRX";
-      e[5] = int.class;
-      k[5] = "java/lang/Integer";
-      e[6] = "\r\u0010\u000e\u0018Fc&";
-      e[7] = void.class;
-      k[7] = "java/lang/Void";
-      e[8] = "V&R\u00119<])C^X2V\"G\u0004";
-      e[9] = "Kk_-TjFo\u000e@^\u0012\u00116_yMnWmT}&";
-      e[10] = "\"`C\u0002p\u0013gbN\tI~\u001b9BU-\u001f+\u007fHMy# i\u001eIwQj}\u001c\bI\u0018y<AL+\u0013ih\u00193rA$f[QyQp>$\u000f)]$<DI8E|\u0003\u0019\r-\u001fzl\\\n$J\u001b";
-      e[11] = "$N89 3)JiT)K~\u00138m978H3iR";
-   }
-
    public final void x(long var1, EventBus var3) {
       TrajectoriesBinder.U( var3, this);
    }
 
    public Trajectories(long var1) {
       super(((a ^ (var1)) ^ 136413373644575L));
-      // add code
       this.declare("Trajectories", Category.Visual_utility, "Show trajectories of projectiles");
       var1 = a ^ var1;
    }
@@ -231,8 +209,6 @@ public class Trajectories extends Module implements EventSubscriber {
    }
 
    private TrajectoriesViewerOffset P$r1(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       RenderManager var10 = f.getRenderManager();
       return new TrajectoriesViewerOffset(RenderManagerAccessor.k(0L, var10), RenderManagerAccessor.y(13236, var10), RenderManagerAccessor.W(0L, var10), null);
    }
@@ -257,11 +233,6 @@ public class Trajectories extends Module implements EventSubscriber {
    }
 
    private TrajectorySimulationResult getRGB(long var1, Vector3d var3, TrajectoryProjectileSpec var4, TrajectoriesViewerOffset var5) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
       TrajectorySimulationResult var9 = new TrajectorySimulationResult(null);
       TrajectorySimulationResult.g(var9, Color.WHITE.getRGB());
 
@@ -319,12 +290,6 @@ public class Trajectories extends Module implements EventSubscriber {
    }
 
    private void N(long var1, TrajectorySimulationResult var3) {
-
-
-
-
-
-
       WorldRenderer var11 = Tessellator.getInstance().getWorldRenderer();
       Expo.util.render.RenderUtil.L();
       Expo.util.render.RenderUtil.l(TrajectorySimulationResult.K(var3), 73372009905513L);
@@ -402,9 +367,6 @@ public class Trajectories extends Module implements EventSubscriber {
    }
 
    public void onRender3D(Render3DEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (this.f$r4()) {
          Item var12 = f.thePlayer.getHeldItem().getItem();
          TrajectoryProjectileSpec var13 = this.W(var12, var1.j);
@@ -421,7 +383,6 @@ public class Trajectories extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       nonePlayersColor = new ColorSetting("None-players-color", "FFFFFF");
       botColor = new ColorSetting("Bot-color", "FFFFFF");
       teammatesColor = new ColorSetting("Teammates-color", "FFFFFF");

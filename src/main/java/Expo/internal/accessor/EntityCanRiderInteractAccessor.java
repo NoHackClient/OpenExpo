@@ -2,18 +2,6 @@ package Expo.internal.accessor;
 
 import net.minecraft.entity.Entity;
 
-
-
-
-
-
-
-
-
-
-
-
-
 public final class EntityCanRiderInteractAccessor {
    private static Accessor H;
 
@@ -24,10 +12,7 @@ public final class EntityCanRiderInteractAccessor {
    private EntityCanRiderInteractAccessor() {
    }
 
-
-
    public static Accessor C() {
       return H;
    }
-
 }

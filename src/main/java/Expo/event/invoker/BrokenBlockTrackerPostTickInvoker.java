@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.internal.BrokenBlockTracker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BrokenBlockTrackerPostTickInvoker implements EventInvoker {
    final BrokenBlockTracker i;
 

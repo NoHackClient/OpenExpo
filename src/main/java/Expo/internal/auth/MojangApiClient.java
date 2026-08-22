@@ -11,41 +11,22 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-
-
-
-
-
-
-
-
-
-
 public class MojangApiClient {
    private static String[] b;
    private static Map d;
    private static ConcurrentHashMap<UUID, String> P;
    private static long a;
 
-
-
    static {
       a = 64276654896250L;
       P = new ConcurrentHashMap<>();
    }
 
-
-
    private MojangApiClient() {
    }
 
-
-
    public static void S() {
       P.clear();
-   }
-
-   private static void a() {
    }
 
    public static String X(UUID var0, boolean var1) throws Exception, Throwable {
@@ -105,6 +86,4 @@ public class MojangApiClient {
    public static String d(int var0, UUID var2) throws Exception, Throwable {
       return X(var2, false);
    }
-
-
 }

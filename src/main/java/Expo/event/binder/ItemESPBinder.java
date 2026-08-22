@@ -7,16 +7,6 @@ import Expo.event.invoker.ItemESPPostTickInvoker;
 import Expo.event.invoker.ItemESPRender3DInvoker;
 import Expo.module.impl.visual_utility.ItemESP;
 
-
-
-
-
-
-
-
-
-
-
 public final class ItemESPBinder {
    private static final long a = 6182073483998L;
 

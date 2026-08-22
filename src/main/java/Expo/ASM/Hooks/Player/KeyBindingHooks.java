@@ -10,7 +10,6 @@ import Expo.util.KeyBindUtil;
 import Expo.util.MinecraftRef;
 import net.minecraft.client.Minecraft;
 
-
 public class KeyBindingHooks {
    private static Minecraft T;
    private static long a;
@@ -23,13 +22,10 @@ public class KeyBindingHooks {
    }
 
    public static void onTick(int var0) {
-
       ExpoClient.w.e(new TickEvent(var0), 18670087776179L);
    }
 
    public static void isPressed(CallbackInfoReturnable<Boolean> var0, String var1, int var2) {
-
-
       IsPressedEvent var13 = new IsPressedEvent(KeyBindUtil.m(32881896332787L, var2), (Boolean)var0.getReturnValue());
       ExpoClient.w.e(var13, 18670087776179L);
       if (var13.a()) {
@@ -50,10 +46,8 @@ public class KeyBindingHooks {
    }
 
    public static void onSetKeyBindState(int var0, boolean var1) {
-
       if (var1 && T.currentScreen == null) {
          ExpoClient.w.e(new SetKeyBindStateEvent(var0), 18670087776179L);
       }
    }
-
 }

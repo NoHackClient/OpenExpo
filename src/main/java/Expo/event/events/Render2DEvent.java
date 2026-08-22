@@ -3,16 +3,6 @@ package Expo.event.events;
 import Expo.event.Event;
 import net.minecraft.client.gui.ScaledResolution;
 
-
-
-
-
-
-
-
-
-
-
 public class Render2DEvent extends Event {
    private static final long a = 98039059035453L;
    public float r;

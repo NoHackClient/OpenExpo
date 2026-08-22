@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ClickMouseEvent;
 import Expo.module.impl.player.NoHitDelay;
 
-
-
-
-
-
-
-
-
-
-
 public final class NoHitDelayClickMouseInvoker implements EventInvoker {
    final NoHitDelay l;
 

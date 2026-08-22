@@ -3,16 +3,6 @@ package Expo.module.impl.visual_utility;
 import Expo.internal.synthetic.TrajectoriesSwitchMapAxis;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class TrajectoryStep {
    private final double q;
    private final double J;

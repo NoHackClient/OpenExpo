@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostRightClickEvent;
 import Expo.module.impl.world.FastPlace;
 
-
-
-
-
-
-
-
-
-
-
 public final class FastPlacePostRightClickInvoker implements EventInvoker {
    final FastPlace J;
 

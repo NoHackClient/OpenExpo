@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformNetworkManager extends TransformerBase {
    private static long d;
 
@@ -32,9 +31,7 @@ public class TransformNetworkManager extends TransformerBase {
       super("net/minecraft/network/NetworkManager");
    }
 
-
    static {
       d = 45344561273536L;
    }
-
 }

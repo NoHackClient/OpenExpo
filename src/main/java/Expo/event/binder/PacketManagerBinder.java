@@ -5,16 +5,6 @@ import Expo.event.events.SendPacketEvent;
 import Expo.event.invoker.PacketManagerSendPacketInvoker;
 import Expo.util.packet.PacketManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class PacketManagerBinder {
    private static final long a = 118831071249546L;
 
@@ -24,5 +14,4 @@ public final class PacketManagerBinder {
 
    private PacketManagerBinder() {
    }
-
 }

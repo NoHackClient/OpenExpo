@@ -1,20 +1,8 @@
 package Expo.util;
 
-
-
-
-
-
-
-
-
-
-
-
 public class LunarClientDetector {
    private static long a;
    private static Boolean P;
-
 
    public static boolean q(long var0) {
       if (P == null) {
@@ -33,7 +21,6 @@ public class LunarClientDetector {
          Class.forName(var0, false, var1);
          return true;
       } catch (Throwable var3) {
-         Expo.internal.restore.ExpoDiag.attribute(var3, "LunarClientDetector.Y/2#0");
          return false;
       }
    }
@@ -53,5 +40,4 @@ public class LunarClientDetector {
 
    private LunarClientDetector() {
    }
-
 }

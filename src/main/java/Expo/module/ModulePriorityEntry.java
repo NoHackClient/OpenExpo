@@ -2,16 +2,6 @@ package Expo.module;
 
 import Expo.internal.synthetic.ModulePriorityCtorMarker;
 
-
-
-
-
-
-
-
-
-
-
 public class ModulePriorityEntry {
    public final Class<? extends PriorityModule> P;
    private static long b;
@@ -48,9 +38,5 @@ public class ModulePriorityEntry {
 
    static {
       a = 45265588781549L;
-      // add code
    }
-
-
-
 }

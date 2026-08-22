@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class StoppableEvent extends Event {
    private static long b;
    private boolean Z;
@@ -32,5 +22,4 @@ public class StoppableEvent extends Event {
    public void G() {
       this.Z = true;
    }
-
 }

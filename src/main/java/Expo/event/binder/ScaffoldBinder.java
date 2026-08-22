@@ -13,16 +13,6 @@ import Expo.event.invoker.ScaffoldRender2DInvoker;
 import Expo.event.invoker.ScaffoldRender3DInvoker;
 import Expo.module.impl.world.Scaffold;
 
-
-
-
-
-
-
-
-
-
-
 public final class ScaffoldBinder {
    private static final long a = 62520427670610L;
 
@@ -36,5 +26,4 @@ public final class ScaffoldBinder {
 
    private ScaffoldBinder() {
    }
-
 }

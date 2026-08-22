@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.player.AutoWeapon;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoWeaponPreUpdateInvoker implements EventInvoker {
    final AutoWeapon y;
 

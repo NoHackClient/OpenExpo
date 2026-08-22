@@ -8,22 +8,10 @@ import java.util.Map;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
-
-
-
-
-
-
-
-
-
 public class TransformGuiDisconnected extends TransformerBase {
    private static long d;
    private static String P;
    private static Map t;
-
-
 
    static {
       d = 55710805314204L;
@@ -45,7 +33,4 @@ public class TransformGuiDisconnected extends TransformerBase {
 
    private static void b() {
    }
-
-
-
 }

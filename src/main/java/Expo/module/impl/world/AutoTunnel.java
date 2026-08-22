@@ -18,16 +18,6 @@ import java.security.spec.InvalidKeySpecException;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
-
-
-
-
-
-
-
-
-
 public class AutoTunnel extends Module {
    public static NumberSetting stuckTimeout;
    public static NumberSetting noBreakTimeout;
@@ -55,7 +45,6 @@ public class AutoTunnel extends Module {
 
    public AutoTunnel(long var1) {
       super(((a ^ (var1)) ^ 40733195189558L));
-      // add code
       this.declare("AutoTunnel", Category.World, "Automatically mine tunnel in MegaWalls");
       var1 = a ^ var1;
    }
@@ -92,7 +81,6 @@ public class AutoTunnel extends Module {
       return mode.Y();
    }
    static {
-      // add code
       stuckTimeout = new NumberSetting("Stuck-timeout", 5.0F, 1.0F, 20.0F, 0.1F);
       sideOffsetScan = new BooleanSetting("Side-offset-scan", false);
       noBreakTimeout = new NumberSetting("No-break-timeout", 5.0F, 1.0F, 20.0F, 0.1F);
@@ -108,11 +96,9 @@ public class AutoTunnel extends Module {
       ownedChestsOnly = new BooleanSetting("Owned-chests-only", true);
    }
    static {
-      // add code
       rotationSmoothing = new PercentageSetting("Rotation-smoothing", 100);
    }
    static {
-      // add code
       // update new version
       gapAltOnlyStone = new BooleanSetting("GapAlt-only-stone", false);
       // update new version

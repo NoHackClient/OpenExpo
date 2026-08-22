@@ -17,16 +17,6 @@ import Expo.event.invoker.SprintResetPreUpdateInvoker;
 import Expo.event.invoker.SprintResetReceivePacketInvoker;
 import Expo.module.impl.combat.SprintReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class SprintResetBinder {
    private static final long a = 34596840566344L;
 

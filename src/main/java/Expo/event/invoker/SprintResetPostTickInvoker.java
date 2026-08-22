@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.combat.SprintReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class SprintResetPostTickInvoker implements EventInvoker {
    final SprintReset x;
 

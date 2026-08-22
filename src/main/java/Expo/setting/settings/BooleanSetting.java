@@ -2,16 +2,6 @@ package Expo.setting.settings;
 
 import Expo.setting.Setting;
 
-
-
-
-
-
-
-
-
-
-
 public class BooleanSetting extends Setting {
    private static final long a = 45529864789466L;
    private boolean h;

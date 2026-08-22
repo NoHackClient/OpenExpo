@@ -7,16 +7,6 @@ import Expo.event.invoker.ClosestPlayerHUDPostTickInvoker;
 import Expo.event.invoker.ClosestPlayerHUDRender2DInvoker;
 import Expo.module.impl.visual_utility.ClosestPlayerHUD;
 
-
-
-
-
-
-
-
-
-
-
 public final class ClosestPlayerHUDBinder {
    private static final long a = 63021179349595L;
 

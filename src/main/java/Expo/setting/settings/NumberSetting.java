@@ -3,7 +3,6 @@ package Expo.setting.settings;
 import Expo.setting.Setting;
 import Expo.util.MathUtil;
 
-
 public class NumberSetting extends Setting {
    private float z;
    private final float Z;
@@ -29,7 +28,6 @@ public class NumberSetting extends Setting {
    }
 
    static {
-
       a = 96988644486315L;
    }
 
@@ -41,7 +39,6 @@ public class NumberSetting extends Setting {
       return this.Z;
    }
 
-   // add code
    public NumberSetting(String var1, float var2, float var3, float var4, float var5) {
       this.q = var1;
       this.o = var3;
@@ -97,9 +94,7 @@ public class NumberSetting extends Setting {
       return this.o;
    }
 
-
    public void o(byte var1, long var2, float var4) {
       this.z = this.E(0L, var4);
    }
-
 }

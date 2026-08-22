@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.combat.SprintReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class SprintResetPreUpdateInvoker implements EventInvoker {
    final SprintReset D;
 

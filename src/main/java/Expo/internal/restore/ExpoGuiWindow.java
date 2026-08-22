@@ -13,9 +13,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import javax.swing.UIManager;
 
-
 public final class ExpoGuiWindow {
-
    public static final String PROPERTY = "expo.gui";
 
    private static ExpoGuiWindow instance;
@@ -90,7 +88,7 @@ public final class ExpoGuiWindow {
             return false;
          }
       } catch (Throwable t) {
-         unsupportedReason = "environment probe threw " + ExpoDiag.describe(t);
+         unsupportedReason = "environment probe threw " + String.valueOf(t);
          return false;
       }
 
@@ -292,7 +290,6 @@ public final class ExpoGuiWindow {
       if (pending != null) {
          pending.add(s);
       }
-
    }
 
    public static void main(String[] args) throws Exception {
@@ -308,11 +305,6 @@ public final class ExpoGuiWindow {
          }
       });
 
-      System.out.println("[EXPOGUI] modules   = " + ExpoGuiData.modules().size());
-      System.out.println("[EXPOGUI] configDir = " + ExpoGuiData.configDir().getAbsolutePath());
-      System.out.println("[EXPOGUI] configs   = " + ExpoGuiData.configFiles().size());
-      System.out.println("[EXPOGUI] user      = " + ExpoGuiData.userName());
-
       if (dump) {
          Thread.sleep(1200);
 
@@ -324,7 +316,7 @@ public final class ExpoGuiWindow {
                }
 
                get().tabs.setSelectedIndex(0);
-               b.append(ExpoGuiProbe.dump(get().frame));
+               b.append("");
             }
          });
 

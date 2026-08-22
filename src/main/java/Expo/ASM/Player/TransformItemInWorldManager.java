@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
 
-
 public class TransformItemInWorldManager extends TransformerBase {
    private static long d;
 
@@ -19,7 +18,6 @@ public class TransformItemInWorldManager extends TransformerBase {
          return true;
       }, "tryHarvestBlock", "tryHarvestBlock");
    }
-
 
    public TransformItemInWorldManager() {
       super("net/minecraft/server/management/ItemInWorldManager");

@@ -21,7 +21,6 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.input.Keyboard;
 
-
 public class RefreshTokenLoginScreen extends GuiScreen {
    private static String[] b;
    private static Pattern N;
@@ -106,7 +105,6 @@ public class RefreshTokenLoginScreen extends GuiScreen {
 
                this.mc.displayGuiScreen(new AccountManagerScreen(var5xx, this.X, new TimedStatusMessage(ChatFormatting.y(var10x), j)));
                if (!var12.isEmpty()) {
-
                   for (String var12x : (Iterable<String>)(var12)) {
                   }
                }
@@ -169,9 +167,6 @@ public class RefreshTokenLoginScreen extends GuiScreen {
       }
    }
 
-
-
-
    static {
       a = 130222794822054L;
       N = Pattern.compile("M\\.C[A-Za-z0-9._!*$\\-]+");
@@ -226,8 +221,6 @@ public class RefreshTokenLoginScreen extends GuiScreen {
    }
 
    protected void actionPerformed(GuiButton var1) {
-
-
       if (var1.enabled) {
          switch (var1.id) {
             case 0:
@@ -245,9 +238,7 @@ public class RefreshTokenLoginScreen extends GuiScreen {
       }
    }
 
-
    protected void keyTyped(char var1, int var2) {
-
       if (var2 == 1) {
          this.actionPerformed(this.d);
       } else {
@@ -286,5 +277,4 @@ public class RefreshTokenLoginScreen extends GuiScreen {
       super.mouseClicked(var1, var2, var3);
       this.W.D(var1, var2, var3);
    }
-
 }

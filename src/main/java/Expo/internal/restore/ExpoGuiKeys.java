@@ -2,9 +2,7 @@ package Expo.internal.restore;
 
 import java.awt.event.KeyEvent;
 
-
 public final class ExpoGuiKeys {
-
    private ExpoGuiKeys() {
    }
 

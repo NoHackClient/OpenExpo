@@ -51,7 +51,6 @@ import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.VarInsnNode;
 
-
 public abstract class TransformerBase implements ClassTransform, Opcodes {
    public static String D;
    public static String a;
@@ -128,13 +127,12 @@ public abstract class TransformerBase implements ClassTransform, Opcodes {
       while (var3 != null) {
          AbstractInsnNode var4 = var3.getNext();
          var0.instructions.remove(var3);
-         var3 = var4; // add code
+         var3 = var4;
       }
 
       var0.tryCatchBlocks.clear();
       var0.localVariables.clear();
    }
-
 
    public static boolean Q(MethodNode var0, MethodInsnMatcher var1, int var2, InsnEditor var3) {
       int var6 = 0;
@@ -184,7 +182,6 @@ public abstract class TransformerBase implements ClassTransform, Opcodes {
    public abstract boolean s(ClassNode var1);
 
    public static boolean g(MethodNode var0, String var1, String var2, InsnEditor var3, String... var4) {
-
       for (AbstractInsnNode var7 = var0.instructions.getFirst(); var7 != null; var7 = var7.getNext()) {
          if (var7 instanceof FieldInsnNode && var7.getOpcode() == 181) {
             FieldInsnNode var8 = (FieldInsnNode)var7;
@@ -205,7 +202,6 @@ public abstract class TransformerBase implements ClassTransform, Opcodes {
    }
 
    public static String j(ClassNode var0, String var1, String... var2) {
-
       for (String var8 : var2) {
          for (Object var10 : var0.fields) {
             FieldNode var11 = (FieldNode)var10;
@@ -240,11 +236,7 @@ public abstract class TransformerBase implements ClassTransform, Opcodes {
       return false;
    }
 
-   private static void a() {
-   }
-
    static {
-
       c = 7055454155035L;
 
       z = Type.getDescriptor(CallbackInfo.class);
@@ -332,5 +324,4 @@ public abstract class TransformerBase implements ClassTransform, Opcodes {
          return true;
       }, var5);
    }
-
 }

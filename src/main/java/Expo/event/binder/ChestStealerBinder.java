@@ -7,16 +7,6 @@ import Expo.event.invoker.ChestStealerPreUpdateInvoker;
 import Expo.event.invoker.ChestStealerRender2DInvoker;
 import Expo.module.impl.player.ChestStealer;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChestStealerBinder {
    private static final long a = 30793623120997L;
 

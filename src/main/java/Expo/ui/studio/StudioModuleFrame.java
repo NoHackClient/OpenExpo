@@ -27,18 +27,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.Minecraft;
 
-
-
-
-
-
-
-
-
-
-
-
-
 public class StudioModuleFrame {
    private float Z;
    private final Minecraft m;
@@ -71,9 +59,6 @@ public class StudioModuleFrame {
    }
 
    public void Q(long var1) {
-
-
-
       for (AbstractSettingComponent var6 : this.t) {
          var6.k(116871293733447L);
       }
@@ -223,22 +208,9 @@ public class StudioModuleFrame {
       );
    }
 
-
    private void f(long var1) {
-
-
-
-
-
-
-
-
-
-
-
       this.t.clear();
 
-      // add code
       java.util.List<Setting> var30 = this.M.w();
 
       for (int var31 = 0; var31 < var30.size(); var31++) {
@@ -281,10 +253,7 @@ public class StudioModuleFrame {
       return new StudioModuleActionLayout(var1, var18, var14, var17, var15, null);
    }
 
-
    public void y(float var1, float var2, long var3) {
-
-
       for (AbstractSettingComponent var9 : this.t) {
          var9.A(var1, var2);
       }
@@ -492,7 +461,6 @@ public class StudioModuleFrame {
       a = 12075157230319L;
    }
 
-
    private boolean G(float var1, float var2, float var3, float var4, float var5, float var6) {
       return var1 >= var3 && var1 <= var3 + var5 && var2 >= var4 && var2 <= var4 + var6;
    }
@@ -665,5 +633,4 @@ public class StudioModuleFrame {
          return false;
       }
    }
-
 }

@@ -49,16 +49,6 @@ import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.network.play.server.S19PacketEntityStatus;
 
-
-
-
-
-
-
-
-
-
-
 public class BlockHit extends Module implements EventSubscriber {
    public static boolean N;
    private long h;
@@ -123,7 +113,7 @@ public class BlockHit extends Module implements EventSubscriber {
       int var5 = (int)((var1 ^ 52374169736260L) >>> 32);
       int var6 = (int)((var1 ^ 52374169736260L) << 32 >>> 48);
       int var7 = (int)((var1 ^ 52374169736260L) << 48 >>> 48);
-      zkm$unresolved$0$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_ia_n_OR_Expo_ia_U_OR_Expo_ia_G_OR_Expo_ia_X_y_slots_25_35_42_45(this, var3, var1);
+      this.X(var3);
       this.H = 0L;
       this.t = 0L;
       this.v = false;
@@ -214,8 +204,6 @@ public class BlockHit extends Module implements EventSubscriber {
    }
 
    public void onPreUpdate(long var1, PreUpdateEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (lagAfterBlockMode.R("PRE")) {
          this.q(8138133633306L);
       }
@@ -306,7 +294,6 @@ public class BlockHit extends Module implements EventSubscriber {
       try {
          if (var8 != 194 && var8 != 'x' && var8 != 'b' && var8 != 223) {
             var11 = d(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/module/impl/combat/BlockHit.java", var8, var4, var6, var11); // add code
             Class var17 = var11.getDeclaringClass();
             String var19 = var11.getName();
             MethodType var20 = MethodType.methodType(var11.getReturnType(), var11.getParameterTypes());
@@ -319,7 +306,6 @@ public class BlockHit extends Module implements EventSubscriber {
             }
          } else {
             var10 = c(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/module/impl/combat/BlockHit.java", var8, var4, var6, var10); // add code
             Class var12 = var10.getDeclaringClass();
             String var18 = var10.getName();
             Class var14 = var10.getType();
@@ -364,10 +350,6 @@ public class BlockHit extends Module implements EventSubscriber {
    }
 
    public void onReceivePacket(ReceivePacketEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       if (mode.R("PREDICT") && f.theWorld != null && var1.d instanceof S19PacketEntityStatus) {
          S19PacketEntityStatus var7 = (S19PacketEntityStatus)var1.d;
          if (var7.getEntity(f.theWorld) instanceof EntityPlayerSP && var7.getOpCode() == 2) {
@@ -426,8 +408,6 @@ public class BlockHit extends Module implements EventSubscriber {
    }
 
    public void onPostUpdate(long var1, PostUpdateEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (lagAfterBlockMode.R("POST")) {
          this.q(8138133633306L);
       }
@@ -445,7 +425,7 @@ public class BlockHit extends Module implements EventSubscriber {
 
    public void Z(long var1) {
       long var3 = var1 ^ 85749904770628L;
-      zkm$unresolved$3$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_ia_p_OR_Expo_ia_X_y_slots_43_45(this, var3, var1);
+      this.isUsingItem(var3);
    }
 
    private void V(long var1) {
@@ -584,7 +564,6 @@ public class BlockHit extends Module implements EventSubscriber {
          if (var16 < var13) {
             var14[var16] = var15;
          }
-
       }
 
       Class var23 = var8;
@@ -754,7 +733,6 @@ public class BlockHit extends Module implements EventSubscriber {
 
    public BlockHit(long var1) {
       super(((D ^ (var1)) ^ 25070132217130L));
-      // add code
       this.declare("BlockHit", Category.Combat, "Block the sword when needed to decrease damage received");
       var1 = D ^ var1;
       this.H = 0L;
@@ -955,8 +933,6 @@ public class BlockHit extends Module implements EventSubscriber {
          .invoke((Object)var0, (long)var1, (long)7743209299158848852L, (long)var5);
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
-
-
    private static void zkm$unresolved$3$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_ia_p_OR_Expo_ia_X_y_slots_43_45(Object var0, long var1, long var5) {
        try {MethodType var7 = MethodType.fromMethodDescriptorString("(Ljava/lang/Object;JJJ)V", BlockHit.class.getClassLoader());
       MethodHandles.explicitCastArguments(a(MethodHandles.lookup(), null, "ö", var7, 3910435423868124319L, var5), var7)
@@ -964,7 +940,6 @@ public class BlockHit extends Module implements EventSubscriber {
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
    private static void zkm$clinit() {
       try {
-
          ob = new Object[49];
          pb = new String[49];
          c();
@@ -1168,7 +1143,6 @@ public class BlockHit extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       // update new version
       allowNoSlow = new BooleanSetting("Allow-NoSlow", true);
       // update new version
@@ -1186,7 +1160,6 @@ public class BlockHit extends Module implements EventSubscriber {
       bots = new BooleanSetting("Bots", false);
    }
    static {
-      // add code
       range = new NumberSetting("Range", 6.0F, 0.0F, 10.0F, 0.1F);
       fov = new NumberSetting("FOV", 180.0F, 0.0F, 360.0F, 1.0F);
       predictHurtResistTicks = new NumberSetting("Predict-hurt-resist-ticks", 10.0F, 1.0F, 20.0F, 1.0F);
@@ -1199,12 +1172,10 @@ public class BlockHit extends Module implements EventSubscriber {
       lagAfterBlockTime = new NumberSetting("Lag-after-block-time", 100.0F, 0.0F, 1000.0F, 1.0F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", "PREDICT", "SPAM");
       lagAfterBlockMode = new ModeSetting("Lag-after-block-mode", "NONE", "POST", "PRE");
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

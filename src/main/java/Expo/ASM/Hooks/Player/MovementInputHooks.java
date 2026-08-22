@@ -7,23 +7,10 @@ import Expo.event.events.PostMoveInputEvent;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.util.MovementInput;
 
-
-
-
-
-
-
-
-
-
-
 public class MovementInputHooks {
    private static final long a = 110068457662810L;
 
    public static void onUpdatePlayerMoveState(MovementInput var0, GameSettings var1, CallbackInfo var2) {
-
-
-
       var0.moveStrafe = 0.0F;
       var0.moveForward = 0.0F;
       if (var1.keyBindForward.isKeyDown()) {

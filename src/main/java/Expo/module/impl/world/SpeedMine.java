@@ -22,16 +22,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public class SpeedMine extends Module implements EventSubscriber {
    public static PercentageSetting delayChance;
    private static long a;
@@ -42,7 +32,6 @@ public class SpeedMine extends Module implements EventSubscriber {
    public static PercentageSetting speedChance;
    public static PercentageSetting increaseSpeed;
 
-
    public final void x(long var1, EventBus var3) {
       SpeedMineBinder.H(var3, this);
    }
@@ -51,10 +40,8 @@ public class SpeedMine extends Module implements EventSubscriber {
       a = 40047299343839L;
    }
 
-
    public SpeedMine(short var1, long var2) {
       super((((((long)((var1)) << 48) | 0L) ^ a) ^ 69186206453329L));
-      // add code
       this.declare("SpeedMine", Category.World, "Increase your mining speed");
       this.b = null;
    }
@@ -67,13 +54,7 @@ public class SpeedMine extends Module implements EventSubscriber {
       }
    }
 
-
-
    public void onPostTick(PostTickEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       BlockPos var19 = PlayerControllerStateAccessor.Z(f.playerController);
       if (f.inGameHasFocus) {
          int var20 = (int)delay.L();
@@ -138,17 +119,14 @@ public class SpeedMine extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       delayChance = new PercentageSetting("Delay-chance", 100);
       increaseSpeed = new PercentageSetting("Increase-speed", 10);
       speedChance = new PercentageSetting("Speed-chance", 100);
    }
    static {
-      // add code
       delay = new NumberSetting("Delay", 0.0F, 0.0F, 5.0F, 1.0F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", "POST", "PRE", "INCREASE");
    }
 }

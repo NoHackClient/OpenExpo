@@ -7,16 +7,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class PlayerRightClickEvent extends Event {
    private final Vec3 h;
    private final ItemStack R;

@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class RedirectIsUsingItemEvent extends Event {
    float l;
    private boolean r;
@@ -42,5 +32,4 @@ public class RedirectIsUsingItemEvent extends Event {
    static {
       a = 72090766616664L;
    }
-
 }

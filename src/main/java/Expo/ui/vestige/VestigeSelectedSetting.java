@@ -3,15 +3,6 @@ package Expo.ui.vestige;
 import Expo.internal.synthetic.VestigeClickGuiScreenCtorMarker;
 import Expo.setting.Setting;
 
-
-
-
-
-
-
-
-
-
 public class VestigeSelectedSetting {
    private final Setting J;
 

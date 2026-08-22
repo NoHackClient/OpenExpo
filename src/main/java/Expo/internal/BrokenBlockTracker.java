@@ -37,7 +37,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 
-
 public class BrokenBlockTracker implements EventSubscriber {
    private static long a;
    private static Minecraft w;
@@ -125,8 +124,6 @@ public class BrokenBlockTracker implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) {
-
-
       if (this.r()) {
          if (w.objectMouseOver != null && w.objectMouseOver.typeOfHit == MovingObjectType.BLOCK) {
             BlockPos var8 = w.objectMouseOver.getBlockPos();
@@ -165,8 +162,6 @@ public class BrokenBlockTracker implements EventSubscriber {
    }
 
    public void onTryHarvestBlockHead(TryHarvestBlockHeadEvent var1, long var2) {
-
-
       if (this.r()) {
          BlockPos var6 = var1.n;
          this.W = var6;
@@ -236,8 +231,6 @@ public class BrokenBlockTracker implements EventSubscriber {
    }
 
    private void c(long var1, BlockPos var3, long var4) {
-
-
       if (!this.D() && !this.c.containsKey(var3)) {
          MiningState var10 = MiningEngine.uq.s();
          if (var10 == null || !var10.d$r1().contains(var3) && !var10.g().contains(var3)) {
@@ -440,8 +433,6 @@ public class BrokenBlockTracker implements EventSubscriber {
    }
 
    public void onClickBlockReturn(ClickBlockReturnEvent var1, long var2) {
-
-
       if (this.r()) {
          BlockPos var7 = var1.b;
          if (this.T == null || !this.T.equals(var7)) {
@@ -526,7 +517,6 @@ public class BrokenBlockTracker implements EventSubscriber {
 
       return var1;
    }
-
 
    private static void zkm$clinit() {
       try {

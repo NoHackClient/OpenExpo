@@ -3,16 +3,6 @@ package loader_forgemod;
 import java.io.IOException;
 import java.io.Writer;
 
-
-
-
-
-
-
-
-
-
-
 class d_2 extends J {
    private final char[] a;
    private int b;

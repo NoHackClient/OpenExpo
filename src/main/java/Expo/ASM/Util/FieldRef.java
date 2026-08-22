@@ -12,7 +12,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
 public final class FieldRef {
    private static long b;
    private final String Z;
@@ -84,5 +83,4 @@ public final class FieldRef {
       FieldRef var2 = (FieldRef)var1;
       return this.Z.equals(var2.Z) && this.H.equals(var2.H);
    }
-
 }

@@ -13,16 +13,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
-
-
-
-
-
-
-
-
-
 public class UpdateCameraAndRenderEvent extends Event {
    private boolean K;
    private static long b;
@@ -38,7 +28,6 @@ public class UpdateCameraAndRenderEvent extends Event {
    }
 
    static {
-      // add code
       try {
          a = 60199098923997L;
          long var0 = a ^ 31564594784833L;
@@ -80,5 +69,4 @@ public class UpdateCameraAndRenderEvent extends Event {
    public void W(int var1, long var2) {
       this.K = (b) != 0;
    }
-
 }

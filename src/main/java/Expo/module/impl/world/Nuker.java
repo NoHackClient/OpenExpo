@@ -37,7 +37,6 @@ import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 
-
 public class Nuker extends PriorityModule implements EventSubscriber {
    public static BooleanSetting swing;
    public static NumberSetting range;
@@ -72,7 +71,6 @@ public class Nuker extends PriorityModule implements EventSubscriber {
       this.C = null;
    }
 
-
    private List<Integer> x(int var1) {
       ArrayList var2 = new ArrayList();
       var2.add(0);
@@ -94,7 +92,6 @@ public class Nuker extends PriorityModule implements EventSubscriber {
 
    public Nuker(int var1, int var2, byte var3) {
       super((((((((long)((var1)) << 32) | (((long)((var2)) << 40) >>> 32)) | (((long)((var3)) << 56) >>> 56)) ^ b) ^ 62759715954982L) >>> 16), (char)((int)(((((((((long)((var1)) << 32) | (((long)((var2)) << 40) >>> 32)) | (((long)((var3)) << 56) >>> 56)) ^ b) ^ 62759715954982L) << 48) >>> 48))));
-      // add code
       this.declare("Nuker", Category.World, "Mine blocks around you");
       long var4 = ((long)var1 << 32 | (long)var2 << 40 >>> 32 | (long)var3 << 56 >>> 56) ^ b;
       this.v = new TimerUtil();
@@ -103,37 +100,6 @@ public class Nuker extends PriorityModule implements EventSubscriber {
       this.U = -1;
       this.o = null;
       this.C = null;
-   }
-
-   private static void a() {
-      n[0] = "yILNkir";
-      n[1] = long.class;
-      p[1] = "java/lang/Long";
-      n[2] = void.class;
-      p[2] = "java/lang/Void";
-      n[3] = "\"\u0012Z}#V>";
-      n[4] = int.class;
-      p[4] = "java/lang/Integer";
-      n[5] = "wM7\nUR\\";
-      n[6] = "h\u0000jLBW_\u0017nF\u000fsH\u001c4Z";
-      n[7] = "hw[\u0013m\u001e\u001f";
-      n[8] = float.class;
-      p[8] = "java/lang/Float";
-      n[9] = "drA>\u001fn\u0016";
-      n[10] = "\\U\u001c\b7\u001f";
-      n[11] = char.class;
-      p[11] = "java/lang/Character";
-      n[12] = "(\u0006s:J3(\u0006dfF<2Mr`N6h!k{D1\u0016\ft";
-      n[13] = "W=YP\u0005\u001bW=N\f\t\u0014MvX\n\u0001\u001e\u0017\u001dC\u000b\u00054X;D\u0010\u000f";
-      n[14] = "\u001bW";
-      n[15] = "\r\u001b/m\u0000W\u0006\u0014>\"aY\r\u001f:x";
-      n[16] = "f\u0004#\u0017EU6]g'rde]\"BG_d\u0007b\u001b;Y.[t^@_2\u0001c'\u0002\u000b-\u0010']\u0002\u000e#\b\u0018";
-      n[17] = "(E^ZEyx\u001c\u001aj|H+\u001c_\u000fGs*F\u001fV;q}Q\u0014UAqx_\fj";
-      n[18] = "Toc\u0015j\"\u00046'%r\u0013P;5^dc\u0014q8\u001d\u0014*\u0001{)\u001an*\u0004u1%";
-      n[19] = "XU,oh\u0004RR{m\u0013\u001ac\u000e\"3t\u000f\u0013B)0.bZ\u000e(hoY[Th1\u0013^\u001dYtc\u007fX\u001a\bl\r*\r\u0012C-w*\b\u001c[\u0012";
-      n[20] = "\t\\\rjp\u007fY\u0005IZpN\u000eK\f6w5\bWV!\u000esA\u0003Z#uu]YMZ7r\t\\Ja6(I\u00056g|t_@Ma`.H9\u000f5\u007f?\fC\u000f0q'3";
-      n[21] = "L\u0013\u0001?:\u0001\u0010\u0011F(\u0007<vG\u0004hb\u0018MF^(;dMNCb}\u001b\r\u0013\u0006m\u0007]\u0019\u000fIm}]\u001c\u0001QR";
-      n[22] = "=e\u0010(atycK5]T\u00029\nd9h?t\u00155/\u000f96\u0001i'pykDf]0r;\u001e>`}mj\bYmvd~\u0011%<oaxzhc6|l\n5$m=\u0006\u0013bd`s7\u0003$4v\u0002";
    }
 
    private BlockPos e(long var1, NukerScanState var3) {
@@ -196,7 +162,6 @@ public class Nuker extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private NukerScanAxis f$r1() {
       float var1 = MathUtil.T(RotationManager.r, 0.0F, 360.0F);
       if (var1 >= 45.0F && var1 < 135.0F) {
@@ -216,33 +181,6 @@ public class Nuker extends PriorityModule implements EventSubscriber {
       d = new String[3];
       m = new HashMap(13);
       h = new long[]{-5908676961446516622L, 5372785210800559796L, 6375693055559332728L, -1275294834765481263L, 2914767951935686523L, -8291187651642895498L, -4312771241707091288L};
-   }
-
-   private static String b(byte[] var0) {
-      int var1 = 0;
-      int var2;
-      char[] var3 = new char[var2 = var0.length];
-
-      for (int var4 = 0; var4 < var2; var4++) {
-         int var5;
-         if ((var5 = 255 & var0[var4]) < 192) {
-            var3[var1++] = (char)var5;
-         } else if (var5 < 224) {
-            char var6 = (char)((char)(var5 & 31) << 6);
-            byte var8 = var0[++var4];
-            var6 = (char)(var6 | (char)(var8 & 63));
-            var3[var1++] = var6;
-         } else if (var4 < var2 - 2) {
-            char var12 = (char)((char)(var5 & 15) << '\f');
-            byte var9 = var0[++var4];
-            var12 = (char)(var12 | (char)(var9 & 63) << 6);
-            var9 = var0[++var4];
-            var12 = (char)(var12 | (char)(var9 & 63));
-            var3[var1++] = var12;
-         }
-      }
-
-      return new String(var3, 0, var1);
    }
 
    public void onHeldItemChange(int var1, int var2, char var3, HeldItemChangeEvent var4) {
@@ -445,16 +383,13 @@ public class Nuker extends PriorityModule implements EventSubscriber {
       return new BlockPos(var11, var12, var13);
    }
    static {
-      // add code
       mineDown = new BooleanSetting("Mine-down", true);
       swing = new BooleanSetting("Swing", true);
    }
    static {
-      // add code
       range = new NumberSetting("Range", 4.0F, 1.0F, 10.0F, 1.0F);
    }
    static {
-      // add code
       moveFix = new ModeSetting("Move-fix", "SILENT", "STRICT", "NONE");
    }
 }

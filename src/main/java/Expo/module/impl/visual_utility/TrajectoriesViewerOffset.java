@@ -2,13 +2,6 @@ package Expo.module.impl.visual_utility;
 
 import Expo.internal.synthetic.TrajectoriesSwitchMapAxis;
 
-
-
-
-
-
-
-
 public class TrajectoriesViewerOffset {
    private final double K;
    private final double L;

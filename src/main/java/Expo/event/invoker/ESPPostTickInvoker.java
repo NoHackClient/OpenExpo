@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.visual_utility.ESP;
 
-
-
-
-
-
-
-
-
-
-
 public final class ESPPostTickInvoker implements EventInvoker {
    final ESP S;
 

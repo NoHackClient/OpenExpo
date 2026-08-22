@@ -29,22 +29,11 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MathHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class EntityPlayerHooks {
    private static final Minecraft D;
    private static final long a = 52432132721974L;
 
    public static void onGetDisplayName(EntityPlayer var0, CallbackInfoReturnable<IChatComponent> var1) {
-
       GetDisplayNameEvent var8 = new GetDisplayNameEvent(var0, (IChatComponent)var1.getReturnValue());
       ExpoClient.w.e(var8, 18670087776179L);
       var1.setReturnValue(var8.c());
@@ -56,12 +45,10 @@ public class EntityPlayerHooks {
    }
 
    public static void onPostItemUseFinish() {
-
       ExpoClient.w.e(new PostItemUseFinishEvent(), 18670087776179L);
    }
 
    public static void onAttackTargetEntity(EntityPlayer var0, Entity var1, CallbackInfo var2) {
-
       if (var1.canAttackWithItem() && !var1.hitByEntity(var0)) {
          float var11 = (float)var0.getEntityAttribute(SharedMonsterAttributes.attackDamage).getAttributeValue();
          int var12 = 0;

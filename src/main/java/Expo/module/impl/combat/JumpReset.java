@@ -49,16 +49,6 @@ import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.MathHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class JumpReset extends Module implements EventSubscriber {
    public static PercentageSetting chance;
    public static BooleanSetting enemies;
@@ -367,7 +357,6 @@ public class JumpReset extends Module implements EventSubscriber {
 
    public JumpReset(long var1) {
       super(((a ^ (var1)) ^ 70001787441225L));
-      // add code
       this.declare("JumpReset", Category.Combat, "JumpReset and reduce knockback in combat");
       var1 = a ^ var1;
       this.t = new TimerUtil();
@@ -377,7 +366,6 @@ public class JumpReset extends Module implements EventSubscriber {
    }
 
    private void q(long var1) {
-
       this.d = false;
       this.o = 0;
       if (this.J) {
@@ -387,7 +375,6 @@ public class JumpReset extends Module implements EventSubscriber {
    }
 
    private void q(double var1, long var3, double var5) {
-
       this.d = true;
       this.o = 3;
       if (reduce.c() && !RotationManager.X) {
@@ -412,7 +399,6 @@ public class JumpReset extends Module implements EventSubscriber {
    }
 
    public void onPostUpdate(long var1, PostUpdateEvent var3) {
-
       if (this.o > 0) {
          this.o--;
       } else {
@@ -457,7 +443,6 @@ public class JumpReset extends Module implements EventSubscriber {
          if (var16 < var13) {
             var14[var16] = var15;
          }
-
       }
 
       Class var23 = var8;
@@ -516,9 +501,6 @@ public class JumpReset extends Module implements EventSubscriber {
    }
 
    public void onKnockback(KnockbackEvent var1, long var2) {
-
-
-
       if (var1.f() > 0.0 && C(122264478076639L)) {
          this.q(
             var1.S(),
@@ -537,7 +519,6 @@ public class JumpReset extends Module implements EventSubscriber {
       try {
          if (var8 != 233 && var8 != 'c' && var8 != 255 && var8 != 'Q') {
             var11 = d(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/module/impl/combat/JumpReset.java", var8, var4, var6, var11); // add code
             Class var17 = var11.getDeclaringClass();
             String var19 = var11.getName();
             MethodType var20 = MethodType.methodType(var11.getReturnType(), var11.getParameterTypes());
@@ -550,7 +531,6 @@ public class JumpReset extends Module implements EventSubscriber {
             }
          } else {
             var10 = c(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/module/impl/combat/JumpReset.java", var8, var4, var6, var10); // add code
             Class var12 = var10.getDeclaringClass();
             String var18 = var10.getName();
             Class var14 = var10.getType();
@@ -768,11 +748,9 @@ public class JumpReset extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       chance = new PercentageSetting("Chance", 100);
    }
    static {
-      // add code
       requireMoving = new BooleanSetting("Require-moving", true);
       reduce = new BooleanSetting("Reduce", false);
       players = new BooleanSetting("Players", true);
@@ -785,12 +763,10 @@ public class JumpReset extends Module implements EventSubscriber {
       bots = new BooleanSetting("Bots", false);
    }
    static {
-      // add code
       fov = new NumberSetting("FOV", 180.0F, 0.0F, 360.0F, 1.0F);
       range = new NumberSetting("Range", 5.0F, 0.0F, 10.0F, 0.1F);
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

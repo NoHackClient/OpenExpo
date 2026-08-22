@@ -9,16 +9,6 @@ import Expo.event.invoker.TargetHUDPreUpdateInvoker;
 import Expo.event.invoker.TargetHUDRender2DInvoker;
 import Expo.module.impl.visual_utility.TargetHUD;
 
-
-
-
-
-
-
-
-
-
-
 public final class TargetHUDBinder {
    private static final long a = 138990443720805L;
 

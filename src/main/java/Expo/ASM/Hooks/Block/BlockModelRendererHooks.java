@@ -12,14 +12,12 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.ReportedException;
 import net.minecraft.world.IBlockAccess;
 
-
 public class BlockModelRendererHooks {
    private static long a;
 
    static {
       a = 71741488425841L;
    }
-
 
    public static void renderModel(
       IBlockAccess var0,
@@ -48,6 +46,4 @@ public class BlockModelRendererHooks {
 
       var7.cancel();
    }
-
-
 }

@@ -2,16 +2,6 @@ package Expo.module.impl.visual_utility;
 
 import java.util.Objects;
 
-
-
-
-
-
-
-
-
-
-
 public class ItemESPStackKey {
    public final double l;
    public final double p;

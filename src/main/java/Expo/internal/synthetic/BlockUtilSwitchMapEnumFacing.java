@@ -2,16 +2,6 @@ package Expo.internal.synthetic;
 
 import net.minecraft.util.EnumFacing;
 
-
-
-
-
-
-
-
-
-
-
 public class BlockUtilSwitchMapEnumFacing {
    public static final int[] b = new int[EnumFacing.values().length];
 

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.HeldItemChangeEvent;
 import Expo.module.impl.world.Scaffold;
 
-
-
-
-
-
-
-
-
-
-
 public final class ScaffoldHeldItemChangeInvoker implements EventInvoker {
    final Scaffold I;
 

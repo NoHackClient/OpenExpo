@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.TickEvent;
 import Expo.module.impl.combat.AutoBlock;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoBlockTickInvoker implements EventInvoker {
    final AutoBlock g;
 

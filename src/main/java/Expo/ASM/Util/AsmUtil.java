@@ -31,7 +31,6 @@ import org.objectweb.asm.tree.FieldNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
 
-
 public class AsmUtil {
    private static volatile MappingKind i;
    private static String[] e;
@@ -116,13 +115,11 @@ public class AsmUtil {
       r.remove();
    }
 
-
    public static void a() {
       v.remove();
    }
 
    public static boolean H(ClassNode var0) {
-
       for (Object var4 : var0.methods) {
          MethodNode var5 = (MethodNode)var4;
          if (var5.name.startsWith("func_")) {
@@ -146,7 +143,6 @@ public class AsmUtil {
    }
 
    public static boolean E(Class<?> var0, String var1) {
-
       for (Field var7 : var0.getDeclaredFields()) {
          if (var7.getName().equals(var1)) {
             return true;
@@ -197,7 +193,6 @@ public class AsmUtil {
       return var5;
    }
 
-
    public static void E(Set<String> var0, String var1, String var2) {
       var0.add(var2);
       FieldMapping var5 = P.get(c()).get(new FieldRef(var1, var2));
@@ -245,7 +240,6 @@ public class AsmUtil {
          }
       }
    }
-
 
    public static MappingKind Z() {
       try {
@@ -300,7 +294,6 @@ public class AsmUtil {
       }
    }
 
-
    public static String j(String var0) {
       return var0 == null ? null : var0.replace((char)46, (char)47);
    }
@@ -323,12 +316,10 @@ public class AsmUtil {
       return var6 == null ? var5 : FieldMapping.U(var6);
    }
 
-
    public static void L(ClassNode var0) {
       MappingKind var3 = r.get();
       v.set(var3 == null ? Q(var0) : var3);
    }
-
 
    public static MappingKind Q(ClassNode var0) {
       if (var0 != null && var0.name != null) {
@@ -433,7 +424,6 @@ public class AsmUtil {
       return var5 == null ? var4 : var5;
    }
 
-
    public static OwnerNamePair K(String var0) {
       int var3 = var0.lastIndexOf(47);
       return new OwnerNamePair(var0.substring(0, var3), var0.substring(var3 + 1));
@@ -461,9 +451,7 @@ public class AsmUtil {
       }
    }
 
-
    public static String q(String var0, String var1, String var2) {
-
       for (MappingKind var8 : MappingKind.values()) {
          String var9 = b(var8, var0);
          String var10 = Y(var8, var1);
@@ -527,9 +515,7 @@ public class AsmUtil {
       return q(var0, var1);
    }
 
-
    public static String J(String var0, String var1) {
-
       for (MappingKind var7 : MappingKind.values()) {
          String var8 = b(var7, var0);
          FieldMapping var9 = B.get(var7).get(new FieldRef(var8, var1));
@@ -542,7 +528,6 @@ public class AsmUtil {
    }
 
    public static void H(String var0, MappingKind var1) throws Throwable {
-
       String var6;
       try (BufferedReader var4 = F(var0)) {
          while ((var6 = var4.readLine()) != null) {
@@ -603,11 +588,9 @@ public class AsmUtil {
       B.put(var0, new LinkedHashMap<>());
    }
 
-
    public static void r(String var0) {
       r.set(o(var0));
    }
-
 
    public static String b(String var0) {
       String var3 = j(var0);
@@ -626,7 +609,6 @@ public class AsmUtil {
    }
 
    public static boolean O(Class<?> var0, String var1) {
-
       for (Method var7 : var0.getDeclaredMethods()) {
          if (var7.getName().equals(var1)) {
             return true;
@@ -666,7 +648,6 @@ public class AsmUtil {
    public static boolean H(String var0) {
       return var0 != null && (var0.startsWith("func_") || var0.startsWith("field_") || var0.length() > 2);
    }
-
 
    public static Set<String> Q(String var0, String var1, String... var2) {
       String var5 = b(var0);
@@ -1000,5 +981,4 @@ public class AsmUtil {
          throw new RuntimeException(var22);
       }
    }
-
 }

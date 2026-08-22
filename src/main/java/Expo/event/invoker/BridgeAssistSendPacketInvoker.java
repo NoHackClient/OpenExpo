@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SendPacketEvent;
 import Expo.module.impl.world.BridgeAssist;
 
-
-
-
-
-
-
-
-
-
-
 public final class BridgeAssistSendPacketInvoker implements EventInvoker {
    final BridgeAssist T;
 

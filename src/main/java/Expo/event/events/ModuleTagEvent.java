@@ -4,20 +4,9 @@ import Expo.event.Event;
 import java.util.Arrays;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
 public class ModuleTagEvent extends Event {
    private static final long a = 71874928198191L;
    private StringBuilder K;
-
 
    public void U(String var1) {
       this.K.append(var1).append("\n");

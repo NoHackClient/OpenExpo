@@ -14,16 +14,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
-
-
-
-
-
-
-
-
-
 public class PercentageSetting extends Setting {
    private int n;
    private static long a;
@@ -34,7 +24,6 @@ public class PercentageSetting extends Setting {
    }
 
    static {
-      // add code
       try {
          a = 49645478270159L;
          long var0 = a ^ 116504715470166L;
@@ -86,5 +75,4 @@ public class PercentageSetting extends Setting {
    public int k() {
       return this.n;
    }
-
 }

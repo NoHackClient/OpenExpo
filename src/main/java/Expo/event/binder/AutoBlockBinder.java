@@ -17,16 +17,6 @@ import Expo.event.invoker.AutoBlockTickInvoker;
 import Expo.event.invoker.AutoBlockUpdateCameraAndRenderInvoker;
 import Expo.module.impl.combat.AutoBlock;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoBlockBinder {
    private static final long a = 95045012906063L;
 

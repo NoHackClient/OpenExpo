@@ -17,16 +17,6 @@ import java.util.List;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
-
-
-
-
-
-
-
-
-
 public class StudioNotification {
    private final Animation h;
    private static final float W = 3.0F;
@@ -48,7 +38,6 @@ public class StudioNotification {
    private final Animation F;
    private final StudioFrameState N;
 
-
    public void t(float var1, char var2, float var3, float var4, int var5) {
       if (this.A) {
          float var9 = var1 - this.P;
@@ -65,11 +54,6 @@ public class StudioNotification {
    }
 
    public boolean m(float var1, float var2, long var3, int var5, float var6) throws UnsupportedEncodingException, Throwable, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
       float var10 = this.N.J;
       float var11 = this.N.h + var6;
       if (this.g(var1, var2, var10, var11, 136.0F, 16.0F)) {
@@ -138,13 +122,6 @@ public class StudioNotification {
    }
 
    public void d(float var1, float var2, float var3, float var4, float var5, long var6, float var8) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
       this.h.d(this.N.S ? 1.0F : 0.0F);
       this.h.y(0.22F, this.I.y());
       float var21 = this.N.J;
@@ -184,17 +161,9 @@ public class StudioNotification {
    }
 
    private void v(long var1, float var3, float var4, float var5, float var6, float var7) {
-
-
-
-
       long var10001 = 44910181633441L;
 
-
-
-
       var10001 = 52136776939807L;
-
 
       int var25 = (int)(var10001 << 48 >>> 48);
       CustomFont var32 = FontUtil.G();
@@ -282,8 +251,6 @@ public class StudioNotification {
    }
 
    public void k(float var1, long var2, float var4) {
-
-
       this.A = false;
       this.R = false;
 
@@ -343,5 +310,4 @@ public class StudioNotification {
    public float m(float var1) {
       return this.N.h + 16.0F + this.C(var1);
    }
-
 }

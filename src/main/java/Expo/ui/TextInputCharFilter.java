@@ -1,16 +1,5 @@
 package Expo.ui;
 
-
-
-
-
-
-
-
-
-
-
-
 public class TextInputCharFilter {
    private static long a;
 
@@ -24,5 +13,4 @@ public class TextInputCharFilter {
    public static boolean R(char var0) {
       return var0 >= 32 && var0 != 127;
    }
-
 }

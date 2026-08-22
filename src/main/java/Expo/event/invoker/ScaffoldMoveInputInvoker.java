@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.MoveInputEvent;
 import Expo.module.impl.world.Scaffold;
 
-
-
-
-
-
-
-
-
-
-
 public final class ScaffoldMoveInputInvoker implements EventInvoker {
    final Scaffold H;
 

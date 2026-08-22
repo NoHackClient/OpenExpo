@@ -11,19 +11,8 @@ import Expo.event.invoker.StuckMoveInputInvoker;
 import Expo.event.invoker.StuckPreLivingUpdateInvoker;
 import Expo.module.impl.movement.Stuck;
 
-
-
-
-
-
-
-
-
-
-
 public final class StuckBinder {
    private static final long a = 31411806791669L;
-
 
    public static void c(EventBus var0, Stuck var1) {
       var0.R(var1, MoveInputEvent.class, 3, new StuckMoveInputInvoker(var1));

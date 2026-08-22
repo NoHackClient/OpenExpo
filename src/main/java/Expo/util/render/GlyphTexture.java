@@ -4,16 +4,6 @@ import Expo.util.Pair;
 import java.util.Map;
 import net.minecraft.client.renderer.texture.DynamicTexture;
 
-
-
-
-
-
-
-
-
-
-
 public class GlyphTexture {
    private static Map d;
    private static long a;
@@ -40,10 +30,7 @@ public class GlyphTexture {
 
    static {
       a = 137121052021233L;
-      // add code
    }
-
-
 
    public static DynamicTexture d(GlyphTexture var0, DynamicTexture var1) {
       return var0.x = var1;
@@ -59,7 +46,4 @@ public class GlyphTexture {
       this.g = Pair.p(512, 0);
       this.y = var1;
    }
-
-
-
 }

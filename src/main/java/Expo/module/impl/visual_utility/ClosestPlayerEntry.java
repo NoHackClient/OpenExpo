@@ -2,16 +2,6 @@ package Expo.module.impl.visual_utility;
 
 import net.minecraft.entity.player.EntityPlayer;
 
-
-
-
-
-
-
-
-
-
-
 public class ClosestPlayerEntry {
    public EntityPlayer a;
    public int l;

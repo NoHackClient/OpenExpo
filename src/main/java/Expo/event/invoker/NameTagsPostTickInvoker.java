@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.visual_utility.NameTags;
 
-
-
-
-
-
-
-
-
-
-
 public final class NameTagsPostTickInvoker implements EventInvoker {
    final NameTags p;
 

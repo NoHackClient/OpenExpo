@@ -7,16 +7,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.IBakedModel;
 import net.minecraft.init.Blocks;
 
-
-
-
-
-
-
-
-
-
-
 public class BlockModelShapesHooks {
    private static final Minecraft g;
    private static IBakedModel p;

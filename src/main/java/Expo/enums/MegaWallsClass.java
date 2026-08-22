@@ -20,7 +20,6 @@ import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.client.Minecraft;
 import net.minecraft.scoreboard.ScorePlayerTeam;
 
-
 public enum MegaWallsClass {
    ANGEL("ANG", (int)zkm$g0()[8]),
    ARCANIST("ARC", (int)zkm$g0()[27]),
@@ -145,7 +144,6 @@ public enum MegaWallsClass {
       ScorePlayerTeam var6 = K.theWorld.getScoreboard().getPlayersTeam(var0);
       return var6 == null ? null : q((char)var3, (char)var4, var6.getColorSuffix());
    }
-
 
    public static MegaWallsClass o(String var0) {
       return v.get(var0);

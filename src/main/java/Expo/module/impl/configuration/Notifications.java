@@ -32,7 +32,6 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.util.ResourceLocation;
 
-
 public class Notifications extends Module implements EventSubscriber {
    private static List<NotificationToast> s;
    private static int F;
@@ -64,7 +63,6 @@ public class Notifications extends Module implements EventSubscriber {
    public static float u(float var0) {
       return b(var0);
    }
-
 
    private static NotificationToast a(String var0, long var1, boolean var3, CustomFont var4, float var5) {
       var1 = a ^ var1;
@@ -161,7 +159,6 @@ public class Notifications extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       graphic = new ModeSetting("Graphic", false, "RIGHT", "CHAT", "LEFT", "RIGHT", "DISABLE");
    }
 
@@ -211,17 +208,12 @@ public class Notifications extends Module implements EventSubscriber {
    }
 
    private static int F(long var0) {
-
-
-
-
       CustomFont var7 = Font.O((short)0, 1609519694);
       return (int)(var7.o(60714858652844L) + 2.0F + 1.0F);
    }
 
    public Notifications(long var1) {
       super(((a ^ (var1)) ^ 1063327075694L));
-      // add code
       this.declare("Notifications", Category.Configuration, "Module toggle notifications settings");
       var1 = a ^ var1;
    }
@@ -236,7 +228,6 @@ public class Notifications extends Module implements EventSubscriber {
       int var6 = (int)((var0 ^ 88767308938623L) << 48 >>> 48);
       Z(var4, var2, (char)var6, var3, stayTime.L());
    }
-
 
    private static float D(float var0) {
       var0 = MathUtil.q(var0, 0.0F, 1.0F);
@@ -296,6 +287,7 @@ public class Notifications extends Module implements EventSubscriber {
          float var31 = stayTime.L();
          float var32 = leaveTime.L();
          float var33 = F(var11);
+         float var34 = var33 + 3.0F;
          float var35 = var51.getScaledHeight() - offsetY.L() - var33;
          s.removeIf(var5x -> var5x.c(var28, var30, var31, var32));
          ArrayList var36 = new ArrayList();
@@ -333,6 +325,7 @@ public class Notifications extends Module implements EventSubscriber {
                   int var48 = u(-657931, var41);
                   int var49 = u(var25, var41);
                   n(var50, var40, var43, var42, NotificationToast.f(var40), NotificationToast.c(var40), var45, var46, var47, var13, var48, var49);
+                  var52 = var42 - var34;
                }
             }
          }
@@ -387,7 +380,6 @@ public class Notifications extends Module implements EventSubscriber {
       return var0 < 0.5F ? 4.0F * var0 * var0 * var0 : 1.0F - (float)Math.pow(-2.0F * var0 + 2.0F, 3.0) / 2.0F;
    }
    static {
-      // add code
       customBackgroundColor = new ColorSetting("Custom-background-color", "000000");
       stripColor = new ModeSetting("Strip-color", "THEME", "THEME_CUSTOM", "CUSTOM");
       customstripColor = new ColorSetting("Customstrip-color", "FFFFFF");

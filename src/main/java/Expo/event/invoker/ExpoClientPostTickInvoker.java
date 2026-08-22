@@ -4,16 +4,6 @@ import Expo.ExpoClient;
 import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 
-
-
-
-
-
-
-
-
-
-
 public final class ExpoClientPostTickInvoker implements EventInvoker {
    final ExpoClient p;
 

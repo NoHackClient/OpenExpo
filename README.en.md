@@ -20,25 +20,32 @@
 ## Details
 
 <p align="center">
-  <strong>Simplified Chinese</strong> |
-  <a href="./README.md">Idiomatic American English™</a>
+  <strong>Idiomatic American English™</strong> |
+  <a href="./README.md">Simplified Chinese</a>
 </p>
 
-ExpoClient's a Minecraft cheat client publicly sold back in 2026 by **US intl student** Cai Zihao (aka a self-styled American) & **his AI**, based on a stitched-together [OpenMyau](https://github.com/Mornly/OpenMyau-Fix) + Raven base. Target: Minecraft 1.8.9 + Forge.
+ExpoClient's a Minecraft cheat client publicly sold back in 2026 by **US intl student** Cai Zihao (aka a self-styled Murican) & **his AI**, based on a stitched-together [OpenMyau](https://github.com/Mornly/OpenMyau-Fix) + Raven base. Target: Minecraft 1.8.9 + Forge.
 
 After Claude™'s 16-sec analysis, we found Expo used [zkm26](https://zelix.com/klassmaster/index.html), [jnic351](https://jnic.dev/), [XiaoShadiao-Obfuscator](https://github.com/SuperShadiao/XiaoShadiao-Obfuscator), [Phantom Shield](https://www.skidonion.tech/), [VMProtect](https://vmpsoft.com/), & [Themida](https://www.oreans.com/themida.php) 2 protect the client. FYI, aside from Phantom Shield + open-source XiaoShadiao, every protector was a **cracked copy**.
 
 Buy this client & u get 6 powerful protections: zkm + jnic + XiaoShadiao + Phantom Shield + vmp + tmd.
 
-W/ Claude™ + manual work, we processed the target client, incl. but not limited 2: **cracked ZelixKlassMaster26**, w/ every class's string encryption, `invokedynamic`, reflection, & control-flow obfuscation fully restored.
+W/ Claude™ + manual work, we processed the target client, incl. but not limited 2: **cracked ZelixKlassMaster26**, restoring string encryption in most classes, all `invokedynamic`, reflection, & control-flow obf (limited time + energy, so no 100% deobf).
 We also unpacked `expoantidump.dll`, protected by **cracked VMProtect Lite 3.10.4**.
 We restored **JNIC** native methods + constants. After unpacking + devirtualizing the **cracked Themida** dug out of an ancient tomb & used by **Phantom Shield**, we restored the JNI methods, then decrypted + restored all classes.
 
+**We don't have enough time + energy 2 achieve 100% deobf or test every feature. If ur willing + capable, join us and submit PRs 2 contribute ur part 2 OpenExpo.**
+That said, most classes r still readable and the proj can be built + launched directly.
+
 Finally, after **Opus5™ + Fable5™** repaired this proj, we got this source. lol.
+
+<p align="center">
+  <img src="./img/killphantomshield.png" alt="1" width="40%" />
+</p>
 
 ## If I Had 3 Days 2 Cash In
 
-Note: this client **may** be this way bc Cai Zihao can't write bypasses or visuals (the parts he wrote r pure AI fantasies, & AI did the rest of the slop too, lmao). While watching him, his words + behavior may show **intellectual disability**, & the price shouldn't be what this garbage client is worth; it's way higher than its actual value. So we decided 2 open-source it.
+Note: this client **may** be this way bc Cai Zihao can't write bypasses or visuals (the parts he wrote r pure AI fantasies, & AI finished the skid too, lmao). While watching him, his words + behavior may suggest an [intellectual disability](https://en.wikipedia.org/wiki/Intellectual_disability), & the price shouldn't be what this garbage client is worth; it's way higher than its actual value. So we decided 2 open-source it.
 
 We still don't know if Cai Zihao's got a **brain bleed bc he's a self-styled American** or is just a **broke US intl student**. Using his messed-up "make dollars, spend dollars" logic, he priced the client (per RoseShop) at **up to 60 CNY/mo**, **140 CNY lifetime**, & the hot-injection ver. **sold separately at 170 CNY/yr**. (As of the open-source release, there were at least 400 victims. fr.)
 
@@ -53,7 +60,9 @@ We still don't know if Cai Zihao's got a **brain bleed bc he's a self-styled Ame
 
 ## Glorious Achievements
 
-Back in the day, he **recovered** a Minecon account & flexed about it. After everyone dragged him, his whole family's household-registration info got exposed too. He showed zero shame & said: **"I can do it in America."** After seeing these glorious achievements, we couldn't help feeling **helpless + sorry 4 ~~his parents~~**, smh.
+### Cai Zihao Flips Overpriced Minecon Accts & Becomes a Scammer
+
+Back in the day, the self-styled Murican scammed ppl + flipped Minecon accts. Everyone dragged him, his whole family's household-registration info got exposed, and he quit the internet + vanished. Now he's back to kissing up, fantasizing, and flexing his imaginary wins. After seeing these glorious achievements, we couldn't help feeling **helpless + sorry 4 ~~his parents~~**, smh.
 
 <p align="center">
   <img src="./img/homeless.jpg" alt="1" width="25%" />
@@ -63,7 +72,10 @@ Back in the day, he **recovered** a Minecon account & flexed about it. After eve
 - Funny vid #2: **[American Street NHCM loves dancing, just like mice love rice](https://www.bilibili.com/video/BV1wkoUYZEQ5/)**
 - Funny vid #3: **[NHCM's little Ren got served justice](https://www.bilibili.com/video/BV1JadpY1EoU/)**
 
-After he came back in 2025, he asked how 2 write KillAura, then—w/ AI getting better—posted vids abt stuff like **"the strongest client 4 MegaWalls."** In his latest livestream, there was tons of 40ms bunker Switch, but the XP bar was still at 0. His Expo could barely play Legit. The cheat author looked goofy af while streaming w/ his own cheat, and he couldn't even turn the cheat on right. So why r so many ppl still buying it + glazing him? That made us even more eager 2 deobf it + see his coding level. The result left us **completely shook**, ngl.
+### How Cai Zihao Writes a Client
+
+After the self-styled Murican came back in 2025, he asked how 2 code KillAura head turning. Then, as AI got better, he posted vids + claims abt stuff like **"the strongest client 4 MegaWalls"** and casually beating up other clients. In his latest stream, **40ms bunker Switch showed up nonstop while the XP bar below stayed at 0**. His cheat could barely play Legit. The self-styled Murican still looked goofy af streaming w/ his own cheat and couldn't even turn it on right.
+So y r so many ppl still buying it + glazing him? We tried it ourselves, checked his coding level, and collected the stuff Cai Zihao said. The result left us **completely shook**, ngl.
 
 <p align="center">
   <img src="./img/nick.jpg" alt="1" width="50%" />
@@ -80,7 +92,26 @@ After he came back in 2025, he asked how 2 write KillAura, then—w/ AI getting 
   <img src="./img/question.jpg" alt="1" width="50%" />
 </p>
 
-After becoming an intl student in America, Cai Zihao may've gotten his head hit by a car and lost track of his own nationality + political views. He lives comfy in America while **sucking the blood of his own ppl on the other side + worshipping foreign stuff**. tbh, wild.
+### Cai Zihao's Conspiracy Theory
+
+When the self-styled Murican first started writing clients, his cheat got cracked. He later posted a [vid](https://www.bilibili.com/video/BV11KN56AEQ1) responding 2 the crack. His lack of professional knowledge in that vid had us seriously worried abt his IQ. W/o any conclusive evidence, he looked at a VMP-packed + sandboxed binary and decided the crack had a backdoor (**even if it actually did, u still shouldn't reach that conclusion from this alone**), lmao.
+
+<p align="center">
+  <img src="./img/MalwareX.png" alt="1" width="40%" />
+  <img src="./img/wdymVMP.png" alt="1" width="40%" />
+</p>
+
+If we follow Cai Zihao's god-tier analysis, does that mean `expodll/expoantidump.dll` inside `expo.jar` is a backdoor too? (Reality check: after unpacking + analyzing `expoantidump.dll`, we concluded it has no backdoor.)
+
+<p align="center">
+  <img src="./img/antidumpdll.png" alt="1" width="40%" />
+  <img src="./img/vmp.png" alt="1" width="40%" />
+  <img src="./img/virustotal.png" alt="1" width="70%" />
+</p>
+
+### Cai Zihao Understands Americans, Becomes American, Then Surpasses Americans
+
+After becoming an intl student in America, Cai Zihao may've gotten his head hit by a car and lost track of his own nationality. He made comments discriminating against Chinese ppl, social status, and education while praising how advanced US tech is. His words + behavior make us wonder if he has [schizophrenia](https://en.wikipedia.org/wiki/Schizophrenia), all while **sucking the blood of his own ppl + worshipping foreign stuff**. He also *may* have made anti-China comments (unverified; more evidence needed, Issues welcome).
 
 <p align="center">
   <img src="./img/word.png" alt="1" width="40%" />
@@ -88,20 +119,33 @@ After becoming an intl student in America, Cai Zihao may've gotten his head hit 
 </p>
 <p align="center">
   <img src="./img/AmericanNB2.jpg" alt="1" width="40%" />
+  <img src="./img/sima.png" alt="1" width="25%" />
 </p>
 
 ## Looking Back
 
-At the same time last yr, Cai Zihao was still a **street vagrant** playing PvP on MMC. Before that, he was just a reseller flipping overpriced capes. lol.
+### Dec 27, 2022: Early Cai Zihao Wasn't a Self-Styled Murican Yet. He Was Farming Freebies on the Kuaishou App at Home in **Hubei**, Foreshadowing His Future as a Broke US Intl Student
+
+<p align="center">
+  <img src="./img/91.jpg" alt="1" width="30%" />
+</p>
+
+### Meanwhile, 1 Yr Ago, Cai Zihao Was Still a **Street Vagrant** Playing PvP on MMC
 
 <p align="center">
   <img src="./img/llh.png" alt="1" width="50%" />
 </p>
 
-1 yr later, he turned into a **street beggar** using an **OpenMyau mixed w/ Raven** base while telling everyone not 2 buy Myau. For this kind of biting-the-hand-that-feeds-you behavior, the author'll stay clueless 4 now, lmao:
+### 1 Yr Later, He Became a **Street Beggar**, Building Expo on an **OpenMyau Mixed w/ Raven** Base While Telling Everyone Not 2 Buy Myau. We're Still Clueless Abt This Biting-the-Hand-That-Feeds-U Behavior, Lmao
 
 <p align="center">
   <img src="./img/nomyau.png" alt="1" width="40%" />
+</p>
+
+### Self-Styled Murican Singing:
+
+<p align="center">
+  <img src="./img/singsong.png" alt="1" width="40%" />
 </p>
 
 ## Requirements
@@ -144,7 +188,7 @@ PRs + issue reports r welcome!
 
 ## Credits
 
-- **Original obf client:** Expo 2.4.5 (Expo 2.4.6 dropped during restoration; *maybe?* it was slop too. It came from [**our team**](https://github.com/NoHackClient)'s open-source [**openrise**](https://github.com/NoHackClient/Rise-6.9.5) KeepSprint, & we added the major updates 2 this proj.)
+- **Original obf client:** Expo 2.4.5 (2.4.6 + 2.4.7 dropped during restoration, and their updates have been merged into the current open-source code.)
 - **Deobf, symbol recovery + restoration:** Claude™, under human supv (self-styled American Cai Zihao, pls reimburse Claude™'s token bill.)
 - **Unpacking, devirt + deobf tools:** [**NoHackClient**](https://github.com/NoHackClient)™
 - **Java Deobfuscator**

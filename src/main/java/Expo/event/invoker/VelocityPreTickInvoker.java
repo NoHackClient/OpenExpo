@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.module.impl.combat.Velocity;
 
-
-
-
-
-
-
-
-
-
-
 public final class VelocityPreTickInvoker implements EventInvoker {
    final Velocity J;
 

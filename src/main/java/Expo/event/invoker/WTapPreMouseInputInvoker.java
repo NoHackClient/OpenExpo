@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.combat.WTap;
 
-
-
-
-
-
-
-
-
-
-
 public final class WTapPreMouseInputInvoker implements EventInvoker {
    final WTap S;
 

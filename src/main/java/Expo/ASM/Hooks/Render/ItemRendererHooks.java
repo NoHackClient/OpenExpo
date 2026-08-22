@@ -23,7 +23,6 @@ import net.minecraft.item.ItemMap;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 
-
 public class ItemRendererHooks {
    private static Map e;
    private static String b;
@@ -38,13 +37,10 @@ public class ItemRendererHooks {
       }
    }
 
-
    private static boolean shouldSpoofScaffoldItem() {
       Scaffold var0 = Modules.J(Scaffold.class);
       return var0 != null && var0.o() && Scaffold.fakeItem != null && Scaffold.fakeItem.c();
    }
-
-
 
    public static boolean onUpdateEquippedItemLastPart(float var0) {
       return shouldSpoofScaffoldItem()
@@ -73,10 +69,6 @@ public class ItemRendererHooks {
    }
 
    public static void renderItemInFirstPerson(ItemRenderer var0, Minecraft var1, ItemStack var2, float var3, float var4, float var5, CallbackInfo var6) {
-
-
-
-
       if (ModuleManager.d.o()) {
          Animations.C();
          Animations.U();
@@ -159,5 +151,4 @@ public class ItemRendererHooks {
          return var1;
       }
    }
-
 }

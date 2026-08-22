@@ -16,18 +16,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.objectweb.asm.Type;
 
-
-
-
-
-
-
-
-
-
-
-
-
 public class MethodAccessors {
    private static final byte T = 1;
    private static final Lookup G = MethodHandles.lookup();

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.module.impl.macro.Macro5;
 
-
-
-
-
-
-
-
-
-
-
 public final class Macro5PreTickInvoker implements EventInvoker {
    final Macro5 X;
 

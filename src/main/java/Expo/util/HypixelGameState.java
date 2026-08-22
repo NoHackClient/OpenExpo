@@ -18,16 +18,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
-
-
-
-
-
-
-
-
-
 public class HypixelGameState implements EventSubscriber {
    private static boolean E;
    private static boolean e;
@@ -60,7 +50,6 @@ public class HypixelGameState implements EventSubscriber {
    }
 
    static {
-      // add code
       try {
          a = 84332417681851L;
          long var11 = a ^ 21143209762804L;
@@ -139,8 +128,6 @@ public class HypixelGameState implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) {
-
-
       k(113061010428450L);
    }
 
@@ -168,10 +155,6 @@ public class HypixelGameState implements EventSubscriber {
    }
 
    public void onWorldLoad(WorldLoadEvent var1, long var2) {
-
-
-
-
       HypixelScoreboardParser.M((short)0, 730080858);
       h = new HypixelScoreboardParser(5239149500758L);
       u(h);
@@ -182,10 +165,7 @@ public class HypixelGameState implements EventSubscriber {
    }
 
    public static void k(long var0) {
-
-
       h = new HypixelScoreboardParser(5239149500758L);
       u(h);
    }
-
 }

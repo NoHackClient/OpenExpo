@@ -13,19 +13,7 @@ import java.util.UUID;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandCheaters extends Command {
-
    @Override
    public boolean J() {
       return false;

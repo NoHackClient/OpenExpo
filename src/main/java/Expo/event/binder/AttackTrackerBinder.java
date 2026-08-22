@@ -5,16 +5,6 @@ import Expo.event.events.AttackEntityEvent;
 import Expo.event.invoker.AttackTrackerAttackEntityInvoker;
 import Expo.util.AttackTracker;
 
-
-
-
-
-
-
-
-
-
-
 public final class AttackTrackerBinder {
    private static final long a = 117798708674610L;
 

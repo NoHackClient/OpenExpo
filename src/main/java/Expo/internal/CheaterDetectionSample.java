@@ -2,13 +2,6 @@ package Expo.internal;
 
 import Expo.enums.DetectedAction;
 
-
-
-
-
-
-
-
 public class CheaterDetectionSample {
    private final boolean D;
    private final boolean R;

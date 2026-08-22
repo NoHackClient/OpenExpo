@@ -15,16 +15,6 @@ import Expo.event.invoker.ReconnectHandlerPreDrawScreenInvoker;
 import Expo.event.invoker.ReconnectHandlerServerJoinInvoker;
 import Expo.ui.screen.ReconnectHandler;
 
-
-
-
-
-
-
-
-
-
-
 public final class ReconnectHandlerBinder {
    private static final long a = 65628309907104L;
 

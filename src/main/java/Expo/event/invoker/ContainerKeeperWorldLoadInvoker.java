@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.WorldLoadEvent;
 import Expo.module.impl.misc.ContainerKeeper;
 
-
-
-
-
-
-
-
-
-
-
 public final class ContainerKeeperWorldLoadInvoker implements EventInvoker {
    final ContainerKeeper f;
 

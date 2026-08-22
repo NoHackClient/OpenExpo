@@ -9,16 +9,6 @@ import Expo.event.invoker.AmbienceRender2DInvoker;
 import Expo.event.invoker.AmbienceUpdateWalkingPlayerInvoker;
 import Expo.module.impl.visual.Ambience;
 
-
-
-
-
-
-
-
-
-
-
 public final class AmbienceBinder {
    private static final long a = 23521424907434L;
 
@@ -30,5 +20,4 @@ public final class AmbienceBinder {
 
    private AmbienceBinder() {
    }
-
 }

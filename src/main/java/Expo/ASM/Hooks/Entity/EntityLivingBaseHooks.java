@@ -19,22 +19,11 @@ import net.minecraft.potion.Potion;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class EntityLivingBaseHooks {
    private static final Minecraft Z;
    private static final long a = 29521831753297L;
 
    public static void onMoveFlying(EntityLivingBase var0, float var1, float var2, float var3, EntityLivingBase var4) {
-
       if (var4 instanceof EntityPlayerSP) {
          MoveFlyingEvent var11 = new MoveFlyingEvent(var1, var2, var3);
          ExpoClient.w.e(var11, 18670087776179L);
@@ -48,7 +37,6 @@ public class EntityLivingBaseHooks {
    }
 
    public static void onJump(EntityLivingBase var0, CallbackInfo var1) {
-
       JumpEvent var8 = new JumpEvent(EntityLivingBaseAccessor.e(var0), RotationManager.r);
       ExpoClient.w.e(var8, 18670087776179L);
       if (!var8.a()) {
@@ -105,9 +93,6 @@ public class EntityLivingBaseHooks {
    }
 
    public static void onGetArmSwingAnimationEnd(EntityLivingBase var0, CallbackInfoReturnable<Integer> var1) {
-
-
-
       if (var0 instanceof EntityPlayerSP) {
          GetArmSwingAnimationEndEvent var11 = new GetArmSwingAnimationEndEvent(1236, (Integer)var1.getReturnValue());
          ExpoClient.w.e(var11, 18670087776179L);
@@ -121,19 +106,11 @@ public class EntityLivingBaseHooks {
    }
 
    public static void onLivingDeath(EntityLivingBase var0, DamageSource var1) {
-
-
-
-
       LivingDeathEvent var9 = new LivingDeathEvent(23778, var1, (char)20225, (short)22806, var0);
       ExpoClient.w.e(var9, 18670087776179L);
    }
 
    public static void onMoveEntityWithHeading(EntityLivingBase var0, CallbackInfo var1) {
-
-
-
-
       MoveEntityWithHeadingEvent var9 = new MoveEntityWithHeadingEvent((short)0, var0, (short)11036, -1066395815);
       ExpoClient.w.e(var9, 18670087776179L);
       if (var9.a()) {

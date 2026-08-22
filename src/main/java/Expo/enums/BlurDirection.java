@@ -5,5 +5,4 @@ public enum BlurDirection {
    LR;
 
    private static final BlurDirection[] D = new BlurDirection[]{TB, LR};
-
 }

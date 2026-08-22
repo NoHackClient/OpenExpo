@@ -7,16 +7,6 @@ import Expo.event.invoker.FireBallPredictPostTickInvoker;
 import Expo.event.invoker.FireBallPredictRender3DInvoker;
 import Expo.module.impl.visual_utility.FireBallPredict;
 
-
-
-
-
-
-
-
-
-
-
 public final class FireBallPredictBinder {
    private static final long a = 119981692591083L;
 

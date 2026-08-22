@@ -6,16 +6,6 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import org.objectweb.asm.Type;
 
-
-
-
-
-
-
-
-
-
-
 public class FieldAccessors {
    private static final byte h = 2;
    private static final byte C = 0;

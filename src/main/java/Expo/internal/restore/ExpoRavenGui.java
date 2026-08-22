@@ -17,9 +17,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
-
 public final class ExpoRavenGui {
-
    public static final long AD2_SEED_A = 52686871891298L;
 
    public static final long AI_SEED_B = 7843458566225L;
@@ -91,7 +89,6 @@ public final class ExpoRavenGui {
    private ExpoRavenGui() {
    }
 
-
    public static void installPanels() {
       if (RavenClickGuiScreen.A == null) {
          RavenClickGuiScreen.A = EXECUTOR = new ScheduledThreadPoolExecutor(EXECUTOR_CORE, new RavenThreads());
@@ -112,7 +109,7 @@ public final class ExpoRavenGui {
          } catch (Throwable t) {
             panel = new RavenCategoryPanel(cats[i], y);
             DEGRADED.add("Expo/ui/raven/RavenCategoryPanel(" + cats[i] + ") fell back to the row-less constructor: the ZKM "
-                         + "one threw " + ExpoDiag.describe(t) + " -- that panel has 0 module rows");
+                         + "one threw " + String.valueOf(t) + " -- that panel has 0 module rows");
          }
 
          panels.put(cats[i], panel);
@@ -122,7 +119,6 @@ public final class ExpoRavenGui {
       RavenClickGuiScreen.P = panels;
       RavenClickGuiScreen.h = order;
    }
-
 
    public static RavenClickGuiScreen installRaven(List<String> pending) {
       if (attempted) {
@@ -166,19 +162,10 @@ public final class ExpoRavenGui {
       long chainTitle = 5790399078481539381L ^ seedT;
       long chainSign = 8131522771472482745L ^ seedT;
 
-      // add code
-      // Deobfuscation inlined this class's numeric layer: the three offsets are
-      // literals at their use sites now (this.U = 92, this.e + 12, this.e + 80),
-      // checked against the same 2.4.6 dump this gate encodes. With the
-      // decryptor gone there is nothing left to decrypt, so the numeric probes
-      // below cannot run -- they would refuse RAVEN for being fixed. Only skip
-      // them when the decryptor really is absent; a decryptor that is still
-      // present must still agree with the dump.
       if (numericLayerInlined()) {
          note(pending, "Expo/ui/raven/RavenCategoryPanel numeric layer is inlined "
                        + "(width/titleX/signX are literals); gate 2 has nothing to decrypt");
       } else {
-
       Integer[] cache = aiCache();
 
       if (cache == null || cache.length != 21) {
@@ -221,8 +208,7 @@ public final class ExpoRavenGui {
                                 + EXPECT_SIGN_X_OFF + " (negative control returned " + poisoned
                                 + ')');
       }
-
-      } // add code
+      }
 
       if (RavenCategoryPanel.ravenAnimationMillis() != EXPECT_ANIM_MILLIS) {
          return refuse(pending, "Expo/AI.i is " + RavenCategoryPanel.ravenAnimationMillis() + ", the 2.4.6 dump "
@@ -238,7 +224,7 @@ public final class ExpoRavenGui {
       try {
          screen = new RavenClickGuiScreen(AD2_SEED_A ^ AD2_CTOR_LOW15);
       } catch (Throwable t) {
-         return refuse(pending, "Expo/ui/raven/RavenClickGuiScreen constructor threw " + ExpoDiag.describe(t));
+         return refuse(pending, "Expo/ui/raven/RavenClickGuiScreen constructor threw " + String.valueOf(t));
       }
 
       if (RavenClickGuiScreen.P == null || RavenClickGuiScreen.P.size() != 9 || RavenClickGuiScreen.h == null || RavenClickGuiScreen.h.size() != 9) {
@@ -349,7 +335,6 @@ public final class ExpoRavenGui {
       return DEGRADED;
    }
 
-
    private static final class RavenThreads implements ThreadFactory {
       private final AtomicInteger n = new AtomicInteger(1);
 
@@ -370,7 +355,6 @@ public final class ExpoRavenGui {
       }
    }
 
-   // add code
    private static boolean numericLayerInlined() {
       return numericLayerInlined(RavenCategoryPanel.class);
    }
@@ -404,7 +388,6 @@ public final class ExpoRavenGui {
    }
 
    private static boolean seed(List<String> pending, Class<?> cls, String name, int len, int slot) {
-      // add code
       if (numericLayerInlined(cls)) {
          note(pending, cls.getName() + '.' + name + " is a vestigial ZKM ctor-slot cache: the "
                        + "class has no numeric decryptor left, so there is no slot to reserve");

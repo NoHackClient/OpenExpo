@@ -30,7 +30,6 @@ import java.util.Set;
 import net.minecraft.client.Minecraft;
 
 public final class ExpoConfig {
-
    public static final long MODULE_I_CARRIER = 20724619369162L;
 
    private static final String FILE = "current.json";
@@ -172,8 +171,6 @@ public final class ExpoConfig {
             fieldFailureNotes.add(note);
          }
       }
-
-      ExpoDiag.warn("cfgfield|" + field + '|' + key, note);
    }
 
    private static int writeBool(Module m, String field, JsonObject o, String key) {
@@ -302,7 +299,6 @@ public final class ExpoConfig {
    }
 
    public static final class SaveResult {
-
       public boolean ok;
       public String path = "?";
       public int modules;

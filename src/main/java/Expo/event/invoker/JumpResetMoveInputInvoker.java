@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.MoveInputEvent;
 import Expo.module.impl.combat.JumpReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class JumpResetMoveInputInvoker implements EventInvoker {
    final JumpReset x;
 

@@ -3,7 +3,6 @@ package Expo.internal.jnic;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-
 public class GameStartLatch {
    private static String[] c;
    private static String[] b;
@@ -14,8 +13,6 @@ public class GameStartLatch {
    private static long[] e;
    private static long h;
    public static boolean $skidonion$1876635283;
-
-   private static native String a(int var0, long var1);
 
    static {
       w = new java.util.concurrent.atomic.AtomicBoolean(false);

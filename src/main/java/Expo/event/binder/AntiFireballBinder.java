@@ -9,16 +9,6 @@ import Expo.event.invoker.AntiFireballPreTickInvoker;
 import Expo.event.invoker.AntiFireballWorldLoadInvoker;
 import Expo.module.impl.combat.AntiFireball;
 
-
-
-
-
-
-
-
-
-
-
 public final class AntiFireballBinder {
    private static final long a = 96382948686270L;
 

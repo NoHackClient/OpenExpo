@@ -50,7 +50,6 @@ import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 
-
 public class BlockIn extends PriorityModule implements EventSubscriber {
    private boolean e;
    private BlockPos v;
@@ -172,11 +171,11 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
             }
          }
 
+         var33 = var37;
       }
 
       return null;
    }
-
 
    private boolean j(BlockPos var1, BlockPos... var2) {
       for (EnumFacing var6 : EnumFacing.values()) {
@@ -199,7 +198,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
 
       return false;
    }
-
 
    private BlockInPlacement g(List var1, long var2, double var4, Vec3 var6) {
       if (var1 != null && !var1.isEmpty() && this.M >= 0 && this.M <= 8) {
@@ -286,15 +284,11 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private static double i(double var0) {
       return var0 > 0.0 ? (Math.random() * 2.0 - 1.0) * var0 : 0.0;
    }
 
-
    public void onHeldItemChange(long var1, HeldItemChangeEvent var3) {
-
-
       if (this.Y) {
          var3.I(21307, 3074332907L);
       }
@@ -312,7 +306,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
          return var2 == 0.0F ? 0.0F : var2 * (var1.getMaterial().isToolNotRequired() ? 30.0F : 100.0F);
       }
    }
-
 
    private void x$r3(long var1) {
       var1 = b ^ var1;
@@ -494,7 +487,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
       return var3 == 0 && var5 == 0 && var4 == 2 ? true : (var4 == 0 || var4 == 1) && (Math.abs(var3) == 1 && var5 == 0 || Math.abs(var5) == 1 && var3 == 0);
    }
 
-
    private void s(long var1) {
       this.T(false);
       if (this.Y) {
@@ -574,13 +566,11 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
       return BlockUtil.F(new float[]{var3, var4}, var1);
    }
 
-
    private boolean I(ItemStack var1, BlockPos var2, EnumFacing var3) {
       return var1 != null && var1.getItem() instanceof ItemBlock
          ? ((ItemBlock)var1.getItem()).canPlaceBlockOnSide(f.theWorld, var2, var3, f.thePlayer, var1)
          : false;
    }
-
 
    private void c(int var1, char var2, char var3) {
       if (!this.Y) {
@@ -589,7 +579,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
          this.O = f.thePlayer.inventory.currentItem;
       }
    }
-
 
    private double e(Vec3 var1, BlockPos var2) {
       double var3 = Math.max(var2.getX(), Math.min(var2.getX() + 1, var1.xCoord));
@@ -665,7 +654,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private boolean T() {
       double var1 = rotationTolerance.L();
       return Math.abs(MathUtil.M(RotationManager.r, this.G)) <= var1 && Math.abs(MathUtil.M(RotationManager.G, this.B)) <= var1;
@@ -678,7 +666,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
          this.y = true;
       }
    }
-
 
    private int S( boolean var3) {
       int var4 = -1;
@@ -724,7 +711,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
 
       return new String(var3, 0, var1);
    }
-
 
    private void T(int var1, short var2, short var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       long var4 = ((long)var1 << 32 | (long)var2 << 48 >>> 32 | (long)var3 << 48 >>> 48) ^ b;
@@ -799,7 +785,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
 
    public BlockIn(long var1) {
       super((((b ^ (var1)) ^ 121332785966042L) >>> 16), (char)((int)(((((b ^ (var1)) ^ 121332785966042L) << 48) >>> 48))));
-      // add code
       this.declare("BlockIn", Category.World, "Automatically surrounds blocks when you are trying to break bed");
       var1 = b ^ var1;
       this.O = -1;
@@ -848,6 +833,7 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
                   double var13 = var8.posZ - f.thePlayer.posZ;
                   double var15 = var9 * var9 + var11 * var11 + var13 * var13;
                   if (var15 < var4) {
+                     var4 = var15;
                      var3 = new Vec3(var8.posX, var8.posY, var8.posZ);
                   }
                }
@@ -879,17 +865,14 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
       }
    }
    static {
-      // add code
       swing = new BooleanSetting("Swing", true);
    }
    static {
-      // add code
       range = new NumberSetting("Range", 4.5F, 0.0F, 8.0F, 0.1F);
       angleStep = new NumberSetting("Angle-step", 60.0F, 1.0F, 180.0F, 1.0F);
       rotationTolerance = new NumberSetting("Rotation-tolerance", 25.0F, 20.0F, 100.0F, 1.0F);
    }
    static {
-      // add code
       moveFix = new ModeSetting("Move-fix", "SILENT", "STRICT", "NONE");
    }
 }

@@ -62,16 +62,6 @@ import net.minecraft.network.play.server.S08PacketPlayerPosLook;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class ExpoClient implements EventSubscriber {
    private static Map e;
    private static Object[] l;
@@ -140,9 +130,6 @@ public class ExpoClient implements EventSubscriber {
    }
 
    public void onPreUpdate(long var1, PreUpdateEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       List var8 = ModuleManager.S;
       int var9 = 0;
 
@@ -151,7 +138,7 @@ public class ExpoClient implements EventSubscriber {
          if (!var11.b().equalsIgnoreCase("Timer")) {
             if (var11.l()) {
                var11.h(122596698849654L);
-            } else if (zkm$unresolved$0$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_iD_l_OR_Expo_iD_K_y_slots_39_49_66_70(var11, 9901644652386L)) {
+            } else if (var11.K()) {
                var11.Z(110240354022990L);
             }
 
@@ -290,10 +277,6 @@ public class ExpoClient implements EventSubscriber {
    }
 
    public void onSetKeyBindState(SetKeyBindStateEvent var1, long var2) throws UnsupportedEncodingException, Throwable, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       if (ClientUtil.I()) {
          List var9 = ModuleManager.S;
          int var10 = 0;
@@ -435,16 +418,9 @@ public class ExpoClient implements EventSubscriber {
    }
 
    public void onPostTick(PostTickEvent var1, long var2) throws Throwable {
-
-
-
-
-
-
       int var16 = 22243;
 
       int var21 = 12652;
-
 
       if (!ClientUtil.I()) {
          BedNuker.B = ((0 & 1) != 0);
@@ -557,8 +533,6 @@ public class ExpoClient implements EventSubscriber {
    }
 
    public void onPreMouseInput(long var1, PreMouseInputEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       List var6 = ModuleManager.S;
       int var7 = 0;
 
@@ -729,7 +703,6 @@ public class ExpoClient implements EventSubscriber {
       Object var6 = l[var4];
       try {
          if (var6 instanceof String) {
-            // add code
             var5 = Class.forName(Expo.internal.restore.ExpoNameMap.map(m[var4]));
             l[var4] = var5;
             return var5;
@@ -781,7 +754,6 @@ public class ExpoClient implements EventSubscriber {
       try {
          if (var8 != 204 && var8 != 200 && var8 != 'K' && var8 != 219) {
             var11 = d(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/ExpoClient.java", var8, var4, var6, var11); // add code
             Class var17 = var11.getDeclaringClass();
             String var19 = var11.getName();
             MethodType var20 = MethodType.methodType(var11.getReturnType(), var11.getParameterTypes());
@@ -794,7 +766,6 @@ public class ExpoClient implements EventSubscriber {
             }
          } else {
             var10 = c(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/ExpoClient.java", var8, var4, var6, var10); // add code
             Class var12 = var10.getDeclaringClass();
             String var18 = var10.getName();
             Class var14 = var10.getType();
@@ -852,7 +823,6 @@ public class ExpoClient implements EventSubscriber {
          if (var16 < var13) {
             var14[var16] = var15;
          }
-
       }
 
       Class var23 = var8;
@@ -934,12 +904,6 @@ public class ExpoClient implements EventSubscriber {
       return (boolean)MethodHandles.explicitCastArguments(a(MethodHandles.lookup(), null, "ô", var5, 2266045794134596627L, 9901644652386L), var5)
          .invoke((Object)var0, (long)2266045794134596627L, (long)9901644652386L);
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
-
-
-
-
-
-
 
    private static void zkm$clinit() {
       try {
@@ -1147,5 +1111,4 @@ public class ExpoClient implements EventSubscriber {
          throw new RuntimeException(var33);
       }
    }
-
 }

@@ -23,16 +23,6 @@ import java.util.Optional;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 
-
-
-
-
-
-
-
-
-
-
 public class AltManager {
    public static ArrayList<Account> Q;
    private static File i;
@@ -42,8 +32,6 @@ public class AltManager {
    private static String[] b;
    private static long[] e;
    private static Minecraft X;
-
-
 
    public static void O(long var0) {
       long var2 = var0 ^ 76724696706368L;
@@ -61,8 +49,6 @@ public class AltManager {
       } catch (IOException var7) {
       }
    }
-
-
 
    public static void Q(int var0, short var1, short var2) {
       Q.clear();
@@ -93,8 +79,6 @@ public class AltManager {
    }
 
    public static void M(long var0) {
-
-
       if (!I) {
          TrustAllSslContext.j();
          if (!i.exists()) {
@@ -119,8 +103,6 @@ public class AltManager {
       CookieAuthService.C(var2, var9);
    }
 
-
-
    static {
       a = 94244023323350L;
       X = Minecraft.getMinecraft();
@@ -129,6 +111,4 @@ public class AltManager {
       Q = new ArrayList<>();
       I = false;
    }
-
-
 }

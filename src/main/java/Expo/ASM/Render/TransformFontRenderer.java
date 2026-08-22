@@ -6,14 +6,12 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.VarInsnNode;
 
-
 public class TransformFontRenderer extends TransformerBase {
    private static long d;
 
    public TransformFontRenderer() {
       super("net/minecraft/client/gui/FontRenderer");
    }
-
 
    public boolean X(ClassNode var1, String var2, String... var3) {
       return BytecodeHelper.t(var1, var2, (var0, var1x) -> {
@@ -29,7 +27,6 @@ public class TransformFontRenderer extends TransformerBase {
    static {
       d = 75314626025260L;
    }
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;

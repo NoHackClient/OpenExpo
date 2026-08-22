@@ -8,16 +8,6 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
 public class g_2 extends n implements Iterable<H> {
    private final List<String> b;
    private final List<n> c;

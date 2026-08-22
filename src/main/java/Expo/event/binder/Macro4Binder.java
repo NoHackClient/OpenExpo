@@ -5,16 +5,6 @@ import Expo.event.events.PreTickEvent;
 import Expo.event.invoker.Macro4PreTickInvoker;
 import Expo.module.impl.macro.Macro4;
 
-
-
-
-
-
-
-
-
-
-
 public final class Macro4Binder {
    private static final long a = 99838166720388L;
 

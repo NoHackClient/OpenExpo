@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.GuiChatKeyTypedEvent;
 import Expo.internal.ChatInputHandler;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChatInputHandlerGuiChatKeyTypedInvoker implements EventInvoker {
    final ChatInputHandler E;
 

@@ -3,16 +3,6 @@ package Expo.module.impl.visual_utility;
 import Expo.internal.synthetic.TargetHUDCtorMarker;
 import java.awt.Color;
 
-
-
-
-
-
-
-
-
-
-
 public class TargetHUDSnapshot {
    private final float o;
    private final int c;

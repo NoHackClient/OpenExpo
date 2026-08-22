@@ -23,9 +23,7 @@ import javax.swing.JScrollPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-
 public final class ExpoGuiConfig extends JPanel {
-
    private static final long serialVersionUID = 1L;
 
    private final DefaultListModel<String> model = new DefaultListModel<String>();

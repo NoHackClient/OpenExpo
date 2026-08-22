@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.misc.ContainerKeeper;
 
-
-
-
-
-
-
-
-
-
-
 public final class ContainerKeeperPreUpdateInvoker implements EventInvoker {
    final ContainerKeeper r;
 

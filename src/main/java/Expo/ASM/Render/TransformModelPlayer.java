@@ -5,15 +5,12 @@ import Expo.ASM.Util.BytecodeHelper;
 import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformModelPlayer extends TransformerBase {
    private static long d;
-
 
    public TransformModelPlayer() {
       super("net/minecraft/client/model/ModelPlayer");
    }
-
 
    static {
       d = 134426372867376L;
@@ -40,5 +37,4 @@ public class TransformModelPlayer extends TransformerBase {
          "render"
       );
    }
-
 }

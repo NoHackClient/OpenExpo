@@ -2,16 +2,6 @@ package Expo.internal.synthetic;
 
 import net.minecraft.util.EnumFacing.Axis;
 
-
-
-
-
-
-
-
-
-
-
 public class TrajectoriesSwitchMapAxis {
    public static final int[] t = new int[Axis.values().length];
 

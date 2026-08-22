@@ -15,7 +15,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
 public enum ChatFormatting {
    BLACK(0, (char)48, -16777216, (char)zkm$g24()),
    DARK_BLUE(1, (char)49, -16777046, (char)zkm$g24()),
@@ -62,7 +61,6 @@ public enum ChatFormatting {
    private static long zkm$v22;
    private static int zkm$v24;
 
-
    private static String a(byte[] var0) {
       int var1 = 0;
       int var2;
@@ -91,7 +89,7 @@ public enum ChatFormatting {
    }
 
    ChatFormatting(int var3, char var4, int var5, char var6) {
-      long var8 = (zkm$g22() << 16 | (long)var6 << 48 >>> 48) ^ zkm$ga();   // add code
+      long var8 = (zkm$g22() << 16 | (long)var6 << 48 >>> 48) ^ zkm$ga();
       this.b = var5;
       this.e = new String(new char[]{(char)167, var4});
    }
@@ -300,7 +298,6 @@ public enum ChatFormatting {
       }
    }
 
-
    private static long zkm$g22() {
       if (!zkm$done) {
          zkm$done = true;
@@ -319,7 +316,6 @@ public enum ChatFormatting {
       return zkm$v24;
    }
 
-   // add code
    private static long zkm$ga() {
       if (!zkm$done) {
          zkm$done = true;

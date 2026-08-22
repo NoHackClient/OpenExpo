@@ -53,7 +53,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class TransformerRegistry {
    private static long[] e;
    private static String[] c;
@@ -73,18 +72,6 @@ public class TransformerRegistry {
    private static volatile Map<String, ClassTransform> stage1$registry;
    private static volatile List<ClassTransform> stage1$all;
 
-   private static native Field a(Class var0, String var1, Class var2);
-
-   private static native Class b(long var0, long var2);
-
-   private static native int a(long var0, long var2);
-
-
-   private static native Method b(Class var0, String var1, Class var2, int var3, Class[] var4);
-
-
-   private static native CallSite a(Lookup var0, String var1, MethodType var2);
-
    public static ClassTransform k(String var0) {
       if (var0 == null) {
          return null;
@@ -93,14 +80,10 @@ public class TransformerRegistry {
       return H().get(var0.replace('.', '/'));
    }
 
-
    public static List<ClassTransform> q() {
       H();
       return stage1$all;
    }
-
-
-   private static native String a(int var0, long var1);
 
    public static Map<String, ClassTransform> H() {
       Map<String, ClassTransform> var0 = stage1$registry;
@@ -127,14 +110,9 @@ public class TransformerRegistry {
    private TransformerRegistry() {
    }
 
-   private static native void a();
-
    public static List<ClassTransform> R() {
       return q();
    }
-
-   private static native Field b(Class var0, String var1, Class var2);
-
 
    private static void r(Map<String, ClassTransform> var0, ClassTransform var1, String var2) {
       var0.put(var2.replace('.', '/'), var1);

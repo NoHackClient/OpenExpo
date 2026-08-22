@@ -25,7 +25,6 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.client.Minecraft;
 
-
 public class Module {
    private boolean V;
    private static Map lb;
@@ -207,7 +206,6 @@ public class Module {
    public void E(boolean var1) {
       this.P = var1;
    }
-
 
    public void L(PreMouseInputEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
    }
@@ -468,7 +466,6 @@ public class Module {
       return this.X;
    }
 
-   // add code
    protected final Module declare(String var1, Category var2, String var3, Setting... var4) {
       this.Q = var1;
       this.X = var2;
@@ -484,17 +481,14 @@ public class Module {
       return this;
    }
 
-   // add code
    public final String name() {
       return this.Q;
    }
 
-   // add code
    public final String description() {
       return this.W;
    }
 
-   // add code
    public final List<Setting> settings() {
       if (this.l.isEmpty()) {
          for (Class<?> var1 = this.getClass(); var1 != null && var1 != Module.class; var1 = var1.getSuperclass()) {
@@ -558,5 +552,4 @@ public class Module {
       }
       f = MinecraftRef.c((byte)0, 0L);
    }
-
 }

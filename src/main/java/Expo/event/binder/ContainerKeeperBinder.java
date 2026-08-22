@@ -13,16 +13,6 @@ import Expo.event.invoker.ContainerKeeperSendPacketInvoker;
 import Expo.event.invoker.ContainerKeeperWorldLoadInvoker;
 import Expo.module.impl.misc.ContainerKeeper;
 
-
-
-
-
-
-
-
-
-
-
 public final class ContainerKeeperBinder {
    private static final long a = 35367237427810L;
 
@@ -36,5 +26,4 @@ public final class ContainerKeeperBinder {
       var0.R(var2, ReceivePacketEvent.class, 3, new ContainerKeeperReceivePacketInvoker(var2));
       var0.R(var2, Render2DEvent.class, 3, new ContainerKeeperRender2DInvoker(var2));
    }
-
 }

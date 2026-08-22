@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.UpdateWalkingPlayerEvent;
 import Expo.util.RotationManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class RotationManagerUpdateWalkingPlayerInvoker implements EventInvoker {
    final RotationManager k;
 

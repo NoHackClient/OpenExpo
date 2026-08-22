@@ -12,9 +12,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
-
 public final class ExpoClickGui {
-
    public static final long CTOR_VAR1 = 135029260739073L;
 
    public static final long MEASURED_SEED_A = 14637767574010L;
@@ -127,7 +125,6 @@ public final class ExpoClickGui {
          DEGRADED.add("Expo.ui.vestige.VestigeClickGuiScreen.a not readable (" + t.getClass().getName()
                       + "); falling back to the measured seed");
       }
-
 
       if (ModuleManager.S == null || ModuleManager.S.isEmpty()) {
          note(pending, "Expo.ui.vestige.VestigeClickGuiScreen built with an EMPTY tD.S -- the "

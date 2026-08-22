@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostRenderEvent;
 import Expo.module.impl.visual.Chams;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChamsPostRenderInvoker implements EventInvoker {
    final Chams R;
 

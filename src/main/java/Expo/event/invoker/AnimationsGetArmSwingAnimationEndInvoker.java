@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.GetArmSwingAnimationEndEvent;
 import Expo.module.impl.visual.Animations;
 
-
-
-
-
-
-
-
-
-
-
 public final class AnimationsGetArmSwingAnimationEndInvoker implements EventInvoker {
    final Animations N;
 

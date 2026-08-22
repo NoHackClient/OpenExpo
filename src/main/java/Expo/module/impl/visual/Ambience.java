@@ -20,16 +20,6 @@ import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.network.play.server.S03PacketTimeUpdate;
 import net.minecraft.network.play.server.S2BPacketChangeGameState;
 
-
-
-
-
-
-
-
-
-
-
 public class Ambience extends Module implements EventSubscriber {
    public static NumberSetting time;
    public static ModeSetting mode;
@@ -37,7 +27,6 @@ public class Ambience extends Module implements EventSubscriber {
    private static long a;
 
    public void onUpdateWalkingPlayer(long var1, UpdateWalkingPlayerEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (f.thePlayer.ticksExisted % 20 == 0) {
          switch (mode.Y()) {
             case "CLEAR":
@@ -58,7 +47,6 @@ public class Ambience extends Module implements EventSubscriber {
       a = 81694087725472L;
    }
 
-
    public void A(long var1) {
       int var5 = (int)((var1 ^ 125021944116750L) << 56 >>> 56);
       this.D((byte)var5);
@@ -66,7 +54,6 @@ public class Ambience extends Module implements EventSubscriber {
 
    public Ambience(long var1) {
       super(((a ^ (var1)) ^ 34096516885598L));
-      // add code
       this.declare("Ambience", Category.Visual, "Change the environment rendering");
       var1 = a ^ var1;
    }
@@ -83,10 +70,7 @@ public class Ambience extends Module implements EventSubscriber {
       }
    }
 
-
    public void onReceivePacket(ReceivePacketEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (var3.d instanceof S03PacketTimeUpdate) {
          var3.I(21307, 3074332907L);
       } else if (var3.d instanceof S2BPacketChangeGameState && !mode.R("NONE")) {
@@ -110,14 +94,11 @@ public class Ambience extends Module implements EventSubscriber {
       f.theWorld.getWorldInfo().setThundering(false);
    }
 
-
    static {
-      // add code
       time = new NumberSetting("Time", 0.0F, 0.0F, 24000.0F, 10.0F);
       speed = new NumberSetting("Speed", 0.0F, 0.0F, 100.0F, 1.0F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", "NONE", "RAIN", "CLEAR");
    }
 }

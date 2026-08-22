@@ -12,16 +12,6 @@ import Expo.setting.settings.NumberSetting;
 import Expo.util.KeyBindUtil;
 import Expo.util.MoveUtil;
 
-
-
-
-
-
-
-
-
-
-
 public class Fly extends Module implements EventSubscriber {
    private double K;
    private static final long a = 125513684974462L;
@@ -54,7 +44,6 @@ public class Fly extends Module implements EventSubscriber {
 
    public Fly(long var1) {
       super(((a ^ (var1)) ^ 23319704636145L));
-      // add code
       this.declare("Fly", Category.Movement, "Allows you to fly without creative");
       var1 = a ^ var1;
       this.K = 0.0;
@@ -69,8 +58,6 @@ public class Fly extends Module implements EventSubscriber {
    }
 
    public void onPreUpdate(PreUpdateEvent var3) {
-
-
       this.K = 0.0;
       if (f.currentScreen == null) {
          if (KeyBindUtil.V(f.gameSettings.keyBindJump.getKeyCode(), 64165991731362L)) {
@@ -85,7 +72,6 @@ public class Fly extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       horizontalSpeed = new NumberSetting("Horizontal-speed", 1.0F, 0.0F, 20.0F, 0.01F);
       verticalSpeed = new NumberSetting("Vertical-speed", 1.0F, 0.0F, 20.0F, 0.01F);
    }

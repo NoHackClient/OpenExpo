@@ -9,16 +9,6 @@ import Expo.event.invoker.HitSelectPreMouseInputInvoker;
 import Expo.event.invoker.HitSelectReceivePacketInvoker;
 import Expo.module.impl.combat.HitSelect;
 
-
-
-
-
-
-
-
-
-
-
 public final class HitSelectBinder {
    private static final long a = 134656957190345L;
 
@@ -30,5 +20,4 @@ public final class HitSelectBinder {
 
    private HitSelectBinder() {
    }
-
 }

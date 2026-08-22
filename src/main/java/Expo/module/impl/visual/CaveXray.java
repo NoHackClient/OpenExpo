@@ -8,16 +8,6 @@ import Expo.setting.settings.PercentageSetting;
 import Expo.util.BlockUtil;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public class CaveXray extends Module {
    public static BooleanSetting reloadRenderer;
    private static long[] b;
@@ -37,8 +27,6 @@ public class CaveXray extends Module {
          );
    }
 
-
-
    public static int L(long var0) {
       return 255 * opacity.k() / 100;
    }
@@ -53,7 +41,6 @@ public class CaveXray extends Module {
 
    public CaveXray(long var1) {
       super(((a ^ (var1)) ^ 86093155091655L));
-      // add code
       this.declare("CaveXray", Category.Visual, "Allows you to see structures underground (Only works with optifine)");
       var1 = a ^ var1;
    }
@@ -74,9 +61,7 @@ public class CaveXray extends Module {
       return opacity.k() + "%";
    }
 
-
    static {
-      // add code
       reloadRenderer = new BooleanSetting("Reload-renderer", false);
       opacity = new PercentageSetting("Opacity", 60);
    }

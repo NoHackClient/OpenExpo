@@ -13,16 +13,6 @@ import Expo.event.invoker.RotationManagerReceivePacketInvoker;
 import Expo.event.invoker.RotationManagerUpdateWalkingPlayerInvoker;
 import Expo.util.RotationManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class RotationManagerBinder {
    private static final long a = 89290623735844L;
 

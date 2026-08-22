@@ -3,15 +3,6 @@ package Expo.ui;
 import Expo.internal.synthetic.ArrayListModuleCtorMarker;
 import Expo.module.Module;
 
-
-
-
-
-
-
-
-
-
 public class ArrayListEntry {
    private boolean c;
    private float n;

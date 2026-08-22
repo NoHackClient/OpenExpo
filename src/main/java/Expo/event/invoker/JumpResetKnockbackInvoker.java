@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.KnockbackEvent;
 import Expo.module.impl.combat.JumpReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class JumpResetKnockbackInvoker implements EventInvoker {
    final JumpReset X;
 

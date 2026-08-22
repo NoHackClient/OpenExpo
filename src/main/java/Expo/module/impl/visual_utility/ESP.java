@@ -41,7 +41,6 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Vec3;
 import org.lwjgl.opengl.GL11;
 
-
 public class ESP extends Module implements EventSubscriber {
    private static long a;
    public static BooleanSetting friends;
@@ -75,7 +74,6 @@ public class ESP extends Module implements EventSubscriber {
 
    // update new version
    public void l(EntityLivingBase var1, long var2, int var4, double var5, float var7, ScaledResolution var8, boolean var9) {
-
       if (Expo.util.render.RenderUtil.l(var1)) {
          EntityRendererAccessor.k(f.entityRenderer, var7, 0);
          double var11 = var1.lastTickPosX + (var1.posX - var1.lastTickPosX) * var7 - f.getRenderManager().viewerPosX;
@@ -164,15 +162,6 @@ public class ESP extends Module implements EventSubscriber {
    }
 
    private void r(EntityLivingBase var1, long var2, ScaledResolution var4, float var5) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
-
-
       if (!KillAura.e(139955413975329L, var1)) {
          if (Expo.util.render.RenderUtil.l(var1)) {
             int var24;
@@ -219,7 +208,6 @@ public class ESP extends Module implements EventSubscriber {
 
    public ESP(long var1) {
       super(((a ^ (var1)) ^ 20870233781589L));
-      // add code
       this.declare("ESP", Category.Visual_utility, "Aka \"Extra sensory perception\"");
       var1 = a ^ var1;
       this.L = new ArrayList<>();
@@ -282,7 +270,6 @@ public class ESP extends Module implements EventSubscriber {
       this.L.clear();
    }
 
-
    public String g(long var1) {
       return mode.Y();
    }
@@ -315,8 +302,6 @@ public class ESP extends Module implements EventSubscriber {
    }
 
    private void E(long var1, EntityLivingBase var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (!hideTeammatesHealthBar.c() || !Teams.g(0L, var3)) {
          switch (healthBar.Y()) {
             case "NORMAL":
@@ -327,7 +312,6 @@ public class ESP extends Module implements EventSubscriber {
          }
       }
    }
-
 
    public void onRender3D(char var1, int var2, Render3DEvent var3, short var4) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       long var5 = ((long)var1 << 48 | (long)var2 << 32 >>> 16 | (long)var4 << 48 >>> 48) ^ a;
@@ -521,11 +505,9 @@ public class ESP extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       customColor = new ColorSetting("Custom-color", "FFFFFF");
    }
    static {
-      // add code
       showSelf = new BooleanSetting("Show-self", false);
       hideTeammatesHealthBar = new BooleanSetting("Hide-teammates-health-bar", true);
       players = new BooleanSetting("Players", true);
@@ -538,18 +520,15 @@ public class ESP extends Module implements EventSubscriber {
       bots = new BooleanSetting("Bots", false);
    }
    static {
-      // add code
       offset = new NumberSetting("Offset", 0.0F, -50.0F, 25.0F, 1.0F);
    }
    static {
-      // add code
       // update new version
       mode = new ModeSetting("Mode", "2D", "2D_BOX", "2D_BOX_FILL", "3D", "3D_BIG", "3D_BIG_FILL", "OUTLINE");
       color = new ModeSetting("Color", "TEAM", "THEME", "THEME_CUSTOM", "CUSTOM");
       healthBar = new ModeSetting("Health-bar", "NORMAL", "THIN", "NONE");
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

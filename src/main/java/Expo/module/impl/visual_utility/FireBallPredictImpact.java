@@ -3,16 +3,6 @@ package Expo.module.impl.visual_utility;
 import Expo.internal.synthetic.FireBallPredictCtorMarker;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public class FireBallPredictImpact {
    private final int z;
    private final BlockPos h;

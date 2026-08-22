@@ -20,16 +20,6 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.IChatComponent;
 import org.lwjgl.input.Mouse;
 
-
-
-
-
-
-
-
-
-
-
 public class GuiEventHooks {
    private static boolean k;
    private static Field j;
@@ -39,7 +29,6 @@ public class GuiEventHooks {
    private static final long a = 84546025458123L;
 
    private static void ensureInitialized() {
-
       if (!k) {
          if (ExpoClient.w != null) {
             try {
@@ -52,7 +41,6 @@ public class GuiEventHooks {
    }
 
    private static void post(Event var0) {
-
       if (ExpoClient.w != null) {
          ExpoClient.w.e(var0, 18670087776179L);
       }
@@ -82,9 +70,6 @@ public class GuiEventHooks {
    }
 
    public static void onLoadWorld() {
-
-
-
       ensureInitialized();
       post(new ServerJoinEvent(n.getCurrentServerData(), 31027, (char)3724, (short)54290));
    }

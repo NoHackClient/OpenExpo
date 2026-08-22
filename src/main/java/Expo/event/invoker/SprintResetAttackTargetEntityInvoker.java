@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.AttackTargetEntityEvent;
 import Expo.module.impl.combat.SprintReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class SprintResetAttackTargetEntityInvoker implements EventInvoker {
    final SprintReset H;
 

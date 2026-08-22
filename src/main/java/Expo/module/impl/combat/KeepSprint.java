@@ -24,16 +24,6 @@ import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 
-
-
-
-
-
-
-
-
-
-
 public class KeepSprint extends Module implements EventSubscriber {
    private static long b;
    private static long[] g;
@@ -47,10 +37,6 @@ public class KeepSprint extends Module implements EventSubscriber {
    public static PercentageSetting slowdown;
 
    public void onAttackEntity(long var1, AttackEntityEvent var3) {
-
-
-
-
       if (mode.R("PREDICTION") && ScoreboardReader.v(0L)) {
          if (!this.h) {
             if (var3.O() instanceof EntityPlayer) {
@@ -118,8 +104,6 @@ public class KeepSprint extends Module implements EventSubscriber {
    }
 
    public void onPreUpdate(PreUpdateEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (mode.R("PREDICTION") && ScoreboardReader.v(0L)) {
          if (a > 5) {
             this.J((short)0);
@@ -132,13 +116,16 @@ public class KeepSprint extends Module implements EventSubscriber {
                break;
             case 2:
                // update new version
-               if (!S.thePlayer.isUsingItem() || Sprint.U(0L)) {
-                  S.thePlayer.setSprinting(true);
-                  a = 0;
-                  t = 0;
+               if (S.thePlayer.isUsingItem()) {
+                  if (Sprint.U(0L)) {
+                     S.thePlayer.setSprinting(true);
+                  }
                } else {
-                  a++;
+                  S.thePlayer.setSprinting(true);
                }
+
+               a = 0;
+               t = 0;
          }
       } else {
          this.J((short)0);
@@ -167,11 +154,7 @@ public class KeepSprint extends Module implements EventSubscriber {
       KeepSprintBinder.O(var3, (short)var4, (short)var5, this);
    }
 
-
-
    public void onPreSuperLivingUpdate(PreSuperLivingUpdateEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (mode.R("PREDICTION") && ScoreboardReader.v(0L)) {
          switch (t) {
             case 1:
@@ -191,24 +174,14 @@ public class KeepSprint extends Module implements EventSubscriber {
       }
    }
 
-   private static void a() {
-   }
-
-
-
    public KeepSprint(long var1) {
       super(((b ^ (var1)) ^ 18692820696337L));
-      // add code
       this.declare("KeepSprint", Category.Combat, "Modify the slowdown while attacking");
       var1 = b ^ var1;
       this.h = false;
    }
 
-
-
-
    static {
-      // add code
       mode = new ModeSetting("Mode", false, "PREDICTION", "VANILLA", "PREDICTION");
       slowdown = new PercentageSetting("Slowdown", 0);
    }

@@ -2,16 +2,6 @@ package Expo.internal.synthetic;
 
 import net.minecraft.util.EnumFacing;
 
-
-
-
-
-
-
-
-
-
-
 public class RotationUtilSwitchMapEnumFacing {
    public static final int[] m = new int[EnumFacing.values().length];
 

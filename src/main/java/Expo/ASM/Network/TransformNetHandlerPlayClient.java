@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformNetHandlerPlayClient extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -53,7 +51,6 @@ public class TransformNetHandlerPlayClient extends TransformerBase {
    static {
       d = 44525063271188L;
    }
-
 
    public TransformNetHandlerPlayClient() {
       super("net/minecraft/client/network/NetHandlerPlayClient");

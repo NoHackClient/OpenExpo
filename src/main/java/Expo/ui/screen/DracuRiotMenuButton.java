@@ -8,7 +8,6 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
 
-
 public class DracuRiotMenuButton extends GuiButton {
    private static String b;
    public int v;
@@ -26,7 +25,6 @@ public class DracuRiotMenuButton extends GuiButton {
    }
 
    public void drawButton(Minecraft var1, int var2, int var3) {
-
       if (this.visible) {
          FontRenderer var10 = var1.fontRendererObj;
          GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
@@ -54,7 +52,6 @@ public class DracuRiotMenuButton extends GuiButton {
       }
    }
 
-
    public DracuRiotMenuButton(int var1, int var2, int var3, int var4, int var5, long var6, String var8) {
       super(
          (var1),
@@ -68,8 +65,6 @@ public class DracuRiotMenuButton extends GuiButton {
       this.B = 1.0F;
       this.o = 0 != 0;
    }
-
-
 
    public void U(int var1) {
       this.v = var1;

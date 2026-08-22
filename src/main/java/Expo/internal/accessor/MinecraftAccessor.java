@@ -11,16 +11,6 @@ import net.minecraft.client.audio.MusicTicker;
 import net.minecraft.client.shader.Framebuffer;
 import net.minecraft.util.Timer;
 
-
-
-
-
-
-
-
-
-
-
 public final class MinecraftAccessor {
    private static TypedValueStore X;
    private static TypedValueStore y;
@@ -52,8 +42,6 @@ public final class MinecraftAccessor {
       return (MusicTicker)z.v(var3);
    }
 
-
-
    public static void j(long var0, Minecraft var2, int var3) {
       y.T(var2, var3);
    }
@@ -65,5 +53,4 @@ public final class MinecraftAccessor {
       z = FieldAccessors.X(Minecraft.class, "mcMusicTicker", "mcMusicTicker");
       X = FieldAccessors.X(Minecraft.class, "framebufferMc", "framebufferMc");
    }
-
 }

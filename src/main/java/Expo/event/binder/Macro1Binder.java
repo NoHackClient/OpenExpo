@@ -5,16 +5,6 @@ import Expo.event.events.PreTickEvent;
 import Expo.event.invoker.Macro1PreTickInvoker;
 import Expo.module.impl.macro.Macro1;
 
-
-
-
-
-
-
-
-
-
-
 public final class Macro1Binder {
    private static final long a = 13348691935616L;
 

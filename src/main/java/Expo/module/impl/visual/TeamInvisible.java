@@ -21,7 +21,6 @@ import java.util.Map;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 
-
 public class TeamInvisible extends Module implements EventSubscriber {
    private static Object[] e;
    private static long[] b;
@@ -36,13 +35,11 @@ public class TeamInvisible extends Module implements EventSubscriber {
    }
 
    public void onPostRenderModelBiped(PostRenderModelBipedEvent var1, long var2) {
-
       this.j(var1.v, 41139269005963L);
       var1.G();
    }
 
    public void onPreRenderModelBiped(long var1, PreRenderModelBipedEvent var3) {
-
       this.v(var3.O, 111893817914976L);
       var3.G();
    }
@@ -52,9 +49,6 @@ public class TeamInvisible extends Module implements EventSubscriber {
    }
 
    public void v(Entity var1, long var2) {
-
-
-
       if (this.C(1481626796L, (char)46315, var1)) {
          GlStateManager.color(1.0F, 1.0F, 1.0F, opacity.k() / 100.0F);
          GlStateManager.depthMask(false);
@@ -65,22 +59,17 @@ public class TeamInvisible extends Module implements EventSubscriber {
    }
 
    public void onPreRenderCape(PreRenderCapeEvent var1, long var2) {
-
       this.v(var1.F, 111893817914976L);
       var1.G();
    }
 
    public void j(Entity var1, long var2) {
-
-
-
       if (this.C(1481626796L, (char)46315, var1)) {
          GlStateManager.disableBlend();
          GlStateManager.alphaFunc(516, 0.1F);
          GlStateManager.depthMask(true);
       }
    }
-
 
    private boolean C(long var1, char var3, Entity var4) {
       long var5 = (97099893702656L | (long)var3 << 48 >>> 48) ^ a;
@@ -104,26 +93,12 @@ public class TeamInvisible extends Module implements EventSubscriber {
    }
 
    public void onPreRenderEntity(PreRenderEntityEvent var1, long var2) {
-
       this.v(var1.O, 111893817914976L);
       var1.G();
    }
 
-   private static void a() {
-      e[0] = "/M\u001bJ\t]";
-      e[1] = long.class;
-      g[1] = "java/lang/Long";
-      e[2] = "{_\u0003{NNLH\u0007q\u0003j[C]m";
-      e[3] = "DHg8OHQ";
-      e[4] = void.class;
-      g[4] = "java/lang/Void";
-      e[5] = "@S\u000b1\u007f&K\\\u001a~\u001e(@W\u001e$";
-      e[6] = "b\u0006;\taK|V)ji4;P'\rcExI9[\u0018\rx[?\f'Pc\u0003?j\"Sp@-V)\u000bl\u0006GQ#DgT<RaWh9";
-   }
-
    public TeamInvisible(char var1, long var2) {
       super((((((long)((var1)) << 48) | 0L) ^ a) ^ 107406694384265L));
-      // add code
       this.declare("TeamInvisible", Category.Visual, "Let your teammates be \"Invisible\"");
    }
 
@@ -134,7 +109,6 @@ public class TeamInvisible extends Module implements EventSubscriber {
       var4.G();
    }
    static {
-      // add code
       range = new NumberSetting("Range", 20.0F, 1.0F, 64.0F, 1.0F);
       opacity = new PercentageSetting("Opacity", 20);
    }

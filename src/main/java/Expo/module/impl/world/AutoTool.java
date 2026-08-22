@@ -22,7 +22,6 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 
-
 public class AutoTool extends PriorityModule implements EventSubscriber {
    private int J;
    private boolean I;
@@ -43,26 +42,8 @@ public class AutoTool extends PriorityModule implements EventSubscriber {
       this.J = f.thePlayer.inventory.currentItem;
    }
 
-   private static void a() {
-      h[0] = "ka\u0016Ynx\u001f";
-      h[1] = "ic(\u0001\u001d*^t,\u000bP\u000eI\u007fv\u0017";
-      h[2] = long.class;
-      k[2] = "java/lang/Long";
-      h[3] = " 2\u0003\u0013\u0013-\u000f";
-      h[4] = void.class;
-      k[4] = "java/lang/Void";
-      h[5] = "\u001cq\f \t\u0012\u0000";
-      h[6] = int.class;
-      k[6] = "java/lang/Integer";
-      h[7] = "<\u0016(\u0010@g7\u00199_!i<\u0012=\u0005";
-      h[8] = "O~ph\u001brIn6\f\u0005\u000b\u000eqpsGt\t+~\fBf\u000e(&5K4\tkO6\u001d5\u0007\u007f ~\u0019y\u001f\u0014up\tqMns7Giv";
-      h[9] = ",9h\u001a@Z)`-Q\"p\u0017f?\u0012\u001eA.om\u0015](+'\"PH\u0012/o>\u0016\"\u0012k-(QX\u0014,c0j";
-   }
-
-
    public AutoTool(long var1) {
       super((((a ^ (var1)) ^ 66187273744195L) >>> 16), (char)((int)(((((a ^ (var1)) ^ 66187273744195L) << 48) >>> 48))));
-      // add code
       this.declare("AutoTool", Category.World, "Switch to the right tools when you are mining");
       var1 = a ^ var1;
       this.t = new TimerUtil();
@@ -88,8 +69,6 @@ public class AutoTool extends PriorityModule implements EventSubscriber {
    }
 
    public void onPreMouseInput(long var1, PreMouseInputEvent var3) {
-
-
       if (!this.I) {
          this.J = f.thePlayer.inventory.currentItem;
       }
@@ -143,7 +122,6 @@ public class AutoTool extends PriorityModule implements EventSubscriber {
       }
    }
    static {
-      // add code
       disableWhenHoldingSword = new BooleanSetting("Disable-when-holding-sword", true);
       delay = new NumberSetting("Delay", 0.0F, 0.0F, 1000.0F, 1.0F);
       switchBackToSword = new BooleanSetting("Switch-back-to-sword", false);

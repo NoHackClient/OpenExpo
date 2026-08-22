@@ -1,16 +1,5 @@
 package Expo.event;
 
-
-
-
-
-
-
-
-
-
-
-
 public class Event {
    private boolean L;
    private static long f;
@@ -30,5 +19,4 @@ public class Event {
    static {
       f = 96974078947652L;
    }
-
 }

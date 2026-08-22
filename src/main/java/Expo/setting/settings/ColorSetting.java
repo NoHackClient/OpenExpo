@@ -3,16 +3,6 @@ package Expo.setting.settings;
 import Expo.setting.Setting;
 import java.awt.Color;
 
-
-
-
-
-
-
-
-
-
-
 public class ColorSetting extends Setting {
    private String Q;
    private static long a;
@@ -26,15 +16,12 @@ public class ColorSetting extends Setting {
       this.Q = var1;
    }
 
-
    public ColorSetting(String var1, String var2) {
       this.q = var1;
       this.Q = var2;
    }
 
    static {
-      // add code
-
       a = 73137888266447L;
    }
 
@@ -46,5 +33,4 @@ public class ColorSetting extends Setting {
       Color var3 = new Color(Integer.parseInt(this.Q, 16));
       return new Color(var3.getRed(), var3.getGreen(), var3.getBlue(), 255).getRGB();
    }
-
 }

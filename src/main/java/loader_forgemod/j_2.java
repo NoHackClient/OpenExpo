@@ -2,16 +2,6 @@ package loader_forgemod;
 
 import java.util.BitSet;
 
-
-
-
-
-
-
-
-
-
-
 public class j_2 {
    static BitSet a;
    static final int b = 32;

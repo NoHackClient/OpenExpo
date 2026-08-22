@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.world.Nuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class NukerPreMouseInputInvoker implements EventInvoker {
    final Nuker n;
 

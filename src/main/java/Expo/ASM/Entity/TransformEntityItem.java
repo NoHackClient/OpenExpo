@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformEntityItem extends TransformerBase {
    private static long d;
 
@@ -41,10 +40,7 @@ public class TransformEntityItem extends TransformerBase {
       );
    }
 
-
    public TransformEntityItem() {
       super("net/minecraft/entity/item/EntityItem");
    }
-
-
 }

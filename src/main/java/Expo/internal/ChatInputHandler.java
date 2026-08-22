@@ -30,7 +30,6 @@ import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiChat;
 
-
 public class ChatInputHandler implements EventSubscriber {
    private static Map e;
    private static boolean k;
@@ -57,22 +56,12 @@ public class ChatInputHandler implements EventSubscriber {
       k = false;
    }
 
-
    public void onPostTick(long var1, PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       long var10001 = 14005570406408L;
-
 
       int var6 = (int)(var10001 << 48 >>> 48);
 
-
-
       var10001 = 82618457592067L;
-
-
-
-
-
 
       if (!ClientUtil.I()) {
          this.O((char)0, (char)19236);
@@ -142,17 +131,9 @@ public class ChatInputHandler implements EventSubscriber {
       }
    }
 
-
-
    private boolean v(long var1) {
-
-
-
-
-
       return F.currentScreen instanceof GuiChat && this.s(3260, (short)60684, (short)34824).startsWith(".") && Modules.J(CommandLine.class).o() && CommandLine.autoFill.c();
    }
-
 
    static {
       a = 133875353228107L;
@@ -168,11 +149,6 @@ public class ChatInputHandler implements EventSubscriber {
    }
 
    private void X(long var1, String var3) {
-
-
-
-
-
       Expo.internal.accessor.GuiChatAccessor.z((char)0, (char)10358, 245891786, (GuiChat)F.currentScreen).setText(var3);
    }
 
@@ -186,9 +162,6 @@ public class ChatInputHandler implements EventSubscriber {
    }
 
    private Expo.command.Command V(long var1, String var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       for (Expo.command.Command var7 : StockCommandRegistry.L) {
          for (String var11 : var7.e(116557065638625L)) {
             if (var11.equalsIgnoreCase(var3)) {
@@ -222,12 +195,10 @@ public class ChatInputHandler implements EventSubscriber {
       this.V = false;
    }
 
-
    public static String x(String var0) {
       int var1 = var0.lastIndexOf(" ");
       return var1 == -1 ? var0 : var0.substring(var1 + 1);
    }
-
 
    private String s(int var1, short var2, short var3) {
       long var4 = ((long)var1 << 32 | (long)var2 << 48 >>> 32 | (long)var3 << 48 >>> 48) ^ a;
@@ -236,5 +207,4 @@ public class ChatInputHandler implements EventSubscriber {
       int var8 = (int)((var4 ^ 102291818092937L) << 32 >>> 32);
       return Expo.internal.accessor.GuiChatAccessor.z((char)var6, (char)var7, var8, (GuiChat)F.currentScreen).getText();
    }
-
 }

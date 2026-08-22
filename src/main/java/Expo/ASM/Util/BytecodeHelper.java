@@ -18,7 +18,6 @@ import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.tree.TypeInsnNode;
 import org.objectweb.asm.tree.VarInsnNode;
 
-
 public class BytecodeHelper implements Opcodes {
    private static long[] e;
    private static long a;
@@ -68,7 +67,6 @@ public class BytecodeHelper implements Opcodes {
    private BytecodeHelper() {
    }
 
-
    static {
       a = 61928475667890L;
       e = new long[]{-5429171985177711537L, 6187635497878269435L, -6581119459714187126L, 7107969073356968743L, 2820024596290804831L, 7337315615374374430L, 3706939413501503167L, -4317051446622828700L, -8999311426859473138L, -196078507611109492L, 8273881709042227883L, -8927539407399229563L, 1086641127646846090L, 5060027598279406223L, -6896644230366819460L, -7724244888761978027L, -8558951859111784474L, -8287679933341875785L, 4989937912086212935L, 1307340829104811771L, 1516848615258668850L, 8328543278176812516L, 566518700464235520L, 4386890919040497072L, -7452953066216032776L, -636690406231162664L, 1671852792684224212L, 140819537226725359L, -5699305053711291737L, 4219450700601667714L, 5240827103556161155L, 4446872206910589127L, -9213117635459321421L, 1735559972631884227L, -4570162767749151689L, 5687421691262585797L, 4730486941700652670L};
@@ -76,11 +74,9 @@ public class BytecodeHelper implements Opcodes {
       k = Type.getInternalName(CallbackInfoReturnable.class);
    }
 
-
    public static boolean a() {
       return false;
    }
-
 
    public static void x(InsnList var0, String var1, String var2, String var3) {
       boolean var6 = AsmUtil.y$r1(var1);
@@ -117,7 +113,6 @@ public class BytecodeHelper implements Opcodes {
       }
    }
 
-
    public static boolean R(MethodNode var0, MethodInsnMatcher var1, MethodInsnAction var2) {
       boolean var5 = false;
 
@@ -139,13 +134,11 @@ public class BytecodeHelper implements Opcodes {
       var0.add(new VarInsnNode(25, 0));
    }
 
-
    public static int t(MethodNode var0, Type var1) {
       int var4 = var0.maxLocals;
       var0.maxLocals = var0.maxLocals + var1.getSize();
       return var4;
    }
-
 
    public static boolean A(MethodNode var0, ReturnValueSiteEmitter var1) {
       boolean var4 = false;
@@ -174,7 +167,6 @@ public class BytecodeHelper implements Opcodes {
       return var4;
    }
 
-
    public static boolean w(ClassNode var0, MethodPredicate var1, String... var2) {
       boolean var5 = false;
 
@@ -187,7 +179,6 @@ public class BytecodeHelper implements Opcodes {
 
       return var5;
    }
-
 
    public static void y(InsnList var0, Type var1) {
       switch (var1.getSort()) {
@@ -270,7 +261,6 @@ public class BytecodeHelper implements Opcodes {
       }
    }
 
-
    public static int O(MethodNode var0, InsnList var1) {
       int var4 = t(var0, Type.getObjectType(P));
       var1.add(new TypeInsnNode(187, P));
@@ -297,6 +287,7 @@ public class BytecodeHelper implements Opcodes {
             }
          }
 
+         var7 = var8;
       }
 
       return false;
@@ -317,7 +308,6 @@ public class BytecodeHelper implements Opcodes {
       return var5;
    }
 
-
    public static boolean t(ClassNode var0, String var1, MethodPredicate var2, String... var3) {
       boolean var6 = false;
 
@@ -335,9 +325,7 @@ public class BytecodeHelper implements Opcodes {
       N(var0, var1, Type.getArgumentTypes(var1.desc).length);
    }
 
-
    public static byte[] G(byte[] var0, ClassNodeTransform var1) throws Throwable {
-
       for (String var7 : AsmUtil.z(var0)) {
          byte[] var8 = i(var0, var1, var7);
          if (var8 != var0) {
@@ -437,8 +425,6 @@ public class BytecodeHelper implements Opcodes {
       return false;
    }
 
-
-
    public static int N(Type var0) {
       switch (var0.getSort()) {
          case 0:
@@ -465,7 +451,6 @@ public class BytecodeHelper implements Opcodes {
    }
 
    public static void N(InsnList var0, MethodNode var1, int var2) {
-
       for (int var5 = 0; var5 < var2; var5++) {
          n(var0, var1, var5);
       }
@@ -514,6 +499,4 @@ public class BytecodeHelper implements Opcodes {
       boolean var6 = AsmUtil.y$r1(var1);
       ((InsnList)var0).add((AbstractInsnNode)new MethodInsnNode(184, var6 ? AsmUtil.D(var1) : var1, var6 ? AsmUtil.O(var1, var2, var3) : var2, AsmUtil.v(var3), false));
    }
-
-
 }

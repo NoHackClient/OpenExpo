@@ -2,17 +2,6 @@ package loader_forgemod;
 
 import java.util.Iterator;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 @SuppressWarnings("rawtypes")
 class i_2 implements Iterator {
    final Iterator a;

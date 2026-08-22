@@ -29,16 +29,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.renderer.GlStateManager;
 
-
-
-
-
-
-
-
-
-
-
 public class TabGUI extends Module implements EventSubscriber {
    public static HashMap<Category, Integer> E;
    public static ModeSetting color;
@@ -55,7 +45,6 @@ public class TabGUI extends Module implements EventSubscriber {
 
    public TabGUI(long var1) {
       super(((c ^ (var1)) ^ 138011780300290L));
-      // add code
       this.declare("TabGUI", Category.Visual, "Use tab and arrow keys to toggle modules");
       var1 = c ^ var1;
       this.t = 0.5F;
@@ -89,27 +78,11 @@ public class TabGUI extends Module implements EventSubscriber {
       E = new HashMap<>();
    }
 
-
-
    public final void x(long var1, EventBus var3) {
       TabGUIBinder.z(var3, this);
    }
 
    public void onRender2D(long var1, Render2DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       GlStateManager.pushMatrix();
       CustomFont var35 = Font.F(0L);
       float var36 = offsetX.L();
@@ -256,13 +229,7 @@ public class TabGUI extends Module implements EventSubscriber {
       return (int)var1;
    }
 
-
-
-
-
    public void onSetKeyBindState(SetKeyBindStateEvent var1, long var2) throws UnsupportedEncodingException, Throwable, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (f.currentScreen == null) {
          if (var1.R == 15 && !disableTabKey.c()) {
             this.a++;
@@ -318,22 +285,17 @@ public class TabGUI extends Module implements EventSubscriber {
       }
    }
 
-
    static {
-      // add code
       customColor = new ColorSetting("Custom-color", "FFFFFF");
    }
    static {
-      // add code
       disableTabKey = new BooleanSetting("Disable-tab-key", true);
    }
    static {
-      // add code
       offsetX = new NumberSetting("Offset-X", 3.0F, 0.0F, 1000.0F, 1.0F);
       offsetY = new NumberSetting("Offset-Y", 60.0F, 0.0F, 1000.0F, 1.0F);
    }
    static {
-      // add code
       color = new ModeSetting("Color", "THEME", "THEME_CUSTOM", "CUSTOM");
    }
 }

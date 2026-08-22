@@ -21,16 +21,6 @@ import net.minecraft.scoreboard.ScorePlayerTeam;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.util.StringUtils;
 
-
-
-
-
-
-
-
-
-
-
 public class ScoreboardUtil {
    private static Map h;
    private static long a;
@@ -42,7 +32,6 @@ public class ScoreboardUtil {
       if (var0 == null) {
          return "";
       }
-
 
       for (int var4 = var0.length() - 1; var4 >= 0; var4--) {
          if (var0.charAt(var4) == 167 && var4 + 1 < var0.length()) {
@@ -114,9 +103,6 @@ public class ScoreboardUtil {
       return L(b( var0));
    }
 
-   private static void a() {
-   }
-
    public static String u( String var2) {
       if (var2.isEmpty()) {
          return var2;
@@ -156,10 +142,6 @@ public class ScoreboardUtil {
    public static String E(Scoreboard var0) {
       return r(w(var0));
    }
-
-
-
-
 
    public static String r(String var0) {
       return var0 == null ? null : StringUtils.stripControlCodes(var0);
@@ -255,8 +237,6 @@ public class ScoreboardUtil {
       return f.theWorld == null ? null : E(f.theWorld.getScoreboard());
    }
 
-
-
    public static boolean x(long var0) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       if (ScoreboardReader.v(0L)) {
          List var8 = v(0L);
@@ -332,6 +312,4 @@ public class ScoreboardUtil {
       a = 23291616283485L;
       f = MinecraftRef.c((byte)0, 0L);
    }
-
-
 }

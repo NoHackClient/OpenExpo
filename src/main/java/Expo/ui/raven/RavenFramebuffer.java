@@ -14,7 +14,6 @@ import net.minecraft.client.renderer.texture.TextureUtil;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 
-
 public class RavenFramebuffer {
    private int e;
    private int N;
@@ -43,8 +42,6 @@ public class RavenFramebuffer {
    private int S;
 
    public void c(int var1, int var2, int var3, int var4, long var5) {
-
-
       this.u = this.C(var1, var2, var3, var4, 29209995737999L);
       int var11 = this.u[0];
       int var12 = this.u[var3 - 1];
@@ -106,9 +103,6 @@ public class RavenFramebuffer {
    }
 
    public void a(long var1, float var3, float var4, float var5, float var6, float var7, float var8) {
-
-
-
       Color var12 = new Color(this.B(this.a, this.e, var7), this.B(this.i, this.N, var7), this.B(this.L, this.T, var7));
       Color var13 = new Color(this.B(this.m, this.H, var7), this.B(this.f, this.c, var7), this.B(this.U, this.S, var7));
       var12 = RenderUtil.R(var12, var8);
@@ -173,7 +167,6 @@ public class RavenFramebuffer {
       this.c((int)var3, (int)var4, (int)var5, (int)var6, var7);
    }
 
-
    public int u() {
       return this.S;
    }
@@ -204,13 +197,12 @@ public class RavenFramebuffer {
       return this.m;
    }
 
-
    private int[] C(int var1, int var2, int var3, int var4, long var5) {
       int var8 = var3 * var4;
       IntBuffer var9 = (IntBuffer)((Buffer)BufferUtils.createIntBuffer(var8)).clear();
       int[] var7 = new int[var8];
-      GL11.glPixelStorei(240, 1);
-      GL11.glPixelStorei(320, 1);
+      GL11.glPixelStorei(3333, 1);
+      GL11.glPixelStorei(3317, 1);
       int var10 = 1;
       int var11 = j.gameSettings.guiScale;
       if (var11 == 0) {
@@ -230,8 +222,8 @@ public class RavenFramebuffer {
          j.displayHeight - (var2 + 1) * var10,
          var3,
          var4,
-         0,
-         255,
+         32993,
+         33639,
          var9
       );
       var9.get(var7);
@@ -249,5 +241,4 @@ public class RavenFramebuffer {
       l = new HashMap(13);
       g = new long[]{-634123079903718284L, -449954504354636044L, -5448260739223382033L, 2332538861600869028L, -5339800790329183928L, 7122341011747045817L, 775259053441777127L, -997511244557585255L, 6140130801574930532L, 524137214210370194L, -2300091152783046003L, -5054703763100788379L};
    }
-
 }

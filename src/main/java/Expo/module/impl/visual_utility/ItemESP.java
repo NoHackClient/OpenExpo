@@ -39,7 +39,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 
-
 public class ItemESP extends Module implements EventSubscriber {
    public static NumberSetting scale;
    public static BooleanSetting emeralds;
@@ -51,13 +50,11 @@ public class ItemESP extends Module implements EventSubscriber {
    public static BooleanSetting outline;
    public static BooleanSetting diamonds;
 
-
    private boolean Q(int var1) {
       Item var2 = Item.getItemById(var1);
       Block var3 = Block.getBlockFromItem(var2);
       return var2 == Items.iron_ingot || var3 == Blocks.iron_block || var3 == Blocks.iron_ore;
    }
-
 
    private void W(AxisAlignedBB var1, Color var2, char var3) {
       Expo.util.render.RenderUtil.L();
@@ -80,7 +77,6 @@ public class ItemESP extends Module implements EventSubscriber {
    private double q(double var1) {
       return (0.5 + 0.375 * var1) * scale.L();
    }
-
 
    private float q() {
       return f.gameSettings.thirdPersonView == 2 ? -1.0F : 1.0F;
@@ -136,7 +132,6 @@ public class ItemESP extends Module implements EventSubscriber {
       GlStateManager.popMatrix();
    }
 
-
    private void q(Map<ItemESPStackKey, Integer> var1, ItemESPStackKey var2, int var3) {
       var1.merge(var2, var3, Integer::sum);
    }
@@ -164,14 +159,11 @@ public class ItemESP extends Module implements EventSubscriber {
 
    public ItemESP(short var1, char var2, int var3) {
       super(((((((long)((var1)) << 48) | (((long)((var2)) << 48) >>> 16)) | (((long)((var3)) << 32) >>> 32)) ^ b) ^ 112538991030944L));
-      // add code
       this.declare("ItemESP", Category.Visual_utility, "Render a box on items");
       this.t = new ArrayList<>();
    }
 
-
    static void $jnicClinit() throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException, NoSuchPaddingException {
-
       b = 28379158381100L;
    }
 
@@ -203,10 +195,6 @@ public class ItemESP extends Module implements EventSubscriber {
    }
 
    public void onRender3D(Render3DEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       CustomFont var16 = Font.s(0L);
       LinkedHashMap var17 = this.q(var1.j);
       ArrayList var18 = new ArrayList(var17.entrySet());
@@ -227,7 +215,6 @@ public class ItemESP extends Module implements EventSubscriber {
          );
       }
    }
-
 
    private LinkedHashMap<ItemESPStackKey, Integer> q(float var1) {
       LinkedHashMap var2 = new LinkedHashMap();
@@ -254,7 +241,6 @@ public class ItemESP extends Module implements EventSubscriber {
       return (-0.04375 - 0.0328125 * var1) * scale.L();
    }
 
-
    private void G(List<Entry<ItemESPStackKey, Integer>> var1) {
       var1.sort((var1x, var2) -> Integer.compare(this.D(((ItemESPStackKey)var1x.getKey()).Z), this.D(((ItemESPStackKey)var2.getKey()).Z)));
    }
@@ -269,8 +255,6 @@ public class ItemESP extends Module implements EventSubscriber {
       return var2 == Items.emerald || var3 == Blocks.emerald_block || var3 == Blocks.emerald_ore;
    }
 
-
-
    public void A(long var1) {
       this.t.clear();
    }
@@ -280,11 +264,9 @@ public class ItemESP extends Module implements EventSubscriber {
       return new AxisAlignedBB(var1 - var9, var3, var5 - var9, var1 + var9, var3 + var7, var5 + var9);
    }
 
-
    private boolean b(ItemStack var1) {
       return var1 != null && var1.stackSize > 0;
    }
-
 
    private int D(int var1) {
       if (this.i(var1)) {
@@ -320,7 +302,6 @@ public class ItemESP extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       scale = new NumberSetting("Scale", 0.8F, 0.01F, 5.0F, 0.01F);
       golds = new BooleanSetting("Golds", true);
       irons = new BooleanSetting("Irons", true);

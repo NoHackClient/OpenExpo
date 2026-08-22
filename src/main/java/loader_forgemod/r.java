@@ -7,16 +7,6 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
 public class r extends n implements Iterable<n> {
    private final List<n> c;
 

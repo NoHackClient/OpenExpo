@@ -7,16 +7,6 @@ import java.util.Map;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
-
-
-
-
-
-
-
-
-
 public class GenericTransformer extends TransformerBase {
    private static String y;
    private static Map t;
@@ -77,10 +67,4 @@ public class GenericTransformer extends TransformerBase {
       d = 108897702989157L;
       y = TransformerBase.e(GuiEventHooks.class);
    }
-
-
-
-
-
-
 }

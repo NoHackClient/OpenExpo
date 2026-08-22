@@ -25,16 +25,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
-
-
-
-
-
-
-
-
-
-
 public class NoSlow extends Module implements EventSubscriber {
    private static Map k;
    public static BooleanSetting onlyEnableWhenAutoblock;
@@ -53,7 +43,6 @@ public class NoSlow extends Module implements EventSubscriber {
    }
 
    public static boolean c(long var0) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       ItemStack var4 = R.thePlayer.getHeldItem();
       if (var4 == null) {
          return false;
@@ -76,14 +65,9 @@ public class NoSlow extends Module implements EventSubscriber {
 
    public NoSlow(long var1) {
       super(((a ^ (var1)) ^ 85255024010748L));
-      // add code
       this.declare("NoSlow", Category.Movement, "Change the slowdown when blocking sword, eating and pulling bow");
       var1 = a ^ var1;
    }
-
-
-
-
 
    public final void x(long var1, EventBus var3) {
       NoSlowBinder.G(var3, this);
@@ -118,14 +102,7 @@ public class NoSlow extends Module implements EventSubscriber {
       }
    }
 
-   private static void a() {
-   }
-
-
-
-
    static {
-      // add code
       slowDown = new PercentageSetting("Slow-down", 0);
       otherMode = new ModeSetting("Other-mode", "NONE", "VANILLA");
       swordMode = new ModeSetting("Sword-mode", "VANILLA", "NONE");

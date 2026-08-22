@@ -7,16 +7,6 @@ import Expo.event.invoker.FlyMoveFlyingInvoker;
 import Expo.event.invoker.FlyPreUpdateInvoker;
 import Expo.module.impl.movement.Fly;
 
-
-
-
-
-
-
-
-
-
-
 public final class FlyBinder {
    private static final long a = 23171281344504L;
 

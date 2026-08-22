@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.KnockbackEvent;
 import Expo.module.impl.combat.Velocity;
 
-
-
-
-
-
-
-
-
-
-
 public final class VelocityKnockbackInvoker implements EventInvoker {
    final Velocity J;
 

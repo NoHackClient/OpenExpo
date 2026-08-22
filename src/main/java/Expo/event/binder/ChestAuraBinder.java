@@ -11,16 +11,6 @@ import Expo.event.invoker.ChestAuraPlayerRightClickInvoker;
 import Expo.event.invoker.ChestAuraPreMouseInputInvoker;
 import Expo.module.impl.player.ChestAura;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChestAuraBinder {
    private static final long a = 63789128011315L;
 

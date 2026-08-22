@@ -9,16 +9,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-
-
-
-
-
-
-
-
-
-
 public class RandomUsernamePool {
    private static Random r;
    private static long a;
@@ -87,8 +77,6 @@ public class RandomUsernamePool {
       }
    }
 
-
-
    private static String x(long var0, String var2) {
       if (var2 != null && !var2.isEmpty()) {
          double var5 = 0.125;
@@ -117,15 +105,12 @@ public class RandomUsernamePool {
       }
    }
 
-
-
    static {
       a = 44449083093767L;
       r = new Random();
    }
 
    public static String[] Q() {
-
       try {
          InputStream var3 = RandomUsernamePool.class.getResourceAsStream("/usernames.txt");
          if (var3 == null) {
@@ -170,14 +155,8 @@ public class RandomUsernamePool {
       }
    }
 
-
-
    public static String x(long var0) {
-
-
       String[] var4 = z(1, 67153725001959L);
       return var4 != null && var4.length != 0 ? var4[0] : null;
    }
-
-
 }

@@ -3,16 +3,6 @@ package Expo.ui.swing;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-
-
-
-
-
-
-
-
-
-
 class VisualSpoofWindowCloseListener extends WindowAdapter {
    final VisualSpoofWindow T;
    final Runnable X;

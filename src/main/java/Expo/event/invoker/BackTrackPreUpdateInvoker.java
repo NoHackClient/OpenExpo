@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.combat.BackTrack;
 
-
-
-
-
-
-
-
-
-
-
 public final class BackTrackPreUpdateInvoker implements EventInvoker {
    final BackTrack O;
 

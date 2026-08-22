@@ -6,19 +6,7 @@ import Expo.util.BuildInfo;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandChangelog extends Command {
-
    private static final String SEP = "§8-----------------------------";
 
    @Override

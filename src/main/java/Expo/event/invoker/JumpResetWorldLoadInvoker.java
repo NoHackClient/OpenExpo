@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.WorldLoadEvent;
 import Expo.module.impl.combat.JumpReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class JumpResetWorldLoadInvoker implements EventInvoker {
    final JumpReset n;
 

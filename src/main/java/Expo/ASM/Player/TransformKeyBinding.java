@@ -5,10 +5,8 @@ import Expo.ASM.Util.BytecodeHelper;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformKeyBinding extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -39,7 +37,6 @@ public class TransformKeyBinding extends TransformerBase {
       }, "onTick", "onTick");
    }
 
-
    static {
       d = 100462606356730L;
    }
@@ -47,5 +44,4 @@ public class TransformKeyBinding extends TransformerBase {
    public TransformKeyBinding() {
       super("net/minecraft/client/settings/KeyBinding");
    }
-
 }

@@ -9,7 +9,6 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.InsnList;
 import org.objectweb.asm.tree.VarInsnNode;
 
-
 public class TransformBlockModelShapes extends TransformerBase {
    private static long d;
 
@@ -17,20 +16,15 @@ public class TransformBlockModelShapes extends TransformerBase {
       super("net/minecraft/client/renderer/BlockModelShapes");
    }
 
-
    static {
       d = 6178367048455L;
    }
-
-
-
 
    public boolean s(ClassNode var1) {
       return BytecodeHelper.t(
          var1,
          "(" + SrgNames.X("net/minecraft/block/state/IBlockState") + ")" + SrgNames.X("net/minecraft/client/resources/model/IBakedModel"),
          (var0, var1x) -> {
-
             for (AbstractInsnNode var4 = var1x.instructions.getFirst(); var4 != null; var4 = var4.getNext()) {
                if (var4.getOpcode() == 176) {
                   InsnList var5 = new InsnList();

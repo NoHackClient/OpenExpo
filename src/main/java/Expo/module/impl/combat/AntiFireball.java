@@ -26,7 +26,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.EntityFireball;
 import net.minecraft.network.play.client.C0APacketAnimation;
 
-
 public class AntiFireball extends PriorityModule implements EventSubscriber {
    private EntityFireball G;
    public static NumberSetting fov;
@@ -38,9 +37,7 @@ public class AntiFireball extends PriorityModule implements EventSubscriber {
    public static NumberSetting range;
    private boolean N;
 
-
    private void m(long var1) {
-
       this.T(false);
       if (this.N) {
          RotationManager.O(123115463851087L);
@@ -107,7 +104,6 @@ public class AntiFireball extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    private void swingItem() {
       if (swing.c()) {
          f.thePlayer.swingItem();
@@ -116,21 +112,17 @@ public class AntiFireball extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    public final void x(long var1, EventBus var3) {
       AntiFireballBinder.r(var3, this);
    }
-
 
    public void onWorldLoad(WorldLoadEvent var3) {
       this.K.clear();
       this.r.clear();
    }
 
-
    public AntiFireball(long var1) {
       super((((a ^ (var1)) ^ 77523410250733L) >>> 16), (char)((int)(((((a ^ (var1)) ^ 77523410250733L) << 48) >>> 48))));
-      // add code
       this.declare("AntiFireball", Category.Combat, "Hit fireballs back");
       var1 = a ^ var1;
       this.K = new ArrayList<>();
@@ -139,7 +131,6 @@ public class AntiFireball extends PriorityModule implements EventSubscriber {
       this.N = false;
    }
 
-
    private boolean V(long var1, int var3, EntityFireball var4) {
       long var5 = (var1 << 32 | (long)var3 << 32 >>> 32) ^ a;
       long var7 = var5 ^ 71130462620705L;
@@ -147,24 +138,15 @@ public class AntiFireball extends PriorityModule implements EventSubscriber {
       return var4 != null && RaytraceUtil.q(var7, var4, range.L() + 3.0) && RotationUtil.b(var9, var4, fov.L());
    }
 
-
    static {
       a = 119630054251485L;
    }
-
 
    public void A(long var1) {
       this.m(0L);
    }
 
    public void onPreMouseInput(PreMouseInputEvent var1, long var2) {
-
-
-
-
-
-
-
       EntityFireball var16 = this.G;
       if (this.G != null && f.theWorld.loadedEntityList.contains(var16) && this.Y() && OutgoingPacketState.f()) {
          this.T(true);
@@ -196,21 +178,14 @@ public class AntiFireball extends PriorityModule implements EventSubscriber {
       return String.valueOf(range.L());
    }
 
-
-
-
-
    static {
-      // add code
       swing = new BooleanSetting("Swing", true);
    }
    static {
-      // add code
       range = new NumberSetting("Range", 5.0F, 0.0F, 10.0F, 0.1F);
       fov = new NumberSetting("FOV", 180.0F, 0.0F, 360.0F, 1.0F);
    }
    static {
-      // add code
       moveFix = new ModeSetting("Move-fix", "SILENT", "STRICT", "NONE");
    }
 }

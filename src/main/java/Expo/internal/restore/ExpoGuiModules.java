@@ -46,9 +46,7 @@ import javax.swing.event.ChangeListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-
 public final class ExpoGuiModules extends JPanel {
-
    private static final long serialVersionUID = 1L;
 
    private final DefaultListModel<Object> model = new DefaultListModel<Object>();
@@ -150,7 +148,6 @@ public final class ExpoGuiModules extends JPanel {
    }
 
    static final class StateButton extends JButton {
-
       private static final long serialVersionUID = 1L;
 
       StateButton(String text) {
@@ -279,6 +276,8 @@ public final class ExpoGuiModules extends JPanel {
          c.gridy++;
          this.grid.add(new JLabel(ExpoGuiText.NO_SETTINGS), c);
       } else {
+         String pendingHeader = null;
+
          for (int si = 0; si < settings.size(); si++) {
             Setting s = settings.get(si);
             if (s == null) {
@@ -287,20 +286,7 @@ public final class ExpoGuiModules extends JPanel {
 
             if (s instanceof Expo.setting.settings.HeaderSetting) {
                String text = ((Expo.setting.settings.HeaderSetting)s).L();
-
-               // add code
-               if (text != null && text.length() > 0
-                     && Expo.setting.settings.HeaderSetting.occupied(settings, si)) {
-                  c.gridy++;
-                  c.gridx = 0;
-                  c.gridwidth = 2;
-                  c.weightx = 1.0D;
-                  JLabel band = new JLabel(text);
-                  band.setFont(ExpoGuiText.font(Font.BOLD, 13));
-                  this.grid.add(band, c);
-                  c.gridwidth = 1;
-               }
-
+               pendingHeader = text != null && text.length() > 0 ? text : null;
                continue;
             }
 
@@ -308,6 +294,18 @@ public final class ExpoGuiModules extends JPanel {
 
             if (widget == null) {
                continue;
+            }
+
+            if (pendingHeader != null) {
+               c.gridy++;
+               c.gridx = 0;
+               c.gridwidth = 2;
+               c.weightx = 1.0D;
+               JLabel band = new JLabel(pendingHeader);
+               band.setFont(ExpoGuiText.font(Font.BOLD, 13));
+               this.grid.add(band, c);
+               c.gridwidth = 1;
+               pendingHeader = null;
             }
 
             c.gridy++;
@@ -628,7 +626,6 @@ public final class ExpoGuiModules extends JPanel {
    }
 
    static final class Header {
-
       final String text;
 
       Header(String text) {
@@ -641,7 +638,6 @@ public final class ExpoGuiModules extends JPanel {
    }
 
    final class Renderer extends DefaultListCellRenderer {
-
       private static final long serialVersionUID = 1L;
 
       public Component getListCellRendererComponent(JList<?> l, Object value, int index,

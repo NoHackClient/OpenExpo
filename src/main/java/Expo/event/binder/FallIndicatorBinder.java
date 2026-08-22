@@ -7,16 +7,6 @@ import Expo.event.invoker.FallIndicatorPostTickInvoker;
 import Expo.event.invoker.FallIndicatorRender2DInvoker;
 import Expo.module.impl.visual_utility.FallIndicator;
 
-
-
-
-
-
-
-
-
-
-
 public final class FallIndicatorBinder {
    private static final long a = 139939118238575L;
 
@@ -27,5 +17,4 @@ public final class FallIndicatorBinder {
 
    private FallIndicatorBinder() {
    }
-
 }

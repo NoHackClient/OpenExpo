@@ -4,16 +4,6 @@ import java.io.UnsupportedEncodingException;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
-
-
-
-
-
-
-
-
-
-
 public final class EntityPlayerAccessor {
    private static TypedValueStore Q;
    private static TypedValueStore m;
@@ -21,8 +11,6 @@ public final class EntityPlayerAccessor {
    public static int J(EntityPlayer var0) {
       return Q.m(var0);
    }
-
-
 
    public static void Z(EntityPlayer var0, ItemStack var1) {
       m.d(var0, var1);
@@ -40,5 +28,4 @@ public final class EntityPlayerAccessor {
       m = FieldAccessors.X(EntityPlayer.class, "itemInUse", "itemInUse");
       Q = FieldAccessors.X(EntityPlayer.class, "itemInUseCount", "itemInUseCount");
    }
-
 }

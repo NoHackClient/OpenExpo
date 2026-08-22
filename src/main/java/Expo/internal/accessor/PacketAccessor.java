@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.Set;
 import net.minecraft.network.Packet;
 
-
 public class PacketAccessor {
    private static long[] b;
    public static Set<Class<?>> m;
@@ -17,8 +16,6 @@ public class PacketAccessor {
       U = Collections.<Class<?>>singleton(Packet.class);
       m = Collections.<Class<?>>singleton(Packet.class);
    }
-
-   private static native int a(int var0, long var1);
 
    public static native void K(long var0);
 }

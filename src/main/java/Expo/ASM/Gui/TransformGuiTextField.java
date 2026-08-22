@@ -5,7 +5,6 @@ import Expo.ASM.Util.BytecodeHelper;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformGuiTextField extends TransformerBase {
    private static long d;
 
@@ -23,14 +22,11 @@ public class TransformGuiTextField extends TransformerBase {
       }, "deleteWords", "deleteWords", "deleteFromCursor", "deleteFromCursor");
    }
 
-
    static {
       d = 14047968795735L;
    }
 
-
    public TransformGuiTextField() {
       super("net/minecraft/client/gui/GuiTextField");
    }
-
 }

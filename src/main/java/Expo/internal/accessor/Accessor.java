@@ -3,16 +3,6 @@ package Expo.internal.accessor;
 import Expo.internal.synthetic.AccessorCtorMarker;
 import java.lang.invoke.MethodHandle;
 
-
-
-
-
-
-
-
-
-
-
 public final class Accessor {
    private final MethodHandle L;
    private final MethodHandle k;

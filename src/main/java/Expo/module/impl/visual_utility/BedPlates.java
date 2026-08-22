@@ -54,7 +54,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import org.lwjgl.opengl.GL11;
 
-
 public class BedPlates extends Module implements EventSubscriber {
    private final int d;
    private final int F;
@@ -89,23 +88,12 @@ public class BedPlates extends Module implements EventSubscriber {
       return var1.offset(var3.getOpposite());
    }
 
-
    static {
       b = 130834582854816L;
       zkm$clinit();
    }
 
    public void onRender3D(Render3DEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
-
-
-
       CustomFont var39 = Font.s(0L);
       int var40;
       switch (color.Y()) {
@@ -194,7 +182,6 @@ public class BedPlates extends Module implements EventSubscriber {
 
    public BedPlates(long var1) {
       super(((b ^ (var1)) ^ 84481071993970L));
-      // add code
       this.declare("BedPlates", Category.Visual_utility, "Show surrounding blocks of beds");
       var1 = b ^ var1;
       this.a = new HashMap<>();
@@ -477,21 +464,17 @@ public class BedPlates extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       backgroundOpacity = new PercentageSetting("Background-opacity", 40);
       customColor = new ColorSetting("Custom-color", "000000");
    }
    static {
-      // add code
       outline = new BooleanSetting("Outline", true);
       fill = new BooleanSetting("Fill", false);
    }
    static {
-      // add code
       surroundingRange = new NumberSetting("Surrounding-range", 5.0F, 0.0F, 10.0F, 1.0F);
    }
    static {
-      // add code
       color = new ModeSetting("Color", false, "CUSTOM", "THEME", "THEME_CUSTOM", "CUSTOM");
    }
 }

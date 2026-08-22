@@ -36,16 +36,6 @@ import net.minecraft.network.status.client.C00PacketServerQuery;
 import net.minecraft.network.status.client.C01PacketPing;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class IncomingPacketHold implements EventSubscriber {
    private static Object[] b;
    private static Minecraft h;
@@ -57,7 +47,6 @@ public class IncomingPacketHold implements EventSubscriber {
 
    static {
       a = 16363778365439L;
-      // add code
       zkm$clinit();
       h = MinecraftRef.c((byte)0, 0L);
    }
@@ -107,9 +96,6 @@ public class IncomingPacketHold implements EventSubscriber {
    }
 
    public void onReceivePacket(ReceivePacketEvent var1, long var2) {
-
-
-
       if (ClientUtil.I() && !h.isSingleplayer()) {
          if (g && this.K(var1.d)) {
             U.add((Packet<INetHandlerPlayClient>)var1.d);
@@ -202,5 +188,4 @@ public class IncomingPacketHold implements EventSubscriber {
       b[5] = "xDxwm\\sKi8\fRx@mb";
       b[6] = "\\F%\\\u001e\u0016GS~?\u001dh\u0005\u0011wU\u0006\u0001\u0003EhDoQ\\Ks@\u0006W\u0002T~?U\u000e\u0007Sh\u0000\u000f\u0019\u0006W\u0018\u0004\u0001\n\u0001E\"A\u0005\u0014\u0003)";
    }
-
 }

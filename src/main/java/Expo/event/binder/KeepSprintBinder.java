@@ -11,16 +11,6 @@ import Expo.event.invoker.KeepSprintPreTickInvoker;
 import Expo.event.invoker.KeepSprintPreUpdateInvoker;
 import Expo.module.impl.combat.KeepSprint;
 
-
-
-
-
-
-
-
-
-
-
 public final class KeepSprintBinder {
    private static final long a = 109516607754392L;
 

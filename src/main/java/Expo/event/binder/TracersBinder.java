@@ -9,16 +9,6 @@ import Expo.event.invoker.TracersRender2DInvoker;
 import Expo.event.invoker.TracersRender3DInvoker;
 import Expo.module.impl.visual_utility.Tracers;
 
-
-
-
-
-
-
-
-
-
-
 public final class TracersBinder {
    private static final long a = 110263243401207L;
 
@@ -30,5 +20,4 @@ public final class TracersBinder {
       var0.R(var1, Render3DEvent.class, 3, new TracersRender3DInvoker(var1));
       var0.R(var1, Render2DEvent.class, 3, new TracersRender2DInvoker(var1));
    }
-
 }

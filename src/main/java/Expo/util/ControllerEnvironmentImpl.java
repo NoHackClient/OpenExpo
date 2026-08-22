@@ -8,21 +8,10 @@ import net.java.games.input.Controller;
 import net.java.games.input.ControllerEnvironment;
 import net.java.games.util.plugins.Plugins;
 
-
-
-
-
-
-
-
-
-
-
 public class ControllerEnvironmentImpl extends ControllerEnvironment {
    private final Collection<String> x = new ArrayList<>();
    private ArrayList<Controller> N;
    private static long a;
-
 
    private void c(String var1) {
       File var2 = new File(var1);
@@ -39,7 +28,6 @@ public class ControllerEnvironmentImpl extends ControllerEnvironment {
                }
             }
          } catch (Exception var10) {
-            Expo.internal.restore.ExpoDiag.attribute(var10, "ControllerEnvironmentImpl.c/1#0");
          }
       }
    }
@@ -89,12 +77,10 @@ public class ControllerEnvironmentImpl extends ControllerEnvironment {
                   this.x.add(var10.getClass().getName());
                }
             } catch (Exception var11) {
-               Expo.internal.restore.ExpoDiag.attribute(var11, "ControllerEnvironmentImpl.getControllers/0#0");
             }
          }
       }
 
       return this.N.toArray(new Controller[0]);
    }
-
 }

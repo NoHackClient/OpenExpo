@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformEntityLivingBase extends TransformerBase {
    private static long d;
 
@@ -17,7 +16,6 @@ public class TransformEntityLivingBase extends TransformerBase {
    static {
       d = 53417989733027L;
    }
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -99,6 +97,4 @@ public class TransformEntityLivingBase extends TransformerBase {
          });
       }, "getArmSwingAnimationEnd", "getArmSwingAnimationEnd");
    }
-
-
 }

@@ -33,14 +33,13 @@ import net.minecraft.entity.passive.IAnimals;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.Vec3;
 
-
 public class Tracers extends Module implements EventSubscriber {
    public static ColorSetting animalsColor;
    public static BooleanSetting enemies;
    // update new version
    public static HeaderSetting colorSettings;
    // update new version
-   public static HeaderSetting targetSettings2;
+   public static HeaderSetting targetSettings;
    public static BooleanSetting animals;
    public static ColorSetting friendsColor;
    public static ColorSetting playersColor;
@@ -89,7 +88,6 @@ public class Tracers extends Module implements EventSubscriber {
       return new Vec3(var3.xCoord, var3.yCoord + f.getRenderViewEntity().getEyeHeight(), var3.zCoord);
    }
 
-
    private boolean u(long var1, EntityLivingBase var3) {
       var1 = c ^ var1;
       int var4 = (int)((var1 ^ 47718613103071L) >>> 48);
@@ -101,7 +99,6 @@ public class Tracers extends Module implements EventSubscriber {
    }
 
    public void onRender3D(Render3DEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (mode.R("LINE")) {
          Expo.util.render.RenderUtil.L();
          Vec3 var8 = this.s(var1.j);
@@ -115,11 +112,7 @@ public class Tracers extends Module implements EventSubscriber {
       }
    }
 
-
    private int B(long var1, EntityLivingBase var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       int var12 = 34903;
 
       if (this.Z(23952)) {
@@ -134,7 +127,6 @@ public class Tracers extends Module implements EventSubscriber {
          return this.h(var3) ? animalsColor.k(96531491288662L) : -1;
       }
    }
-
 
    private boolean h(long var1, EntityLivingBase var3, TracersFilterFlags var4, short var5) {
       long var6 = (5612624347136L | (long)var5 << 48 >>> 48) ^ c;
@@ -164,7 +156,6 @@ public class Tracers extends Module implements EventSubscriber {
       return var1.isSneaking() ? 0.125 : 0.0;
    }
 
-
    private boolean g(EntityLivingBase var1) {
       return f.getRenderViewEntity().getDistanceToEntity(var1) > 512.0F;
    }
@@ -175,13 +166,11 @@ public class Tracers extends Module implements EventSubscriber {
       return var1.rotatePitch((float)(-Math.toRadians(var3))).rotateYaw((float)(-Math.toRadians(var4)));
    }
 
-
    private TracersFilterFlags s() {
       return new TracersFilterFlags(players.c(), mobs.c(), animals.c(), bosses.c(), friends.c(), enemies.c(), teammates.c(), bots.c(), null);
    }
 
    static void $jnicClinit() throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException, NoSuchPaddingException {
-
       c = 87762184973561L;
    }
 
@@ -202,10 +191,6 @@ public class Tracers extends Module implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       this.Y.clear();
       TracersFilterFlags var11 = this.s();
       List var12 = EntityUtil.U( this.M(var11));
@@ -220,7 +205,6 @@ public class Tracers extends Module implements EventSubscriber {
 
    public Tracers(long var1) {
       super(((c ^ (var1)) ^ 92928119894841L));
-      // add code
       this.declare("Tracers", Category.Visual_utility, "Draw lines which traced to players");
       var1 = c ^ var1;
       this.Y = new ArrayList<>();
@@ -247,15 +231,12 @@ public class Tracers extends Module implements EventSubscriber {
    }
 
    private void B(Vec3 var1, long var2, TracersTarget var4, float var5) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       EntityLivingBase var8 = Expo.module.impl.visual_utility.TracersTarget.L(var4);
       double var9 = this.D(var8.lastTickPosX, var8.posX, var5);
       double var11 = this.D(var8.lastTickPosY, var8.posY, var5) - this.isSneaking(var8);
       double var13 = this.D(var8.lastTickPosZ, var8.posZ, var5);
       Expo.util.render.RenderUtil.J(var1, var9, var11 + var8.getEyeHeight(), var13, Expo.module.impl.visual_utility.TracersTarget.Y(var4), 1.5F, 133584403222966L);
    }
-
 
    public void onRender2D(long var1, Render2DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       if (mode.R("ARROW") && f.currentScreen == null) {
@@ -270,7 +251,6 @@ public class Tracers extends Module implements EventSubscriber {
       return f.gameSettings.thirdPersonView == 0;
    }
 
-
    static {
       try {
          $jnicClinit();
@@ -279,7 +259,6 @@ public class Tracers extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       mobsColor = new ColorSetting("Mobs-color", "FFFFFF");
       enemiesColor = new ColorSetting("Enemies-color", "FF0000");
       botsColor = new ColorSetting("Bots-color", "FFFFFF");
@@ -287,7 +266,7 @@ public class Tracers extends Module implements EventSubscriber {
       // update new version
       colorSettings = new HeaderSetting("Color settings");
       // update new version
-      targetSettings2 = new HeaderSetting("Target settings");
+      targetSettings = new HeaderSetting("Target settings");
       mobs = new BooleanSetting("Mobs", false);
       players = new BooleanSetting("Players", true);
       enemies = new BooleanSetting("Enemies", true);

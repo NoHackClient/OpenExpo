@@ -32,7 +32,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.StringUtils;
 
-
 public class KillEffect extends Module implements EventSubscriber {
    public static BooleanSetting onlyKilledBySelf;
    private static long a;
@@ -90,8 +89,6 @@ public class KillEffect extends Module implements EventSubscriber {
    }
 
    private void R(KillEffectDeathPos var1, long var2) {
-
-
       switch (mode.Y()) {
          case "BLOOD":
             LightningRenderer.f(1, 6021109416714L, var1.G, var1.L, var1.S, var1.w);
@@ -109,7 +106,6 @@ public class KillEffect extends Module implements EventSubscriber {
    }
 
    public void onLivingDeath(LivingDeathEvent var1, long var2) {
-
       boolean var6 = !onlyKilledBySelf.c() || var1.M.getEntity() != null && var1.M.getEntity().equals(f.thePlayer);
       if (var6 && var1.p != f.thePlayer) {
          String var7 = var1.p.getName();
@@ -131,7 +127,6 @@ public class KillEffect extends Module implements EventSubscriber {
    }
 
    public void onHandleChat(long var1, HandleChatEvent var3) {
-
       String var6 = StringUtils.stripControlCodes(var3.A.getUnformattedText());
       if (f.thePlayer != null && !var6.contains(":") && var6.contains("by " + f.thePlayer.getName())) {
          String var7 = var6.trim().split(" ")[0];
@@ -142,10 +137,8 @@ public class KillEffect extends Module implements EventSubscriber {
       }
    }
 
-
    public KillEffect(long var1) {
       super(((a ^ (var1)) ^ 45213747570466L));
-      // add code
       this.declare("KillEffect", Category.Visual, "Play some effects after you killed your enemy");
       var1 = a ^ var1;
       this.F = new ConcurrentHashMap<>();
@@ -161,10 +154,6 @@ public class KillEffect extends Module implements EventSubscriber {
    }
 
    public void t(LivingDeathEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       if (var1.p != null) {
          boolean var7 = var1.M.getEntity() != null && var1.M.getEntity().equals(f.thePlayer);
          if (!onlyKilledBySelf.c() || var7) {
@@ -246,7 +235,6 @@ public class KillEffect extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       mode = new ModeSetting("Mode", false, "BLOOD", "NONE", "BLOOD", "LIGHTNING", "SOUL_BREAK");
       onlyKilledBySelf = new BooleanSetting("Only-killed-by-self", false);
    }

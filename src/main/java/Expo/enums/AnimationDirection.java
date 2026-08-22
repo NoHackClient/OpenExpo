@@ -15,5 +15,4 @@ public enum AnimationDirection {
    public boolean D$r1() {
       return this == FORWARDS;
    }
-
 }

@@ -4,16 +4,6 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
 
-
-
-
-
-
-
-
-
-
-
 public class GuiTextWidget extends Gui {
    private String E;
    private final int S;
@@ -133,9 +123,8 @@ public class GuiTextWidget extends Gui {
       int var7 = (this.x - 8) / (this.B.FONT_HEIGHT / 2);
       int var8 = 0;
 
-      for (int var9 = this.M; var9 < var3.length && var8 < var5; var9++) {   // add code
+      for (int var9 = this.M; var9 < var3.length && var8 < var5; var9++) {
          String var10 = var3[var9];
-
 
          while (0 < var10.length() && var8 < var5) {
             int var12 = Math.min(0 + var7, var10.length());
@@ -149,7 +138,7 @@ public class GuiTextWidget extends Gui {
             var8++;
          }
 
-         if (var10.isEmpty()) {   // add code
+         if (var10.isEmpty()) {
             var8++;
          }
       }
@@ -183,7 +172,6 @@ public class GuiTextWidget extends Gui {
       this.s = var1;
    }
 
-
    private void J(String var1) {
       StringBuilder var6 = new StringBuilder();
 
@@ -212,5 +200,4 @@ public class GuiTextWidget extends Gui {
    static {
       a = 89951620145125L;
    }
-
 }

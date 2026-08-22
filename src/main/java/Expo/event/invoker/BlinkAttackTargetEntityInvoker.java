@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.AttackTargetEntityEvent;
 import Expo.module.impl.player.Blink;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlinkAttackTargetEntityInvoker implements EventInvoker {
    final Blink P;
 

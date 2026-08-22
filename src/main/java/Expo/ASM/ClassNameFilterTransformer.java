@@ -7,14 +7,12 @@ import net.minecraft.launchwrapper.IClassTransformer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
 public class ClassNameFilterTransformer implements IClassTransformer {
    private static Set<String> c;
    private static Logger i;
    private static Set<String> U;
    private static long a;
    private static Class<?> W;
-
 
    public ClassNameFilterTransformer() {
       i.info("ASM Transformer initialized");
@@ -60,7 +58,6 @@ public class ClassNameFilterTransformer implements IClassTransformer {
                return var3;
             }
 
-
             if (!c.add(var6)) {
                i.info("ASM recursive transform skipped: {}", new Object[]{var6});
                return var3;
@@ -90,9 +87,6 @@ public class ClassNameFilterTransformer implements IClassTransformer {
       }
    }
 
-
-
-
    public static String z(String var0, String var1) {
       String var4 = var1 != null && !var1.isEmpty() ? var1 : var0;
       return var4 == null ? null : var4.replace((char)47, (char)46);
@@ -104,5 +98,4 @@ public class ClassNameFilterTransformer implements IClassTransformer {
       c = Collections.newSetFromMap(new ConcurrentHashMap<>());
       U = Collections.newSetFromMap(new ConcurrentHashMap<>());
    }
-
 }

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.util.RotationManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class RotationManagerPreTickInvoker implements EventInvoker {
    final RotationManager P;
 

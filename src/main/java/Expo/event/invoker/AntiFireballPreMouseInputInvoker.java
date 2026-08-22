@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.combat.AntiFireball;
 
-
-
-
-
-
-
-
-
-
-
 public final class AntiFireballPreMouseInputInvoker implements EventInvoker {
    final AntiFireball e;
 

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render3DEvent;
 import Expo.internal.MiningRenderSubscriber;
 
-
-
-
-
-
-
-
-
-
-
 public final class MiningRenderSubscriberRender3DInvoker implements EventInvoker {
    final MiningRenderSubscriber s;
 

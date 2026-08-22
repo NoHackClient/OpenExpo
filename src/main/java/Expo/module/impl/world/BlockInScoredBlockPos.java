@@ -2,16 +2,6 @@ package Expo.module.impl.world;
 
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public class BlockInScoredBlockPos {
    public final BlockPos o;
    public final double k;

@@ -7,16 +7,6 @@ import Expo.event.invoker.LeapModeHUDReceivePacketInvoker;
 import Expo.event.invoker.LeapModeHUDRender2DInvoker;
 import Expo.module.impl.visual_utility.LeapModeHUD;
 
-
-
-
-
-
-
-
-
-
-
 public final class LeapModeHUDBinder {
    private static final long a = 38923866201901L;
 
@@ -27,5 +17,4 @@ public final class LeapModeHUDBinder {
 
    private LeapModeHUDBinder() {
    }
-
 }

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.util.HypixelGameState;
 
-
-
-
-
-
-
-
-
-
-
 public final class HypixelGameStatePostTickInvoker implements EventInvoker {
    final HypixelGameState i;
 

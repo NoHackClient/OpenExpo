@@ -3,16 +3,6 @@ package Expo.ui.swing;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-
-
-
-
-
-
-
-
-
-
 class ConfigManagerKeyAdapter extends KeyAdapter {
    final ConfigManagerWindow Y;
 

@@ -40,7 +40,6 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.client.C0DPacketCloseWindow;
 import net.minecraft.network.play.client.C0EPacketClickWindow;
 
-
 public class InvMove extends Module implements EventSubscriber {
    public static ModeSetting containerMode;
    private static long a;
@@ -49,11 +48,7 @@ public class InvMove extends Module implements EventSubscriber {
    public static BooleanSetting clickgui;
    private final List<Packet<?>> Y;
 
-
    public static void c(long var0) {
-
-
-
       KeyBinding[] var10000 = new KeyBinding[7];
       var10000[0] = MinecraftRef.c((byte)0,0L).gameSettings.keyBindForward;
       var10000[1] = MinecraftRef.c((byte)0,0L).gameSettings.keyBindBack;
@@ -73,12 +68,10 @@ public class InvMove extends Module implements EventSubscriber {
       }
    }
 
-
    public void onCloseScreen(CloseScreenEvent var1) {
       c(0L);
       f.inGameHasFocus = true;
    }
-
 
    private boolean w$r3() {
       for (Slot var2 : f.thePlayer.openContainer.inventorySlots) {
@@ -94,8 +87,6 @@ public class InvMove extends Module implements EventSubscriber {
    }
 
    public void onSendPacket(SendPacketEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       if (var3.B instanceof C0EPacketClickWindow) {
          C0EPacketClickWindow var13 = (C0EPacketClickWindow)var3.B;
          if (this.Z(var13.getSlotId()) || !this.isGetItemStack()) {
@@ -123,7 +114,6 @@ public class InvMove extends Module implements EventSubscriber {
    }
 
    private void remove(boolean var3) {
-
       for (Packet var5 : this.Y) {
          PacketManager.X(var5);
          this.Y.remove(var5);
@@ -159,7 +149,6 @@ public class InvMove extends Module implements EventSubscriber {
          this.remove(this.isGetItemStack());
       }
    }
-
 
    private boolean Z(int var1) {
       if (f.thePlayer.openContainer == null) {
@@ -241,29 +230,23 @@ public class InvMove extends Module implements EventSubscriber {
       }
    }
 
-
    static {
       a = 71119880394628L;
    }
 
    public InvMove(long var1) {
       super(((a ^ (var1)) ^ 110879857448364L));
-      // add code
       this.declare("InvMove", Category.Movement, "Allows you to move around while opening a container");
       var1 = a ^ var1;
       this.Y = new CopyOnWriteArrayList<>();
       this.c = false;
    }
 
-
    public final void x(long var1, EventBus var3) {
       InvMoveBinder.I(var3, this);
    }
 
-
    public static void Q(long var0) {
-
-
       KeyBinding[] var10000 = new KeyBinding[7];
       var10000[0] = MinecraftRef.c((byte)0,0L).gameSettings.keyBindForward;
       var10000[1] = MinecraftRef.c((byte)0,0L).gameSettings.keyBindBack;
@@ -279,23 +262,17 @@ public class InvMove extends Module implements EventSubscriber {
       }
    }
 
-
-
-
    public void A(long var1) {
       this.c = false;
    }
-
 
    private boolean isGetItemStack() {
       return f.thePlayer != null && f.thePlayer.openContainer != null && f.thePlayer.inventory.getItemStack() == null && !this.d$r2();
    }
    static {
-      // add code
       clickgui = new BooleanSetting("ClickGUI", true);
    }
    static {
-      // add code
       containerMode = new ModeSetting("Container-mode", "LEGIT", "HYPIXEL", "VANILLA", "NONE");
       inventoryMode = new ModeSetting("Inventory-mode", "LEGIT", "HYPIXEL", "VANILLA", "NONE");
    }

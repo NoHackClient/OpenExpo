@@ -2,16 +2,6 @@ package loader_forgemod;
 
 import java.io.IOException;
 
-
-
-
-
-
-
-
-
-
-
 class f_2 extends n {
    private final String a;
 

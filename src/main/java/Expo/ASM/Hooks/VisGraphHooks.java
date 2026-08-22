@@ -4,16 +4,6 @@ import Expo.module.ModuleManager;
 import java.util.BitSet;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public class VisGraphHooks {
    private static int getIndex(BlockPos var0) {
       return getIndex(var0.getX() & 15, var0.getY() & 15, var0.getZ() & 15);

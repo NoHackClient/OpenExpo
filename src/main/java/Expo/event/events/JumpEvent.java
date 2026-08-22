@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class JumpEvent extends Event {
    private float r;
    private static final long a = 119049593305353L;

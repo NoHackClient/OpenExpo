@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ClickBlockReturnEvent;
 import Expo.internal.BrokenBlockTracker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BrokenBlockTrackerClickBlockReturnInvoker implements EventInvoker {
    final BrokenBlockTracker Z;
 

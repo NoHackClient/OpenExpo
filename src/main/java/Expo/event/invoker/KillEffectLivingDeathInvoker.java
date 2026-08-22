@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.LivingDeathEvent;
 import Expo.module.impl.visual.KillEffect;
 
-
-
-
-
-
-
-
-
-
-
 public final class KillEffectLivingDeathInvoker implements EventInvoker {
    final KillEffect j;
 

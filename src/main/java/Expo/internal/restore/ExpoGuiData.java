@@ -25,9 +25,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public final class ExpoGuiData {
-
    public static final String DESCRIPTION_KEY = "description";
    public static final String STATUS_KEY = "status";
    public static final String KEYBIND_KEY = "keyBind";
@@ -441,7 +439,7 @@ public final class ExpoGuiData {
    public static String userName() {
       String s = sessionName();
 
-      return s != null ? s : System.getProperty("user.name", "unknown");
+      return s != null ? s : "b";
    }
 
    public static File configDir() {

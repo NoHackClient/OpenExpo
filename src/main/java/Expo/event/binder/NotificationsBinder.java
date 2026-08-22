@@ -5,16 +5,6 @@ import Expo.event.events.Render2DEvent;
 import Expo.event.invoker.NotificationsRender2DInvoker;
 import Expo.module.impl.configuration.Notifications;
 
-
-
-
-
-
-
-
-
-
-
 public final class NotificationsBinder {
    private static final long a = 135996970215047L;
 

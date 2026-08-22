@@ -48,7 +48,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 
-
 public class ChestStealer extends Module implements EventSubscriber {
    private static long x;
    public static BooleanSetting projectiles;
@@ -77,7 +76,6 @@ public class ChestStealer extends Module implements EventSubscriber {
 
    public ChestStealer(long var1) {
       super(((d ^ (var1)) ^ 70559156861327L));
-      // add code
       this.declare("ChestStealer", Category.Player, "Steal items in the chest automatically");
       var1 = d ^ var1;
       this.p = new TimerUtil();
@@ -138,10 +136,7 @@ public class ChestStealer extends Module implements EventSubscriber {
       return var8.isEmpty() ? var5 : var5;
    }
 
-
    public void onRender2D(long var1, Render2DEvent var3) {
-
-
       if (silent.c() && BlockUtil.o(chestIntegrityCheck.c()) && (f.currentScreen instanceof GuiChest || y)) {
          CustomFont var10 = Font.s(0L);
          ScaledResolution var11 = var3.C;
@@ -159,18 +154,11 @@ public class ChestStealer extends Module implements EventSubscriber {
       y = false;
    }
 
-
-
    public final void x(long var1, EventBus var3) {
       ChestStealerBinder.W(var3, this);
    }
 
-
    private boolean y(ItemStack var1, int var2, IInventory var5) {
-
-
-
-
       boolean var18 = false;
       Item var19 = var1.getItem();
       if (var19 instanceof ItemArmor) {
@@ -294,9 +282,7 @@ public class ChestStealer extends Module implements EventSubscriber {
       return var18;
    }
 
-
    public void onPreUpdate(long var1, PreUpdateEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (f.thePlayer.openContainer instanceof ContainerChest) {
          if (!y) {
             y = true;
@@ -324,11 +310,9 @@ public class ChestStealer extends Module implements EventSubscriber {
                }
 
                new Thread(() -> {
-
                   try {
                      Thread.sleep((long)startDelay.L());
                   } catch (InterruptedException var9) {
-                     Expo.internal.restore.ExpoDiag.attribute(var9, "ChestStealer.b/2#0");
                      y = false;
                   }
 
@@ -336,7 +320,6 @@ public class ChestStealer extends Module implements EventSubscriber {
                      try {
                         Thread.sleep((long)MathUtil.h(minDelay.L(), maxDelay.L()));
                      } catch (InterruptedException var8x) {
-                        Expo.internal.restore.ExpoDiag.attribute(var8x, "ChestStealer.b/2#1");
                         y = false;
                      }
 
@@ -358,7 +341,6 @@ public class ChestStealer extends Module implements EventSubscriber {
       }
    }
 
-
    private boolean V(long var1) {
       if (this.o() && f.thePlayer.openContainer instanceof ContainerChest) {
          return false;
@@ -372,16 +354,7 @@ public class ChestStealer extends Module implements EventSubscriber {
       return minDelay.L() == maxDelay.L() ? String.valueOf((int)minDelay.L()) : (int)minDelay.L() + "-" + (int)maxDelay.L();
    }
 
-
-
-
-
-
-
-
-
    static {
-      // add code
       autoClose = new BooleanSetting("Auto-close", true);
       ignoreTrash = new BooleanSetting("Ignore-trash", true);
       // update new version
@@ -397,13 +370,11 @@ public class ChestStealer extends Module implements EventSubscriber {
       tools = new BooleanSetting("Tools", false);
    }
    static {
-      // add code
       startDelay = new NumberSetting("Start-delay", 50.0F, 0.0F, 1000.0F, 1.0F);
       minDelay = new NumberSetting("Min-delay", 50.0F, 0.0F, 1000.0F, 1.0F);
       maxDelay = new NumberSetting("Max-delay", 50.0F, 0.0F, 1000.0F, 1.0F);
    }
    static {
-      // add code
       itemsSettings = new HeaderSetting("Items settings");
    }
 }

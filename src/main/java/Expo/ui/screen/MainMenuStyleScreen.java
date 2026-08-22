@@ -7,7 +7,6 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.input.Keyboard;
 
-
 public class MainMenuStyleScreen extends GuiScreen {
    private final GuiScreen H;
    private static long b;
@@ -30,7 +29,6 @@ public class MainMenuStyleScreen extends GuiScreen {
    }
 
    public void initGui() {
-
       Keyboard.enableRepeatEvents(true);
       this.buttonList.clear();
       this.buttonList
@@ -118,7 +116,6 @@ public class MainMenuStyleScreen extends GuiScreen {
    }
 
    static {
-
       b = 88517798541407L;
    }
 
@@ -138,7 +135,6 @@ public class MainMenuStyleScreen extends GuiScreen {
       this.h = -1;
       this.H = var1;
    }
-
 
    private String O() {
       return "Music: " + (MainMenuTheme.music.c() ? "ON" : "OFF");
@@ -181,6 +177,4 @@ public class MainMenuStyleScreen extends GuiScreen {
             }
       }
    }
-
-
 }

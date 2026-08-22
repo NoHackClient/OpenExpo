@@ -5,16 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public final class MiningRegionScanResult {
    public List<BlockPos> P;
    public MiningRegionState Z;

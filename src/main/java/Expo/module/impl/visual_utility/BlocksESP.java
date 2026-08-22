@@ -47,16 +47,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.Vec3;
 import net.minecraft.util.Vec3i;
 
-
-
-
-
-
-
-
-
-
-
 public class BlocksESP extends Module implements EventSubscriber {
    public static BooleanSetting tracers;
    public static HeaderSetting oresSettings;
@@ -98,7 +88,6 @@ public class BlocksESP extends Module implements EventSubscriber {
 
    public BlocksESP(long var1) {
       super(((d ^ (var1)) ^ 89300791270915L));
-      // add code
       this.declare("BlocksESP", Category.Visual_utility, "Highlight some blocks");
       var1 = d ^ var1;
    }
@@ -187,8 +176,6 @@ public class BlocksESP extends Module implements EventSubscriber {
    }
 
    public void onRender3D(long var1, Render3DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       Vec3 var10;
       if (s.gameSettings.thirdPersonView == 0) {
          var10 = new Vec3(0.0, 0.0, 1.0)
@@ -248,13 +235,6 @@ public class BlocksESP extends Module implements EventSubscriber {
    }
 
    private void u(BlockPos var1, long var2, Block var4, Vec3 var5) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
       if (RaytraceUtil.Y(var1, range.L(), 119767551018300L)) {
          Color var17 = this.x((char)0, var4, 1134423564);
          if (outline.c()) {
@@ -419,7 +399,6 @@ public class BlocksESP extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       coal = new BooleanSetting("Coal", false);
       lapis = new BooleanSetting("Lapis", false);
       tracers = new BooleanSetting("Tracers", false);
@@ -438,7 +417,6 @@ public class BlocksESP extends Module implements EventSubscriber {
       outline = new BooleanSetting("Outline", true);
    }
    static {
-      // add code
       oresSettings = new HeaderSetting("Ores settings");
    }
 }

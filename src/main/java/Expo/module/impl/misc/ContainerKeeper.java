@@ -32,16 +32,6 @@ import net.minecraft.network.play.server.S2DPacketOpenWindow;
 import net.minecraft.network.play.server.S2EPacketCloseWindow;
 import org.lwjgl.input.Keyboard;
 
-
-
-
-
-
-
-
-
-
-
 public class ContainerKeeper extends Module implements EventSubscriber {
    private boolean v;
    private boolean t;
@@ -115,7 +105,6 @@ public class ContainerKeeper extends Module implements EventSubscriber {
       this.p();
    }
 
-
    private void W(boolean var1, long var2) {
       long var6 = var2 ^ 36240920312644L;
       if (!this.T && var1) {
@@ -137,7 +126,6 @@ public class ContainerKeeper extends Module implements EventSubscriber {
       }
    }
 
-
    public final void x(long var1, EventBus var3) {
       int var4 = (int)((var1 ^ 72387046643234L) >>> 32);
       ContainerKeeperBinder.Q(var3, var4, this);
@@ -147,11 +135,8 @@ public class ContainerKeeper extends Module implements EventSubscriber {
       this.p();
    }
 
-
-
    public ContainerKeeper(long var1) {
       super(((a ^ (var1)) ^ 59075679715341L));
-      // add code
       this.declare("ContainerKeeper", Category.Misc, "Save a container to open later");
       var1 = a ^ var1;
       this.v = false;
@@ -161,7 +146,6 @@ public class ContainerKeeper extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       toggleKey = new TextSetting("Toggle-key", "NONE");
       requireShiftToSave = new BooleanSetting("Require-shift-to-save", false);
    }

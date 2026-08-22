@@ -15,16 +15,6 @@ import Expo.event.invoker.CheaterDetectorReceivePacketInvoker;
 import Expo.event.invoker.CheaterDetectorWorldLoadInvoker;
 import Expo.internal.CheaterDetector;
 
-
-
-
-
-
-
-
-
-
-
 public final class CheaterDetectorBinder {
    private static final long a = 118608653688864L;
 

@@ -7,29 +7,22 @@ import java.io.InputStream;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 
-
 public class CustomFont {
    public final boolean b;
    private final Minecraft H;
    private static long a;
    private final FontGlyphPage G;
 
-
    private static Font a(ResourceLocation var0, long var1) {
-
-
-
       try {
          InputStream var6 = MinecraftRef.c((byte)0,0L).getResourceManager().getResource(var0).getInputStream();
          return Font.createFont(0, var6).deriveFont(20.0F);
       } catch (Exception var7) {
-         Expo.internal.restore.ExpoDiag.attribute(var7, "CustomFont.a/2#0");
          return new Font("default", 0, 20);
       }
    }
 
    static {
-
       a = 123238688271397L;
    }
 
@@ -112,8 +105,6 @@ public class CustomFont {
    }
 
    public void X(String var1, float var2, long var3, float var5, int var6) {
-
-
       this.v(var1, var2, var5, var6, 88827598794260L, false);
    }
 
@@ -152,27 +143,18 @@ public class CustomFont {
    }
 
    public float o(long var1) {
-
-
       return this.b ? this.H.fontRendererObj.FONT_HEIGHT : this.G.e(25129460711095L);
    }
 
    public void p(String var1, float var2, float var3, long var4, int var6) {
-
-
-
       this.v(var1, var2 - this.R(var1, 52019766876817L) / 2.0F, var3, var6, 88827598794260L, false);
    }
 
    public void T(long var1, String var3, float var4, float var5, int var6) {
-
-
       this.v(var3, var4, var5, var6, 88827598794260L, true);
    }
 
    public void A(String var1, float var2, float var3, int var4, long var5, boolean var7, GlyphDrawer var8) {
-
-
       var1 = ClientUtil.replaceString(var1);
       if (this.b) {
          this.B(var1, var2, var3, var4, var7, var8);
@@ -181,11 +163,7 @@ public class CustomFont {
       }
    }
 
-
    public void v(String var1, float var2, float var3, int var4, long var5, boolean var7) {
-
-
-
       var1 = ClientUtil.replaceString(var1);
       if (this.b) {
          if (var7) {
@@ -203,8 +181,6 @@ public class CustomFont {
    }
 
    public float R(String var1, long var2) {
-
-
       var1 = ClientUtil.replaceString(var1);
       return this.b ? this.H.fontRendererObj.getStringWidth(var1) : this.G.S(var1, 2692364323580L);
    }
@@ -219,5 +195,4 @@ public class CustomFont {
       this.b = var3.equalsIgnoreCase("NONE");
       this.G = this.b ? null : new FontGlyphPage(a(new ResourceLocation("font/" + var3 + ".ttf"), var6), var4);
    }
-
 }

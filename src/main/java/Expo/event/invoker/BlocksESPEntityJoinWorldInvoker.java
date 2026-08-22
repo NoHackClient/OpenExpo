@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.EntityJoinWorldEvent;
 import Expo.module.impl.visual_utility.BlocksESP;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlocksESPEntityJoinWorldInvoker implements EventInvoker {
    final BlocksESP W;
 

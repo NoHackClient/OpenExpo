@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformNetworkPlayerInfo extends TransformerBase {
    private static long d;
-
 
    static {
       d = 69769816458693L;
@@ -58,7 +56,6 @@ public class TransformNetworkPlayerInfo extends TransformerBase {
          "getLocationCape"
       );
    }
-
 
    public TransformNetworkPlayerInfo() {
       super("net/minecraft/client/network/NetworkPlayerInfo");

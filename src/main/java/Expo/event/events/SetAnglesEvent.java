@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class SetAnglesEvent extends Event {
    private float s;
    private boolean F;
@@ -50,5 +40,4 @@ public class SetAnglesEvent extends Event {
       this.F = true;
       this.Y = var3;
    }
-
 }

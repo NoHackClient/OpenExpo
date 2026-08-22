@@ -3,18 +3,15 @@ package Expo.ASM.Util;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 
-
 class SafeClassWriter extends ClassWriter {
    private static long F;
    private final ClassLoader g;
-
 
    SafeClassWriter(ClassReader var1, int var2) {
       super(var1, var2);
       ClassLoader var3 = Thread.currentThread().getContextClassLoader();
       this.g = var3 == null ? SafeClassWriter.class.getClassLoader() : var3;
    }
-
 
    static {
       F = 120390589417918L;
@@ -55,6 +52,4 @@ class SafeClassWriter extends ClassWriter {
    private Class<?> i(String var1) throws ClassNotFoundException {
       return Class.forName(var1.replace((char)47, (char)46), false, this.g);
    }
-
-
 }

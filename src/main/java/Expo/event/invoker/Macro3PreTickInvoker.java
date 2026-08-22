@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.module.impl.macro.Macro3;
 
-
-
-
-
-
-
-
-
-
-
 public final class Macro3PreTickInvoker implements EventInvoker {
    final Macro3 Y;
 

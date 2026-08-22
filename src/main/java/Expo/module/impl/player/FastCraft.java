@@ -40,7 +40,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.lwjgl.input.Mouse;
 
-
 public class FastCraft extends Module implements EventSubscriber {
    private final int[] J;
    private static long[] e;
@@ -180,7 +179,6 @@ public class FastCraft extends Module implements EventSubscriber {
    }
 
    public void onPreUpdate(long var1, PreUpdateEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (f.currentScreen instanceof GuiCrafting) {
          Container var10 = f.thePlayer.openContainer;
          ContainerWorkbench var11 = (ContainerWorkbench)var10;
@@ -265,7 +263,6 @@ public class FastCraft extends Module implements EventSubscriber {
 
    public FastCraft(short var1, short var2, int var3) {
       super(((((((long)((var1)) << 48) | (((long)((var2)) << 48) >>> 16)) | (((long)((var3)) << 32) >>> 32)) ^ a) ^ 111658972797502L));
-      // add code
       this.declare("FastCraft", Category.Player, "Craft some MegaWalls items faster");
       this.J = new int[]{1, 2, 3, 4, 6};
       int[] var10001 = new int[8];
@@ -303,11 +300,6 @@ public class FastCraft extends Module implements EventSubscriber {
    }
 
    public void onPostDrawScreen(PostDrawScreenEvent var1, long var2) {
-
-
-
-
-
       boolean var11 = this.v;
       if (var1.C instanceof GuiCrafting) {
          this.v = Mouse.isButtonDown(0);

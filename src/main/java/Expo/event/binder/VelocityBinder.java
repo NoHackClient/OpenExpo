@@ -15,16 +15,6 @@ import Expo.event.invoker.VelocityReceivePacketInvoker;
 import Expo.event.invoker.VelocityWorldLoadInvoker;
 import Expo.module.impl.combat.Velocity;
 
-
-
-
-
-
-
-
-
-
-
 public final class VelocityBinder {
    private static final long a = 92901142756133L;
 

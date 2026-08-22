@@ -23,16 +23,6 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 
-
-
-
-
-
-
-
-
-
-
 public class VanillaHudRenderer extends Gui {
    private static final ResourceLocation e = new ResourceLocation("textures/gui/widgets.png");
 

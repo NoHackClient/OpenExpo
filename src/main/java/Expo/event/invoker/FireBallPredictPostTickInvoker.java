@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.visual_utility.FireBallPredict;
 
-
-
-
-
-
-
-
-
-
-
 public final class FireBallPredictPostTickInvoker implements EventInvoker {
    final FireBallPredict L;
 

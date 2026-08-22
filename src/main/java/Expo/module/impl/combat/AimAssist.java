@@ -40,7 +40,6 @@ import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 
-
 public class AimAssist extends Module implements EventSubscriber {
    public static BooleanSetting lock;
    public static NumberSetting horizontalSpeed;
@@ -71,7 +70,6 @@ public class AimAssist extends Module implements EventSubscriber {
    public String g(long var1) {
       return String.valueOf(horizontalSpeed.L());
    }
-
 
    private static String b(byte[] var0) {
       int var1 = 0;
@@ -105,12 +103,6 @@ public class AimAssist extends Module implements EventSubscriber {
    }
 
    private void J(long var1, EntityLivingBase var3) {
-
-
-
-
-
-
       float[] var13;
       if (ignoreBehindWall.c()) {
          var13 = RotationUtil.p(var3, range.L(), 133389424731416L);
@@ -147,10 +139,6 @@ public class AimAssist extends Module implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) {
-
-
-
-
       if (f.currentScreen != null) {
          this.g = null;
       } else if (!KeyBindUtil.V(f.gameSettings.keyBindAttack.getKeyCode(), 64165991731362L)) {
@@ -176,9 +164,6 @@ public class AimAssist extends Module implements EventSubscriber {
    }
 
    private EntityLivingBase L(long var1) {
-
-
-
       float var7 = range.L();
       float var8 = fov.L();
       boolean var9 = players.c();
@@ -196,7 +181,6 @@ public class AimAssist extends Module implements EventSubscriber {
 
       if (ignoreBehindWall.c()) {
          var17.removeIf(var1x -> {
-
             return RaytraceUtil.V(var1x, 140537582766428L, var7);
          });
       }
@@ -276,7 +260,6 @@ public class AimAssist extends Module implements EventSubscriber {
 
    public AimAssist(long var1) {
       super(((k ^ (var1)) ^ 101115674713218L));
-      // add code
       this.declare("AimAssist", Category.Combat, "Help you aim BETTER when you click");
       var1 = k ^ var1;
       this.g = null;
@@ -345,7 +328,6 @@ public class AimAssist extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       lock = new BooleanSetting("Lock", false);
       breakBlocks = new BooleanSetting("Break-blocks", true);
       ignoreBehindWall = new BooleanSetting("Ignore-behind-wall", true);
@@ -360,18 +342,15 @@ public class AimAssist extends Module implements EventSubscriber {
       bots = new BooleanSetting("Bots", false);
    }
    static {
-      // add code
       range = new NumberSetting("Range", 6.0F, 0.1F, 10.0F, 0.1F);
       fov = new NumberSetting("FOV", 180.0F, 1.0F, 360.0F, 1.0F);
       horizontalSpeed = new NumberSetting("Horizontal-speed", 15.0F, 1.0F, 20.0F, 0.1F);
       verticalSpeed = new NumberSetting("Vertical-speed", 5.0F, 1.0F, 20.0F, 0.1F);
    }
    static {
-      // add code
       sort = new ModeSetting("Sort", "DISTANCE", "HEALTH", "VIEW", "HURT_TIME", "ARMOR");
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

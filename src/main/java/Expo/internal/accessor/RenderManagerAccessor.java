@@ -8,16 +8,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.renderer.entity.RenderManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class RenderManagerAccessor {
    private static TypedValueStore F;
    private static TypedValueStore t;
@@ -31,8 +21,6 @@ public final class RenderManagerAccessor {
       return F.w(var3);
    }
 
-
-
    public static double k(long var0, RenderManager var2) {
       return O.w(var2);
    }
@@ -42,5 +30,4 @@ public final class RenderManagerAccessor {
       F = FieldAccessors.X(RenderManager.class, "renderPosY", "renderPosY");
       t = FieldAccessors.X(RenderManager.class, "renderPosZ", "renderPosZ");
    }
-
 }

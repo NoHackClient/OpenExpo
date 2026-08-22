@@ -3,16 +3,6 @@ package Expo.ui.swing;
 import java.awt.Point;
 import javax.swing.JScrollPane;
 
-
-
-
-
-
-
-
-
-
-
 class ConfigManagerScrollRunnable implements Runnable {
    final JScrollPane v;
    final ConfigManagerWindow W;

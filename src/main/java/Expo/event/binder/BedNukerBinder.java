@@ -19,16 +19,6 @@ import Expo.event.invoker.BedNukerRender3DInvoker;
 import Expo.event.invoker.BedNukerSendPacketInvoker;
 import Expo.module.impl.world.BedNuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedNukerBinder {
    private static final long a = 29300658956394L;
 

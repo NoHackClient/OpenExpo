@@ -45,16 +45,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
-
-
-
-
-
-
-
-
-
-
 public final class AuthService {
    public static String E;
    private static Map d;
@@ -66,7 +56,6 @@ public final class AuthService {
    public static CompletableFuture<String> P(String var0, String var1, Executor var2) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var6 = d();
                Throwable var7 = null;
@@ -119,7 +108,6 @@ public final class AuthService {
    public static CompletableFuture<String> M(String var0, Executor var1) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var5 = d();
                Throwable var6 = null;
@@ -180,7 +168,6 @@ public final class AuthService {
    }
 
    public static URI P( String var2) {
-
       try {
          URIBuilder var3 = new URIBuilder("https://login.live.com/oauth20_authorize.srf")
             .addParameter("client_id", "42a60a84-599d-44b2-a7c6-b00cdef1d6a2")
@@ -198,7 +185,6 @@ public final class AuthService {
    public static CompletableFuture<Map<String, String>> x(String var0, Executor var1) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var5 = d();
                Throwable var6 = null;
@@ -276,12 +262,9 @@ public final class AuthService {
       );
    }
 
-
-
    public static CompletableFuture<Map<String, String>> L(String var0, Executor var1) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var5 = d();
                Throwable var6 = null;
@@ -442,7 +425,6 @@ public final class AuthService {
 
    public static CompletableFuture<Session> i(String var0, Executor var1) {
       return CompletableFuture.supplyAsync(() -> {
-
          try {
             CloseableHttpClient var5 = d();
             Throwable var6 = null;
@@ -489,7 +471,6 @@ public final class AuthService {
    public static CompletableFuture<Map<String, String>> A(String var0, Executor var1) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var5 = d();
                Throwable var6 = null;
@@ -567,12 +548,7 @@ public final class AuthService {
       );
    }
 
-
-
-
-
    private static CloseableHttpClient d() {
-
       try {
          SSLSocketFactory var2 = TrustAllSslContext.j().getSocketFactory();
          SSLConnectionSocketFactory var3 = new SSLConnectionSocketFactory(var2, new String[]{"TLSv1.2"}, null, new BrowserCompatHostnameVerifier());
@@ -581,7 +557,4 @@ public final class AuthService {
          return HttpClients.createDefault();
       }
    }
-
-
-
 }

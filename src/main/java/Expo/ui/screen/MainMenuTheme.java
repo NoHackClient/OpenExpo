@@ -28,7 +28,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.GuiModList;
 import org.lwjgl.opengl.Display;
 
-
 public class MainMenuTheme implements EventSubscriber {
    private static long[] h;
    public static ModeSetting mode;
@@ -123,19 +122,11 @@ public class MainMenuTheme implements EventSubscriber {
       }
    }
 
-
    public static boolean X(long var0) {
       return b();
    }
 
    public void onPostTick(long var1, PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
       if (!this.t) {
          this.C = Display.getTitle();
          this.t = true;
@@ -217,12 +208,10 @@ public class MainMenuTheme implements EventSubscriber {
       MainMenuThemeBinder.D(var3, this);
    }
 
-
    private static boolean W(long var0) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       long var2 = var0 ^ 76067192870528L;
       return b() && music.c() && I.theWorld == null && I.thePlayer == null && A(I.currentScreen, var2);
    }
-
 
    public static void S(int var0, int var1) {
       if (!"User".equals("Injection")) {
@@ -244,10 +233,6 @@ public class MainMenuTheme implements EventSubscriber {
    }
 
    public void onPreTick(long var1, PreTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       if (W(42846407720032L)) {
          I.getSoundHandler().stopSounds();
          MinecraftAccessor.S((char)0, 1751831693, I).func_181557_a();
@@ -255,12 +240,10 @@ public class MainMenuTheme implements EventSubscriber {
    }
 
    private static Object k(GuiScreen var0, long var1) {
-
       try {
          Method var3 = var0.getClass().getMethod("func_154321_a");
          return var3.invoke(var0);
       } catch (Throwable var4) {
-         Expo.internal.restore.ExpoDiag.attribute(var4, "MainMenuTheme.k/2#0");
          return null;
       }
    }
@@ -286,6 +269,4 @@ public class MainMenuTheme implements EventSubscriber {
    public static boolean o(long var0) {
       return b();
    }
-
-
 }

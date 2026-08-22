@@ -2,16 +2,6 @@ package Expo.internal.synthetic;
 
 import net.minecraft.util.EnumFacing;
 
-
-
-
-
-
-
-
-
-
-
 public class ChestESPSwitchMapEnumFacing {
    public static final int[] V = new int[EnumFacing.values().length];
 

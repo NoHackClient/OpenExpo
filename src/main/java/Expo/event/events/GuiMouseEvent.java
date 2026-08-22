@@ -3,16 +3,6 @@ package Expo.event.events;
 import Expo.event.Event;
 import net.minecraft.client.gui.GuiScreen;
 
-
-
-
-
-
-
-
-
-
-
 public class GuiMouseEvent extends Event {
    public final GuiScreen j;
    private static final long a = 135486859174404L;

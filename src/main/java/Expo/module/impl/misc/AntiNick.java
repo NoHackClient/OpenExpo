@@ -11,16 +11,6 @@ import Expo.setting.settings.TextSetting;
 import com.mojang.authlib.GameProfile;
 import java.util.UUID;
 
-
-
-
-
-
-
-
-
-
-
 public class AntiNick extends Module implements EventSubscriber {
    private static final long a = 106963681923233L;
    public static TextSetting suffix;
@@ -42,7 +32,6 @@ public class AntiNick extends Module implements EventSubscriber {
 
    public AntiNick(long var1) {
       super(((a ^ (var1)) ^ 50917928111327L));
-      // add code
       this.declare("AntiNick", Category.Misc, "Allows you to see if any player is nicked");
       var1 = a ^ var1;
    }
@@ -54,7 +43,6 @@ public class AntiNick extends Module implements EventSubscriber {
    private static void a() {
    }
    static {
-      // add code
       suffix = new TextSetting("Suffix", "\u00a7l\u00a7e[\u00a7l\u00a7eNick\u00a7r\u00a7l\u00a7e]\u00a7r");
    }
 }

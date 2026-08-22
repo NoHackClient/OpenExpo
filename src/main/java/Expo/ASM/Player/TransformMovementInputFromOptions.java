@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformMovementInputFromOptions extends TransformerBase {
    private static long d;
-
 
    public TransformMovementInputFromOptions() {
       super("net/minecraft/util/MovementInputFromOptions");
@@ -18,7 +16,6 @@ public class TransformMovementInputFromOptions extends TransformerBase {
    static {
       d = 10135976976134L;
    }
-
 
    public boolean s(ClassNode var1) {
       return BytecodeHelper.t(

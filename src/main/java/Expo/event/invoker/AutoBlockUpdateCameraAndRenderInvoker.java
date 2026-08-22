@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.UpdateCameraAndRenderEvent;
 import Expo.module.impl.combat.AutoBlock;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoBlockUpdateCameraAndRenderInvoker implements EventInvoker {
    final AutoBlock B;
 

@@ -3,16 +3,6 @@ package Expo.ui.swing;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-
-
-
-
-
-
-
-
-
-
 class ConfigManagerWindowCloseAdapter extends WindowAdapter {
    private static final long a = 100160086535595L;
    final ConfigManagerWindow W;

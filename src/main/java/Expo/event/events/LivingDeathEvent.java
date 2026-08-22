@@ -4,16 +4,6 @@ import Expo.event.Event;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;
 
-
-
-
-
-
-
-
-
-
-
 public class LivingDeathEvent extends Event {
    public final EntityLivingBase p;
    public final DamageSource M;

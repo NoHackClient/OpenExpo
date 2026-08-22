@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Map;
 
-
 public class StockConfigStore {
    private static Map d;
    private static String[] c;
@@ -33,8 +32,6 @@ public class StockConfigStore {
    public static native boolean u(JsonObject var0, long var1);
 
    public static native void U(JsonObject var0, long var1);
-
-   private static native String a(int var0, long var1);
 
    public static native void n(JsonObject var0, long var1);
 
@@ -66,8 +63,6 @@ public class StockConfigStore {
 
    public static native void K(long var0, JsonObject var2, Category var3);
 
-   private static native void H(Setting var0, short var1, int var2, JsonObject var3, int var4);
-
    public static native Path u(long var0, String var2);
 
    public static native JsonObject i(long var0, JsonObject var2);
@@ -75,7 +70,6 @@ public class StockConfigStore {
    public static native JsonObject Z(JsonObject var0, long var1);
 
    public static native JsonObject A(long var0, JsonObject var2);
-
 
    public static boolean o(String var2) {
       return ExpoConfig.save(var2).ok;

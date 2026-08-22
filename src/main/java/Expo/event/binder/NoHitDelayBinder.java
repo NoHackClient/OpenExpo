@@ -9,16 +9,6 @@ import Expo.event.invoker.NoHitDelayPostClickMouseInvoker;
 import Expo.event.invoker.NoHitDelayPostTickInvoker;
 import Expo.module.impl.player.NoHitDelay;
 
-
-
-
-
-
-
-
-
-
-
 public final class NoHitDelayBinder {
    private static final long a = 131580852294153L;
 

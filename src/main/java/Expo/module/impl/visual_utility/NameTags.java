@@ -53,7 +53,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-
 public class NameTags extends Module implements EventSubscriber {
    public static BooleanSetting onlyName;
    private static String[] E;
@@ -104,9 +103,6 @@ public class NameTags extends Module implements EventSubscriber {
    }
 
    private void c(EntityLivingBase var1, CustomFont var2, long var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (var1 instanceof EntityPlayer) {
          float var11 = var2.o(60714858652844L) + 2.0F;
          // update new version
@@ -213,31 +209,7 @@ public class NameTags extends Module implements EventSubscriber {
       x.clear();
    }
 
-   private static void a() {
-      y[0] = "\u0001yM(tH=";
-      y[1] = long.class;
-      E[1] = "java/lang/Long";
-      y[2] = boolean.class;
-      E[2] = "java/lang/Boolean";
-      y[3] = "o%_\u001e\fdq-EQnxv0";
-      y[4] = "9B\u0014yD\u00049B\u0003%H\u000b#\t\u00059]\u0004#^N\u0012G\u0019>S\u0019";
-      y[5] = "v\fv\u0016\u0000zv\faJ\fulGgV\u0019zl\u0010,H\u0001ra\fp\u0016(}l\u0000vA=\u007fy\u0010gJ";
-      y[6] = "a@j\u007f\u001d\u007fG";
-      y[7] = ":`r\u001cZp\rwv\u0016\u0017T\u001a|,\n";
-      y[8] = "da\u0018hY$f";
-      y[9] = void.class;
-      E[9] = "java/lang/Void";
-      y[10] = "\u001c&a\u0018~F\u0017)pW\u001fH\u001c\"t\r";
-      y[11] = "m,Hp'^?#N\u0015'\"$+_wsB5tT\u0015w@n>Cl']i}//v\u001ej ItrXlL\u0015/p\u001c8*N+6\u001aTv\u0015)rN2-\u0011ot\"nv\u0013+ D5rU-L\u0018np\u0011y*Cj6\u0017\u0015";
-      y[12] = "\u0017|\u0018M;|IjJ\u0004\u0005J+8\u0012\u0019;eR?\u0005\u00128\u0003\u0015:\u0014IhrG9EJ\u0005sLu\u0019Keb\u0013~{J}x\u00154A\u0016:bO\u0005";
-      y[13] = "c\u001a\u001bFXK1\u0015\u001d#n7*\u001d\fA\fW;B\u0007#\t\rfD\u0010ER\t B|\u0019^[aG\u001b\u0018^Y`z";
-      y[14] = "r\u0012){,` \u001d/\u001e>\u001cq\r'e.n7\t1/G&qNpr!}u\bv\u001e}&wL\"x&\"1JN$} u\u001e(\u007fyfsrt${\"'\u0014/ =$KHt\"yp-\u0013pd\u007f\u001cqHr +z*L4&G&qNpr!}u\bv\u001e}&wL\"x&\"1JNn l)M.\u007f\u007fgKHt\"yp-\u0013pd\u007f\u001c";
-   }
-
    public void onRender3D(Render3DEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       CustomFont var9 = Font.s(0L);
       float var10 = var1.j;
       x.clear();
@@ -257,8 +229,6 @@ public class NameTags extends Module implements EventSubscriber {
    private float y() {
       return f.gameSettings.thirdPersonView == 2 ? -1.0F : 1.0F;
    }
-
-
 
    private void O(EntityLivingBase var1, double var2, double var4, double var8, double var10) {
       GlStateManager.translate(var2, var4 + (var1.isSneaking() ? 0.225 : 0.4), var8);
@@ -349,12 +319,6 @@ public class NameTags extends Module implements EventSubscriber {
    }
 
    private void l(long var1, EntityLivingBase var3, CustomFont var4, String var5) {
-
-
-
-
-
-
       float var18 = var4.R(var5, 52019766876817L);
       Color var19 = !var3.isSneaking() && !var3.isInvisible()
          ? new Color(0.0F, 0.0F, 0.0F, backgroundOpacity.k() / 100.0F)
@@ -407,10 +371,8 @@ public class NameTags extends Module implements EventSubscriber {
       GlStateManager.popMatrix();
    }
 
-
    public NameTags(long var1) {
       super(((a ^ (var1)) ^ 119992795285380L));
-      // add code
       this.declare("NameTags", Category.Visual_utility, "Modify nametags rendering");
       var1 = a ^ var1;
       this.Y = new ArrayList<>();
@@ -448,8 +410,6 @@ public class NameTags extends Module implements EventSubscriber {
    }
 
    public void onPostTick(PostTickEvent var1, long var2) {
-
-
       this.Y.clear();
       boolean var10 = players.c();
       boolean var11 = mobs.c();
@@ -488,7 +448,6 @@ public class NameTags extends Module implements EventSubscriber {
       s = new long[]{8114464844023189536L, -8498047997027657721L, -6848780433799349009L, 1123611790016166617L, -8478601633323954937L, -1822533454991580431L, 4543667561951989338L, 366751151073540261L, -7937407761630176002L, 4904965540425861536L, -5136359554768556648L};
    }
 
-
    private void W(long var1, ItemStack var3, float var4, float var5, float var6) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       long var9 = var1 ^ 131829999346408L;
       NBTTagList var11 = var3.getItem() == Items.enchanted_book ? Items.enchanted_book.getEnchantments(var3) : var3.getEnchantmentTagList();
@@ -509,7 +468,6 @@ public class NameTags extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       teammates = new BooleanSetting("Teammates", true);
       bots = new BooleanSetting("Bots", false);
       backgroundOpacity = new PercentageSetting("Background-opacity", 30);
@@ -537,7 +495,6 @@ public class NameTags extends Module implements EventSubscriber {
       showEffects = new BooleanSetting("Show-effects", false);
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

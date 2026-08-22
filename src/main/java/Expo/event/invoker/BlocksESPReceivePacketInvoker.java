@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ReceivePacketEvent;
 import Expo.module.impl.visual_utility.BlocksESP;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlocksESPReceivePacketInvoker implements EventInvoker {
    final BlocksESP n;
 

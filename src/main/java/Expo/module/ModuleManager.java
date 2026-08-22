@@ -25,7 +25,6 @@ import java.util.Map.Entry;
 import java.util.Map;
 import org.apache.logging.log4j.Logger;
 
-
 public class ModuleManager {
    public static CaveXray m;
    public static NameHider J;
@@ -56,7 +55,6 @@ public class ModuleManager {
    public static boolean $skidonion$1876635314;
 
    static {
-      // add code
       m = new CaveXray(0L);
       W = new BarrierVisible(0L);
       d = new Animations(0L);
@@ -67,22 +65,16 @@ public class ModuleManager {
       q = new ChestStealer(0L);
       r = new HitBox(0L);
       v = new ItemScale(0L);
-
    }
 
-   private static native String a(int var0, long var1);
-
-   // add code
    public static List<Module> modules() {
       return S == null ? java.util.Collections.<Module>emptyList() : S;
    }
 
-   // add code
    public static Module byClass(Class<? extends Module> var0) {
       return o == null ? null : o.get(var0);
    }
 
-   // add code
    public static Module byName(String var0) {
       if (var0 != null) {
          for (Module var1 : modules()) {
@@ -95,7 +87,6 @@ public class ModuleManager {
       return null;
    }
 
-   // add code
    public static List<Module> inCategory(Category var0) {
       List<Module> var1 = new java.util.ArrayList<Module>();
 
@@ -108,7 +99,6 @@ public class ModuleManager {
       return var1;
    }
 
-   // add code
    public static List<String> names() {
       List<String> var0 = new java.util.ArrayList<String>();
 
@@ -121,10 +111,8 @@ public class ModuleManager {
       return var0;
    }
 
-   // add code
    public static String describe(String var0) {
       Module var1 = byName(var0);
       return var1 == null ? null : var1.description();
    }
-
 }

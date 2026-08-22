@@ -10,7 +10,6 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.scoreboard.ScoreObjective;
 
-
 public class GuiIngameHooks {
    private static long a;
    private static long b;
@@ -38,5 +37,4 @@ public class GuiIngameHooks {
          var2.cancel();
       }
    }
-
 }

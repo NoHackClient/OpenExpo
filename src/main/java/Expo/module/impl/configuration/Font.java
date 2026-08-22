@@ -20,7 +20,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
 public class Font extends Module {
    private static CustomFont H;
    private static long a;
@@ -58,7 +57,6 @@ public class Font extends Module {
 
    public Font(long var1) {
       super(((a ^ (var1)) ^ 34253150402247L));
-      // add code
       this.declare("Font", Category.Configuration, "Manage font rendering");
       var1 = a ^ var1;
    }
@@ -189,7 +187,6 @@ public class Font extends Module {
    }
 
    static {
-      // add code
       clickguiFont = new ModeSetting("ClickGUI-font", "NONE", "PRODUCT_SANS", "INTER", "PING_FANG", "ROBOTO", "TAHOMA");
       hudFont = new ModeSetting("HUD-font", "NONE", "PRODUCT_SANS", "INTER", "PING_FANG", "ROBOTO", "TAHOMA");
       scoreboardFont = new ModeSetting("Scoreboard-font", "NONE", "PRODUCT_SANS", "INTER", "PING_FANG", "ROBOTO", "TAHOMA");

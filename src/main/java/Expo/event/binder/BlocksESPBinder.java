@@ -9,16 +9,6 @@ import Expo.event.invoker.BlocksESPReceivePacketInvoker;
 import Expo.event.invoker.BlocksESPRender3DInvoker;
 import Expo.module.impl.visual_utility.BlocksESP;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlocksESPBinder {
    private static final long a = 123756056164713L;
 
@@ -30,5 +20,4 @@ public final class BlocksESPBinder {
       var2.R(var3, ReceivePacketEvent.class, 3, new BlocksESPReceivePacketInvoker(var3));
       var2.R(var3, Render3DEvent.class, 3, new BlocksESPRender3DInvoker(var3));
    }
-
 }

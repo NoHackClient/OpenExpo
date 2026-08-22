@@ -11,7 +11,6 @@ import Expo.setting.settings.TextSetting;
 import java.util.List;
 import java.util.Map;
 
-
 public class StockCommandModuleSetting extends Command {
    private static String[] c;
    private static long[] e;
@@ -24,12 +23,7 @@ public class StockCommandModuleSetting extends Command {
 
    private native boolean d(long var1, NumberSetting var3, String[] var4);
 
-   private static native String a(int var0, long var1);
-
    private native boolean b(TextSetting var1, short var2, String[] var3, int var4, short var5);
-
-   private static native int b(int var0, long var1);
-
 
    public static native String O(String var0, String var1, String var2);
 

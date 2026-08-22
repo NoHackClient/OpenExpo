@@ -3,16 +3,6 @@ package Expo.ui.studio;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
-
-
-
-
-
-
-
-
 public class StudioFrameState {
    public float J;
    public boolean S;

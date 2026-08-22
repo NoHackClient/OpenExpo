@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.misc.CommandLine;
 
-
-
-
-
-
-
-
-
-
-
 public final class CommandLinePreUpdateInvoker implements EventInvoker {
    final CommandLine w;
 

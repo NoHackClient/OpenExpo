@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PlayerRightClickEvent;
 import Expo.module.impl.player.ChestAura;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChestAuraPlayerRightClickInvoker implements EventInvoker {
    final ChestAura l;
 

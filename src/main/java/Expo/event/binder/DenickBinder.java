@@ -7,16 +7,6 @@ import Expo.event.invoker.DenickPlayerGetNameInvoker;
 import Expo.event.invoker.DenickPostTickInvoker;
 import Expo.module.impl.misc.Denick;
 
-
-
-
-
-
-
-
-
-
-
 public final class DenickBinder {
    private static final long a = 29576312540654L;
 

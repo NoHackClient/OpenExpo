@@ -9,16 +9,6 @@ import Expo.event.invoker.BackTrackPreUpdateInvoker;
 import Expo.event.invoker.BackTrackRender2DInvoker;
 import Expo.module.impl.combat.BackTrack;
 
-
-
-
-
-
-
-
-
-
-
 public final class BackTrackBinder {
    private static final long a = 135812800071493L;
 

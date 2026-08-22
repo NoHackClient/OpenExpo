@@ -37,7 +37,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.settings.KeyBinding;
 
-
 public class KeyStrokes extends Module implements EventSubscriber {
    private static Object[] t;
    private static Map e;
@@ -87,8 +86,6 @@ public class KeyStrokes extends Module implements EventSubscriber {
    }
 
    private float u(String var1, float var2, long var3, float var5) {
-
-
       return var2 + (var5 - var2) / 2.0F - this.n.R(var1, 52019766876817L) / 2.0F;
    }
 
@@ -105,11 +102,6 @@ public class KeyStrokes extends Module implements EventSubscriber {
    }
 
    private void D(KeyBinding var1, float var2, float var3, float var4, float var5, float var6, long var7, float var9) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
       this.a(var1, var2, var3, 11955L, 1464655768, var4, var5, var6, var9, KeyBindUtil.p(1864665317L, (char)64411, var1.getKeyCode()));
    }
 
@@ -128,9 +120,6 @@ public class KeyStrokes extends Module implements EventSubscriber {
    }
 
    private void n(KeyBinding var1, float var2, long var3, float var5, float var6, float var7) {
-
-
-
       GlStateManager.pushMatrix();
       Expo.util.render.RenderUtil.c(125644905353792L, var2, var5, var6, var7, new Color(0, 0, 0, (int)(2.55F * backgroundOpacity.k())).getRGB());
       if (System.currentTimeMillis() - h.get(var1) < 40L) {
@@ -160,7 +149,6 @@ public class KeyStrokes extends Module implements EventSubscriber {
    }
 
    public void onMouse(MouseEvent var1, long var2) {
-
       for (Entry var5 : h.entrySet()) {
          if (((KeyBinding)var5.getKey()).getKeyCode() + 100 == var1.getButton()) {
             h.put((KeyBinding)var5.getKey(), System.currentTimeMillis());
@@ -177,10 +165,8 @@ public class KeyStrokes extends Module implements EventSubscriber {
       return (int)(2.0F * var8);
    }
 
-
    public KeyStrokes(byte var1, int var2, int var3) {
       super(((((((long)((var1)) << 56) | (((long)((var2)) << 32) >>> 8)) | (((long)((var3)) << 40) >>> 40)) ^ b) ^ 17198579932816L));
-      // add code
       this.declare("KeyStrokes", Category.Visual, "Show your keys interactions");
       this.D = 4.0F;
       this.L = 2.0F;
@@ -290,19 +276,10 @@ public class KeyStrokes extends Module implements EventSubscriber {
    }
 
    private float T(long var1) {
-
-
       return 8.0F + this.n.o(60714858652844L);
    }
 
    public void onRender2D(long var1, Render2DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
       this.n = Font.F(0L);
       float var17 = offsetX.L();
       float var18 = offsetY.L();
@@ -355,12 +332,6 @@ public class KeyStrokes extends Module implements EventSubscriber {
    }
 
    private void E(KeyBinding var1, long var2, float var4, float var5) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
       float var15 = this.n.o(60714858652844L);
       this.D(
          var1,
@@ -578,7 +549,6 @@ public class KeyStrokes extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       offsetX = new NumberSetting("Offset-X", 120.0F, 0.0F, 1000.0F, 1.0F);
       offsetY = new NumberSetting("Offset-Y", 30.0F, 0.0F, 1000.0F, 1.0F);
       backgroundOpacity = new PercentageSetting("Background-opacity", 50);

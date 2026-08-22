@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreLivingUpdateEvent;
 import Expo.module.impl.combat.FakeLag;
 
-
-
-
-
-
-
-
-
-
-
 public final class FakeLagPreLivingUpdateInvoker implements EventInvoker {
    final FakeLag j;
 

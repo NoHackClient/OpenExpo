@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render3DEvent;
 import Expo.module.impl.visual.BreakProgress;
 
-
-
-
-
-
-
-
-
-
-
 public final class BreakProgressRender3DInvoker implements EventInvoker {
    final BreakProgress T;
 

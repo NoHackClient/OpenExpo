@@ -13,7 +13,6 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.util.EnumFacing;
 
-
 public class RaytraceUtilSwitchMapEnumFacing {
    public static int[] b;
 
@@ -86,5 +85,4 @@ public class RaytraceUtilSwitchMapEnumFacing {
          throw new RuntimeException(var16);
       }
    }
-
 }

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.AttackEntityEvent;
 import Expo.module.impl.combat.WTap;
 
-
-
-
-
-
-
-
-
-
-
 public final class WTapAttackEntityInvoker implements EventInvoker {
    final WTap b;
 

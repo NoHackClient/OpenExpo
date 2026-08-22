@@ -1,7 +1,5 @@
 package Expo.ASM.Util;
 
-
-
 public final class MethodRef {
    private final String i;
    private final String v;
@@ -11,7 +9,6 @@ public final class MethodRef {
    static String O(MethodRef var0) {
       return var0.i;
    }
-
 
    public MethodRef(String var1, String var2, String var3) {
       this.i = var1;
@@ -49,5 +46,4 @@ public final class MethodRef {
    static String V(MethodRef var0) {
       return var0.v;
    }
-
 }

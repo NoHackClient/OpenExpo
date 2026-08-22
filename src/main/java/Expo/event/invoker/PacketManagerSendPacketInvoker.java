@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SendPacketEvent;
 import Expo.util.packet.PacketManager;
 
-
-
-
-
-
-
-
-
-
-
 public final class PacketManagerSendPacketInvoker implements EventInvoker {
    final PacketManager U;
 

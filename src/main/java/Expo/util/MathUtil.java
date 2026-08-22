@@ -6,16 +6,6 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class MathUtil {
    private static long b;
    private static long a;

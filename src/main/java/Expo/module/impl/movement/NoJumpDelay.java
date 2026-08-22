@@ -16,16 +16,6 @@ import java.security.spec.InvalidKeySpecException;
 import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 
-
-
-
-
-
-
-
-
-
-
 public class NoJumpDelay extends Module implements EventSubscriber {
    private static final long a = 43870994421215L;
    public static NumberSetting jumpTicks;
@@ -34,7 +24,6 @@ public class NoJumpDelay extends Module implements EventSubscriber {
    }
 
    public void onPreTick(PreTickEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       EntityLivingBaseStateAccessor.x(14848, f.thePlayer, Math.min(EntityLivingBaseStateAccessor.C( f.thePlayer), (int)jumpTicks.L() + 1));
    }
 
@@ -44,7 +33,6 @@ public class NoJumpDelay extends Module implements EventSubscriber {
 
    public NoJumpDelay(long var1) {
       super(((a ^ (var1)) ^ 128982966657112L));
-      // add code
       this.declare("NoJumpDelay", Category.Movement, "Remove vanilla hold-space jump delay");
       var1 = a ^ var1;
    }
@@ -57,7 +45,6 @@ public class NoJumpDelay extends Module implements EventSubscriber {
       return String.valueOf((int)jumpTicks.L());
    }
    static {
-      // add code
       jumpTicks = new NumberSetting("Jump-ticks", 0.0F, 0.0F, 10.0F, 1.0F);
    }
 }

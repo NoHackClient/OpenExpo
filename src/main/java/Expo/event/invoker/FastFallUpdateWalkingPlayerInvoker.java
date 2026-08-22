@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.UpdateWalkingPlayerEvent;
 import Expo.module.impl.movement.FastFall;
 
-
-
-
-
-
-
-
-
-
-
 public final class FastFallUpdateWalkingPlayerInvoker implements EventInvoker {
    final FastFall Z;
 

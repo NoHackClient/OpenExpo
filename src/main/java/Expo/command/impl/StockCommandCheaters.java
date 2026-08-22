@@ -25,16 +25,6 @@ import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 
-
-
-
-
-
-
-
-
-
-
 public class StockCommandCheaters extends Command {
    private static Minecraft p;
    private static String[] a;
@@ -162,5 +152,4 @@ public class StockCommandCheaters extends Command {
 
       return new String(var3, 0, var1);
    }
-
 }

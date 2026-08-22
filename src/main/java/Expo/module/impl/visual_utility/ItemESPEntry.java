@@ -3,16 +3,6 @@ package Expo.module.impl.visual_utility;
 import Expo.internal.synthetic.ItemESPCtorMarker;
 import net.minecraft.entity.item.EntityItem;
 
-
-
-
-
-
-
-
-
-
-
 public class ItemESPEntry {
    private final int a;
    private final EntityItem d;

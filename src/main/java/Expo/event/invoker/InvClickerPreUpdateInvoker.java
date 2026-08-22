@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.player.InvClicker;
 
-
-
-
-
-
-
-
-
-
-
 public final class InvClickerPreUpdateInvoker implements EventInvoker {
    final InvClicker a;
 

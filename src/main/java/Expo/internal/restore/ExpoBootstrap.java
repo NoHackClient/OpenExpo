@@ -11,14 +11,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
 public final class ExpoBootstrap {
-
    public static final long REGISTRATION_CARRIER = 0L;
-
-
-
-
 
    public static final List<String> SUBSCRIBED = new ArrayList<String>();
 
@@ -28,8 +22,6 @@ public final class ExpoBootstrap {
    }
 
    public static void initClient() {
-      // add code
-      ExpoTableDump.install();
       if (ExpoClient.w != null) {
          return;
       }
@@ -76,6 +68,8 @@ public final class ExpoBootstrap {
       ExpoClickGui.install(PENDING);
       ExpoCommands.install(PENDING);
 
+      subscribeAlways(var2, "Expo.module.impl.misc.Timer", "Timer");
+
       ExpoClient.w = var2;
       if (ExpoModuleRegistry.PLAIN_LISTENER != null) {
          PENDING.add("Expo.internal.CheaterDetector held out of tD.S and left unsubscribed -- /cheaters reads its "
@@ -90,12 +84,10 @@ public final class ExpoBootstrap {
       try {
          ExpoGuiWindow.install(PENDING);
       } catch (Throwable var3) {
-         PENDING.add("ExpoGuiWindow.install threw: " + ExpoDiag.describe(var3));
+         PENDING.add("ExpoGuiWindow.install threw: " + String.valueOf(var3));
       }
 
-
       diag$dump();
-      ExpoSelfTest.install();
    }
 
    private static String census() {
@@ -192,6 +184,31 @@ public final class ExpoBootstrap {
       }
    }
 
+   /**
+    * Subscribes a registered module by its declared name and keeps it that way.
+    * Looked up through ModuleManager.S rather than Modules.J so it does not
+    * depend on the class-keyed map being populated at this point in boot.
+    */
+   private static void subscribeAlways(EventBus var0, String var1, String var2) {
+      Module var3 = null;
+      if (ModuleManager.S != null) {
+         for (Module var5 : ModuleManager.S) {
+            if (var2.equalsIgnoreCase(var5.b())) {
+               var3 = var5;
+               break;
+            }
+         }
+      }
+
+      if (var3 == null) {
+         PENDING.add(var1 + " not in ModuleManager.S; its listener stays unregistered");
+         return;
+      }
+
+      var0.s(var3, REGISTRATION_CARRIER);
+      SUBSCRIBED.add(var1);
+   }
+
    private static void sub(EventBus var0, String var1, Object var2) {
       if (var2 == null) {
          throw new IllegalStateException("ExpoBootstrap: null listener " + var1);
@@ -206,7 +223,7 @@ public final class ExpoBootstrap {
          Expo.module.impl.visual.KeyStrokes.T();
          SUBSCRIBED.add("za_4.T (KeyStrokes last-press map seeded)");
       } catch (Throwable var0) {
-         PENDING.add("za_4.T threw: " + ExpoDiag.describe(var0));
+         PENDING.add("za_4.T threw: " + String.valueOf(var0));
       }
 
       try {
@@ -231,7 +248,7 @@ public final class ExpoBootstrap {
             PENDING.add("zH_3.O is null -- CustomCape cannot resolve any texture");
          }
       } catch (Throwable var1) {
-         PENDING.add("zH_3.O seeding threw: " + ExpoDiag.describe(var1));
+         PENDING.add("zH_3.O seeding threw: " + String.valueOf(var1));
       }
 
       try {
@@ -244,8 +261,7 @@ public final class ExpoBootstrap {
             PENDING.add("yg_2.W left empty -- no Minecraft session name available");
          }
       } catch (Throwable var2) {
-         PENDING.add("yg_2.W seeding threw: " + ExpoDiag.describe(var2));
+         PENDING.add("yg_2.W seeding threw: " + String.valueOf(var2));
       }
    }
-
 }

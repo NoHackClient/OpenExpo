@@ -7,16 +7,6 @@ import Expo.event.invoker.ChamsPostRenderInvoker;
 import Expo.event.invoker.ChamsPreRenderInvoker;
 import Expo.module.impl.visual.Chams;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChamsBinder {
    private static final long a = 58488706269333L;
 
@@ -27,5 +17,4 @@ public final class ChamsBinder {
 
    private ChamsBinder() {
    }
-
 }

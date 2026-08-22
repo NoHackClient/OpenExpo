@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreTickEvent;
 import Expo.module.impl.combat.KeepSprint;
 
-
-
-
-
-
-
-
-
-
-
 public final class KeepSprintPreTickInvoker implements EventInvoker {
    final KeepSprint V;
 

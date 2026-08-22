@@ -12,16 +12,6 @@ import java.awt.Color;
 import java.util.Arrays;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
 public class Theme extends Module {
    public static ColorSetting customColor1;
    private static final double N = 12.0;
@@ -33,7 +23,6 @@ public class Theme extends Module {
    public static ModeSetting theme;
    private static long b;
 
-
    public static int M(double var0, double var2, int var4, long var5) {
       long var13 = var5 ^ 55716916432493L;
       int var15 = L(var0, var13, var2);
@@ -44,8 +33,6 @@ public class Theme extends Module {
    }
 
    public static int S(double var0, long var2) {
-
-
       return c(var0, 96536354457767L, theme.Y());
    }
 
@@ -55,8 +42,6 @@ public class Theme extends Module {
    }
 
    public static int e(double var0, int var2, long var3) {
-
-
       int var13 = X(65301174328177L, var0);
       int var14 = ColorUtil.l(var13,0L);
       int var15 = ColorUtil.U(0L, var13);
@@ -65,14 +50,10 @@ public class Theme extends Module {
    }
 
    public static int L(double var0, long var2, double var4) {
-
-
       return F(var0, var4, 125154644418230L, theme.Y());
    }
 
    public static int n(long var0, double var2, int var4) {
-
-
       int var13 = S(var2, 35338930340239L);
       int var14 = ColorUtil.l(var13,0L);
       int var15 = ColorUtil.U(0L, var13);
@@ -81,12 +62,6 @@ public class Theme extends Module {
    }
 
    public static List w(long var0, double var2, double var4, String var6) {
-
-
-
-
-
-
       int var16;
       int var17;
       int var18;
@@ -121,8 +96,6 @@ public class Theme extends Module {
    }
 
    public static int c(double var0, long var2, String var4) {
-
-
       switch (var4.toUpperCase()) {
          case "RAINBOW":
             return GradientPalette.R(var0, timerMultiplier.L());
@@ -134,10 +107,7 @@ public class Theme extends Module {
       }
    }
 
-
    public static int F(double var0, double var2, long var4, String var6) {
-
-
       double var9 = Math.max(0.0, Math.min(1.0, var2));
       return c(var0 + var9 * 12.0, 96536354457767L, var6);
    }
@@ -152,19 +122,15 @@ public class Theme extends Module {
    }
 
    public static int X(long var0, double var2) {
-
-
       return c(var2, 96536354457767L, customTheme.Y());
    }
 
    public Theme(int var1, char var2, int var3) {
       super(((((((long)((var1)) << 32) | (((long)((var2)) << 48) >>> 32)) | (((long)((var3)) << 48) >>> 48)) ^ b) ^ 30936422044319L));
-      // add code
       this.declare("Theme", Category.Configuration, "The color theme of the client");
    }
 
    static {
-      // add code
       customColor3 = new ColorSetting("Custom-color-3", "FFFFFF");
       customColor2 = new ColorSetting("Custom-color-2", "FFFFFF");
       customTheme = new ModeSetting("Custom-theme", "CUSTOM", "RAINBOW", "SUNSET", "OCEAN", "FIRE", "ICE", "PURPLE_DREAM", "FOREST", "CYBER", "ROSE", "GOLD", "LAVA", "NIGHT", "AQUA", "MAGMA", "TOXIC", "NEON_PINK", "CYBER_BLUE", "MATRIX", "LASER", "ULTRAVIOLET", "PEACH", "LAVENDER", "MINT", "SAND", "OBSIDIAN", "MIDNIGHT", "CARBON", "DEEP_SEA", "BLOOD", "ELECTRIC", "SOLAR");

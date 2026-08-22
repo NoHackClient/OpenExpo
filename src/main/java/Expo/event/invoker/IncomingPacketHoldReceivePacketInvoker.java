@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ReceivePacketEvent;
 import Expo.util.packet.IncomingPacketHold;
 
-
-
-
-
-
-
-
-
-
-
 public final class IncomingPacketHoldReceivePacketInvoker implements EventInvoker {
    final IncomingPacketHold J;
 

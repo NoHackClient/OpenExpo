@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SendPacketEvent;
 import Expo.module.impl.world.BedNuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedNukerSendPacketInvoker implements EventInvoker {
    final BedNuker P;
 

@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformGuiMainMenu extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -41,7 +39,6 @@ public class TransformGuiMainMenu extends TransformerBase {
    static {
       d = 53853411023713L;
    }
-
 
    public TransformGuiMainMenu() {
       super("net/minecraft/client/gui/GuiMainMenu");

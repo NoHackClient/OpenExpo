@@ -7,16 +7,6 @@ import Expo.event.invoker.AntiVoidSetKeyBindStateInvoker;
 import Expo.event.invoker.AntiVoidUpdateWalkingPlayerInvoker;
 import Expo.module.impl.world.AntiVoid;
 
-
-
-
-
-
-
-
-
-
-
 public final class AntiVoidBinder {
    private static final long a = 29935093634162L;
 

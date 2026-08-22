@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class GetArmSwingAnimationEndEvent extends Event {
    private int N;
    private static final long a = 53536427542161L;

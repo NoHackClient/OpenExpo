@@ -7,16 +7,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import net.minecraft.scoreboard.Scoreboard;
 
-
-
-
-
-
-
-
-
-
-
 public class HypixelScoreboardParser {
    private final List<String> j;
    private static Pattern A;
@@ -171,8 +161,6 @@ public class HypixelScoreboardParser {
       return this.j.size() == 4;
    }
 
-
-
    private void matcher(String var1, List var2, long var3, byte var5, List var6) {
       long var7 = (var3 << 8 | (long)var5 << 56 >>> 56) ^ b;
       int var11 = (int)((var7 ^ 76055446654476L) << 48 >>> 48);
@@ -265,8 +253,4 @@ public class HypixelScoreboardParser {
    public String x() {
       return this.y;
    }
-
-
-
-
 }

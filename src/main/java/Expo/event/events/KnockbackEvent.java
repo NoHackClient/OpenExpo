@@ -2,16 +2,6 @@ package Expo.event.events;
 
 import Expo.event.Event;
 
-
-
-
-
-
-
-
-
-
-
 public class KnockbackEvent extends Event {
    private double R;
    private static final long a = 66664800753044L;

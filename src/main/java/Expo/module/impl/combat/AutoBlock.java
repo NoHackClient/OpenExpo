@@ -70,16 +70,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class AutoBlock extends Module implements EventSubscriber {
    public static BooleanSetting mobs;
    private static boolean m;
@@ -141,8 +131,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    private static Object[] nb;
 
    public void onRedirectIsUsingItem(RedirectIsUsingItemEvent var1, long var2) {
-
-
       if (m) {
          switch (mode.Y()) {
             case "LAG":
@@ -213,7 +201,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private Pair n(boolean var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       if (var1) {
          I = 0;
       }
@@ -246,9 +233,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private Pair B(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       B = false;
       Pair var16 = new Pair<>(false, true);
       Pair var17 = new Pair<>(false, false);
@@ -593,26 +577,16 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    public void onPreMouseInput(PreMouseInputEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       long var10001 = 104267827882366L;
-
 
       int var8 = (int)(var10001 << 40 >>> 40);
       var10001 = 91503647250490L;
 
-
       int var11 = (int)(var10001 << 40 >>> 40);
-
 
       var10001 = 42176070331598L;
 
-
-
-
-
       int var32 = 6007;
-
-
 
       B = false;
       if (I > 0) {
@@ -787,7 +761,6 @@ public class AutoBlock extends Module implements EventSubscriber {
       try {
          if (var8 != 'w' && var8 != 'm' && var8 != 238 && var8 != 'T') {
             var11 = d(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/module/impl/combat/AutoBlock.java", var8, var4, var6, var11); // add code
             Class var17 = var11.getDeclaringClass();
             String var19 = var11.getName();
             MethodType var20 = MethodType.methodType(var11.getReturnType(), var11.getParameterTypes());
@@ -800,7 +773,6 @@ public class AutoBlock extends Module implements EventSubscriber {
             }
          } else {
             var10 = c(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/module/impl/combat/AutoBlock.java", var8, var4, var6, var10); // add code
             Class var12 = var10.getDeclaringClass();
             String var18 = var10.getName();
             Class var14 = var10.getType();
@@ -839,9 +811,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    public static boolean G(long var0) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (m && s(26815, -704018324)) {
          String var4 = mode.Y();
          int var5 = -1;
@@ -945,11 +914,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private void F(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
       String var14 = mode.Y();
       if (k != 0 && k != 3 && k != 5) {
          if (k == 1 || k == 6) {
@@ -1044,8 +1008,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    public void onUpdateCameraAndRender(long var1, UpdateCameraAndRenderEvent var3) {
-
-
       if ((m || this.M) && visualBlocking.c()) {
          var3.W(17984, 996510524L);
       }
@@ -1105,9 +1067,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private void C(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (s(26815, -704018324)) {
          if (k == 0) {
             if (this.K(0L, true)) {
@@ -1187,9 +1146,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private void r(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (s(26815, -704018324)) {
          if (k == 0) {
             if (this.K(0L, true)) {
@@ -1303,7 +1259,6 @@ public class AutoBlock extends Module implements EventSubscriber {
          if (var16 < var13) {
             var14[var16] = var15;
          }
-
       }
 
       Class var23 = var8;
@@ -1386,9 +1341,6 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private void b(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       if (k == 1) {
          k = 2;
          if (X(0L, (short)55086) && this.F != null && RaytraceUtil.q(50051018191872L, this.F, 3.5)) {
@@ -1653,7 +1605,6 @@ public class AutoBlock extends Module implements EventSubscriber {
 
    public AutoBlock(byte var1, long var2) {
       super((((((long)((var1)) << 56) | 43254310455398L) ^ o) ^ 53883575149036L));
-      // add code
       this.declare("AutoBlock", Category.Combat, "Allows you to combat while sword blocked");
       this.p = 0;
       this.J = false;
@@ -1707,7 +1658,6 @@ public class AutoBlock extends Module implements EventSubscriber {
       return var4;
    }
 
-
    private static boolean zkm$unresolved$1$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_iT_c_OR_Expo_yO_Y_y_slots_41_67(long var2) {
        try {MethodType var4 = MethodType.fromMethodDescriptorString("(JJ)Z", AutoBlock.class.getClassLoader());
       return (boolean)MethodHandles.explicitCastArguments(a(MethodHandles.lookup(), null, "q", var4, 1362679790029856311L, var2), var4).invoke((long)1362679790029856311L, (long)var2);
@@ -1718,16 +1668,12 @@ public class AutoBlock extends Module implements EventSubscriber {
       return (boolean)MethodHandles.explicitCastArguments(a(MethodHandles.lookup(), null, "q", var4, 7385552860468072201L, var2), var4).invoke((long)7385552860468072201L, (long)var2);
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
-
-
-
    private static boolean zkm$unresolved$6$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_iT_c_OR_Expo_yO_f_y_slots_41_99(long var2) {
        try {MethodType var4 = MethodType.fromMethodDescriptorString("(JJ)Z", AutoBlock.class.getClassLoader());
       return (boolean)MethodHandles.explicitCastArguments(a(MethodHandles.lookup(), null, "q", var4, -855537796426212009L, var2), var4).invoke((long)-855537796426212009L, (long)var2);
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
    private static void zkm$clinit() {
       try {
-
          nb = new Object[103];
          ob = new String[103];
          a();
@@ -1910,11 +1856,9 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       smartUnblockChance = new PercentageSetting("Smart-unblock-chance", 100);
    }
    static {
-      // add code
       manualLeftClick = new BooleanSetting("Manual-left-click", false);
       requireRightClick = new BooleanSetting("Require-right-click", false);
       requireKillAura = new BooleanSetting("Require-KillAura", true);
@@ -1938,7 +1882,6 @@ public class AutoBlock extends Module implements EventSubscriber {
       golems = new BooleanSetting("Golems", false);
    }
    static {
-      // add code
       fov = new NumberSetting("FOV", 360.0F, 1.0F, 360.0F, 1.0F);
       targetRange = new NumberSetting("Target-range", 5.0F, 1.0F, 8.0F, 0.01F);
       smartUnblockTicks = new NumberSetting("Smart-unblock-ticks", 8.0F, 0.0F, 15.0F, 1.0F);
@@ -1946,12 +1889,10 @@ public class AutoBlock extends Module implements EventSubscriber {
       noSlowDisableRange = new NumberSetting("NoSlow-disable-range", 3.5F, 0.0F, 8.0F, 0.01F);
    }
    static {
-      // add code
       mode = new ModeSetting("Mode", "LAG_NEW", "LAG_NEW_PRE", "LAG", "LAG_PRE", "LAG_LEGIT", "LAG_LEGIT_PRE", "LEGIT", "VANILLA", "NONE");
       apsMode = new ModeSetting("APS-mode", "3APS", "5APS", "7APS", "10APS", "14APS");
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

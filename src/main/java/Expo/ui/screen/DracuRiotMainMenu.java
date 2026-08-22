@@ -8,16 +8,6 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.resources.I18n;
 
-
-
-
-
-
-
-
-
-
-
 public class DracuRiotMainMenu {
    private static long a;
    private static final float v = 1.7777778F;
@@ -41,8 +31,6 @@ public class DracuRiotMainMenu {
 
       return var7 + Math.max(8, (int)(4.0F * var4));
    }
-
-
 
    public static void h(int var0, int var1) {
       T.getTextureManager().bindTexture(MainMenuTheme.z);
@@ -135,6 +123,4 @@ public class DracuRiotMainMenu {
 
       return var7 + Math.max(8, (int)(4.0F * var4));
    }
-
-
 }

@@ -29,22 +29,8 @@ import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ChatComponentText;
 
-
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommands {
-
    public static final char PREFIX = '.';
-
 
    private static boolean installed;
 
@@ -63,12 +49,10 @@ public final class ExpoCommands {
       }
 
       StockCommandRegistry.L.add(new ExpoCommandBind());
-      // add code
       StockCommandRegistry.L.add(new ExpoCommandBindChat());
       StockCommandRegistry.L.add(new ExpoCommandChangelog());
       StockCommandRegistry.L.add(new ExpoCommandCheaters());
       StockCommandRegistry.L.add(new ExpoCommandConfig());
-      // add code
       StockCommandRegistry.L.add(new ExpoCommandDebug());
       StockCommandRegistry.L.add(new ExpoCommandNames(ExpoCommandNames.ENEMY,
                                     "§eManage your blacklisted players",
@@ -84,7 +68,6 @@ public final class ExpoCommands {
                                     "friend", "f", "wl", "whitelist"));
       StockCommandRegistry.L.add(new ExpoCommandVisible(false, "§eHide module in the ArrayList", "hide", "h"));
       StockCommandRegistry.L.add(new ExpoCommandHelp());
-      // add code
       StockCommandRegistry.L.add(new ExpoCommandInfo());
       StockCommandRegistry.L.add(new ExpoCommandIgn());
       StockCommandRegistry.L.add(new ExpoCommandList());
@@ -95,7 +78,6 @@ public final class ExpoCommands {
       StockCommandRegistry.L.add(new ExpoCommandSuffix());
       StockCommandRegistry.L.add(new ExpoCommandToggle());
 
-      // add code
       try {
          ExpoCommandData.load();
       } catch (Throwable var13) {
@@ -114,8 +96,6 @@ public final class ExpoCommands {
          }
       }
 
-      // add code
-      // add code
       try {
          note(var0);
       } catch (Throwable var9) {

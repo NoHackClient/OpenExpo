@@ -66,7 +66,6 @@ import net.minecraft.potion.Potion;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 
-
 public class BedNuker extends PriorityModule implements EventSubscriber {
    private final TimerUtil b;
    public static NumberSetting delayVelocityTicks;
@@ -121,8 +120,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    private List<Pair<BlockPos, EnumFacing>> Y;
 
    private BlockPos f(long var1, BlockPos var3) {
-
-
       IBlockState var6 = f.theWorld.getBlockState(var3);
       if (var6.getBlock() instanceof BlockBed) {
          ArrayList<BlockPos> var7 = new ArrayList<>();
@@ -144,7 +141,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
 
          if (!var7.isEmpty()) {
             var7.sort((var1x, var2) -> {
-
                long var7x = 68314340999508L;
                int var9x = Float.compare(this.w(var2, var7x), this.w(var1x, var7x));
                return var9x != 0 ? var9x : Double.compare(RaytraceUtil.p(var1x, 12489541448578L), RaytraceUtil.p(var2, 12489541448578L));
@@ -197,8 +193,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    public void onClickMouse(long var1, ClickMouseEvent var3) {
-
-
       if (DJ) {
          var3.I(21307, 3074332907L);
       }
@@ -220,10 +214,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    public void onRender3D(long var1, Render3DEvent var3) {
-
-
-
-
       if (this.Do != null) {
          int var12;
          switch (showTargetColor.Y()) {
@@ -375,8 +365,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    private BlockPos e(double var1, long var3) {
-
-
       BlockPos var7 = BlockUtil.F(new float[]{0.0F, 90.0F}, 1.5).getBlockPos();
       BlockPos var8 = null;
 
@@ -397,9 +385,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    private List f(long var1, BlockPos var3, double var4) {
-
-
-
       if (!RaytraceUtil.Y(var3, var4, 119767551018300L)) {
          return new ArrayList();
       }
@@ -433,6 +418,7 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
                   double var22 = BlockUtil.g(var19, var15);
                   double var24 = var20 + var22 * 0.1;
                   if (var11 == null || var24 < var12) {
+                     var12 = var24;
                      var11 = var19;
                   }
                }
@@ -494,7 +480,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    public void onPreTick(long var1, PreTickEvent var3) {
-
       boolean var10 = this.Do == null;
       if (this.K >= 0) {
          this.K++;
@@ -505,7 +490,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
       }
 
       boolean var14 = blinkDisableRange.L() != -1.0F && blinkRange.L() != -1.0F && blinkDuration.L() != -1.0F;
-      // add code
       boolean var12 = !var10 && RaytraceUtil.Y(this.Do, blinkRange.L(), 119767551018300L) && !RaytraceUtil.Y(this.Do, blinkDisableRange.L(), 119767551018300L);
       if (!var10 && var14 && var12) {
          if (this.E.L((long)blinkDuration.L(), true)) {
@@ -522,8 +506,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    private void Y(ReceivePacketEvent var1, long var2) {
-
-
       S12PacketEntityVelocity var7 = (S12PacketEntityVelocity)var1.d;
       if (this.T) {
          IncomingPacketHold.p().add(var7);
@@ -538,10 +520,8 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    public void onPreMouseInput(PreMouseInputEvent var1, long var2) {
-
       int var6 = 51853;
       int var9 = 49506;
-
 
       int var16 = 61657;
 
@@ -592,19 +572,11 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    public final void x(long var1, EventBus var3) {
       BedNukerBinder.d(var3, this);
    }
 
    public void onRender2D(long var1, Render2DEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
-
-
-
       if (this.Do != null) {
          int var22;
          switch (showTargetColor.Y()) {
@@ -661,8 +633,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    public void onReceivePacket(ReceivePacketEvent var1, long var2) {
-
-
       if (this.Do != null && var1.d instanceof S12PacketEntityVelocity) {
          S12PacketEntityVelocity var8 = (S12PacketEntityVelocity)var1.d;
          if (var8.getEntityID() == f.thePlayer.getEntityId() && delayVelocityRange.L() != -1.0F && RaytraceUtil.Y(this.Do, delayVelocityRange.L(), 119767551018300L)) {
@@ -810,16 +780,12 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    }
 
    public void onSendPacket(SendPacketEvent var1, long var2) {
-
-
       if (DJ && var1.B instanceof C07PacketPlayerDigging && ((C07PacketPlayerDigging)var1.B).getStatus() == Action.ABORT_DESTROY_BLOCK) {
          var1.I(21307, 3074332907L);
       }
    }
 
    public void onIsPressed(long var1, IsPressedEvent var3) {
-
-
       if (DJ && var3.o == f.gameSettings.keyBindAttack.getKeyCode()) {
          var3.I(21307, 3074332907L);
       }
@@ -831,7 +797,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
 
    public BedNuker(short var1, long var2) {
       super(((((((long)((var1)) << 48) | 33171000103266L) ^ bb) ^ 104466678813848L) >>> 16), (char)((int)((((((((long)((var1)) << 48) | 33171000103266L) ^ bb) ^ 104466678813848L) << 48) >>> 48))));
-      // add code
       this.declare("BedNuker", Category.World, "Break the bed near around you");
       this.b = new TimerUtil();
       this.o = new TimerUtil();
@@ -860,11 +825,9 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
       this.S(false, var3, (char)var4, var5);
    }
    static {
-      // add code
       customColor = new ColorSetting("Custom-color", "FFFFFF");
    }
    static {
-      // add code
       swing = new BooleanSetting("Swing", true);
       requireClick = new BooleanSetting("Require-click", false);
       whitelistOwnBed = new BooleanSetting("Whitelist-own-bed", true);
@@ -878,7 +841,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
       showTargetBar = new BooleanSetting("Show-target-bar", false);
    }
    static {
-      // add code
       range = new NumberSetting("Range", 4.5F, 0.0F, 8.0F, 0.01F);
       fov = new NumberSetting("FOV", 360.0F, 0.0F, 360.0F, 1.0F);
       delayVelocityTicks = new NumberSetting("Delay-velocity-ticks", -1.0F, -1.0F, 20.0F, 1.0F);
@@ -888,7 +850,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
       blinkDuration = new NumberSetting("Blink-duration", 499.0F, -1.0F, 2000.0F, 10.0F);
    }
    static {
-      // add code
       moveFix = new ModeSetting("Move-fix", "SILENT", "STRICT", "NONE");
       showTargetColor = new ModeSetting("Show-target-color", "THEME", "THEME_CUSTOM", "CUSTOM");
    }

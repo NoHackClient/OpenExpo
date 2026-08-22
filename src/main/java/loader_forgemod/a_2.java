@@ -2,16 +2,6 @@ package loader_forgemod;
 
 import java.io.Writer;
 
-
-
-
-
-
-
-
-
-
-
 public class a_2 extends w {
    private final char[] a;
 

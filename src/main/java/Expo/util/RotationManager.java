@@ -39,16 +39,6 @@ import net.minecraft.network.play.server.S08PacketPlayerPosLook.EnumFlags;
 import net.minecraft.network.play.server.S08PacketPlayerPosLook;
 import net.minecraft.util.MathHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class RotationManager implements EventSubscriber {
    public static float F;
    public static float I;
@@ -265,8 +255,6 @@ public class RotationManager implements EventSubscriber {
    }
 
    public static void v(long var0, float var2) {
-
-
       a(59024409194504L, var2, 180.0F);
    }
 
@@ -518,7 +506,6 @@ public class RotationManager implements EventSubscriber {
       try {
          if (var8 != 'z' && var8 != 197 && var8 != 'O' && var8 != 219) {
             var11 = d(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/util/RotationManager.java", var8, var4, var6, var11); // add code
             Class var17 = var11.getDeclaringClass();
             String var19 = var11.getName();
             MethodType var20 = MethodType.methodType(var11.getReturnType(), var11.getParameterTypes());
@@ -531,7 +518,6 @@ public class RotationManager implements EventSubscriber {
             }
          } else {
             var10 = c(var4, var6);
-            Expo.internal.restore.ExpoHandleProbe.log("Expo/util/RotationManager.java", var8, var4, var6, var10); // add code
             Class var12 = var10.getDeclaringClass();
             String var18 = var10.getName();
             Class var14 = var10.getType();
@@ -758,7 +744,6 @@ public class RotationManager implements EventSubscriber {
    }
 
    public static void V(long var0, float var2, float var3) {
-
       if (var2 > 90.0F) {
          var2 = 90.0F;
       }
@@ -771,8 +756,7 @@ public class RotationManager implements EventSubscriber {
       var4 = MathUtil.H(var4);
 
       G += var4;
-      long var10001 = 1952985819236853773L ^ var0; // add code
-      X = (((a(32531, var10001)) & 1) != 0);
+      X = true;
    }
 
    private static void P(float var2) {
@@ -863,7 +847,6 @@ public class RotationManager implements EventSubscriber {
    }
 
    public void onPreTick(PreTickEvent var1, long var2) {
-
       if (G()) {
          z(1.0F,0L);
          k(0L);
@@ -888,11 +871,8 @@ public class RotationManager implements EventSubscriber {
          V = p();
       }
 
-      if (G
-         != zkm$unresolved$2$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_oN_p_OR_Expo_oN_s_y_slots_18_26(var0)
-         )
-       {
-         G = zkm$unresolved$3$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_oN_p_OR_Expo_oN_s_y_slots_18_26(var0);
+      if (G != s()) {
+         G = s();
          m.thePlayer.prevRotationPitch = G;
       }
 
@@ -933,7 +913,6 @@ public class RotationManager implements EventSubscriber {
          if (var16 < var13) {
             var14[var16] = var15;
          }
-
       }
 
       Class var23 = var8;
@@ -1000,7 +979,6 @@ public class RotationManager implements EventSubscriber {
       MethodHandles.explicitCastArguments(a(MethodHandles.lookup(), null, "H", var9, 6837697899622233875L, var7), var9)
          .invoke((float)var0, (float)var1, (float)var2, (long)var3, (long)6837697899622233875L, (long)var7);
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
-
 
    private static float zkm$unresolved$2$monomorphic_exactly_one_target_not_statically_decidable_candidates_Expo_oN_p_OR_Expo_oN_s_y_slots_18_26(long var2) {
        try {MethodType var4 = MethodType.fromMethodDescriptorString("(JJ)F", RotationManager.class.getClassLoader());
@@ -1112,5 +1090,4 @@ public class RotationManager implements EventSubscriber {
          throw new RuntimeException(var16);
       }
    }
-
 }

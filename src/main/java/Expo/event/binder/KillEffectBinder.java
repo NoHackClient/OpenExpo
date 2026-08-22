@@ -12,16 +12,6 @@ import Expo.event.invoker.KillEffectLivingDeathInvoker;
 import Expo.event.invoker.Zc_2;
 import Expo.module.impl.visual.KillEffect;
 
-
-
-
-
-
-
-
-
-
-
 public final class KillEffectBinder {
    private static final long a = 21480002052700L;
 
@@ -35,5 +25,4 @@ public final class KillEffectBinder {
 
    private KillEffectBinder() {
    }
-
 }

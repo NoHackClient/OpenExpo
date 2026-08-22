@@ -33,16 +33,6 @@ import net.minecraft.network.play.client.C07PacketPlayerDigging.Action;
 import net.minecraft.network.play.client.C07PacketPlayerDigging;
 import net.minecraft.network.play.client.C08PacketPlayerBlockPlacement;
 
-
-
-
-
-
-
-
-
-
-
 public class FakeLag extends Module implements EventSubscriber {
    public static BooleanSetting bots;
    public static HeaderSetting targetSettings;
@@ -80,13 +70,8 @@ public class FakeLag extends Module implements EventSubscriber {
       this.W();
    }
 
-
-
    public final void x(long var1, EventBus var3) {
       FakeLagBinder.S(var3, this);
-   }
-
-   private static void a() {
    }
 
    public void onSendPacket(long var1, SendPacketEvent var3) {
@@ -151,7 +136,6 @@ public class FakeLag extends Module implements EventSubscriber {
 
    public FakeLag(int var1, int var2, short var3) {
       super(((((((long)((var1)) << 32) | (((long)((var2)) << 48) >>> 32)) | (((long)((var3)) << 48) >>> 48)) ^ c) ^ 51643362766489L));
-      // add code
       this.declare("FakeLag", Category.Combat, "Simulate network lags to get advantages during combat");
       this.M = new TimerUtil();
       this.s = new TimerUtil();
@@ -173,10 +157,6 @@ public class FakeLag extends Module implements EventSubscriber {
    }
 
    public void onPreLivingUpdate(PreLivingUpdateEvent var1, long var2) {
-
-
-
-
       this.m.clear();
       boolean var14 = players.c();
       boolean var15 = mobs.c();
@@ -214,9 +194,7 @@ public class FakeLag extends Module implements EventSubscriber {
       }
    }
 
-
    static {
-      // add code
       targetRange = new NumberSetting("Target-range", 10.0F, 0.0F, 20.0F, 0.1F);
       bots = new BooleanSetting("Bots", false);
       animals = new BooleanSetting("Animals", false);
@@ -236,7 +214,6 @@ public class FakeLag extends Module implements EventSubscriber {
       maxDuration = new NumberSetting("Max-duration", 100.0F, 0.0F, 500.0F, 1.0F);
    }
    static {
-      // add code
       targetSettings = new HeaderSetting("Target settings");
    }
 }

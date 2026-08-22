@@ -11,9 +11,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
-
 public final class ExpoModuleRegistry {
-
    public static final String PLACEHOLDER_PREFIX = "?";
 
    public static Module PLAIN_LISTENER;
@@ -538,7 +536,6 @@ public final class ExpoModuleRegistry {
          throw new IllegalStateException("ExpoModuleRegistry: name/persistable mismatch for " + var1 + " -> " + var2);
       }
 
-      // add code
       if (var0.name() == null) {
          var0.K(var2);
       }

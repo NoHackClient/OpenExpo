@@ -37,7 +37,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 
-
 public class FallIndicator extends Module implements EventSubscriber {
    private String M;
    private static int d;
@@ -64,7 +63,6 @@ public class FallIndicator extends Module implements EventSubscriber {
    private static long[] k;
    private int r;
 
-
    public final void x(long var1, EventBus var3) {
       FallIndicatorBinder.r(var3, this);
    }
@@ -85,19 +83,13 @@ public class FallIndicator extends Module implements EventSubscriber {
       return var0 == (float)((long)var0) ? Long.toString((long)var0) : Float.toString(var0);
    }
 
-
    public void onPostTick(PostTickEvent var1, long var2) {
-
-
       if (!this.isSneaking()) {
          this.G((char)0);
       }
    }
 
    public void onRender2D(Render2DEvent var1, long var2) {
-
-
-
       if (!this.isSneaking()) {
          if (this.L && this.M != null) {
             CustomFont var12 = Font.F(0L);
@@ -150,7 +142,6 @@ public class FallIndicator extends Module implements EventSubscriber {
 
    public FallIndicator(long var1) {
       super(((b ^ (var1)) ^ 27654362203666L));
-      // add code
       this.declare("FallIndicator", Category.Visual_utility, "Display the damage amount you might receive when looking at the ground");
       var1 = b ^ var1;
       this.Y = new ItemStack[4];
@@ -491,7 +482,6 @@ public class FallIndicator extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       minDamagePercentage = new PercentageSetting("Min-damage-percentage", 0);
       showFallDistance = new BooleanSetting("Show-fall-distance", true);
       onlyWhileSneaking = new BooleanSetting("Only-while-sneaking", false);

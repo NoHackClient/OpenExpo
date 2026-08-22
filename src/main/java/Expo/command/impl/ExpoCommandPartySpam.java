@@ -8,19 +8,7 @@ import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandPartySpam extends Command {
-
    @Override
    public boolean J() {
       return false;

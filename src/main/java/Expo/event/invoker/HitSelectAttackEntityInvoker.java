@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.AttackEntityEvent;
 import Expo.module.impl.combat.HitSelect;
 
-
-
-
-
-
-
-
-
-
-
 public final class HitSelectAttackEntityInvoker implements EventInvoker {
    final HitSelect N;
 

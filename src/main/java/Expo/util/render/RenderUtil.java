@@ -52,7 +52,6 @@ import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.glu.GLU;
 
-
 public class RenderUtil {
    private static Frustum Z;
    private static String[] c;
@@ -119,8 +118,6 @@ public class RenderUtil {
    }
 
    public static void j(AxisAlignedBB var0, int var1, long var2, boolean var4, boolean var5) {
-
-
       GL11.glPushMatrix();
       GL11.glBlendFunc(770, 771);
       GL11.glEnable(3042);
@@ -292,8 +289,6 @@ public class RenderUtil {
    }
 
    public static void O(double var0, double var2, double var4, long var6, double var8, double var10, double var12, int var14, boolean var15, boolean var16) {
-
-
       double var19 = var0 - T.getRenderManager().viewerPosX;
       double var21 = var2 - T.getRenderManager().viewerPosY;
       double var23 = var4 - T.getRenderManager().viewerPosZ;
@@ -394,7 +389,6 @@ public class RenderUtil {
    }
 
    public static void R(Entity var0, long var1, int var3, float var4) {
-
       double var8 = var0.lastTickPosX + (var0.posX - var0.lastTickPosX) * var4 - T.getRenderManager().viewerPosX;
       double var10 = var0.lastTickPosY + (var0.posY - var0.lastTickPosY) * var4 - T.getRenderManager().viewerPosY;
       double var12 = var0.lastTickPosZ + (var0.posZ - var0.lastTickPosZ) * var4 - T.getRenderManager().viewerPosZ;
@@ -566,7 +560,6 @@ public class RenderUtil {
       double var27 = MathUtil.h(var0.posY, var0.lastTickPosY, ClientUtil.H(0L));
       double var29 = MathUtil.h(var0.posZ, var0.lastTickPosZ, ClientUtil.H(0L));
       r(
-
 
          var0.getEntityBoundingBox()
             .expand(var5, var5, var5)
@@ -757,7 +750,6 @@ public class RenderUtil {
    }
 
    public static void j(float var0, float var1, float var2, float var3, float var4, long var5, int var7) {
-
       P(var0, var1, var2, var3, var4, var4, var4, var4, var7);
    }
 
@@ -889,8 +881,6 @@ public class RenderUtil {
    }
 
    public static void J(Vec3 var0, double var1, double var3, double var5, int var7, float var8, long var9) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       float var20 = (var7 >> 24 & 255) / 255.0F;
       float var21 = (var7 >> 16 & 255) / 255.0F;
       float var22 = (var7 >> 8 & 255) / 255.0F;
@@ -926,8 +916,6 @@ public class RenderUtil {
    }
 
    public static void c(BlockPos var0, long var1, int var3, boolean var4, boolean var5) {
-
-
       O(var0.getX(), var0.getY(), var0.getZ(), 25559446473706L, 1.0, 1.0, 1.0, var3, var4, var5);
    }
 
@@ -1073,7 +1061,6 @@ public class RenderUtil {
    }
 
    public static void a(EntityLivingBase var0, long var1, double var3, float var5, int var6) {
-
       float var11 = ClientUtil.H(0L);
       double var12 = var0.lastTickPosX + (var0.posX - var0.lastTickPosX) * var11 - T.getRenderManager().viewerPosX;
       double var14 = var0.lastTickPosY + (var0.posY - var0.lastTickPosY) * var11 - T.getRenderManager().viewerPosY;
@@ -1099,7 +1086,6 @@ public class RenderUtil {
    }
 
    public static void q(AxisAlignedBB var0, long var1, float var3, float var4, float var5) {
-
       D(var0, var3, var4, var5, 0.25F);
    }
 
@@ -1319,7 +1305,6 @@ public class RenderUtil {
          WorldRenderer var21 = var20.getWorldRenderer();
          var21.begin(9, DefaultVertexFormats.POSITION);
 
-
          for (int var23 = 0; var23 <= 90; var23 += 6) {
             double var24 = Math.toRadians(var23);
             var21.pos(var0 + var4 - Math.sin(var24) * var4, var1 + var4 - Math.cos(var24) * var4, 0.0).endVertex();
@@ -1369,7 +1354,6 @@ public class RenderUtil {
    }
 
    public static void W(AxisAlignedBB var0, long var1, int var3, int var4, boolean var5, boolean var6) {
-
       GL11.glPushMatrix();
       GL11.glBlendFunc(770, 771);
       GL11.glEnable(3042);
@@ -1431,9 +1415,6 @@ public class RenderUtil {
    }
 
    public static void N(EntityLivingBase var0, long var1, int var3) {
-
-
-
       float var15 = MinecraftAccessor.o( T).renderPartialTicks;
       double var16 = var0.lastTickPosX + (var0.posX - var0.lastTickPosX) * var15 - T.getRenderManager().viewerPosX;
       double var18 = var0.lastTickPosY + (var0.posY - var0.lastTickPosY) * var15 - T.getRenderManager().viewerPosY;
@@ -1520,8 +1501,6 @@ public class RenderUtil {
    }
 
    public static void r(Vec3 var0, long var1, double var3, double var5, double var7, float var9, float var10, float var11, float var12, float var13) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
       GlStateManager.pushMatrix();
       GlStateManager.color(var9, var10, var11, var12);
       boolean var23 = T.gameSettings.viewBobbing;
@@ -1895,7 +1874,6 @@ public class RenderUtil {
       o((short)var7, var0.getX(), var0.getY(), var0.getZ(), 1.0, 1.0, 1.0, var3, var4, (char)var8, var5, var9, var6);
    }
 
-
    public static void O(int var0, float var1, long var2) {
       float var4 = (var0 >> 16 & 255) / 255.0F;
       float var5 = (var0 >> 8 & 255) / 255.0F;
@@ -1949,5 +1927,4 @@ public class RenderUtil {
       long var10 = var1 ^ 109440825038403L;
       Z(var0.getEntityBoundingBox().expand(0.1, 0.1, 0.1), var0.lastTickPosX, var0.lastTickPosY, var0.lastTickPosZ, var3, var5, var10, var7, var9);
    }
-
 }

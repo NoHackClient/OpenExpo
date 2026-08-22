@@ -9,19 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandNames extends Command {
-
    public static final int ENEMY = 0;
    public static final int FRIEND = 1;
 

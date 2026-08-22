@@ -8,16 +8,6 @@ import net.minecraft.scoreboard.ScoreObjective;
 import net.minecraft.scoreboard.ScorePlayerTeam;
 import net.minecraft.scoreboard.Scoreboard;
 
-
-
-
-
-
-
-
-
-
-
 public class ScoreboardReader {
    private static Minecraft U;
    private static String[] c;
@@ -26,9 +16,6 @@ public class ScoreboardReader {
 
    public static boolean v(long var0) {
       return !BuildInfo.W.equalsIgnoreCase("Development") && !BuildInfo.W.equalsIgnoreCase("NoHackClient") ? !X.get() : true;
-   }
-
-   private static void a() {
    }
 
    static {
@@ -61,8 +48,4 @@ public class ScoreboardReader {
 
       return var2;
    }
-
-
-
-
 }

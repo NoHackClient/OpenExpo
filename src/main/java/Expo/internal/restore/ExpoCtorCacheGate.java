@@ -8,9 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-
 public final class ExpoCtorCacheGate {
-
    public static final List<String> LOG = new ArrayList<String>();
 
    public static final int EXPECT_STRONG = 29;

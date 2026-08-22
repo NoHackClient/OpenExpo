@@ -9,16 +9,6 @@ import Expo.event.invoker.BlinkPostUpdateWalkingPlayerInvoker;
 import Expo.event.invoker.BlinkRender2DInvoker;
 import Expo.module.impl.player.Blink;
 
-
-
-
-
-
-
-
-
-
-
 public final class BlinkBinder {
    private static final long a = 109928004025865L;
 
@@ -30,5 +20,4 @@ public final class BlinkBinder {
       var2.R(var4, AttackTargetEntityEvent.class, 3, new BlinkAttackTargetEntityInvoker(var4));
       var2.R(var4, Render2DEvent.class, 3, new BlinkRender2DInvoker(var4));
    }
-
 }

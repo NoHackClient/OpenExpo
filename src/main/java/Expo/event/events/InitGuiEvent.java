@@ -5,16 +5,6 @@ import java.util.List;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 
-
-
-
-
-
-
-
-
-
-
 public class InitGuiEvent extends Event {
    public final GuiScreen A;
    private static final long a = 137383723411876L;

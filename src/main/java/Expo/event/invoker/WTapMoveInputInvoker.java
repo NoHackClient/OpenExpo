@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.MoveInputEvent;
 import Expo.module.impl.combat.WTap;
 
-
-
-
-
-
-
-
-
-
-
 public final class WTapMoveInputInvoker implements EventInvoker {
    final WTap M;
 

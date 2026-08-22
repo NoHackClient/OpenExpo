@@ -34,7 +34,6 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
-
 public class FireBallPredict extends Module implements EventSubscriber {
    private static String[] k;
    private static long[] c;
@@ -54,13 +53,11 @@ public class FireBallPredict extends Module implements EventSubscriber {
 
    public FireBallPredict(long var1) {
       super(((a ^ (var1)) ^ 75811301743755L));
-      // add code
       this.declare("FireBallPredict", Category.Visual_utility, "Predict and render fireball impact positions");
       var1 = a ^ var1;
    }
 
    private int I(long var1, double var3) {
-
       if (var3 <= 8.0) {
          return 16711680;
       } else if (var3 >= 48.0) {
@@ -94,6 +91,7 @@ public class FireBallPredict extends Module implements EventSubscriber {
                Vec3 var17 = new Vec3(var16.getX() + 0.5, var16.getY() + 0.5, var16.getZ() + 0.5);
                double var18 = var5.squareDistanceTo(var17);
                if (!(var18 >= var7)) {
+                  var7 = var18;
                   var6 = new FireBallPredictImpact(var16, 16776960, null);
                }
             }
@@ -138,8 +136,6 @@ public class FireBallPredict extends Module implements EventSubscriber {
    }
 
    private FireBallPredictImpact G(long var1) {
-
-
       WorldClient var5 = f.theWorld;
       List var6 = var5.loadedEntityList;
       Vec3 var7 = new Vec3(f.thePlayer.posX, f.thePlayer.posY, f.thePlayer.posZ);
@@ -161,6 +157,7 @@ public class FireBallPredict extends Module implements EventSubscriber {
                   Vec3 var21 = new Vec3(var20.getX() + 0.5, var20.getY() + 0.5, var20.getZ() + 0.5);
                   double var22 = var7.squareDistanceTo(var21);
                   if (!(var22 >= var9)) {
+                     var9 = var22;
                      var8 = new FireBallPredictImpact(var20, this.I(118876068591149L, var16.distanceTo(var19.hitVec)), null);
                   }
                }
@@ -185,11 +182,6 @@ public class FireBallPredict extends Module implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) {
-
-
-
-
-
       FireBallPredictImpact var11 = null;
       if (realFireballs.c()) {
          var11 = this.G(75118909547976L);
@@ -207,18 +199,6 @@ public class FireBallPredict extends Module implements EventSubscriber {
       }
    }
 
-   private static void a() {
-      h[0] = "3E\u0016\r\\N!";
-      h[1] = long.class;
-      k[1] = "java/lang/Long";
-      h[2] = "\u001e\u0011[~?;)\u0006_tr\u001f>\r\u0005h";
-      h[3] = "\b|\u0014I]  ";
-      h[4] = void.class;
-      k[4] = "java/lang/Void";
-      h[5] = "n\r\n\u0012\u001e\u001be\u0002\u001b]\u007f\u0015n\t\u001f\u0007";
-      h[6] = "1=\u0011*@381\u0014L`HkfP}\u000267=V08q5'C*Ir70\u0013L\u0002*=4J*Tv7+*vD411VrJ5o[";
-   }
-
    public void A(long var1) {
       int var3 = (int)((var1 ^ 31933929361417L) >>> 32);
       int var4 = (int)((var1 ^ 31933929361417L) << 32 >>> 48);
@@ -227,15 +207,10 @@ public class FireBallPredict extends Module implements EventSubscriber {
    }
 
    public void onRender3D(long var1, Render3DEvent var3) throws Throwable {
-
-
-
-
       if (f.theWorld != null && f.thePlayer != null && this.o != null) {
          this.c((char)0, 204245502, (short)55223);
       }
    }
-
 
    static {
       a = 56662069471346L;
@@ -304,7 +279,6 @@ public class FireBallPredict extends Module implements EventSubscriber {
       }
    }
    static {
-      // add code
       realFireballs = new BooleanSetting("Real-fireballs", true);
       renderRadius = new NumberSetting("Render-radius", 2.0F, 1.0F, 2.0F, 1.0F);
       heldFireCharges = new BooleanSetting("Held-fire-charges", true);

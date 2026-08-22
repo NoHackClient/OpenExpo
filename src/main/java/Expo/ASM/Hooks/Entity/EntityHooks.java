@@ -18,11 +18,9 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
 
-
 public class EntityHooks {
    private static final Minecraft V;
    private static final long a = 26549936100656L;
-
 
    public static void onMoveFlying(Entity var0, float var1, float var2, float var3, CallbackInfo var4) {
       float var5 = var0.rotationYaw;
@@ -50,10 +48,6 @@ public class EntityHooks {
    }
 
    public static void moveEntity(Entity var0, CallbackInfo var1) {
-
-
-
-
       MoveEntityEvent var9 = new MoveEntityEvent((short)0, 507233767, (short)63688, var0);
       ExpoClient.w.e(var9, 18670087776179L);
       if (var9.a()) {
@@ -61,14 +55,11 @@ public class EntityHooks {
       }
    }
 
-
    public static Vec3 onGetLook(float var0) {
       return RotationUtil.T(var0);
    }
 
-
    public static void setAngles(Entity var0, float var1, float var2, CallbackInfo var3) {
-
       if (var0 instanceof EntityPlayerSP) {
          SetAnglesEvent var10 = new SetAnglesEvent(var1, var2);
          ExpoClient.w.e(var10, 18670087776179L);
@@ -95,8 +86,6 @@ public class EntityHooks {
    }
 
    public static boolean onSafeWalk(Entity var0, boolean var1) {
-
-
       if (!(var0 instanceof EntityPlayerSP)) {
          return var1;
       }
@@ -107,10 +96,7 @@ public class EntityHooks {
       return var8.O();
    }
 
-
    public static void getCollisionBorderSize(Entity var0, CallbackInfoReturnable<Float> var1) {
-
-
       if (ModuleManager.r.o()) {
          if (var0 != null) {
             if (var0.worldObj != null) {
@@ -127,6 +113,4 @@ public class EntityHooks {
       int var2 = 0;
       V = MinecraftRef.c((byte)var2,0L);
    }
-
-
 }

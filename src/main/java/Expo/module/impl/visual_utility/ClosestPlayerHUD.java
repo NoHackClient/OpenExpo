@@ -37,16 +37,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.StringUtils;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class ClosestPlayerHUD extends Module implements EventSubscriber {
    private static final float o = 10.0F;
    public static Color E;
@@ -168,17 +158,11 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
    }
 
    private void J(CustomFont var1, String var2, long var3, float var5, float var6, float var7) {
-
-
-
       float var12 = var1.R(var2, 52019766876817L);
       var1.T(37697014677608L, var2, (int)(var5 + var6 - var12), (int)var7 + 1, -1);
    }
 
    private void ordinal(ClosestPlayerEntry var1, float var2, float var3, float[] var4, long var5, List var7, CustomFont var8) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
       float var21 = var2;
 
       for (int var22 = 0; var22 < var7.size(); var22++) {
@@ -237,9 +221,6 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
       GL11.glEnd();
       GL11.glEnable(3553);
       GlStateManager.popMatrix();
-   }
-
-   private static void a() {
    }
 
    private List p(byte var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
@@ -351,8 +332,6 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
       }
    }
 
-
-
    static {
       a = 23755569410545L;
       K = new Color(
@@ -375,8 +354,6 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
       );
    }
 
-
-
    private String N(EntityPlayer var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
       int var4 = (int)Math.round(var1.posY - f.thePlayer.posY);
       if (var4 > 0) {
@@ -386,15 +363,12 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
       }
    }
 
-
-
    public void A(long var1) {
       this.I.clear();
    }
 
    public ClosestPlayerHUD(long var1) {
       super(((a ^ (var1)) ^ 16392586965669L));
-      // add code
       this.declare("ClosestPlayerHUD", Category.Visual_utility, "Show the closest Mega Walls player in each team");
       var1 = a ^ var1;
       this.I = new ArrayList<>();
@@ -454,10 +428,6 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
    }
 
    public void onRender2D(Render2DEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       List var11 = this.I;
       if (!var11.isEmpty()) {
          CustomFont var12 = Font.F(0L);
@@ -507,11 +477,9 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       backgroundOpacity = new PercentageSetting("Background-opacity", 40);
    }
    static {
-      // add code
       displayHead = new BooleanSetting("Display-head", true);
       displayName = new BooleanSetting("Display-name", false);
       displayDistance = new BooleanSetting("Display-distance", true);
@@ -521,7 +489,6 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
       displayHealth = new BooleanSetting("Display-health", true);
    }
    static {
-      // add code
       offsetX = new NumberSetting("Offset-X", 4.0F, 0.0F, 1000.0F, 1.0F);
       offsetY = new NumberSetting("Offset-Y", 180.0F, 0.0F, 1000.0F, 1.0F);
       scale = new NumberSetting("Scale", 0.9F, 0.5F, 3.0F, 0.01F);

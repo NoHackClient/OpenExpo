@@ -9,16 +9,6 @@ import Expo.event.invoker.NukerPreMouseInputInvoker;
 import Expo.event.invoker.NukerSendPacketInvoker;
 import Expo.module.impl.world.Nuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class NukerBinder {
    private static final long a = 16196326278722L;
 

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreLivingUpdateEvent;
 import Expo.module.impl.movement.Stuck;
 
-
-
-
-
-
-
-
-
-
-
 public final class StuckPreLivingUpdateInvoker implements EventInvoker {
    final Stuck P;
 

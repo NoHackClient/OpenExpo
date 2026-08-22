@@ -9,16 +9,6 @@ import Expo.util.render.RenderUtil;
 import java.awt.Color;
 import org.lwjgl.input.Mouse;
 
-
-
-
-
-
-
-
-
-
-
 public class PercentageSettingComponent extends AbstractSettingComponent<PercentageSetting> {
    private static long a;
    private boolean g;
@@ -126,7 +116,6 @@ public class PercentageSettingComponent extends AbstractSettingComponent<Percent
       this.r = new Animation(0.0F);
       this.H = new Animation(0.0F);
    }
-
 
    static {
       a = 133150059817494L;

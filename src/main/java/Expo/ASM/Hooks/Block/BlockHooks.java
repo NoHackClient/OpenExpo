@@ -20,7 +20,6 @@ import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-
 public class BlockHooks {
    private static long b;
    private static long a;
@@ -46,7 +45,6 @@ public class BlockHooks {
    public static void addCollisionBoxesToList(
       World var0, BlockPos var1, IBlockState var2, AxisAlignedBB var3, List<AxisAlignedBB> var4, Entity var5, BlockState var6, Block var7, CallbackInfo var8
    ) {
-
       if (ExpoClient.w != null) {
          if (var3 != null) {
             AxisAlignedBB var15 = var7.getCollisionBoundingBox(var0, var1, var2);
@@ -90,5 +88,4 @@ public class BlockHooks {
          var1.cancel();
       }
    }
-
 }

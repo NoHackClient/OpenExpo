@@ -7,16 +7,6 @@ import Expo.event.invoker.BindGUIPostTickInvoker;
 import Expo.event.invoker.BindGUIRender2DInvoker;
 import Expo.module.impl.visual.BindGUI;
 
-
-
-
-
-
-
-
-
-
-
 public final class BindGUIBinder {
    private static final long a = 37771993463129L;
 

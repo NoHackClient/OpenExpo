@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformS12PacketEntityVelocity extends TransformerBase {
    private static long d;
-
 
    static {
       d = 83282681363546L;
@@ -46,7 +44,6 @@ public class TransformS12PacketEntityVelocity extends TransformerBase {
          "processPacket"
       );
    }
-
 
    public TransformS12PacketEntityVelocity() {
       super("net/minecraft/network/play/server/S12PacketEntityVelocity");

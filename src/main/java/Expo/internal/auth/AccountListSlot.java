@@ -9,7 +9,6 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiSlot;
 import org.apache.commons.lang3.StringUtils;
 
-
 public class AccountListSlot extends GuiSlot {
    private static String[] b;
    final AccountManagerScreen u;
@@ -17,8 +16,6 @@ public class AccountListSlot extends GuiSlot {
    private static Map d;
    private static long[] h;
    private static String[] c;
-
-
 
    public int getListWidth() {
       return 308;
@@ -93,8 +90,6 @@ public class AccountListSlot extends GuiSlot {
       this.u.drawString(var13, var12, var2 + this.getListWidth() - 5 - var13.getStringWidth(var12), var3 + 2, -1);
    }
 
-
-
    protected boolean isSelected(int var1) {
       return var1 == AccountManagerScreen.W(this.u);
    }
@@ -107,10 +102,6 @@ public class AccountListSlot extends GuiSlot {
       return (this.width + this.getListWidth()) / 2 + 2;
    }
 
-
-
-
-
    public AccountListSlot(long var1, AccountManagerScreen var3, Minecraft var4) {
       super(
          var4,
@@ -122,6 +113,4 @@ public class AccountListSlot extends GuiSlot {
       );
       this.u = var3;
    }
-
-
 }

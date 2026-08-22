@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.ReceivePacketEvent;
 import Expo.module.impl.combat.WTap;
 
-
-
-
-
-
-
-
-
-
-
 public final class WTapReceivePacketInvoker implements EventInvoker {
    final WTap H;
 

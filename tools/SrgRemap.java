@@ -12,16 +12,7 @@ public class SrgRemap {
     static final Map<String, String> CL = new HashMap<String, String>();
     static final Map<String, String> FD = new HashMap<String, String>();
     static final Map<String, String> MD = new HashMap<String, String>();
-    // add code
-    // Names that resolve to more than one target are unusable as an owner-blind
-    // fallback: WorldClient.getScoreboard picked func_147192_d off a colliding
-    // entry instead of the inherited World one.
     static final Set<String> AMBIG = new HashSet<String>();
-    // add code
-    // owner -> [superclass, interfaces...] in the SAME namespace as the mapping's
-    // source side. The srg only lists a member on its declaring class, but javac
-    // emits the static type at the reference site, so EntityPlayerSP.onGround has
-    // to be resolved by walking up to Entity.
     static final Map<String, List<String>> SUP = new HashMap<String, List<String>>();
 
     static String walkField(String owner, String name) {
@@ -79,7 +70,6 @@ public class SrgRemap {
         }
     }
 
-    // add code
     // The owner-blind fallbacks exist so an inherited member still resolves when the
     // reference names a subclass, but on a mod jar they also matched unrelated owners
     // -- java/lang/System.getProperty came out as func_71328_a. Only let them fire for
@@ -95,7 +85,6 @@ public class SrgRemap {
         }
         boolean reverse = "reverse".equalsIgnoreCase(args[3]);
         load(new File(args[2]), reverse);
-        System.out.println("[*] CL=" + CL.size() + " FD=" + FD.size() + " MD=" + MD.size());
 
         Remapper rm = new Remapper() {
             @Override public String map(String t) {
@@ -115,7 +104,6 @@ public class SrgRemap {
             }
         };
 
-        // add code
         hierarchy(new File(args[0]));
         if (args.length > 4) hierarchy(new File(args[4]));
         ZipFile zf = new ZipFile(args[0]);
@@ -127,10 +115,6 @@ public class SrgRemap {
             if (ze.isDirectory()) continue;
             byte[] data = read(zf.getInputStream(ze));
             String name = ze.getName();
-            // 每个类都被重映射过，所以 Mojang 的签名摘要必然全部失效。原样带过来的
-            // META-INF/*.SF|.DSA|.RSA 会让任何装了 SecurityManager 的工具在触碰
-            // net/minecraft/** 时抛 SecurityException("SHA-256 digest error")。
-            // 实测代价：<clinit> 闸门里 165 个类被记成初始化失败，掩盖了真实根因。
             String U = name.toUpperCase();
             if (U.startsWith("META-INF/")
                     && (U.endsWith(".SF") || U.endsWith(".DSA")
@@ -167,8 +151,6 @@ public class SrgRemap {
         }
         zos.close();
         zf.close();
-        System.out.println("[*] classes=" + cls + " resources=" + res
-                + " signatures-stripped=" + sig + " failed=" + fail);
         if (fail > 0) System.out.println("[!] " + fail + " entries failed, see above");
     }
 
@@ -189,7 +171,6 @@ public class SrgRemap {
                 String a = p[0], b = p[1];
                 String from = reverse ? b : a, to = reverse ? a : b;
                 FD.put(from, simple(to));
-                // add code
                 String fk = simple(from);
                 String prevF = FD.get(fk);
                 if (prevF != null && !prevF.equals(simple(to))) AMBIG.add("F:" + fk);
@@ -198,7 +179,6 @@ public class SrgRemap {
                 String a = p[0], ad = p[1], b = p[2], bd = p[3];
                 String from = reverse ? b : a, fd = reverse ? bd : ad, to = reverse ? a : b;
                 MD.put(from + " " + fd, simple(to));
-                // add code
                 String mk = simple(from) + " " + fd;
                 String prevM = MD.get(mk);
                 if (prevM != null && !prevM.equals(simple(to))) AMBIG.add("M:" + mk);
@@ -221,12 +201,6 @@ public class SrgRemap {
         return i < 0 ? path : path.substring(i + 1);
     }
 
-    /**
-     * Drop per-entry Digest attributes from the manifest. They are stale the moment
-     * classes are remapped, and a stale digest makes JarVerifier throw
-     * SecurityException("SHA-256 digest error") for that entry -- but only under a
-     * SecurityManager, so it presents as the class itself being broken.
-     */
     static byte[] stripDigests(byte[] mf) {
         final char NL = (char) 10, CR = (char) 13;
         java.nio.charset.Charset U8 = java.nio.charset.Charset.forName("UTF-8");

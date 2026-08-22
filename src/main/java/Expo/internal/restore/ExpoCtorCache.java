@@ -8,9 +8,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public final class ExpoCtorCache {
-
    public static final boolean ENABLED = true;
 
    public static final List<String> LOG = new ArrayList<String>();

@@ -25,7 +25,6 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import org.lwjgl.opengl.GL11;
 
-
 public class RavenModuleRow implements RavenElement {
    public ArrayList<AbstractRavenSettingRow> H;
    private static String b;
@@ -95,7 +94,7 @@ public class RavenModuleRow implements RavenElement {
       int var8 = (int)((var5 ^ 0L) << 32 >>> 40);
       int var9 = (int)((var5 ^ 0L) << 56 >>> 56);
       this.L = var1;
-      int var10 = this.L + -46173325;
+      int var10 = this.L + 12;
 
       for (AbstractRavenSettingRow var12 : this.H) {
          var12.i(var10, var7, var8, (byte)var9);
@@ -107,8 +106,6 @@ public class RavenModuleRow implements RavenElement {
       }
    }
 
-
-
    public void h(int var1, long var2) {
       long var4 = ((long)var1 << 32 | 1015394633L) ^ a;
       long var6 = var4 ^ 4626215126618L;
@@ -116,7 +113,6 @@ public class RavenModuleRow implements RavenElement {
       if (this.R != null && !this.R.w().isEmpty()) {
          this.H.clear();
 
-         // add code
          java.util.List<Setting> var20 = this.R.w();
 
          for (int var21 = 0; var21 < var20.size(); var21++) {
@@ -142,12 +138,6 @@ public class RavenModuleRow implements RavenElement {
    }
 
    public static void M(float var0, float var1, float var2, long var3, float var5, int var6, int var7) {
-
-
-
-
-
-
       R((char)0, 1109954809, 12240);
       GL11.glShadeModel(7425);
       GL11.glBegin(7);
@@ -176,7 +166,6 @@ public class RavenModuleRow implements RavenElement {
       int var8 = (int)((var4 ^ 49495418689029L) << 48 >>> 48);
       return Language.applyForName.c() ? this.R.Q(var6, (char)var7, (char)var8) : this.R.b();
    }
-
 
    public static void v(int var0) {
       float var1 = 0.0F;
@@ -209,7 +198,6 @@ public class RavenModuleRow implements RavenElement {
             long var5x = 93483943904204L;
             int var7x = 28813;
 
-
             RenderUtil.m(var7x, this.R.j(var5x), var3, 53203, (short)7294, var4);
          } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } });
       }
@@ -234,8 +222,6 @@ public class RavenModuleRow implements RavenElement {
    }
 
    public static void p(long var0) {
-
-
       RenderUtil.a(58001584163179L);
       GL11.glEdgeFlag(true);
    }
@@ -260,9 +246,6 @@ public class RavenModuleRow implements RavenElement {
    }
 
    private void E(Module var1, RavenCategoryPanel var2, long var3, int var5) {
-
-
-
       this.R = var1;
       this.O = var2;
       this.L = var5;
@@ -314,5 +297,4 @@ public class RavenModuleRow implements RavenElement {
       f = new HashMap(13);
       c = new long[]{-2972884669621063793L, 1141437146407109093L, 6107432537624805063L, 7617001951634375911L, 1506688802166888800L, 5888269191767401720L, 667651162496375240L, 8623078964538155950L, 2334337966712658940L, -8367317666064433629L, 8465485200971185740L, -3280606855720221316L, 3224848445458422427L, 549641287674617233L, 4611300639924398236L, 5182933733414454334L, -2117070062415806052L, -1045601703561052909L};
    }
-
 }

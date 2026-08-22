@@ -3,16 +3,6 @@ package Expo.event.events;
 import Expo.event.Event;
 import net.minecraft.entity.Entity;
 
-
-
-
-
-
-
-
-
-
-
 public class EntityJoinWorldEvent extends Event {
    private static final long a = 65611262055503L;
    public final Entity H;

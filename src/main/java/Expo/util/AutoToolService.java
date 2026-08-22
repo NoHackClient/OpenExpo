@@ -13,16 +13,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 
-
-
-
-
-
-
-
-
-
-
 public class AutoToolService implements EventSubscriber {
    private boolean U;
    public static AutoToolService K;
@@ -42,9 +32,6 @@ public class AutoToolService implements EventSubscriber {
       return this.U;
    }
 
-   private static void a() {
-   }
-
    public final void x(long var1, EventBus var3) {
       AutoToolServiceBinder.z(var3, this);
    }
@@ -52,8 +39,6 @@ public class AutoToolService implements EventSubscriber {
    public void I(long var1) {
       this.U = true;
    }
-
-
 
    static {
       a = 62220428746021L;
@@ -101,6 +86,4 @@ public class AutoToolService implements EventSubscriber {
          }
       }
    }
-
-
 }

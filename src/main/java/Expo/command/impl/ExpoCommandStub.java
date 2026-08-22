@@ -5,19 +5,7 @@ import Expo.command.ExpoCommands;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandStub extends Command {
-
    private final String[] aliases;
    private final String description;
    private final String usageHeader;
@@ -45,7 +33,6 @@ public final class ExpoCommandStub extends Command {
    public String[] e(long var1) {
       return this.aliases;
    }
-
 
    public boolean hasText() {
       return this.description != null || this.usage.length > 0;

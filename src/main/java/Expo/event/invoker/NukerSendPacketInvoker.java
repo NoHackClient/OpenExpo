@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SendPacketEvent;
 import Expo.module.impl.world.Nuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class NukerSendPacketInvoker implements EventInvoker {
    final Nuker M;
 

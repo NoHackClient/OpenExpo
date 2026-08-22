@@ -9,16 +9,6 @@ import javax.crypto.IllegalBlockSizeException;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 
-
-
-
-
-
-
-
-
-
-
 public final class EntityPlayerSPAccessor {
    private static TypedValueStore Q;
    private static TypedValueStore j;
@@ -79,7 +69,6 @@ public final class EntityPlayerSPAccessor {
    }
 
    public static void i(EntityPlayerSP var0, double var1, long var3) {
-
       g.f( var0, var1);
    }
 
@@ -96,7 +85,6 @@ public final class EntityPlayerSPAccessor {
    }
 
    public static void z(long var0, EntityPlayerSP var2, double var3) {
-
       V.f( var2, var3);
    }
 
@@ -108,10 +96,7 @@ public final class EntityPlayerSPAccessor {
       return r.V(var0);
    }
 
-
-
    public static Minecraft U(EntityPlayerSP var0, char var1, int var2, int var3) {
       return (Minecraft)b.v(var0);
    }
-
 }

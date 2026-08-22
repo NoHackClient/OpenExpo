@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreRenderCapeEvent;
 import Expo.module.impl.visual.TeamInvisible;
 
-
-
-
-
-
-
-
-
-
-
 public final class TeamInvisiblePreRenderCapeInvoker implements EventInvoker {
    final TeamInvisible b;
 

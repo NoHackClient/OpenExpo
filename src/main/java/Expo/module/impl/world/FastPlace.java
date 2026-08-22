@@ -25,16 +25,6 @@ import net.minecraft.item.ItemEgg;
 import net.minecraft.item.ItemSnowball;
 import net.minecraft.util.BlockPos;
 
-
-
-
-
-
-
-
-
-
-
 public class FastPlace extends Module implements EventSubscriber {
    private static Object[] d;
    private static String[] e;
@@ -49,7 +39,6 @@ public class FastPlace extends Module implements EventSubscriber {
 
    public FastPlace(long var1) {
       super(((a ^ (var1)) ^ 1985667824122L));
-      // add code
       this.declare("FastPlace", Category.World, "Change the block placing delay when holding RMB");
       var1 = a ^ var1;
       this.H = new TimerUtil();
@@ -126,7 +115,6 @@ public class FastPlace extends Module implements EventSubscriber {
             }
          }
       } catch (IndexOutOfBoundsException var10) {
-         Expo.internal.restore.ExpoDiag.attribute(var10, "FastPlace.x/2#0");
       }
    }
 
@@ -136,33 +124,17 @@ public class FastPlace extends Module implements EventSubscriber {
 
    static {
       a = 93753003014134L;
-      // add code
       d = new Object[7];
       e = new String[7];
       b = ", ";
       c = 500L;
    }
 
-
-
    public final void x(long var1, EventBus var3) {
       FastPlaceBinder.e(var3, this);
    }
 
-   private static void a() {
-      d[0] = "<\u00141\u000erc\b";
-      d[1] = "b+ v\u0001gU<$|LCB7~`";
-      d[2] = "\u0004\"fG!s0";
-      d[3] = long.class;
-      e[3] = "java/lang/Long";
-      d[4] = void.class;
-      e[4] = "java/lang/Void";
-      d[5] = "2W\u0000\u0015\u001d]9X\u0011Z|S2S\u0015\u0000";
-      d[6] = "4K\u000b,\u000eI0YNCX&(\u0019V8\u0005Hl@\u000eC\f\\1MF%DY6R4yP\u001f6LV/VG7 \u000e<\b\u00161\\[-\bOW";
-   }
-
    public void onPostRightClick(PostRightClickEvent var1, long var2) {
-
       try {
          if (f.thePlayer.getHeldItem() != null && f.thePlayer.getHeldItem().getItem() instanceof ItemBlock) {
             if (this.U != null) {
@@ -185,12 +157,10 @@ public class FastPlace extends Module implements EventSubscriber {
             }
          }
       } catch (IndexOutOfBoundsException var7) {
-         Expo.internal.restore.ExpoDiag.attribute(var7, "FastPlace.K/2#0");
       }
    }
 
    static {
-      // add code
       projectilesDelay = new NumberSetting("Projectiles-Delay", 2.0F, 0.0F, 4.0F, 1.0F);
       blockDelay = new NumberSetting("Block-Delay", 1.0F, 0.0F, 4.0F, 1.0F);
       disableWhenBedInRange = new NumberSetting("Disable-when-bed-in-range", -1.0F, -1.0F, 20.0F, 1.0F);

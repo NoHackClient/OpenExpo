@@ -15,7 +15,6 @@ import java.util.HashMap;
 import java.util.Map;
 import net.minecraft.item.ItemStack;
 
-
 public class InventoryHUD extends Module implements EventSubscriber {
    public static PercentageSetting backgroundOpacity;
    private static long a;
@@ -44,7 +43,6 @@ public class InventoryHUD extends Module implements EventSubscriber {
 
    public InventoryHUD(long var1) {
       super(((a ^ (var1)) ^ 19548772938122L));
-      // add code
       this.declare("InventoryHUD", Category.Visual_utility, "Show your inventory contents on screen");
       var1 = a ^ var1;
       this.p = new ItemStack[27];
@@ -88,30 +86,14 @@ public class InventoryHUD extends Module implements EventSubscriber {
       }
    }
 
-
    public void onPostTick(long var1, PostTickEvent var3) {
-
       for (int var4 = 9; var4 < 36; var4++) {
          ItemStack var5 = f.thePlayer == null ? null : f.thePlayer.inventory.mainInventory[var4];
          this.p[var4 - 9] = var5 == null ? null : var5.copy();
       }
    }
 
-   private static void a() {
-      h[0] = "v\u0003`t%I\u0007";
-      h[1] = "m'+(A\u001aZ0/\"\f>M;u>";
-      h[2] = "Ifs\u001a\tg<";
-      h[3] = byte.class;
-      k[3] = "java/lang/Byte";
-      h[4] = int.class;
-      k[4] = "java/lang/Integer";
-      h[5] = void.class;
-      k[5] = "java/lang/Void";
-      h[6] = "O&\u001dUo\u0004D)\f\u001a\u000e\nO\"\b@";
-      h[7] = "\f\u0005\u0007Sx\u000e\u000b\u001d\u001a#+\u007f\\[\u001b\u001fx\u000f\u001e\u0019B\u001bIF\u0014\u001a\u0017C.\u001d\n\n\u001b#sN\u0005]\u0002I;\u0011\u0005\u001d{\u00195NZ[\u0005Gs\u001f\u0007cA_x@]\u001d\u001f\u0019)\u001deX\u0001\u001a-\u0002\u0001_\u0016\u0013;\u007f";
-   }
    static {
-      // add code
       offsetX = new NumberSetting("Offset-X", 5.0F, 0.0F, 1000.0F, 1.0F);
       backgroundOpacity = new PercentageSetting("Background-opacity", 50);
       offsetY = new NumberSetting("Offset-Y", 30.0F, 0.0F, 1000.0F, 1.0F);

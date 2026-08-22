@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.module.impl.combat.KillAura;
 
-
-
-
-
-
-
-
-
-
-
 public final class KillAuraPreMouseInputInvoker implements EventInvoker {
    final KillAura b;
 

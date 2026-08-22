@@ -7,16 +7,6 @@ import Expo.event.invoker.FastPlacePostRightClickInvoker;
 import Expo.event.invoker.FastPlacePreUpdateInvoker;
 import Expo.module.impl.world.FastPlace;
 
-
-
-
-
-
-
-
-
-
-
 public final class FastPlaceBinder {
    private static final long a = 83807684013137L;
 

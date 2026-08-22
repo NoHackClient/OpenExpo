@@ -5,16 +5,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import java.util.Optional;
 
-
-
-
-
-
-
-
-
-
-
 public class Account {
    private String S;
    private String O;
@@ -91,7 +81,6 @@ public class Account {
       this.U = var1;
    }
 
-
    public String toString() {
       return "Account{refreshToken='"
          + this.l
@@ -120,8 +109,6 @@ public class Account {
       this(var1, var2, var3, var4, 0L, AccountType.MINECRAFT);
    }
 
-
-
    public Account(String var1, String var2, String var3) {
       this("", var2, var1, var3, 0L, AccountType.MINECRAFT);
    }
@@ -141,5 +128,4 @@ public class Account {
    public void r(String var1) {
       this.a = var1;
    }
-
 }

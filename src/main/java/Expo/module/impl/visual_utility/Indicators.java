@@ -33,16 +33,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Vec3;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class Indicators extends Module implements EventSubscriber {
    public static BooleanSetting renderArrows;
    private static long b;
@@ -61,8 +51,6 @@ public class Indicators extends Module implements EventSubscriber {
    public static BooleanSetting renderEggs;
 
    public void onPostTick(long var1, PostTickEvent var3) {
-
-
       if (ClientUtil.I()) {
          this.Y++;
          if (this.Y % 5 == 0) {
@@ -123,13 +111,11 @@ public class Indicators extends Module implements EventSubscriber {
 
    public Indicators(long var1) {
       super(((b ^ (var1)) ^ 40259283249710L));
-      // add code
       this.declare("Indicators", Category.Visual_utility, "Show projectiles that is going to hit you on screen");
       var1 = b ^ var1;
       this.p = new HashMap<>();
       this.m = new HashSet<>();
    }
-
 
    private boolean d(Entity var1, short var2) {
       if (var1 instanceof EntityArrow && !EntityArrowAccessor.E(0L, (EntityArrow)var1) && renderArrows.c()) {
@@ -151,8 +137,6 @@ public class Indicators extends Module implements EventSubscriber {
    static {
       b = 54273370022170L;
    }
-
-
 
    private Color getItem(ItemStack var3) {
       if (var3 == null) {
@@ -191,10 +175,6 @@ public class Indicators extends Module implements EventSubscriber {
    }
 
    public void onRender2D(long var1, Render2DEvent var3) {
-
-
-
-
       if (f.currentScreen == null && ClientUtil.I()) {
          try {
             for (Entity var11 : this.m) {
@@ -204,7 +184,6 @@ public class Indicators extends Module implements EventSubscriber {
                }
             }
          } catch (Exception var13) {
-            Expo.internal.restore.ExpoDiag.attribute(var13, "Indicators.m/2#0");
          }
       }
    }
@@ -306,7 +285,6 @@ public class Indicators extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       renderEnderPearls = new BooleanSetting("Render-ender-pearls", true);
       renderEggs = new BooleanSetting("Render-eggs", false);
       renderFireballs = new BooleanSetting("Render-fireballs", true);

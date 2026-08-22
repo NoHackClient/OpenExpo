@@ -5,16 +5,6 @@ import Expo.event.events.PreTickEvent;
 import Expo.event.invoker.NoJumpDelayPreTickInvoker;
 import Expo.module.impl.movement.NoJumpDelay;
 
-
-
-
-
-
-
-
-
-
-
 public final class NoJumpDelayBinder {
    private static final long a = 66578939372017L;
 
@@ -24,5 +14,4 @@ public final class NoJumpDelayBinder {
 
    private NoJumpDelayBinder() {
    }
-
 }

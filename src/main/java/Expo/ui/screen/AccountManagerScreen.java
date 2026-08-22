@@ -24,7 +24,6 @@ import net.minecraft.client.gui.GuiScreen;
 import org.apache.commons.lang3.StringUtils;
 import org.lwjgl.input.Keyboard;
 
-
 public class AccountManagerScreen extends GuiScreen {
    private static String[] c;
    private int G;
@@ -43,7 +42,6 @@ public class AccountManagerScreen extends GuiScreen {
 
    public void actionPerformed(GuiButton var1) {
        try {long var2 = 43158565309945L;
-
 
       if (var1 != null) {
          if (var1.enabled) {
@@ -221,8 +219,6 @@ public class AccountManagerScreen extends GuiScreen {
       return var0.i;
    }
 
-
-
    public void drawScreen(int var1, int var2, float var3) {
        try {long var4 = 32992442628228L;
       if (this.P != null) {
@@ -284,7 +280,6 @@ public class AccountManagerScreen extends GuiScreen {
       return var0.fontRendererObj;
    }
 
-
    public void handleMouseInput() {
       if (this.P != null) {
          this.P.handleMouseInput();
@@ -292,7 +287,6 @@ public class AccountManagerScreen extends GuiScreen {
 
       super.handleMouseInput();
    }
-
 
    public AccountManagerScreen(long var1, GuiScreen var3) {
       this.i = null;
@@ -333,12 +327,8 @@ public class AccountManagerScreen extends GuiScreen {
       }
    }
 
-
    public void initGui() {
        try {long var1 = 74020945541135L;
-
-
-
 
       AltManager.Q(17200, (short)3883, (short)55813);
       Keyboard.enableRepeatEvents(true);
@@ -387,7 +377,6 @@ public class AccountManagerScreen extends GuiScreen {
    } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } }
 
    protected void keyTyped(char var1, int var2) {
-
       switch (var2) {
          case 1:
             this.actionPerformed(this.S);
@@ -430,5 +419,4 @@ public class AccountManagerScreen extends GuiScreen {
       g = new HashMap(13);
       k = new HashMap(13);
    }
-
 }

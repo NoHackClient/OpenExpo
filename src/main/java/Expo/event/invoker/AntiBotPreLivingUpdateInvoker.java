@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreLivingUpdateEvent;
 import Expo.module.impl.misc.AntiBot;
 
-
-
-
-
-
-
-
-
-
-
 public final class AntiBotPreLivingUpdateInvoker implements EventInvoker {
    final AntiBot v;
 

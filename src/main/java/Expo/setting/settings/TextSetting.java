@@ -2,15 +2,6 @@ package Expo.setting.settings;
 
 import Expo.setting.Setting;
 
-
-
-
-
-
-
-
-
-
 public class TextSetting extends Setting {
    private String H;
 

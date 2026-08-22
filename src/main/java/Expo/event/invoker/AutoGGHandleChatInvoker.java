@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.HandleChatEvent;
 import Expo.module.impl.misc.AutoGG;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoGGHandleChatInvoker implements EventInvoker {
    final AutoGG K;
 

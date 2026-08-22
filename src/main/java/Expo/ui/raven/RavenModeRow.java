@@ -8,16 +8,6 @@ import Expo.util.MinecraftRef;
 import net.minecraft.client.Minecraft;
 import org.lwjgl.opengl.GL11;
 
-
-
-
-
-
-
-
-
-
-
 public class RavenModeRow extends AbstractRavenSettingRow {
    private static String d;
    private static Minecraft R;
@@ -63,8 +53,6 @@ public class RavenModeRow extends AbstractRavenSettingRow {
       this.h = this.O.O.X();
    }
 
-
-
    public void U(long var1) {
       long var3 = var1 ^ 11699446097668L;
       int var5 = (int)((var1 ^ 67731632783900L) >>> 48);
@@ -95,7 +83,6 @@ public class RavenModeRow extends AbstractRavenSettingRow {
 
    static {
       c = 69705471025448L;
-      // add code
       R = MinecraftRef.c((byte)0, 0L);
       d = ": ";
    }
@@ -121,5 +108,4 @@ public class RavenModeRow extends AbstractRavenSettingRow {
    public Setting f() {
       return this.q;
    }
-
 }

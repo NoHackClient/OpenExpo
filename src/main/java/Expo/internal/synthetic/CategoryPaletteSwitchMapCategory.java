@@ -14,7 +14,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
 public class CategoryPaletteSwitchMapCategory {
    public static int[] S;
 
@@ -116,5 +115,4 @@ public class CategoryPaletteSwitchMapCategory {
          throw new RuntimeException(var22);
       }
    }
-
 }

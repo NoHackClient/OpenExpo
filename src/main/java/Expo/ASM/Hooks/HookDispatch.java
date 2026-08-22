@@ -25,16 +25,6 @@ import net.minecraft.util.IChatComponent;
 import net.minecraft.util.MovementInput;
 import net.minecraft.util.Vec3;
 
-
-
-
-
-
-
-
-
-
-
 public class HookDispatch {
    private static final long a = 6474880236968L;
 

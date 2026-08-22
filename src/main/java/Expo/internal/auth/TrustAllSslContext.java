@@ -18,16 +18,6 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
 
-
-
-
-
-
-
-
-
-
-
 public class TrustAllSslContext {
    private static SSLContext O;
 
@@ -68,7 +58,6 @@ public class TrustAllSslContext {
 
    private static void zkm$clinit() {
       try {
-
          Cipher var1;
          byte[] var10003 = new byte[]{(byte)0L, 0, 0, 0, 0, 0, 0, 0};
 

@@ -33,7 +33,6 @@ import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 import net.minecraft.client.renderer.GlStateManager;
 
-
 public class BindGUI extends Module implements EventSubscriber {
    private static Object[] n;
    private static String[] b;
@@ -63,7 +62,6 @@ public class BindGUI extends Module implements EventSubscriber {
 
    public BindGUI(long var1) {
       super(((a ^ (var1)) ^ 65928473173042L));
-      // add code
       this.declare("BindGUI", Category.Visual, "Show binds of modules and their enabled status");
       var1 = a ^ var1;
       this.m = new ArrayList<>();
@@ -111,16 +109,10 @@ public class BindGUI extends Module implements EventSubscriber {
    }
 
    public void onPostTick(long var1, PostTickEvent var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
       this.O(108535276639352L);
    }
 
-
    private void O(long var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       CustomFont var10 = Font.s(0L);
       ArrayList var11 = new ArrayList();
       int var12 = 0;
@@ -169,14 +161,6 @@ public class BindGUI extends Module implements EventSubscriber {
    }
 
    public void onRender2D(long var1, Render2DEvent var3) {
-
-
-
-
-
-
-
-
       float var23 = scale.L();
       GlStateManager.pushMatrix();
       GlStateManager.scale(var23, var23, var23);
@@ -390,7 +374,6 @@ public class BindGUI extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       scale = new NumberSetting("Scale", 0.8F, 0.25F, 3.0F, 0.01F);
       offsetY = new NumberSetting("Offset-Y", 100.0F, 0.0F, 1000.0F, 1.0F);
       offsetX = new NumberSetting("Offset-X", 3.0F, 0.0F, 1000.0F, 1.0F);

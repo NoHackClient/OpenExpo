@@ -5,10 +5,8 @@ import Expo.ASM.Util.BytecodeHelper;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformGuiContainer extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       return BytecodeHelper.t(var1, "(IIF)V", (var0, var1x) -> {
@@ -23,9 +21,7 @@ public class TransformGuiContainer extends TransformerBase {
       d = 139396823925430L;
    }
 
-
    public TransformGuiContainer() {
       super("net/minecraft/client/gui/inventory/GuiContainer");
    }
-
 }

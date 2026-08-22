@@ -8,19 +8,7 @@ import Expo.module.Module;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandToggle extends Command {
-
    @Override
    public boolean J() {
       return false;

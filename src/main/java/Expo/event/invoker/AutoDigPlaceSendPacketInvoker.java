@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SendPacketEvent;
 import Expo.module.impl.world.AutoDigPlace;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoDigPlaceSendPacketInvoker implements EventInvoker {
    final AutoDigPlace w;
 

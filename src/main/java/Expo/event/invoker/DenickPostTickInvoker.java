@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.misc.Denick;
 
-
-
-
-
-
-
-
-
-
-
 public final class DenickPostTickInvoker implements EventInvoker {
    final Denick l;
 

@@ -25,16 +25,6 @@ import net.minecraft.potion.Potion;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class MoveUtil {
    private static Map d;
    private static long a;
@@ -182,8 +172,6 @@ public class MoveUtil {
    }
 
    public static double k(long var0) {
-
-
       return U(29842568986254L, z.thePlayer);
    }
 
@@ -204,8 +192,6 @@ public class MoveUtil {
    }
 
    public static double U(long var0, EntityPlayer var2) {
-
-
       return var2 != null && var2.ticksExisted >= 1 ? F(var2.lastTickPosX, var2.lastTickPosZ) * (20.0F * ClientUtil.b(75703014522979L).timerSpeed) : 0.0;
    }
 
@@ -298,7 +284,6 @@ public class MoveUtil {
    }
 
    public static boolean v(long var0) {
-
       return z.thePlayer.moveForward >= 0.8F
          && !z.thePlayer.isCollidedHorizontally
          && (z.thePlayer.getFoodStats().getFoodLevel() > a(27762, 6312494855400308921L) || z.thePlayer.capabilities.allowFlying)

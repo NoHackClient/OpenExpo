@@ -1,7 +1,6 @@
 package Expo.event;
 
 import Expo.event.events.StoppableEvent;
-import Expo.internal.restore.ExpoDiag;
 import Expo.ui.ModuleTagRenderer;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -34,33 +33,19 @@ public class EventBus {
             for (ListenerBinding var8 : (Iterable<ListenerBinding>)(var6)) {
                ListenerBinding.S(var8, true);
             }
-
-            ExpoDiag.subscribed(var1, var6);
          }
       }
    }
 
    public void e(Event var1, long var2) {
-
-
-
-
       if (var1 != null) {
          List var9 = this.P.get(var1.getClass());
-         ExpoDiag.dispatch(var1, var9);
          if (var9 != null && !var9.isEmpty()) {
             for (ListenerBinding var11 : (Iterable<ListenerBinding>)(var9)) {
                if (ListenerBinding.o(var11)) {
-                  ExpoDiag.delivered(var1, var11);
                   try {
                      v(var11, var1, 3958);
                   } catch (Throwable var13) {
-
-                     
-
-                     
-                     ExpoDiag.busFailure(var1, var11, var13);
-                     ExpoDiag.swallowed(var1, var11, var13);
                      this.O(var13, 128094061068843L);
                   }
 
@@ -91,8 +76,6 @@ public class EventBus {
    }
 
    private void O(Throwable var1, long var2) {
-
-
       if (ModuleTagRenderer.X) {
          long var6 = System.currentTimeMillis();
          Long var8 = this.Y.put((Class<? extends Throwable>)var1.getClass(), var6);
@@ -116,8 +99,6 @@ public class EventBus {
             for (ListenerBinding var4 : (Iterable<ListenerBinding>)(var2)) {
                ListenerBinding.S(var4, false);
             }
-
-            ExpoDiag.unsubscribed(var1, var2);
          }
       }
    }
@@ -143,5 +124,4 @@ public class EventBus {
       a = 34531714106406L;
       e = 500L;
    }
-
 }

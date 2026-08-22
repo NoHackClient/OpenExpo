@@ -3,16 +3,6 @@ package Expo.util;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 
-
-
-
-
-
-
-
-
-
-
 public class PlacementTarget {
    public final BlockPos q;
    public final boolean o;

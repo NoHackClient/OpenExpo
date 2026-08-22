@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreLivingUpdateEvent;
 import Expo.module.impl.combat.LagRange;
 
-
-
-
-
-
-
-
-
-
-
 public final class LagRangePreLivingUpdateInvoker implements EventInvoker {
    final LagRange p;
 

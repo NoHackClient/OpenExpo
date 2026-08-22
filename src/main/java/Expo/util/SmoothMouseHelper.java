@@ -13,16 +13,6 @@ import net.java.games.input.Mouse;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.MouseHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class SmoothMouseHelper extends MouseHelper {
    private static long d;
    private final ScheduledExecutorService A;
@@ -36,13 +26,11 @@ public class SmoothMouseHelper extends MouseHelper {
    private static long b;
 
    public void M() {
-      // add code
       this.A.shutdown();
       this.p = null;
    }
 
    private void V() {
-
       if (MinecraftRef.c((byte)0,0L).currentScreen == null) {
          this.o.forEach(var1x -> {
             var1x.poll();
@@ -54,7 +42,6 @@ public class SmoothMouseHelper extends MouseHelper {
 
    static {
       b = 104171904487733L;
-      // add code
       x = MinecraftRef.c((byte)0, 0L);
       c = -6439579045398052856L;
       d = 50L;
@@ -84,13 +71,10 @@ public class SmoothMouseHelper extends MouseHelper {
          this.A.scheduleAtFixedRate(this::V, 0L, 1L, TimeUnit.MILLISECONDS);
          this.A.scheduleAtFixedRate(this::j, 0L, d, TimeUnit.MILLISECONDS);
       } catch (NullPointerException var7) {
-         Expo.internal.restore.ExpoDiag.attribute(var7, "SmoothMouseHelper.f/1#0");
       }
    }
 
    private void j() {
-
-
       boolean var8 = MinecraftRef.c((byte)0,0L).currentScreen != null;
       if (var8 && !this.M.get()) {
          this.p.d(17775678696637L);
@@ -99,5 +83,4 @@ public class SmoothMouseHelper extends MouseHelper {
 
       this.M.set(var8);
    }
-
 }

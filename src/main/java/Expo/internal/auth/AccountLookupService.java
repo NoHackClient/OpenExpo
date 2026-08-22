@@ -31,16 +31,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
-
-
-
-
-
-
-
-
-
-
 public final class AccountLookupService {
    private static String i;
    private static Map<Long, String> j;
@@ -50,12 +40,9 @@ public final class AccountLookupService {
    private static Map g;
    private static String[] b;
 
-
-
    private static CompletableFuture<String> g(String var0, String var1, Executor var2) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var9 = f();
                Throwable var10 = null;
@@ -111,7 +98,6 @@ public final class AccountLookupService {
    private static CompletableFuture<Map<String, String>> C(String var0, Executor var1) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var8 = f();
                Throwable var9 = null;
@@ -199,7 +185,6 @@ public final class AccountLookupService {
    private static CompletableFuture<Map<String, String>> m(String var0, Executor var1) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var5 = f();
                Throwable var6 = null;
@@ -269,15 +254,12 @@ public final class AccountLookupService {
       );
    }
 
-
-
    private AccountLookupService() {
    }
 
    private static CompletableFuture<Map<String, String>> w(String var0, Executor var1) {
       return CompletableFuture.supplyAsync(
          () -> {
-
             try {
                CloseableHttpClient var8 = f();
                Throwable var9 = null;
@@ -340,10 +322,7 @@ public final class AccountLookupService {
       );
    }
 
-
-
    private static CloseableHttpClient f() {
-
       try {
          SSLSocketFactory var2 = TrustAllSslContext.j().getSocketFactory();
          SSLConnectionSocketFactory var3 = new SSLConnectionSocketFactory(var2, new String[]{"TLSv1.2"}, null, new BrowserCompatHostnameVerifier());
@@ -352,6 +331,4 @@ public final class AccountLookupService {
          return HttpClients.createDefault();
       }
    }
-
-
 }

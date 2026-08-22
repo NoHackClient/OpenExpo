@@ -2,13 +2,6 @@ package Expo.module.impl.visual;
 
 import Expo.internal.synthetic.ArrayListModuleCtorMarker;
 
-
-
-
-
-
-
-
 public class ArrayListRect {
    private final float A;
    private final float n;

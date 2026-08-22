@@ -18,15 +18,12 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.gui.ScaledResolution;
 import org.lwjgl.input.Keyboard;
 
-
 public class GuiScreenHooks {
    private static long b;
    private static long a;
    private static Minecraft c;
 
    public static void onPostDrawScreen(GuiScreen var0, int var1, int var2, float var3) throws Throwable {
-
-
       if (var0 != null) {
          if (!VisualSpoofRenderer.H()) {
             VisualSpoofRenderer.L(var1, var2, var3, 86835669792802L);
@@ -44,7 +41,6 @@ public class GuiScreenHooks {
    }
 
    public static void onDrawScreen(GuiScreen var0, CallbackInfo var1) {
-
       if (var0 != null) {
          if (!VisualSpoofRenderer.H()) {
             DrawScreenEvent var8 = new DrawScreenEvent(var0);
@@ -72,5 +68,4 @@ public class GuiScreenHooks {
    public static boolean shouldCancel() {
       return ClientUtil.I() && Gadgets.noScreenBackground.c();
    }
-
 }

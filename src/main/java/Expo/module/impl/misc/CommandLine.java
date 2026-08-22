@@ -30,16 +30,6 @@ import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.GuiTextField;
 import net.minecraft.entity.player.EntityPlayer.EnumChatVisibility;
 
-
-
-
-
-
-
-
-
-
-
 public class CommandLine extends Module implements EventSubscriber {
    private static long[] b;
    private static long a;
@@ -51,7 +41,6 @@ public class CommandLine extends Module implements EventSubscriber {
 
    static {
       a = 54022204389669L;
-      // add code
       zkm$clinit();
    }
 
@@ -145,7 +134,6 @@ public class CommandLine extends Module implements EventSubscriber {
 
    public CommandLine(long var1) {
       super(((a ^ (var1)) ^ 41236048353694L));
-      // add code
       this.declare("CommandLine", Category.Misc, "Configure the client setting by typing command in chat");
       var1 = a ^ var1;
    }
@@ -163,7 +151,6 @@ public class CommandLine extends Module implements EventSubscriber {
    }
 
    public void onPreUpdate(PreUpdateEvent var1, long var2) {
-
       if (f.currentScreen == null) {
          boolean var6 = f.gameSettings.chatVisibility != EnumChatVisibility.HIDDEN;
          if (ClientUtil.b(52, 35207672374243L) && var6) {
@@ -177,7 +164,6 @@ public class CommandLine extends Module implements EventSubscriber {
    }
 
    static {
-      // add code
       autoFill = new BooleanSetting("Auto-fill", true);
       autoFillPrompt = new BooleanSetting("Auto-fill-prompt", true);
    }

@@ -2,15 +2,6 @@ package Expo.ui.studio;
 
 import Expo.internal.synthetic.StudioModuleFrameCtorMarker;
 
-
-
-
-
-
-
-
-
-
 public class StudioModuleActionLayout {
    private final float e;
    private final float Q;

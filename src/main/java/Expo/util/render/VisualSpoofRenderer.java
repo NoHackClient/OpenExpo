@@ -20,16 +20,6 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL15;
 
-
-
-
-
-
-
-
-
-
-
 public class VisualSpoofRenderer {
    private static ByteBuffer q;
    private static boolean r = false;
@@ -96,7 +86,6 @@ public class VisualSpoofRenderer {
          W.e(var2, var7);
          return h;
       } catch (Throwable var14) {
-         Expo.internal.restore.ExpoDiag.attribute(var14, "VisualSpoofRenderer.r/2#0");
          return null;
       } finally {
          H = false;
@@ -128,7 +117,6 @@ public class VisualSpoofRenderer {
                   W.e(v, var0);
                   var5 = I(v.displayWidth, v.displayHeight);
                } catch (Throwable var11) {
-                  Expo.internal.restore.ExpoDiag.attribute(var11, "VisualSpoofRenderer.l/1#0");
                   var5 = null;
                } finally {
                   Framebuffer var8 = v.getFramebuffer();
@@ -208,7 +196,6 @@ public class VisualSpoofRenderer {
          var4 = Math.max(var4, y(d, var5));
       }
 
-
       if (i > 22222222L * 9L / 10L) {
          var4 = Math.max(var4, 2);
       }
@@ -260,7 +247,6 @@ public class VisualSpoofRenderer {
 
          return h;
       } catch (Throwable var15) {
-         Expo.internal.restore.ExpoDiag.attribute(var15, "VisualSpoofRenderer.i/2#0");
          return null;
       } finally {
          H = false;
@@ -304,7 +290,6 @@ public class VisualSpoofRenderer {
    }
 
    private static long j() {
-
       return Math.max(1500000L, 22222222L / 3L);
    }
 
@@ -330,7 +315,6 @@ public class VisualSpoofRenderer {
          GL11.glReadBuffer(OpenGlHelper.GL_COLOR_ATTACHMENT0);
          return attribute(var0.displayWidth, var0.displayHeight);
       } catch (Throwable var7) {
-         Expo.internal.restore.ExpoDiag.attribute(var7, "VisualSpoofRenderer.A/1#0");
          return null;
       } finally {
          var1.unbindFramebuffer();
@@ -451,7 +435,6 @@ public class VisualSpoofRenderer {
                      var0.framebufferRenderExt(v.displayWidth, v.displayHeight, true);
                      r = true;
                   } catch (Throwable var5) {
-                     Expo.internal.restore.ExpoDiag.attribute(var5, "VisualSpoofRenderer.f/0#0");
                      r = false;
                   } finally {
                      var0.bindFramebuffer(true);
@@ -471,7 +454,6 @@ public class VisualSpoofRenderer {
    }
 
    private static boolean u$r1() {
-
       return i > 22222222L ? true : p > 0.0 && p > 22222222L;
    }
 
@@ -537,7 +519,6 @@ public class VisualSpoofRenderer {
 
          return I(var2.displayWidth, var2.displayHeight);
       } catch (Throwable var17) {
-         Expo.internal.restore.ExpoDiag.attribute(var17, "VisualSpoofRenderer.M/7#0");
          return null;
       } finally {
          H = false;
@@ -668,7 +649,6 @@ public class VisualSpoofRenderer {
          try {
             return C(var0, var1);
          } catch (Throwable var3) {
-            Expo.internal.restore.ExpoDiag.attribute(var3, "VisualSpoofRenderer.n/2#0");
             b = false;
             T();
          }
@@ -676,5 +656,4 @@ public class VisualSpoofRenderer {
 
       return W(var0, var1);
    }
-
 }

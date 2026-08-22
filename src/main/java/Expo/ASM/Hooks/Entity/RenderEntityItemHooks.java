@@ -16,16 +16,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 
-
-
-
-
-
-
-
-
-
-
 public class RenderEntityItemHooks {
    private static final Minecraft M;
    private static final long a = 83471637984391L;
@@ -38,7 +28,6 @@ public class RenderEntityItemHooks {
    public static void onRenderEntityItem(
       RenderEntityItem var0, EntityItem var1, double var2, double var4, double var6, float var8, IBakedModel var9, CallbackInfoReturnable<Integer> var10
    ) {
-
       if (ModuleManager.v.o()) {
          ItemStack var18 = var1.getEntityItem();
          Item var19 = var18.getItem();

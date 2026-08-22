@@ -5,16 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import net.minecraft.util.ResourceLocation;
 
-
-
-
-
-
-
-
-
-
-
 public enum Category {
    Combat,
    Movement,
@@ -88,8 +78,6 @@ public enum Category {
    public String x(int var1, int var2, short var3) {
       return Language.Y( this.name());
    }
-
-
 
    private static long[] zkm$g0() {
       return new long[]{37596606110892040L, -5414625232382066681L, -737978787085418489L, 5613391014556336136L, 19819809487192070L, 6162584402476924934L, 3655614568782102537L};

@@ -2,13 +2,6 @@ package Expo.internal.synthetic;
 
 import Expo.enums.BlurDirection;
 
-
-
-
-
-
-
-
 public class RavenFramebufferSwitchMapBlurDirection {
    public static final int[] O = new int[BlurDirection.values().length];
 

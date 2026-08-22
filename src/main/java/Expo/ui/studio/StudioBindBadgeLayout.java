@@ -2,15 +2,6 @@ package Expo.ui.studio;
 
 import Expo.internal.synthetic.StudioModuleFrameCtorMarker;
 
-
-
-
-
-
-
-
-
-
 public class StudioBindBadgeLayout {
    private final boolean d;
    private final float h;

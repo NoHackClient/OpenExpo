@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.SetKeyBindStateEvent;
 import Expo.module.impl.world.AntiVoid;
 
-
-
-
-
-
-
-
-
-
-
 public final class AntiVoidSetKeyBindStateInvoker implements EventInvoker {
    final AntiVoid p;
 

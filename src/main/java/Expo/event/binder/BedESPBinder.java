@@ -5,16 +5,6 @@ import Expo.event.events.Render3DEvent;
 import Expo.event.invoker.BedESPRender3DInvoker;
 import Expo.module.impl.visual_utility.BedESP;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedESPBinder {
    private static final long a = 70686049206666L;
 

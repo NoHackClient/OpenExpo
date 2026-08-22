@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.HeldItemChangeEvent;
 import Expo.module.impl.world.Nuker;
 
-
-
-
-
-
-
-
-
-
-
 public final class NukerHeldItemChangeInvoker implements EventInvoker {
    final Nuker D;
 

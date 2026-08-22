@@ -23,7 +23,6 @@ import net.minecraft.scoreboard.ScorePlayerTeam;
 import net.minecraft.scoreboard.Scoreboard;
 import net.minecraft.util.EnumChatFormatting;
 
-
 public class ScoreBoard extends Module {
    private static Map h;
    public static BooleanSetting textShadow;
@@ -47,17 +46,11 @@ public class ScoreBoard extends Module {
 
    public ScoreBoard(long var1) {
       super(((a ^ (var1)) ^ 26128142835819L));
-      // add code
       this.declare("ScoreBoard", Category.Configuration, "Manage vanilla scoreboard rendering");
       var1 = a ^ var1;
    }
 
    public static void n(ScoreObjective var0, ScaledResolution var3) {
-
-
-
-
-
       if (!hideScoreboard.c()) {
          double var16 = scale.L();
          float var18 = offsetX.L();
@@ -146,21 +139,16 @@ public class ScoreBoard extends Module {
       }
    }
 
-
-
    static {
-      // add code
       backgroundOpacity = new PercentageSetting("Background-opacity", 30);
    }
    static {
-      // add code
       hideScoreboard = new BooleanSetting("Hide-scoreboard", false);
       disableScores = new BooleanSetting("Disable-scores", true);
       textShadow = new BooleanSetting("Text-shadow", false);
       roundedRectangle = new BooleanSetting("Rounded-rectangle", false);
    }
    static {
-      // add code
       scale = new NumberSetting("Scale", 1.0F, 0.0F, 3.0F, 0.01F);
       offsetX = new NumberSetting("Offset-X", 0.0F, -1000.0F, 1000.0F, 1.0F);
       offsetY = new NumberSetting("Offset-Y", 0.0F, -1000.0F, 1000.0F, 1.0F);

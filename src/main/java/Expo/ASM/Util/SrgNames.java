@@ -1,7 +1,5 @@
 package Expo.ASM.Util;
 
-
-
 public class SrgNames {
    public static String x;
    public static String f;
@@ -91,7 +89,6 @@ public class SrgNames {
          : var0;
    }
 
-
    public static String o(String var0, String... var1) {
       StringBuilder var4 = new StringBuilder("(");
 
@@ -105,7 +102,6 @@ public class SrgNames {
    public static String X(String var0) {
       return C(var0);
    }
-
 
    static {
       ab = 137773813781953L;
@@ -218,8 +214,6 @@ public class SrgNames {
       return var0.replace((char)47, (char)46);
    }
 
-
    private SrgNames() {
    }
-
 }

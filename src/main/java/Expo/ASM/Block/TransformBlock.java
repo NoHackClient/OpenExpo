@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformBlock extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       boolean var4 = false;
@@ -134,9 +132,7 @@ public class TransformBlock extends TransformerBase {
       super("net/minecraft/block/Block");
    }
 
-
    static {
       d = 23934094264149L;
    }
-
 }

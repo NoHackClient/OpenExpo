@@ -5,19 +5,8 @@ import Expo.internal.ChatInputHandler;
 import Expo.module.Modules;
 import Expo.module.impl.misc.CommandLine;
 
-
-
-
-
-
-
-
-
-
-
 public class GuiChatHooks {
    private static long a;
-
 
    static {
       a = 11136861685548L;
@@ -32,7 +21,6 @@ public class GuiChatHooks {
          var0.cancel();
       }
    }
-
 
    private static String getLastArgAfterDot(String var0) {
       int var3 = var0.indexOf(46);
@@ -51,11 +39,9 @@ public class GuiChatHooks {
       }
    }
 
-
    private static boolean isForgeModAutocompleteNoise(String[] var0) {
       return var0 != null && var0.length == 2
          ? "fml".equalsIgnoreCase(var0[0]) && "forge".equalsIgnoreCase(var0[1]) || "forge".equalsIgnoreCase(var0[0]) && "fml".equalsIgnoreCase(var0[1])
          : false;
    }
-
 }

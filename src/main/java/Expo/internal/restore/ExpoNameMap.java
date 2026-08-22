@@ -4,21 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoNameMap {
-
    private static final Map<String, String> MAP;
 
    static {
@@ -38,9 +24,7 @@ public final class ExpoNameMap {
          for (String k : omit.split(",")) {
             String t = k.trim();
             if (t.length() != 0) {
-               String had = m.remove(t);
-               System.out.println("[EXPONAMEMAP] control: dropped " + t
-                     + (had == null ? " (WAS NOT PRESENT)" : " -> " + had));
+               m.remove(t);
             }
          }
       }
@@ -102,18 +86,14 @@ public final class ExpoNameMap {
       m.put("Expo.Pm", "Expo.event.invoker.ChestStealerPreUpdateInvoker");
       m.put("Expo.Pn", "Expo.event.binder.KeepSprintBinder");
       m.put("Expo.Po", "Expo.event.invoker.VelocityPreMouseInputInvoker");
-      m.put("Expo.Protected.a", "Expo.internal.jnic.NativeGuardLibrary");
       m.put("Expo.Protected.b", "Expo.command.impl.StockCommandBind");
       m.put("Expo.Protected.d", "Expo.internal.accessor.EnchantmentHelperAccessorImpl");
       m.put("Expo.Protected.e", "Expo.command.Command");
       m.put("Expo.Protected.f", "Expo.command.impl.StockCommandCheaters");
-      m.put("Expo.Protected.i", "Expo.internal.jnic.i_2");
       m.put("Expo.Protected.j", "Expo.command.impl.StockCommandMenu");
-      m.put("Expo.Protected.k", "Expo.internal.jnic.k_2");
       m.put("Expo.Protected.l", "Expo.command.impl.StockCommandIgn");
       m.put("Expo.Protected.n", "Expo.command.impl.StockCommandConfig");
       m.put("Expo.Protected.o", "Expo.command.impl.StockCommandFriend");
-      m.put("Expo.Protected.q", "Expo.internal.jnic.q_2");
       m.put("Expo.Protected.r", "Expo.ui.swing.ConfigManagerTextSettingListener");
       m.put("Expo.Protected.s", "Expo.ui.swing.ConfigManagerWindowCloseAdapter");
       m.put("Expo.Protected.tA", "Expo.command.impl.tA_2");
@@ -121,28 +101,18 @@ public final class ExpoNameMap {
       m.put("Expo.Protected.tb", "Expo.internal.accessor.EntityPlayerAccessor");
       m.put("Expo.Protected.tc", "Expo.internal.jnic.GameStartLatch");
       m.put("Expo.Protected.td", "Expo.internal.synthetic.td_2");
-      m.put("Expo.Protected.te", "Expo.internal.jnic.te_2");
-      m.put("Expo.Protected.tf", "Expo.internal.jnic.tf_2");
       m.put("Expo.Protected.tg", "Expo.internal.accessor.PacketAccessor");
       m.put("Expo.Protected.ti", "Expo.internal.accessor.EntityArrowAccessor");
       m.put("Expo.Protected.tj", "Expo.internal.accessor.EntityLivingBaseAccessor");
       m.put("Expo.Protected.tl", "Expo.internal.accessor.MinecraftAccessor");
-      m.put("Expo.Protected.tm", "Expo.internal.jnic.tm_2");
       m.put("Expo.Protected.tn", "Expo.internal.accessor.FieldAccessors");
-      m.put("Expo.Protected.to", "Expo.internal.jnic.ProgressListener");
       m.put("Expo.Protected.tp", "Expo.internal.accessor.EntityRendererAccessor");
-      m.put("Expo.Protected.tq", "Expo.internal.jnic.EncryptedClassEntry");
       m.put("Expo.Protected.tr", "Expo.internal.jnic.StockConfigStore");
       m.put("Expo.Protected.ts", "Expo.internal.accessor.MethodAccessors");
       m.put("Expo.Protected.tt", "Expo.ui.swing.tt_2");
-      m.put("Expo.Protected.tu", "Expo.internal.jnic.tu_2");
-      m.put("Expo.Protected.tv", "Expo.internal.jnic.tv_2");
       m.put("Expo.Protected.tw", "Expo.command.impl.StockCommandToggle");
       m.put("Expo.Protected.tx", "Expo.event.EventSubscriber");
-      m.put("Expo.Protected.ty", "Expo.internal.jnic.ty_2");
-      m.put("Expo.Protected.u", "Expo.internal.jnic.u_2");
       m.put("Expo.Protected.v", "Expo.command.impl.StockCommandReset");
-      m.put("Expo.Protected.w", "Expo.internal.jnic.w_2");
       m.put("Expo.Protected.x", "Expo.command.impl.StockCommandInfo");
       m.put("Expo.Protected.z", "Expo.internal.accessor.GuiChatAccessor");
       m.put("Expo.Ta", "Expo.event.binder.AmbienceBinder");
@@ -548,8 +518,6 @@ public final class ExpoNameMap {
       m.put("Expo.EX", "Expo.event.events.TickEvent");
       m.put("Expo.Eh", "Expo.event.events.SetKeyBindStateEvent");
       m.put("Expo.Protected.C", "Expo.event.EventInvoker");
-      m.put("Expo.Protected.G", "Expo.internal.drm.LoginWindow");
-      m.put("Expo.Protected.T", "Expo.internal.drm.VerifyFailHandler");
       m.put("Expo.Protected.tH", "Expo.ui.swing.ConfigManagerWindow");
       m.put("Expo.Protected.tK", "Expo.internal.accessor.TypedValueStore");
       m.put("Expo.Protected.tZ", "Expo.event.ListenerBinding");
@@ -622,8 +590,6 @@ public final class ExpoNameMap {
       m.put("Expo.zx", "Expo.module.impl.player.GhostHand");
    }
 
-
-   // add code
    private static void tier3_0(Map<String, String> m) {
       m.put("Expo.A2", "Expo.event.invoker.KeyStrokesSetKeyBindStateInvoker");
       m.put("Expo.A3", "Expo.event.invoker.LagRangePreLivingUpdateInvoker");
@@ -911,8 +877,6 @@ public final class ExpoNameMap {
       m.put("Expo.yZ", "Expo.util.MinecraftRef");
    }
 
-
-   // add code
    private static void tier4_0(Map<String, String> m) {
       m.put("Expo.A", "Expo.enums.MinecraftColor");
       m.put("Expo.A0", "Expo.event.binder.PacketManagerBinder");
@@ -1052,8 +1016,6 @@ public final class ExpoNameMap {
       m.put("Expo.y_", "Expo.module.impl.visual_utility.ClosestPlayerEntry");
    }
 
-
-   // add code
    private static void tier5_0(Map<String, String> m) {
       m.put("Expo.ASM.Hooks.EntityLivingBaseHooks", "Expo.ASM.Hooks.Entity.EntityLivingBaseHooks");
       m.put("Expo.ASM.Hooks.EntityPlayerHooks", "Expo.ASM.Hooks.Entity.EntityPlayerHooks");
@@ -1073,11 +1035,8 @@ public final class ExpoNameMap {
       m.put("Expo.ASM.TransformEntityRenderer", "Expo.ASM.Entity.TransformEntityRenderer");
    }
 
-
-   // add code
    private static void tier6_0(Map<String, String> m) {
       m.put("Expo.Protected.B", "Expo.internal.accessor.RenderEntityItemAccessorImpl");
-      m.put("Expo.Protected.Encryption.e", "Expo.internal.jnic.ClassEncryption");
       m.put("Expo.Protected.ExpoAzPump", "Expo.internal.restore.ExpoAzPump");
       m.put("Expo.Protected.ExpoBootstrap", "Expo.internal.restore.ExpoBootstrap");
       m.put("Expo.Protected.ExpoClickGui", "Expo.internal.restore.ExpoClickGui");
@@ -1086,7 +1045,6 @@ public final class ExpoNameMap {
       m.put("Expo.Protected.ExpoConfig", "Expo.internal.restore.ExpoConfig");
       m.put("Expo.Protected.ExpoCtorCache", "Expo.internal.restore.ExpoCtorCache");
       m.put("Expo.Protected.ExpoCtorCacheGate", "Expo.internal.restore.ExpoCtorCacheGate");
-      m.put("Expo.Protected.ExpoDiag", "Expo.internal.restore.ExpoDiag");
       m.put("Expo.Protected.ExpoGuiChangelog", "Expo.internal.restore.ExpoGuiChangelog");
       m.put("Expo.Protected.ExpoGuiConfig", "Expo.internal.restore.ExpoGuiConfig");
       m.put("Expo.Protected.ExpoGuiData", "Expo.internal.restore.ExpoGuiData");
@@ -1094,7 +1052,6 @@ public final class ExpoNameMap {
       m.put("Expo.Protected.ExpoGuiJson", "Expo.internal.restore.ExpoGuiJson");
       m.put("Expo.Protected.ExpoGuiKeys", "Expo.internal.restore.ExpoGuiKeys");
       m.put("Expo.Protected.ExpoGuiModules", "Expo.internal.restore.ExpoGuiModules");
-      m.put("Expo.Protected.ExpoGuiProbe", "Expo.internal.restore.ExpoGuiProbe");
       m.put("Expo.Protected.ExpoGuiTerminal", "Expo.internal.restore.ExpoGuiTerminal");
       m.put("Expo.Protected.ExpoGuiText", "Expo.internal.restore.ExpoGuiText");
       m.put("Expo.Protected.ExpoGuiWindow", "Expo.internal.restore.ExpoGuiWindow");
@@ -1102,45 +1059,23 @@ public final class ExpoNameMap {
       m.put("Expo.Protected.ExpoModuleSettings", "Expo.internal.restore.ExpoModuleSettings");
       m.put("Expo.Protected.ExpoNameMap", "Expo.internal.restore.ExpoNameMap");
       m.put("Expo.Protected.ExpoRavenGui", "Expo.internal.restore.ExpoRavenGui");
-      m.put("Expo.Protected.ExpoSeedProbe", "Expo.internal.restore.ExpoSeedProbe");
-      m.put("Expo.Protected.ExpoSelfTest", "Expo.internal.restore.ExpoSelfTest");
       m.put("Expo.Protected.ExpoSettingStatics", "Expo.internal.restore.ExpoSettingStatics");
-      m.put("Expo.Protected.ExpoSweep", "Expo.internal.restore.ExpoSweep");
-      m.put("Expo.Protected.ExpoSweepCanary", "Expo.internal.restore.ExpoSweepCanary");
-      m.put("Expo.Protected.ExpoSweepSettings", "Expo.internal.restore.ExpoSweepSettings");
       m.put("Expo.Protected.ExpoTruthNames", "Expo.internal.restore.ExpoTruthNames");
-      m.put("Expo.Protected.F", "Expo.internal.jnic.ProgressBridge");
       m.put("Expo.Protected.I", "Expo.internal.accessor.EntityCanRiderInteractAccessor");
       m.put("Expo.Protected.J", "Expo.internal.jnic.J");
       m.put("Expo.Protected.K", "Expo.internal.accessor.ItemOnEntitySwingAccessor");
       m.put("Expo.Protected.M", "Expo.ui.swing.ConfigManagerScrollRunnable");
       m.put("Expo.Protected.N", "Expo.internal.jnic.StockClientBootstrap");
-      m.put("Expo.Protected.P", "Expo.internal.drm.LoginWindowTimer");
       m.put("Expo.Protected.R", "Expo.internal.jnic.R");
-      m.put("Expo.Protected.S", "Expo.internal.drm.SkidonionLoginClient");
       m.put("Expo.Protected.V", "Expo.internal.accessor.FieldReader");
-      m.put("Expo.Protected.W", "Expo.internal.jnic.NativeGuardLibraryOptions");
-      m.put("Expo.Protected.a_Holder", "Expo.internal.jnic.NativeGuardLibraryHolder");
       m.put("Expo.Protected.g", "Expo.internal.accessor.EffectRendererBlockHitEffectsAccessor");
       m.put("Expo.Protected.t", "Expo.internal.jnic.t");
       m.put("Expo.Protected.t0", "Expo.ui.swing.t0");
-      m.put("Expo.Protected.t1", "Expo.internal.jnic.t1");
-      m.put("Expo.Protected.t3", "Expo.internal.jnic.t3");
-      m.put("Expo.Protected.t4", "Expo.internal.jnic.t4");
       m.put("Expo.Protected.t6", "Expo.internal.jnic.StockCommandRegistry");
-      m.put("Expo.Protected.t9", "Expo.internal.jnic.t9");
       m.put("Expo.Protected.tE", "Expo.ui.swing.ConfigManagerBindPanel");
-      m.put("Expo.Protected.tF", "Expo.internal.jnic.StringCallback");
-      m.put("Expo.Protected.tI", "Expo.internal.jnic.tI");
-      m.put("Expo.Protected.tL", "Expo.internal.jnic.tL");
-      m.put("Expo.Protected.tM", "Expo.internal.jnic.tM");
       m.put("Expo.Protected.tN", "Expo.ui.swing.tN");
-      m.put("Expo.Protected.tP", "Expo.internal.jnic.ConfigManagerListHeader");
       m.put("Expo.Protected.tQ", "Expo.ui.swing.ConfigManagerKeyAdapter");
-      m.put("Expo.Protected.tR", "Expo.internal.jnic.tR");
-      m.put("Expo.Protected.tS", "Expo.internal.jnic.EncryptedClassLoader");
       m.put("Expo.Protected.tV", "Expo.ui.swing.tV");
-      m.put("Expo.Protected.tY", "Expo.internal.jnic.tY");
       m.put("Expo.Protected.th", "Expo.ui.swing.th");
    }
 
@@ -1152,10 +1087,6 @@ public final class ExpoNameMap {
 
       if (to == null) {
          return name;
-      }
-
-      if (ExpoDiag.on()) {
-         ExpoDiag.renamed(name, to);
       }
 
       return to;

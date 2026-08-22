@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PreUpdateEvent;
 import Expo.module.impl.movement.Fly;
 
-
-
-
-
-
-
-
-
-
-
 public final class FlyPreUpdateInvoker implements EventInvoker {
    final Fly O;
 

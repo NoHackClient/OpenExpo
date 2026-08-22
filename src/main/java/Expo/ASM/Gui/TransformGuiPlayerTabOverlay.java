@@ -6,14 +6,12 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformGuiPlayerTabOverlay extends TransformerBase {
    private static long d;
 
    static {
       d = 76852039433438L;
    }
-
 
    public boolean s(ClassNode var1) {
       return BytecodeHelper.t(var1, "(" + SrgNames.X("net/minecraft/client/network/NetworkPlayerInfo") + ")Ljava/lang/String;", (var0, var1x) -> {
@@ -28,6 +26,4 @@ public class TransformGuiPlayerTabOverlay extends TransformerBase {
    public TransformGuiPlayerTabOverlay() {
       super("net/minecraft/client/gui/GuiPlayerTabOverlay");
    }
-
-
 }

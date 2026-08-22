@@ -11,16 +11,6 @@ import Expo.event.invoker.JumpResetPostUpdateInvoker;
 import Expo.event.invoker.JumpResetWorldLoadInvoker;
 import Expo.module.impl.combat.JumpReset;
 
-
-
-
-
-
-
-
-
-
-
 public final class JumpResetBinder {
    private static final long a = 45363415832535L;
 
@@ -33,5 +23,4 @@ public final class JumpResetBinder {
 
    private JumpResetBinder() {
    }
-
 }

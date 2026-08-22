@@ -15,28 +15,19 @@ import net.minecraft.network.play.INetHandlerPlayClient;
 import net.minecraft.network.play.server.S02PacketChat;
 import net.minecraft.network.play.server.S12PacketEntityVelocity;
 
-
-
-
-
-
-
-
-
-
-
 public class NetHandlerPlayClientHooks {
    private static final long a = 114020735289940L;
    private static final Minecraft g;
 
    public static void onHandleEntityVelocity(NetHandlerPlayClient var0, S12PacketEntityVelocity var1, CallbackInfo var2) {
-
-
-
-
       WorldClient var12 = g.theWorld;
       PacketThreadUtil.checkThreadAndEnqueue(var1, var0, g);
       Entity var13 = var12.getEntityByID(var1.getEntityID());
+      if (var13 == null) {
+         var2.cancel();
+         return;
+      }
+
       if (var13.getEntityId() == g.thePlayer.getEntityId()) {
          KnockbackEvent var14 = new KnockbackEvent(var1.getMotionX(), var1.getMotionY(), var1.getMotionZ());
          ExpoClient.w.e(var14, 18670087776179L);
@@ -66,7 +57,6 @@ public class NetHandlerPlayClientHooks {
    }
 
    public static void handleChat(S02PacketChat var0) {
-
       ExpoClient.w.e(new HandleChatEvent(var0.getChatComponent()), 18670087776179L);
    }
 }

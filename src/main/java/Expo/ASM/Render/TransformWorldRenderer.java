@@ -6,7 +6,6 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformWorldRenderer extends TransformerBase {
    private static long d;
 
@@ -48,6 +47,4 @@ public class TransformWorldRenderer extends TransformerBase {
          "putColorMultiplier"
       );
    }
-
-
 }

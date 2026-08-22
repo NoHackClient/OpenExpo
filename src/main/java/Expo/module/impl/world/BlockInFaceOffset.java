@@ -2,16 +2,6 @@ package Expo.module.impl.world;
 
 import net.minecraft.util.EnumFacing;
 
-
-
-
-
-
-
-
-
-
-
 public class BlockInFaceOffset {
    public final int I;
    public final int m;

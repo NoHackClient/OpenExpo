@@ -7,16 +7,6 @@ import Expo.event.invoker.BedPlatesPreUpdateInvoker;
 import Expo.event.invoker.BedPlatesRender3DInvoker;
 import Expo.module.impl.visual_utility.BedPlates;
 
-
-
-
-
-
-
-
-
-
-
 public final class BedPlatesBinder {
    private static final long a = 72714004120520L;
 

@@ -14,7 +14,6 @@ import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 
-
 public class CookieLoginScreen extends GuiScreen {
    private static long b;
    private String O;
@@ -36,11 +35,8 @@ public class CookieLoginScreen extends GuiScreen {
       }
    }
 
-
    public void initGui() {
       this.buttonList.clear();
-
-
 
       int var6 = this.width / 2;
       int var7 = var6 - 200 / 2;
@@ -56,7 +52,6 @@ public class CookieLoginScreen extends GuiScreen {
    }
 
    static {
-
       b = 118137226664231L;
    }
 
@@ -134,7 +129,6 @@ public class CookieLoginScreen extends GuiScreen {
       this.mc.addScheduledTask(var1);
    }
 
-
    public void drawScreen(int var1, int var2, float var3) {
       if (this.k != null) {
          this.k.enabled = this.v;
@@ -171,5 +165,4 @@ public class CookieLoginScreen extends GuiScreen {
          this.drawString(this.fontRendererObj, var9, 3, this.height - 2 - this.fontRendererObj.FONT_HEIGHT, -1);
       }
    }
-
 }

@@ -27,7 +27,7 @@ import java.io.*; import java.util.*; import java.util.zip.*;
 public class BoolNarrowPass {
   static int zFixed = 0, bFixed = 0;
   static Set<String> allow = new HashSet<String>();
-  static Set<String> hit = new HashSet<String>();   // add code
+  static Set<String> hit = new HashSet<String>();
 
   static boolean fixZkmZ(MethodNode m) {
     if (!"zkm$z".equals(m.name) || !"(I)Z".equals(m.desc)) return false;
@@ -76,7 +76,7 @@ public class BoolNarrowPass {
       ins.add(new InsnNode(Opcodes.LAND));
       m.instructions.insertBefore(z, ins);
       if (m.maxStack < 6) m.maxStack += 2;
-      hit.add(fi.owner + " " + fi.name);   // add code
+      hit.add(fi.owner + " " + fi.name);
       bFixed++;
     }
   }
@@ -118,13 +118,9 @@ public class BoolNarrowPass {
       times.put(ze.getName(), Long.valueOf(ze.getTime()));
     }
     in.close();
-    System.out.println("[BoolNarrowPass] zkm$z rewritten = " + zFixed + " (expected " + expZ + ")");
-    System.out.println("[BoolNarrowPass] form-B sites    = " + bFixed + " (expected " + expB + ")");
-    // add code
     List<String> miss = new ArrayList<String>(allow);
     miss.removeAll(hit);
     Collections.sort(miss);
-    for (String s : miss) System.out.println("[BoolNarrowPass] no form-B site: " + s);
     // Refuse BEFORE touching the artifact, so a count mismatch cannot leave a
     // half-patched jar behind.
     if (zFixed != expZ || bFixed != expB) {
@@ -152,20 +148,15 @@ public class BoolNarrowPass {
       throw new IllegalStateException("post-write verification found " + seen
           + " narrowed zkm$z body/bodies in the artifact, expected " + expZ);
     }
-    // add code
     if (expZ == 0) {
       int left = countZkmZ(jar);
       if (left != 0) {
         throw new IllegalStateException("expected zkm$z to be gone from the artifact, "
             + "found " + left + " remaining declaration(s)");
       }
-      System.out.println("[BoolNarrowPass] confirmed zkm$z absent from the artifact "
-          + "(inlined at source, Batch A)");
     }
-    System.out.println("[BoolNarrowPass] verified " + seen + " zkm$z bodies in the written jar");
   }
 
-  // add code
   static int countZkmZ(File jar) throws IOException {
     int n = 0;
     ZipFile z = new ZipFile(jar);

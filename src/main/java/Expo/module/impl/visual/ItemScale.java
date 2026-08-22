@@ -12,16 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.StringUtils;
 
-
-
-
-
-
-
-
-
-
-
 public class ItemScale extends Module {
    private static long b;
    public static BooleanSetting bedwarsResources;
@@ -32,15 +22,12 @@ public class ItemScale extends Module {
    public static NumberSetting scale;
    public static BooleanSetting renderALL;
 
-
-
    private static boolean f(Item var0) {
       return var0 == Items.diamond_boots || var0 == Items.diamond_leggings || var0 == Items.diamond_helmet || var0 == Items.diamond_chestplate;
    }
 
    public ItemScale(long var1) {
       super(((b ^ (var1)) ^ 105075184668941L));
-      // add code
       this.declare("ItemScale", Category.Visual, "Scale the dropped items");
       var1 = b ^ var1;
    }
@@ -50,7 +37,6 @@ public class ItemScale extends Module {
    }
 
    static {
-      // add code
       scale = new NumberSetting("Scale", 3.0F, 0.01F, 5.0F, 0.01F);
    }
 
@@ -105,7 +91,6 @@ public class ItemScale extends Module {
    }
 
    static {
-      // add code
       nbtOnly = new BooleanSetting("NBT-only", false);
       megawallsItems = new BooleanSetting("Megawalls-items", true);
       renderSwordsAndBows = new BooleanSetting("Render-swords-and-bows", false);

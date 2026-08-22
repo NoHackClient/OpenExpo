@@ -7,16 +7,6 @@ import Expo.event.invoker.MainMenuThemePostTickInvoker;
 import Expo.event.invoker.MainMenuThemePreTickInvoker;
 import Expo.ui.screen.MainMenuTheme;
 
-
-
-
-
-
-
-
-
-
-
 public final class MainMenuThemeBinder {
    private static final long a = 115498613439651L;
 
@@ -27,5 +17,4 @@ public final class MainMenuThemeBinder {
       var0.R(var1, PreTickEvent.class, 3, new MainMenuThemePreTickInvoker(var1));
       var0.R(var1, PostTickEvent.class, 3, new MainMenuThemePostTickInvoker(var1));
    }
-
 }

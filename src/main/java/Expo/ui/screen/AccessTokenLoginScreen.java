@@ -23,7 +23,6 @@ import net.minecraft.util.Session;
 import org.apache.commons.lang3.StringUtils;
 import org.lwjgl.input.Keyboard;
 
-
 public class AccessTokenLoginScreen extends GuiScreen {
    private static long j;
    private static String[] c;
@@ -59,7 +58,6 @@ public class AccessTokenLoginScreen extends GuiScreen {
       this.f = CompletableFuture.allOf(var1.toArray(new CompletableFuture[0]))
          .thenRunAsync(
             () -> {
-
                AltManager.O(101554584226764L);
                this.mc
                   .addScheduledTask(
@@ -109,7 +107,6 @@ public class AccessTokenLoginScreen extends GuiScreen {
       e = new long[]{-6179178860364192126L, -4115508186449270523L, -8344684637995672757L, -3102215640195162597L, 3437161096464223226L, 4087559869772570548L, -6742336212447138074L, -2954776816750629725L, 8086583128158658561L, 620766257088394773L, -7612866976290492898L, 8239844019441514443L, -2341318659144379299L, -1168087349002653694L, 148759182871054105L, -1412249561140564675L, -514634316045331755L, 2284500278605410940L, 3447497351858921391L, 1928326603251773153L};
       j = 5000L;
    }
-
 
    public void initGui() {
       Keyboard.enableRepeatEvents(true);
@@ -309,10 +306,7 @@ public class AccessTokenLoginScreen extends GuiScreen {
       }
    }
 
-
-
    protected void keyTyped(char var1, int var2) {
-
       if (var2 == 1) {
          this.actionPerformed(this.C);
       } else {
@@ -418,5 +412,4 @@ public class AccessTokenLoginScreen extends GuiScreen {
          this.W(var8, var9, var10);
       }
    }
-
 }

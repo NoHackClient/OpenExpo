@@ -16,16 +16,6 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
-
-
-
-
-
-
-
-
-
-
 public class AttackTracker implements EventSubscriber {
    public static boolean s;
    private static long a;
@@ -36,7 +26,6 @@ public class AttackTracker implements EventSubscriber {
 
    static {
       a = 61906676875913L;
-      // add code
       zkm$clinit();
    }
 
@@ -81,9 +70,6 @@ public class AttackTracker implements EventSubscriber {
    }
 
    public void onAttackEntity(AttackEntityEvent var1, long var2) {
-
-
-
       if (!s) {
          var1.I(21307, 3074332907L);
       }
@@ -99,5 +85,4 @@ public class AttackTracker implements EventSubscriber {
    public final void x(long var1, EventBus var3) {
       AttackTrackerBinder.D(var3, this);
    }
-
 }

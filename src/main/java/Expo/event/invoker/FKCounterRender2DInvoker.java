@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.Render2DEvent;
 import Expo.module.impl.visual_utility.FKCounter;
 
-
-
-
-
-
-
-
-
-
-
 public final class FKCounterRender2DInvoker implements EventInvoker {
    final FKCounter B;
 

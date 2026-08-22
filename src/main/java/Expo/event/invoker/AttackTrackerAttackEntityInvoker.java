@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.AttackEntityEvent;
 import Expo.util.AttackTracker;
 
-
-
-
-
-
-
-
-
-
-
 public final class AttackTrackerAttackEntityInvoker implements EventInvoker {
    final AttackTracker v;
 

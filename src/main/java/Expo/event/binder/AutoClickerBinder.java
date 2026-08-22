@@ -5,16 +5,6 @@ import Expo.event.events.PreTickEvent;
 import Expo.event.invoker.AutoClickerPreTickInvoker;
 import Expo.module.impl.combat.AutoClicker;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoClickerBinder {
    private static final long a = 96604313955593L;
 

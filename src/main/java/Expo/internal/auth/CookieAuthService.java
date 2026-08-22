@@ -58,7 +58,6 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-
 public class CookieAuthService {
    private static long[] h;
    private static String[] b;
@@ -76,18 +75,9 @@ public class CookieAuthService {
    private static List<String> X;
    private static Integer[] f;
 
-
    private static CompletableFuture<Boolean> R(Map<String, String> var0, CookieLoginScreen var1) {
       return CompletableFuture.supplyAsync(() -> {
           try {long var2 = 94968564611454L;
-
-
-
-
-
-
-
-
 
          try {
             var1.x("&fRequesting Microsoft access token...&r");
@@ -129,7 +119,6 @@ public class CookieAuthService {
          }
       } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } });
    }
-
 
    private static boolean o( String var2) {
       return var2.startsWith("__Host-")
@@ -198,10 +187,6 @@ public class CookieAuthService {
    }
 
    public static MinecraftLoginResponse W(long var0, String var2) throws IOException, Exception, Throwable {
-
-
-
-
       AccountManagerScreen.q = new TimedStatusMessage(ChatFormatting.y("&7Logging into Minecraft services..."), 5000L);
       String var9 = "{\"identityToken\":\"" + var2 + "\",\"ensureLegacyEnabled\":true}";
       CloseableHttpClient var10 = Y(18702133247L, (byte)17);
@@ -387,7 +372,6 @@ public class CookieAuthService {
       j.execute(() -> {
           try {long var3 = 61773449943444L;
 
-
          try {
             var1.x("&fReading cookie file...&r");
             Map<String, String> var9 = Z(var0);
@@ -422,9 +406,6 @@ public class CookieAuthService {
    }
 
    private static Map Z(File var0) throws FileNotFoundException, IOException, Throwable {
-
-
-
       String var11 = j(var0);
       if (var11.trim().isEmpty()) {
          return Collections.emptyMap();
@@ -460,9 +441,6 @@ public class CookieAuthService {
    }
 
    private static Map n(String var0) {
-
-
-
       LinkedHashMap var10 = new LinkedHashMap();
 
       try {
@@ -535,9 +513,6 @@ public class CookieAuthService {
    }
 
    private static String e(String var0, long var1) throws IOException, Exception, Throwable {
-
-
-
       JsonObject var6 = new JsonObject();
       JsonObject var7 = new JsonObject();
       JsonArray var8 = new JsonArray();
@@ -590,10 +565,6 @@ public class CookieAuthService {
    }
 
    public static MinecraftProfileResponse l(long var0, String var2) throws IOException, Exception, Throwable {
-
-
-
-
       AccountManagerScreen.q = new TimedStatusMessage(ChatFormatting.y("&7Fetching Minecraft profile..."), 5000L);
       CloseableHttpClient var9 = Y(18702133247L, (byte)17);
       Throwable var10 = null;
@@ -681,12 +652,6 @@ public class CookieAuthService {
    }
 
    private static String y(Map var2) throws Exception, Throwable {
-
-
-
-
-
-
       Exception var8 = null;
       ArrayList var9 = new ArrayList();
       var9.add(N);
@@ -743,9 +708,6 @@ public class CookieAuthService {
    }
 
    private static String b(long var0, String var2) throws IOException, Exception, Throwable {
-
-
-
       CloseableHttpClient var10 = Y(18702133247L, (byte)17);
       Throwable var11 = null;
 
@@ -819,9 +781,6 @@ public class CookieAuthService {
    }
 
    private static Map A(String var0) {
-
-
-
       LinkedHashMap var10 = new LinkedHashMap();
 
       for (String var14 : var0.split("\\r?\\n")) {
@@ -1103,5 +1062,4 @@ public class CookieAuthService {
          throw new RuntimeException(var33);
       }
    }
-
 }

@@ -4,16 +4,6 @@ import Expo.event.EventInvoker;
 import Expo.event.events.PostTickEvent;
 import Expo.module.impl.misc.AutoGG;
 
-
-
-
-
-
-
-
-
-
-
 public final class AutoGGPostTickInvoker implements EventInvoker {
    final AutoGG X;
 

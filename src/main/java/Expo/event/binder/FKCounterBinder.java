@@ -9,16 +9,6 @@ import Expo.event.invoker.FKCounterPostTickInvoker;
 import Expo.event.invoker.FKCounterRender2DInvoker;
 import Expo.module.impl.visual_utility.FKCounter;
 
-
-
-
-
-
-
-
-
-
-
 public final class FKCounterBinder {
    private static final long a = 38152282049884L;
 
@@ -30,5 +20,4 @@ public final class FKCounterBinder {
       var0.R(var1, HandleChatEvent.class, 3, new FKCounterHandleChatInvoker(var1));
       var0.R(var1, Render2DEvent.class, 3, new FKCounterRender2DInvoker(var1));
    }
-
 }

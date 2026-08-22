@@ -26,16 +26,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.play.server.S19PacketEntityStatus;
 import net.minecraft.potion.Potion;
 
-
-
-
-
-
-
-
-
-
-
 public class HitSelect extends Module implements EventSubscriber {
    private int L;
    public static ModeSetting strategy;
@@ -52,7 +42,6 @@ public class HitSelect extends Module implements EventSubscriber {
 
    public HitSelect(long var1) {
       super(((a ^ (var1)) ^ 101385361259381L));
-      // add code
       this.declare("HitSelect", Category.Combat, "Modify your attacking strategy to get more hits in combat");
       var1 = a ^ var1;
       this.D = null;
@@ -103,10 +92,6 @@ public class HitSelect extends Module implements EventSubscriber {
       }
    }
 
-
-
-
-
    public void P(long var1) {
       AttackTracker.Z(true);
       this.m = 0;
@@ -130,23 +115,18 @@ public class HitSelect extends Module implements EventSubscriber {
       }
    }
 
-
-
    static {
       a = 137764223568364L;
    }
 
    static {
-      // add code
       chance = new PercentageSetting("Chance", 100);
    }
    static {
-      // add code
       minPauseTick = new NumberSetting("Min-pause-tick", 5.0F, 1.0F, 20.0F, 1.0F);
       maxPauseTick = new NumberSetting("Max-pause-tick", 6.0F, 1.0F, 20.0F, 1.0F);
    }
    static {
-      // add code
       strategy = new ModeSetting("Strategy", "NORMAL", "CRITICALS");
    }
 }

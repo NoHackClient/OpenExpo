@@ -7,16 +7,6 @@ import Expo.event.invoker.ChatInputHandlerGuiChatKeyTypedInvoker;
 import Expo.event.invoker.ChatInputHandlerPostTickInvoker;
 import Expo.internal.ChatInputHandler;
 
-
-
-
-
-
-
-
-
-
-
 public final class ChatInputHandlerBinder {
    private static final long a = 136951807088222L;
 
@@ -27,5 +17,4 @@ public final class ChatInputHandlerBinder {
 
    private ChatInputHandlerBinder() {
    }
-
 }

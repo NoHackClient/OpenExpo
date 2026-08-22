@@ -28,7 +28,6 @@ import net.minecraft.network.play.client.C0APacketAnimation;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 
-
 public class AutoDigPlace extends PriorityModule implements EventSubscriber {
    private boolean O;
    private int K;
@@ -48,8 +47,6 @@ public class AutoDigPlace extends PriorityModule implements EventSubscriber {
    }
 
    private boolean L() {
-
-
       if (this.R == null) {
          return false;
       }
@@ -108,14 +105,7 @@ public class AutoDigPlace extends PriorityModule implements EventSubscriber {
       var1.I(var7, var8);
    }
 
-
    public void onPreMouseInput(PreMouseInputEvent var1, long var2) {
-
-
-
-
-
-
       if (!this.Y()) {
          this.T(false);
       } else {
@@ -194,11 +184,8 @@ public class AutoDigPlace extends PriorityModule implements EventSubscriber {
       }
    }
 
-
-
    public AutoDigPlace(int var1, char var2, int var3) {
       super((((((((long)((var1)) << 32) | (((long)((var2)) << 48) >>> 32)) | (((long)((var3)) << 48) >>> 48)) ^ b) ^ 17472920490440L) >>> 16), (char)((int)(((((((((long)((var1)) << 32) | (((long)((var2)) << 48) >>> 32)) | (((long)((var3)) << 48) >>> 48)) ^ b) ^ 17472920490440L) << 48) >>> 48))));
-      // add code
       this.declare("AutoDigPlace", Category.World, "Auto dig and place blocks beneath or above");
       this.C = null;
       this.O = false;
@@ -211,8 +198,6 @@ public class AutoDigPlace extends PriorityModule implements EventSubscriber {
    }
 
    private void getKeyCode(long var1) {
-
-
       if (this.C != null) {
          this.E = true;
          KeyBindUtil.A(82009306480869L, f.gameSettings.keyBindJump.getKeyCode(), false);
@@ -239,7 +224,6 @@ public class AutoDigPlace extends PriorityModule implements EventSubscriber {
       }
    }
 
-
    public void Z(long var1) {
       long var5 = var1 ^ 12894974052865L;
       long var7 = var1 ^ 68296509399185L;
@@ -263,7 +247,6 @@ public class AutoDigPlace extends PriorityModule implements EventSubscriber {
          this.t = false;
       }
    }
-
 
    public final void x(long var1, EventBus var3) {
       AutoDigPlaceBinder.n(var3, this);
@@ -299,13 +282,10 @@ public class AutoDigPlace extends PriorityModule implements EventSubscriber {
    }
 
    public void onAttackEntity(AttackEntityEvent var3) {
-
-
       var3.I(21307, 3074332907L);
    }
 
    static {
-      // add code
       swing = new BooleanSetting("Swing", true);
       rightClickDigDown = new BooleanSetting("Right-click-dig-down", true);
    }

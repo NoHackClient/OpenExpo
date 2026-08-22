@@ -3,15 +3,6 @@ package Expo.ui;
 import Expo.module.impl.configuration.Notifications;
 import Expo.util.MathUtil;
 
-
-
-
-
-
-
-
-
-
 public class NotificationToast {
    private final float M;
    private final String B;

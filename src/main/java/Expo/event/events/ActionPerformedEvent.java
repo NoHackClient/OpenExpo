@@ -4,16 +4,6 @@ import Expo.event.Event;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
 
-
-
-
-
-
-
-
-
-
-
 public class ActionPerformedEvent extends Event {
    public final GuiScreen O;
    public final GuiButton Q;

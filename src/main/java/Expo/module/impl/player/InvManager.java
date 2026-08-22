@@ -53,7 +53,6 @@ import net.minecraft.network.play.client.C16PacketClientStatus.EnumState;
 import net.minecraft.network.play.client.C16PacketClientStatus;
 import org.lwjgl.input.Keyboard;
 
-
 public class InvManager extends PriorityModule implements EventSubscriber {
    private static Map hb;
    private static long ob;
@@ -64,12 +63,12 @@ public class InvManager extends PriorityModule implements EventSubscriber {
    public static TextSetting silentKey;
    private static long R;
    public static NumberSetting axeSlot;
-   public static HeaderSetting D;
+   public static HeaderSetting trashSettings;
    private boolean J;
    public static BooleanSetting projectilesIsTrash;
    public static NumberSetting swordSlot;
    public static NumberSetting maxArrowSlots;
-   public static HeaderSetting h;
+   public static HeaderSetting slotsSettings;
    private static Map nb;
    public static BooleanSetting potionIsTrash;
    public static BooleanSetting normalFoodIsTrash;
@@ -88,7 +87,7 @@ public class InvManager extends PriorityModule implements EventSubscriber {
    public static BooleanSetting toolsAreTrash;
    public static ModeSetting silentMode;
    public static NumberSetting fireballSlot;
-   public static HeaderSetting M;
+   public static HeaderSetting maxItemSlotsSettings;
    private boolean L;
    public static NumberSetting foodSlot;
    public static BooleanSetting autoClose;
@@ -100,12 +99,10 @@ public class InvManager extends PriorityModule implements EventSubscriber {
    public static BooleanSetting autoArmor;
    public static NumberSetting maxDelay;
 
-
    private void r(char var1, int var2) {
       new Thread(
             () -> {
                int var7 = 43868;
-
 
                int var20 = 235;
 
@@ -268,7 +265,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
                         }
                      }
                   } catch (InterruptedException var29) {
-                     Expo.internal.restore.ExpoDiag.attribute(var29, "InvManager.r/3#0");
                   }
 
                   this.J = false;
@@ -295,8 +291,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
          }
       }
    }
-
-
 
    public final void x(long var1, EventBus var3) {
       InvManagerBinder.L(var3, this);
@@ -445,11 +439,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
    }
 
    public void onPreUpdate(PreUpdateEvent var1, long var2) {
-
-
-
-
-
       if (!(f.currentScreen instanceof GuiInventory)) {
          this.L = false;
       }
@@ -497,10 +486,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
    }
 
    public void onPickUpItem(PickUpItemEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-
-
-
-
       if (var1.F instanceof EntityPlayerSP && var1.P != null && mode.R("SILENT") && silentMode.R("PICK_ITEM")) {
          PacketManager.b(new C16PacketClientStatus(EnumState.OPEN_INVENTORY_ACHIEVEMENT));
          f.displayGuiScreen(new GuiInventory(f.thePlayer));
@@ -510,7 +495,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
 
    public InvManager(long var1) {
       super((((R ^ (var1)) ^ 45489666346938L) >>> 16), (char)((int)(((((R ^ (var1)) ^ 45489666346938L) << 48) >>> 48))));
-      // add code
       this.declare("InvManager", Category.Player, "Clean and manage your inventory");
       var1 = R ^ var1;
       this.o = new TimerUtil();
@@ -519,7 +503,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
    }
 
    private boolean m(long var1) {
-
       if (f.currentScreen instanceof GuiInventory && this.o() && !KeyBindUtil.V(1, 64165991731362L)) {
          return false;
       }
@@ -529,15 +512,7 @@ public class InvManager extends PriorityModule implements EventSubscriber {
       return true;
    }
 
-
-   private static void a() {
-   }
-
    private void K(List var1, long var2) throws InterruptedException {
-
-
-
-
       if (autoArmor.c()) {
          for (int var11 = 0; var11 < 4; var11++) {
             switch (var11) {
@@ -629,14 +604,13 @@ public class InvManager extends PriorityModule implements EventSubscriber {
       }
    }
    static {
-      // add code
       fireballSlot = new NumberSetting("Fireball-slot", 0.0F, 0.0F, 9.0F, 1.0F);
       // update new version
-      D = new HeaderSetting("Trash settings");
+      trashSettings = new HeaderSetting("Trash settings");
       // update new version
-      h = new HeaderSetting("Slots settings (0 = no sort)");
+      slotsSettings = new HeaderSetting("Slots settings (0 = no sort)");
       // update new version
-      M = new HeaderSetting("Max item slots settings");
+      maxItemSlotsSettings = new HeaderSetting("Max item slots settings");
       pickaxeSlot = new NumberSetting("Pickaxe-slot", 5.0F, 0.0F, 9.0F, 1.0F);
       shovelSlot = new NumberSetting("Shovel-slot", 7.0F, 0.0F, 9.0F, 1.0F);
       normalFoodIsTrash = new BooleanSetting("Normal-food-is-trash", true);
@@ -663,7 +637,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
       axeSlot = new NumberSetting("Axe-slot", 6.0F, 0.0F, 9.0F, 1.0F);
       shearsSlot = new NumberSetting("Shears-slot", 0.0F, 0.0F, 9.0F, 1.0F);
       bowSlot = new NumberSetting("Bow-slot", 4.0F, 0.0F, 9.0F, 1.0F);
-      // add code
       silentMode = new ModeSetting("Silent-mode", "KEY", "PICK_ITEM", "OPEN_INV");
       maxTrashThrows = new NumberSetting("Max-trash-throws", 36.0F, 1.0F, 36.0F, 1.0F);
       throwTrash = new BooleanSetting("Throw-trash", true);

@@ -5,15 +5,12 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformVisGraph extends TransformerBase {
    private static long d;
-
 
    static {
       d = 92898150898623L;
    }
-
 
    public boolean s(ClassNode var1) {
       return BytecodeHelper.t(var1, "(" + SrgNames.X("net/minecraft/util/BlockPos") + ")V", (var1x, var2x) -> {
@@ -30,5 +27,4 @@ public class TransformVisGraph extends TransformerBase {
    public TransformVisGraph() {
       super("net/minecraft/client/renderer/chunk/VisGraph");
    }
-
 }

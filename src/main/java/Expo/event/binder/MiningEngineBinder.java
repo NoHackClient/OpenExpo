@@ -5,16 +5,6 @@ import Expo.event.events.PreTickEvent;
 import Expo.event.invoker.MiningEnginePreTickInvoker;
 import Expo.internal.MiningEngine;
 
-
-
-
-
-
-
-
-
-
-
 public final class MiningEngineBinder {
    private static final long a = 135542148782955L;
 
@@ -24,5 +14,4 @@ public final class MiningEngineBinder {
 
    private MiningEngineBinder() {
    }
-
 }

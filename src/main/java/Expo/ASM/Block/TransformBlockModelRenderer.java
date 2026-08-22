@@ -6,10 +6,8 @@ import Expo.ASM.Util.SrgNames;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 
-
 public class TransformBlockModelRenderer extends TransformerBase {
    private static long d;
-
 
    public boolean s(ClassNode var1) {
       return BytecodeHelper.t(
@@ -61,5 +59,4 @@ public class TransformBlockModelRenderer extends TransformerBase {
    public TransformBlockModelRenderer() {
       super("net/minecraft/client/renderer/BlockModelRenderer");
    }
-
 }

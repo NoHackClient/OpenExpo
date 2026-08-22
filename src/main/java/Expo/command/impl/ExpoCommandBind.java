@@ -9,19 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.lwjgl.input.Keyboard;
 
-
-
-
-
-
-
-
-
-
-
-// add code
 public final class ExpoCommandBind extends Command {
-
    public static final long MODULE_Z_CARRIER = 118276941480361L;
 
    private static final int[] PROBE_CODES = {1, 48, 57};
