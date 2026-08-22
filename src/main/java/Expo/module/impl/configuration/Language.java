@@ -105,6 +105,10 @@ public class Language extends Module {
    static {
       // add code
       applyForArraylist = new BooleanSetting("Apply-for-arraylist", false);
+      // update new version
+      H = new HeaderSetting("These options only affect ClickGui");
+      // update new version
+      t = new HeaderSetting("This option only affects ArrayList");
       applyForCategory = new BooleanSetting("Apply-for-category", true);
       applyForSettings = new BooleanSetting("Apply-for-settings", true);
       applyForName = new BooleanSetting("Apply-for-name", true);

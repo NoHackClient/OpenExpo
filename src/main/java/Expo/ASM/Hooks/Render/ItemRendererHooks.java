@@ -26,7 +26,6 @@ import net.minecraft.util.MathHelper;
 
 public class ItemRendererHooks {
    private static Map e;
-   private static Integer[] d;
    private static String b;
    private static long a;
    private static long[] c;
@@ -71,7 +70,6 @@ public class ItemRendererHooks {
       b = "NONE";
       e = new HashMap(13);
       c = new long[]{2015442937976616169L, -1488955058342560494L};
-      d = new Integer[2];
    }
 
    public static void renderItemInFirstPerson(ItemRenderer var0, Minecraft var1, ItemStack var2, float var3, float var4, float var5, CallbackInfo var6) {

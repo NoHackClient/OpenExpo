@@ -147,11 +147,9 @@ public final class ExpoTruthNames {
                 + " module panels put back into the shipped display order";
       } catch (Throwable t) {
          note = "Expo.truthnames FAILED (" + t + ") -- labels stay as they were";
-         t.printStackTrace();
       }
 
       pending.add(note);
-      System.out.println("[EXPODIAG] " + note);
       return note;
    }
 

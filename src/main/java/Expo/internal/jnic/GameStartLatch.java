@@ -6,7 +6,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 public class GameStartLatch {
    private static String[] c;
-   private static Integer[] f;
    private static String[] b;
    public static AtomicBoolean w;
    private static long a;

@@ -23,7 +23,6 @@ import org.lwjgl.opengl.GL11;
 
 
 public class BoxRenderer {
-   private static Integer[] c;
    private static long a;
    private static Minecraft M;
 

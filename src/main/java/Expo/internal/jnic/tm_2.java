@@ -4,7 +4,6 @@ import java.util.Map;
 
 
 public class tm_2 {
-   private static Integer[] d;
    private static Map e;
    private static long a;
    private static long[] c;

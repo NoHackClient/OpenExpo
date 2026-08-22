@@ -17,7 +17,6 @@ import net.minecraft.item.ItemStack;
 
 
 public class InventoryHUD extends Module implements EventSubscriber {
-   private static Integer[] d;
    public static PercentageSetting backgroundOpacity;
    private static long a;
    private static long[] c;
@@ -34,7 +33,6 @@ public class InventoryHUD extends Module implements EventSubscriber {
       k = new String[8];
       g = new HashMap(13);
       c = new long[]{-437371915069317021L, 2620004582826395637L, -3763553000221625768L, 4610870018804750723L, -7897035737980205386L, 7164162007031990288L, -2322289815908258466L, 932703178022838397L, 8605211776989967091L, 1116916509488641341L};
-      d = new Integer[10];
    }
 
    public final void x(long var1, EventBus var3) {

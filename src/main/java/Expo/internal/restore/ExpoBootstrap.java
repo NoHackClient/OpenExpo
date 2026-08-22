@@ -72,8 +72,6 @@ public final class ExpoBootstrap {
       ExpoSettingStatics.apply(PENDING);
       ExpoModuleSettings.apply(PENDING);
       ExpoTruthNames.apply(PENDING);
-      ExpoModuleCategories.apply(PENDING);
-      ExpoModuleDescriptions.apply(PENDING);
       runOrphanedStaticInit();
       ExpoClickGui.install(PENDING);
       ExpoCommands.install(PENDING);
@@ -190,9 +188,7 @@ public final class ExpoBootstrap {
          }
 
          b.append("[EXPODIAG] ==== end ====");
-         System.out.println(b);
       } catch (Throwable t) {
-         System.out.println("[EXPODIAG] dump failed: " + t);
       }
    }
 

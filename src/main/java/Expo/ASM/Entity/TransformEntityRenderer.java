@@ -17,7 +17,6 @@ public class TransformEntityRenderer extends TransformerBase {
    private static Object[] O;
    private static Map t;
    private static Map G;
-   private static Integer[] y;
    private static long d;
    private static String[] l;
 
@@ -28,7 +27,6 @@ public class TransformEntityRenderer extends TransformerBase {
       t = new HashMap(13);
       l = new String[83];
       G = new HashMap(13);
-      y = new Integer[3];
    }
 
    public boolean s(ClassNode var1) {

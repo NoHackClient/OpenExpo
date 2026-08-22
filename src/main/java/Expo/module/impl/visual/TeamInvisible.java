@@ -25,7 +25,6 @@ import net.minecraft.entity.Entity;
 public class TeamInvisible extends Module implements EventSubscriber {
    private static Object[] e;
    private static long[] b;
-   private static Integer[] c;
    private static long a;
    public static PercentageSetting opacity;
    private static String[] g;
@@ -102,7 +101,6 @@ public class TeamInvisible extends Module implements EventSubscriber {
       g = new String[7];
       d = new HashMap(13);
       b = new long[]{-5350843204115390627L, 3042616221696105688L, 634406712226758148L, -6769754617391115710L};
-      c = new Integer[4];
    }
 
    public void onPreRenderEntity(PreRenderEntityEvent var1, long var2) {

@@ -57,7 +57,6 @@ public class ClosestPlayerHUD extends Module implements EventSubscriber {
    public static NumberSetting scale;
    public static BooleanSetting displayTeamSize;
    private static final float D = 7.0F;
-   private static Integer[] k;
    public static PercentageSetting backgroundOpacity;
    public static NumberSetting offsetY;
    private final List<ClosestPlayerEntry> I;

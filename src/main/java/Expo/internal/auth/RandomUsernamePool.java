@@ -129,7 +129,6 @@ public class RandomUsernamePool {
       try {
          InputStream var3 = RandomUsernamePool.class.getResourceAsStream("/usernames.txt");
          if (var3 == null) {
-            System.err.println("Error: Local username file not found! Please ensure /usernames.txt exists in the resources directory.");
             return null;
          }
 
@@ -145,14 +144,12 @@ public class RandomUsernamePool {
 
          var4.close();
          if (var5.length() == 0) {
-            System.err.println("Error: Local username file /usernames.txt is empty or contains no valid content.");
             return null;
          } else {
             return var5.toString().split(System.lineSeparator());
          }
       } catch (IOException var6) {
          System.err.println("Error reading local username file: " + var6.getMessage());
-         var6.printStackTrace();
          return null;
       }
    }

@@ -36,7 +36,6 @@ public class Animations extends Module implements EventSubscriber {
    public static NumberSetting swingSpeed;
    public static NumberSetting scaleY;
    private static Object[] v;
-   private static Integer[] m;
    public static ModeSetting mode;
    public static NumberSetting rotationZ;
    public static HeaderSetting H;
@@ -48,7 +47,6 @@ public class Animations extends Module implements EventSubscriber {
    public static NumberSetting rotationX;
    public static NumberSetting rotationY;
    public static NumberSetting offsetY;
-   private static Long[] r;
    public static NumberSetting offsetZ;
 
    public void onGetArmSwingAnimationEnd(GetArmSwingAnimationEndEvent var1) {
@@ -274,14 +272,18 @@ public class Animations extends Module implements EventSubscriber {
       g = new HashMap(13);
       d = new String[12];
       n = new HashMap(13);
-      m = new Integer[5];
       t = new HashMap(13);
-      r = new Long[2];
    }
 
    static {
       // add code
       noRotationsEffect = new BooleanSetting("No-rotations-effect", true);
+      // update new version
+      h = new HeaderSetting("Offset settings");
+      // update new version
+      c = new HeaderSetting("Scale settings");
+      // update new version
+      H = new HeaderSetting("Rotation settings");
       noEquipReset = new BooleanSetting("No-equip-reset", true);
       mode = new ModeSetting(
          "Mode", true, "NONE",

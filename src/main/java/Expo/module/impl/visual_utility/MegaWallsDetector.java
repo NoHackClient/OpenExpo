@@ -44,7 +44,6 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
    public static BooleanSetting phoenixIconsInTab;
    private final Set<String> Y;
    private static int p;
-   private static Integer[] m;
    private static long b;
    private final Map<String, Integer> F;
    public static BooleanSetting potionDetector;
@@ -316,7 +315,6 @@ public class MegaWallsDetector extends Module implements EventSubscriber {
       g = new HashMap(13);
       e = new String[8];
       s = new HashMap(13);
-      m = new Integer[10];
       a = 12;
       p = 6;
       B = 60;

@@ -578,7 +578,6 @@ public final class AuthService {
          SSLConnectionSocketFactory var3 = new SSLConnectionSocketFactory(var2, new String[]{"TLSv1.2"}, null, new BrowserCompatHostnameVerifier());
          return HttpClientBuilder.create().setSSLSocketFactory(var3).build();
       } catch (Exception var4) {
-         var4.printStackTrace();
          return HttpClients.createDefault();
       }
    }

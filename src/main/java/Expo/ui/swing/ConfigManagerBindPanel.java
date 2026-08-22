@@ -14,7 +14,6 @@ import javax.swing.JTextPane;
 
 class ConfigManagerBindPanel extends JPanel {
    private int e;
-   private static Integer[] h;
    private static Map i;
    private static long[] g;
    private static String[] d;

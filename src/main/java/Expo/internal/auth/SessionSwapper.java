@@ -24,7 +24,6 @@ public class SessionSwapper {
          var4.set(var3, var0);
       } catch (Exception var5) {
          System.err.println("failed to set Minecraft session: " + var5.getMessage());
-         var5.printStackTrace();
       }
    }
 
@@ -42,10 +41,8 @@ public class SessionSwapper {
          Session var11 = new Session(var0, var10, "accessToken", "legacy");
          t(var11);
          SessionAccessor.k(var11);
-         System.out.println("successfully logged in as: " + var0);
          return true;
       } else {
-         System.err.println("username cannot be null or empty!");
          return false;
       }
    }

@@ -11,7 +11,6 @@ import org.apache.logging.log4j.Logger;
 
 public class StockClientBootstrap {
    private static long[] e;
-   private static Integer[] f;
    private static Map d;
    private static Map g;
    private static volatile boolean F;

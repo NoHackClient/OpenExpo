@@ -45,7 +45,6 @@ public class ArrayList extends Module implements EventSubscriber {
    private static final float o = 0.75F;
    public static NumberSetting offsetY;
    public static NumberSetting rectangleYSpace;
-   private static Integer[] p;
    public static ModeSetting gradientMode;
    public static BooleanSetting textShadow;
    public static NumberSetting rectangleYEdge;
@@ -791,7 +790,6 @@ public class ArrayList extends Module implements EventSubscriber {
                                     var29[var10001] = var46;
                                     if (var2 >= var5) {
                                        m = var6;
-                                       p = new Integer[8];
                                        return;
                                     }
                                     break;

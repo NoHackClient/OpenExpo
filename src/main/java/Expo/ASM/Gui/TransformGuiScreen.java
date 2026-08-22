@@ -32,7 +32,6 @@ public class TransformGuiScreen extends TransformerBase {
    private static Map t;
    private static long[] w;
    private static long d;
-   private static Integer[] y;
    private static String[] Z;
    private static String G;
 
@@ -258,7 +257,6 @@ public class TransformGuiScreen extends TransformerBase {
                         } while (var17 < var16);
 
                         w = var13;
-                        y = new Integer[2];
                         return;
                      }
 

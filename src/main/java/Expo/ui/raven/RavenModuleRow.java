@@ -39,7 +39,6 @@ public class RavenModuleRow implements RavenElement {
    private static Map f;
    private static int W;
    public RavenCategoryPanel O;
-   private static Integer[] d;
    private static int o;
    public Module R;
 
@@ -117,7 +116,15 @@ public class RavenModuleRow implements RavenElement {
       if (this.R != null && !this.R.w().isEmpty()) {
          this.H.clear();
 
-         for (Setting var10 : this.R.w()) {
+         // add code
+         java.util.List<Setting> var20 = this.R.w();
+
+         for (int var21 = 0; var21 < var20.size(); var21++) {
+            Setting var10 = var20.get(var21);
+            if (var10 instanceof HeaderSetting && !HeaderSetting.occupied(var20, var21)) {
+               continue;
+            }
+
             if (var10 instanceof ModeSetting
                || var10 instanceof NumberSetting
                || var10 instanceof PercentageSetting
@@ -306,7 +313,6 @@ public class RavenModuleRow implements RavenElement {
       b = "freelook";
       f = new HashMap(13);
       c = new long[]{-2972884669621063793L, 1141437146407109093L, 6107432537624805063L, 7617001951634375911L, 1506688802166888800L, 5888269191767401720L, 667651162496375240L, 8623078964538155950L, 2334337966712658940L, -8367317666064433629L, 8465485200971185740L, -3280606855720221316L, 3224848445458422427L, 549641287674617233L, 4611300639924398236L, 5182933733414454334L, -2117070062415806052L, -1045601703561052909L};
-      d = new Integer[18];
    }
 
 }

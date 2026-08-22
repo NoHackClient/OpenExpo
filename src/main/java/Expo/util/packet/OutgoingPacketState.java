@@ -24,7 +24,6 @@ import net.minecraft.network.play.client.C0APacketAnimation;
 
 public class OutgoingPacketState {
    public static boolean C;
-   private static Integer[] c;
    private static Minecraft l;
    public static boolean d;
    public static boolean O;

@@ -123,7 +123,6 @@ public final class ExpoCarrierLog {
          w.flush();
          w.close();
       } catch (Throwable t) {
-         System.out.println("[EXPOCARRIER] dump failed: " + t);
       }
    }
 }

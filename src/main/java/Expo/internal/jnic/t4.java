@@ -4,7 +4,6 @@ import java.util.Map;
 
 
 public class t4 {
-   private static Integer[] f;
    private static Map g;
    private static String[] c;
    private static String[] b;

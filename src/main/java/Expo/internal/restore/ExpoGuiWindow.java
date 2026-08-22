@@ -152,7 +152,6 @@ public final class ExpoGuiWindow {
             try {
                get().show0();
             } catch (Throwable t) {
-               t.printStackTrace();
             }
          }
       });
@@ -183,7 +182,6 @@ public final class ExpoGuiWindow {
                   w.show0();
                }
             } catch (Throwable t) {
-               t.printStackTrace();
             }
          }
       });
@@ -295,7 +293,6 @@ public final class ExpoGuiWindow {
          pending.add(s);
       }
 
-      System.out.println("[EXPODIAG] " + s);
    }
 
    public static void main(String[] args) throws Exception {
@@ -331,7 +328,6 @@ public final class ExpoGuiWindow {
             }
          });
 
-         System.out.print(b);
          System.out.flush();
          System.exit(0);
       }

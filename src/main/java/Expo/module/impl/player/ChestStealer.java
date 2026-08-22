@@ -62,7 +62,6 @@ public class ChestStealer extends Module implements EventSubscriber {
    private static long d;
    private final TimerUtil p;
    public static NumberSetting minDelay;
-   private static Integer[] u;
    public static BooleanSetting ignoreTrash;
    public static BooleanSetting chestIntegrityCheck;
    public static BooleanSetting silent;
@@ -385,6 +384,9 @@ public class ChestStealer extends Module implements EventSubscriber {
       // add code
       autoClose = new BooleanSetting("Auto-close", true);
       ignoreTrash = new BooleanSetting("Ignore-trash", true);
+      // update new version
+      chestIntegrityCheck = new BooleanSetting("Chest-integrity-check", true);
+      silent = new BooleanSetting("Silent", false);
       armor = new BooleanSetting("Armor", true);
       blocks = new BooleanSetting("Blocks", true);
       bow = new BooleanSetting("Bow", false);

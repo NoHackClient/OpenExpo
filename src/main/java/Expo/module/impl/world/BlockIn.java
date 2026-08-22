@@ -71,7 +71,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
    private static final double a = 0.05;
    private BlockPos R;
    private static EnumFacing[] J;
-   private static Integer[] p;
    private boolean Y;
    private static String[] g;
    private boolean y;
@@ -434,7 +433,6 @@ public class BlockIn extends PriorityModule implements EventSubscriber {
                         var25[var10001] = var39;
                         if (var2 >= var5) {
                            o = var6;
-                           p = new Integer[11];
                            J = new EnumFacing[]{EnumFacing.EAST, EnumFacing.SOUTH, EnumFacing.WEST, EnumFacing.NORTH};
                            BlockInFaceOffset[] var26 = new BlockInFaceOffset[6];
                            var26[0] = new BlockInFaceOffset(0, 1, 0, EnumFacing.DOWN);

@@ -128,7 +128,6 @@ public final class ExpoHandleProbe {
          w.flush();
          w.close();
       } catch (Throwable t) {
-         System.out.println("[EXPOHANDLE] dump failed: " + t);
       }
    }
 }

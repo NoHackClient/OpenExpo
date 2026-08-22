@@ -50,7 +50,6 @@ public class LagRange extends Module implements EventSubscriber {
    public static BooleanSetting mobs;
    public static BooleanSetting enemies;
    private final Set<EntityLivingBase> E;
-   private static Integer[] h;
    public static NumberSetting delay;
    private static Map m;
    private final TimerUtil v;
@@ -69,7 +68,6 @@ public class LagRange extends Module implements EventSubscriber {
       b = "ms";
       m = new HashMap(13);
       d = new long[]{3397638145785976630L, 921795783406817893L, -3875737584293005616L};
-      h = new Integer[3];
    }
 
 

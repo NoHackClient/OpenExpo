@@ -23,7 +23,6 @@ import org.lwjgl.input.Keyboard;
 
 
 public class RefreshTokenLoginScreen extends GuiScreen {
-   private static Integer[] g;
    private static String[] b;
    private static Pattern N;
    private GuiButton d;
@@ -83,7 +82,6 @@ public class RefreshTokenLoginScreen extends GuiScreen {
 
                String var7x = var15.length() > 30 ? var15.substring(0, 30) + "..." : var15;
                var12.add("§cFailed (" + var5x + ") for token: " + var7x + "§r");
-               System.err.println("Error processing refresh token: " + var7x + " - " + var5x);
                return null;
             });
             var11.add(var16);
@@ -108,10 +106,8 @@ public class RefreshTokenLoginScreen extends GuiScreen {
 
                this.mc.displayGuiScreen(new AccountManagerScreen(var5xx, this.X, new TimedStatusMessage(ChatFormatting.y(var10x), j)));
                if (!var12.isEmpty()) {
-                  System.err.println("Failed refresh token details:");
 
                   for (String var12x : (Iterable<String>)(var12)) {
-                     System.err.println(var12x);
                   }
                }
             });
@@ -184,7 +180,6 @@ public class RefreshTokenLoginScreen extends GuiScreen {
       c = new String[25];
       h = new HashMap(13);
       f = new long[]{-7570801240199433L, -8211173771169325036L, 613585343914352420L, -3132855412799374697L, -2419402698885468389L, -7736364222687519492L, 1422944840999800733L, -370637497708618771L, -247905534369938817L, 5786307659691052987L, 4352395137605550499L, 3587902760217718899L, -6141616386768244L, 3776211645278042015L, -1678665091334605079L, 7178751944627941208L, 3721894796051350167L, -4881095705570002641L, 1347736885119368877L, 129291971699333009L};
-      g = new Integer[20];
       j = 5000L;
    }
 

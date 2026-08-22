@@ -41,7 +41,6 @@ import net.minecraft.util.Vec3;
 public class Nuker extends PriorityModule implements EventSubscriber {
    public static BooleanSetting swing;
    public static NumberSetting range;
-   private static Integer[] k;
    private int U;
    private boolean K;
    private static long[] h;
@@ -217,7 +216,6 @@ public class Nuker extends PriorityModule implements EventSubscriber {
       d = new String[3];
       m = new HashMap(13);
       h = new long[]{-5908676961446516622L, 5372785210800559796L, 6375693055559332728L, -1275294834765481263L, 2914767951935686523L, -8291187651642895498L, -4312771241707091288L};
-      k = new Integer[7];
    }
 
    private static String b(byte[] var0) {

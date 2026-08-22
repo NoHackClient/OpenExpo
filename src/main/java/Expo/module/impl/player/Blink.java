@@ -36,7 +36,6 @@ public class Blink extends Module implements EventSubscriber {
    private static Map m;
    public static BooleanSetting showDelay;
    private static long[] n;
-   private static Long[] o;
    private final TimerUtil t;
    public static BooleanSetting autoDisable;
    private static Map e;
@@ -49,7 +48,6 @@ public class Blink extends Module implements EventSubscriber {
    private static Map r;
    private long y;
    private boolean k;
-   private static Integer[] h;
 
    static {
       a = 30074228456379L;
@@ -58,10 +56,8 @@ public class Blink extends Module implements EventSubscriber {
       e = new HashMap(13);
       d = new String[3];
       m = new HashMap(13);
-      h = new Integer[5];
       r = new HashMap(13);
       n = new long[]{5475581527265492953L, 1411577678159929649L};
-      o = new Long[2];
    }
 
    public void onAttackTargetEntity(AttackTargetEntityEvent var1, long var2) {

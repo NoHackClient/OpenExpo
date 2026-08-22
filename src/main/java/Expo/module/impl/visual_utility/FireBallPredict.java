@@ -43,7 +43,6 @@ public class FireBallPredict extends Module implements EventSubscriber {
    public static PercentageSetting opacity;
    private int b;
    private static final double r = 48.0;
-   private static Integer[] d;
    private static Map g;
    private static long a;
    private static final double B = 24.0;
@@ -244,7 +243,6 @@ public class FireBallPredict extends Module implements EventSubscriber {
       k = new String[7];
       g = new HashMap(13);
       c = new long[]{-5489346428128618421L, -4314703374732682513L, -5745213282544904297L, -4334071078402109778L, 7788256901447205536L, 4233381784929318969L, -2978953989575751051L, -8183968391784814800L, 7468032717364496881L, -5448091144287510570L, -7426750949437619414L, -6623744853995561005L, -4660984849290241194L, -5690810572757300751L, -8861979802741692739L, -2723728853984722903L, -2324990256193890920L};
-      d = new Integer[17];
    }
 
    private int Y(int var1, boolean var2) {

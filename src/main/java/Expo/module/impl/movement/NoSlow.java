@@ -8,6 +8,7 @@ import Expo.event.binder.NoSlowBinder;
 import Expo.event.events.RedirectIsUsingItemEvent;
 import Expo.module.Module;
 import Expo.module.impl.combat.AutoBlock;
+import Expo.module.impl.combat.BlockHit;
 import Expo.setting.settings.BooleanSetting;
 import Expo.setting.settings.ModeSetting;
 import Expo.setting.settings.PercentageSetting;
@@ -62,7 +63,8 @@ public class NoSlow extends Module implements EventSubscriber {
       if (var5 instanceof ItemSword) {
          if (swordMode.R("VANILLA")) {
             float var6 = 0.2F + (100 - slowDown.k()) / 100.0F * 0.8F;
-            float var7 = onlyEnableWhenAutoblock.c() ? (AutoBlock.G(51927146516111L) ? var6 : 0.2F) : var6;
+            // update new version
+            float var7 = onlyEnableWhenAutoblock.c() ? (AutoBlock.G(51927146516111L) || BlockHit.noSlowLive() ? var6 : 0.2F) : var6;
             return var7 > 0.2F;
          } else {
             return false;
@@ -96,7 +98,8 @@ public class NoSlow extends Module implements EventSubscriber {
       long var7 = var5 ^ 33644944796332L;
       if (R.thePlayer.getHeldItem().getItem() instanceof ItemSword) {
          float var9 = 0.2F + (100 - slowDown.k()) / 100.0F * 0.8F;
-         float var10 = onlyEnableWhenAutoblock.c() ? (AutoBlock.G(var7) ? var9 : 0.2F) : var9;
+         // update new version
+         float var10 = onlyEnableWhenAutoblock.c() ? (AutoBlock.G(var7) || BlockHit.noSlowLive() ? var9 : 0.2F) : var9;
          switch (swordMode.Y()) {
             case "VANILLA":
                var4.W(var10);

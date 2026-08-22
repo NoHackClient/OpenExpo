@@ -60,7 +60,6 @@ public class TransformerRegistry {
    private static String[] i;
    private static Object[] h;
    private static Map d;
-   private static Integer[] f;
    private static long a;
    private static String[] b;
    private static Map g;

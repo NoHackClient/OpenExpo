@@ -143,7 +143,6 @@ public final class ExpoClickGui {
       } catch (Throwable t) {
          note(pending, "Expo.ui.vestige.VestigeClickGuiScreen ctor threw " + t.getClass().getName()
                        + ": " + t.getMessage());
-         t.printStackTrace();
          return null;
       }
 

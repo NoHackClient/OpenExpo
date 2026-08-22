@@ -19,7 +19,6 @@ import net.minecraft.client.gui.inventory.GuiInventory;
 
 public class InvClicker extends Module implements EventSubscriber {
    private static long a;
-   private static Integer[] c;
    private static Map d;
    private int p;
    private static Object[] e;
@@ -69,7 +68,6 @@ public class InvClicker extends Module implements EventSubscriber {
       g = new String[7];
       d = new HashMap(13);
       b = new long[]{-7855264762936904475L, 2721434635923828421L, 695722135645467035L, -8001476799126727203L};
-      c = new Integer[4];
    }
 
    public final void x(long var1, EventBus var3) {

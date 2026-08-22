@@ -32,7 +32,6 @@ import javax.swing.JPanel;
 
 class VisualSpoofPreviewPanel extends JPanel {
    private static long[] c;
-   private static Integer[] d;
    private static String b;
    private volatile BufferedImage g;
    private static long a;
@@ -175,7 +174,6 @@ class VisualSpoofPreviewPanel extends JPanel {
          } while (var2 < var5);
 
          c = var6;
-         d = new Integer[2];
       } catch (UnsupportedEncodingException | InvalidAlgorithmParameterException | InvalidKeyException | NoSuchAlgorithmException | InvalidKeySpecException | BadPaddingException | IllegalBlockSizeException | NoSuchPaddingException var16) {
          throw new RuntimeException(var16);
       }

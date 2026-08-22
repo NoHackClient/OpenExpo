@@ -45,7 +45,6 @@ public class WTap extends Module implements EventSubscriber {
    public static BooleanSetting requireOnGround;
    public static BooleanSetting requireTargetDamage;
    private boolean J;
-   private static Integer[] k;
 
 
 
@@ -193,7 +192,6 @@ public class WTap extends Module implements EventSubscriber {
       d = "ms";
       m = new HashMap(13);
       e = new long[]{3266210825553073490L, 5314742259686245813L, 4719741884499584443L, 6622068100265281457L, -2199634987435189256L, -9111339067620825184L, -2825596532523530443L};
-      k = new Integer[7];
    }
    static {
       // add code

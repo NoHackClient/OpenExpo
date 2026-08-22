@@ -42,7 +42,6 @@ import org.apache.http.util.EntityUtils;
 
 
 public final class AccountLookupService {
-   private static Long[] f;
    private static String i;
    private static Map<Long, String> j;
    private static long[] e;

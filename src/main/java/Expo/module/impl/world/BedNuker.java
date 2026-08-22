@@ -81,7 +81,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
    public static NumberSetting delayVelocityRange;
    public static BooleanSetting showTargetShade;
    private static long bb;
-   private static Integer[] nb;
    private boolean O;
    private int x;
    public static boolean y;
@@ -295,7 +294,6 @@ public class BedNuker extends PriorityModule implements EventSubscriber {
       hb = new String[8];
       ob = new HashMap(13);
       mb = new long[]{6875542412366896481L, 6068477483277048441L, 3263470159249675114L, -8886131664387034906L, -485829224368947263L, 2483614103015192913L, -4396291901987456104L, -2617343952690244247L, 3204346084064542728L, -825404432479657210L};
-      nb = new Integer[10];
       pb = 10L;
    }
 

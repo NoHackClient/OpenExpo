@@ -68,7 +68,6 @@ public class BedPlates extends Module implements EventSubscriber {
    public static BooleanSetting fill;
    public static PercentageSetting backgroundOpacity;
    private static Object[] r;
-   private static Integer[] n;
    public static ModeSetting color;
    private static String[] s;
    public static ColorSetting customColor;
@@ -439,7 +438,6 @@ public class BedPlates extends Module implements EventSubscriber {
                            var26[var10001] = var39;
                            if (var2 >= var5) {
                               m = var6;
-                              n = new Integer[7];
                               return;
                            }
                            break;

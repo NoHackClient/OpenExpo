@@ -37,7 +37,6 @@ import net.minecraft.client.renderer.GlStateManager;
 public class BindGUI extends Module implements EventSubscriber {
    private static Object[] n;
    private static String[] b;
-   private static Integer[] h;
    private static Map d;
    private static Map k;
    public static NumberSetting scale;
@@ -333,7 +332,6 @@ public class BindGUI extends Module implements EventSubscriber {
                                     var29[var10001] = var46;
                                     if (var2 >= var5) {
                                        g = var6;
-                                       h = new Integer[6];
                                        return;
                                     }
                                     break;

@@ -25,7 +25,6 @@ import net.minecraft.util.BlockPos;
 
 
 public class MiningBlockScanner {
-   private static Long[] g;
    private static int o;
    private static List<BlockPos> v;
    private static long[] f;
@@ -239,7 +238,6 @@ public class MiningBlockScanner {
       o = 128;
       h = new HashMap(13);
       f = new long[]{5420028875466184167L, 8843669655198616441L, -718371891521002907L};
-      g = new Long[3];
    }
 
    private static double N(double var0, double var2, double var4, BlockPos var6) {

@@ -373,7 +373,6 @@ public final class ExpoCommandBind extends Command {
       }
 
       gateNote = "Module.z carrier gate: " + (var0 ? "TRUSTED" : "REFUSED") + " -- " + var1;
-      System.out.println("[EXPOCMD] " + gateNote);
       trusted = Boolean.valueOf(var0);
       return var0;
    }

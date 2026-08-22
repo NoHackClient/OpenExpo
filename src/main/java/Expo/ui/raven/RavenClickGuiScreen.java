@@ -40,7 +40,6 @@ public class RavenClickGuiScreen extends GuiScreen {
    private static long[] b;
    public final RavenFramebuffer Z;
    private static long a;
-   private static Long[] f;
    public static ScheduledExecutorService A;
    private static Map g;
    public RavenAnimation w;

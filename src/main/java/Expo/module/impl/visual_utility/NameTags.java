@@ -15,6 +15,7 @@ import Expo.module.impl.configuration.Teams;
 import Expo.module.impl.player.AutoWeapon;
 import Expo.setting.settings.BooleanSetting;
 import Expo.setting.settings.HeaderSetting;
+import Expo.setting.settings.ModeSetting;
 import Expo.setting.settings.NumberSetting;
 import Expo.setting.settings.PercentageSetting;
 import Expo.util.CombatUtil;
@@ -58,6 +59,8 @@ public class NameTags extends Module implements EventSubscriber {
    private static String[] E;
    private static long[] s;
    public static PercentageSetting backgroundOpacity;
+   // update new version
+   public static NumberSetting backgroundSpacing;
    public static Set<EntityLivingBase> x;
    private static Object[] y;
    public static BooleanSetting textShadow;
@@ -68,12 +71,15 @@ public class NameTags extends Module implements EventSubscriber {
    public static BooleanSetting players;
    private static long a;
    public static NumberSetting scale;
-   public static BooleanSetting showItems;
    public static BooleanSetting showHealth;
    public static BooleanSetting showEffects;
    private static String[] k;
    private static Map<Integer, EnchantmentAbbreviation> c;
    public static BooleanSetting showHitsToKill;
+   // update new version
+   public static ModeSetting armorMode;
+   // update new version
+   public static BooleanSetting enchant;
    public static BooleanSetting animals;
    public static BooleanSetting teammates;
    private static Map m;
@@ -83,7 +89,6 @@ public class NameTags extends Module implements EventSubscriber {
    public static BooleanSetting showDistance;
    public static BooleanSetting bosses;
    public static BooleanSetting showIndicator;
-   private static Integer[] u;
    public static HeaderSetting targetSettings;
    private static Map v;
 
@@ -104,7 +109,8 @@ public class NameTags extends Module implements EventSubscriber {
 
       if (var1 instanceof EntityPlayer) {
          float var11 = var2.o(60714858652844L) + 2.0F;
-         if (showItems.c()) {
+         // update new version
+         if (!armorMode.R("NONE")) {
             ArrayList var12 = new ArrayList();
 
             for (int var13 = 4; var13 >= 0; var13--) {
@@ -121,13 +127,22 @@ public class NameTags extends Module implements EventSubscriber {
             }
 
             if (!var12.isEmpty()) {
-               int var18 = var12.size() * -8;
+               // update new version
+               String var24 = armorMode.Y();
+               boolean var25 = var1 == f.thePlayer;
+               if (var24.equals("LEFT") || var25 && var24.equals("SELF_LEFT")) {
+                  this.armorColumn(var12, -26, 114286643707769L);
+               } else if (var24.equals("RIGHT") || var25 && var24.equals("SELF_RIGHT")) {
+                  this.armorColumn(var12, 10, 114286643707769L);
+               } else {
+                  int var18 = var12.size() * -8;
 
-               for (int var21 = 0; var21 < var12.size(); var21++) {
-                  this.h((ItemStack)var12.get(var21), var18 + var21 * 16, 114286643707769L, (int)(-var11 - 16.0F));
+                  for (int var21 = 0; var21 < var12.size(); var21++) {
+                     this.h((ItemStack)var12.get(var21), var18 + var21 * 16, 114286643707769L, (int)(-var11 - 16.0F));
+                  }
+
+                  var11 += 16.0F;
                }
-
-               var11 += 16.0F;
             }
          }
 
@@ -154,6 +169,17 @@ public class NameTags extends Module implements EventSubscriber {
             }
          }
       }
+   }
+
+   // update new version
+   private void armorColumn(java.util.List var1, int var2, long var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
+      GlStateManager.pushMatrix();
+
+      for (int var5 = 0; var5 < var1.size(); var5++) {
+         this.h((ItemStack)var1.get(var5), var2, var3, -8 + var5 * 16);
+      }
+
+      GlStateManager.popMatrix();
    }
 
    private void F(PotionEffect var1, int var2, int var3) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
@@ -312,7 +338,11 @@ public class NameTags extends Module implements EventSubscriber {
       GlStateManager.pushMatrix();
       GlStateManager.scale(0.5F, 0.5F, 0.5F);
       GlStateManager.disableDepth();
-      this.W(var6, var1, var2, var5, 0.5F);
+      // update new version
+      if (enchant.c()) {
+         this.W(var6, var1, var2, var5, 0.5F);
+      }
+
       GlStateManager.enableDepth();
       GlStateManager.scale(2.0F, 2.0F, 2.0F);
       GlStateManager.popMatrix();
@@ -330,10 +360,12 @@ public class NameTags extends Module implements EventSubscriber {
          ? new Color(0.0F, 0.0F, 0.0F, backgroundOpacity.k() / 100.0F)
          : new Color(0.33F, 0.0F, 0.33F, backgroundOpacity.k() / 100.0F);
       Expo.util.render.RenderUtil.L();
-      float var20 = -var18 / 2.0F - 1.0F;
-      float var21 = -var4.o(60714858652844L) - 1.0F;
-      float var22 = var18 / 2.0F + (textShadow.c() ? 1.0F : 0.0F);
-      float var23 = textShadow.c() ? 0.0F : -1.0F;
+      // update new version
+      float var24 = backgroundSpacing.L();
+      float var20 = -var18 / 2.0F - var24;
+      float var21 = -var4.o(60714858652844L) - var24;
+      float var22 = var18 / 2.0F + (textShadow.c() ? var24 : 0.0F);
+      float var23 = textShadow.c() ? 0.0F : -var24;
       Expo.util.render.RenderUtil.c(125644905353792L, var20, var21, var22, var23, var19.getRGB());
       if (Teams.l(var3)) {
          Expo.util.render.RenderUtil.m(var20, var21, 91446790430251L, var22, var23, 1.0F, Color.GREEN.getRGB());
@@ -454,7 +486,6 @@ public class NameTags extends Module implements EventSubscriber {
       k = new String[13];
       v = new HashMap(13);
       s = new long[]{8114464844023189536L, -8498047997027657721L, -6848780433799349009L, 1123611790016166617L, -8478601633323954937L, -1822533454991580431L, 4543667561951989338L, 366751151073540261L, -7937407761630176002L, 4904965540425861536L, -5136359554768556648L};
-      u = new Integer[11];
    }
 
 
@@ -490,7 +521,8 @@ public class NameTags extends Module implements EventSubscriber {
       textShadow = new BooleanSetting("Text-shadow", false);
       mobs = new BooleanSetting("Mobs", false);
       showSelf = new BooleanSetting("Show-self", true);
-      showItems = new BooleanSetting("Show-items", false);
+      // update new version
+      enchant = new BooleanSetting("Enchant", true);
       animals = new BooleanSetting("Animals", false);
       bosses = new BooleanSetting("Bosses", false);
       friends = new BooleanSetting("Friends", true);
@@ -498,6 +530,10 @@ public class NameTags extends Module implements EventSubscriber {
       onlyName = new BooleanSetting("Only-name", false);
       enemies = new BooleanSetting("Enemies", true);
       scale = new NumberSetting("Scale", 0.8F, 0.1F, 3.0F, 0.01F);
+      // update new version
+      backgroundSpacing = new NumberSetting("Background-spacing", 1.0F, 0.0F, 5.0F, 0.1F);
+      // update new version
+      armorMode = new ModeSetting("Armor-mode", "NONE", "TOP", "LEFT", "RIGHT", "SELF_LEFT", "SELF_RIGHT");
       showEffects = new BooleanSetting("Show-effects", false);
    }
    static {

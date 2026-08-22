@@ -102,10 +102,29 @@ public final class ExpoModuleSettings {
                }
             }
 
+            // add code
+            // A setting the on-disk config predates is not in `order`, and appending
+            // it put BlockHit's Allow-NoSlow after the target checkboxes. Insert it
+            // after whatever it was declared behind so it stays with its group.
+            Setting prev = null;
+
             for (Setting s : declared) {
                if (seen.put(s, Boolean.TRUE) == null) {
-                  out.add(s);
+                  int at = out.size();
+
+                  if (prev != null) {
+                     for (int i = 0; i < out.size(); i++) {
+                        if (out.get(i) == prev) {
+                           at = i + 1;
+                           break;
+                        }
+                     }
+                  }
+
+                  out.add(at, s);
                }
+
+               prev = s;
             }
 
             if (!out.isEmpty()) {
@@ -136,14 +155,11 @@ public final class ExpoModuleSettings {
                      + " / wouldOverwrite " + relabelWouldOverwrite + " (must be 0)"
                      + (relabelWouldOverwrite == 0 ? "" : " " + relabelOverwrites);
          pending.add(g1);
-         System.out.println("[EXPODIAG] " + g1);
       } catch (Throwable t) {
          note = "Expo.settings FAILED (" + t + ") -- the ClickGUI will show no settings";
-         t.printStackTrace();
       }
 
       pending.add(note);
-      System.out.println("[EXPODIAG] " + note);
       return note;
    }
 
@@ -166,7 +182,6 @@ public final class ExpoModuleSettings {
       }
 
       pending.add(note);
-      System.out.println("[EXPODIAG] " + note);
       return note;
    }
 
@@ -251,7 +266,6 @@ public final class ExpoModuleSettings {
             }
          }
       } catch (Throwable t) {
-         t.printStackTrace();
       }
 
       return r;

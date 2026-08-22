@@ -26,7 +26,6 @@ import org.lwjgl.opengl.GL11;
 
 public class FontUtil {
    private static Map g;
-   private static Integer[] f;
    private static long[] e;
    private static String[] b;
    public static final float x = 0.66F;
@@ -325,7 +324,6 @@ public class FontUtil {
       c = new String[6];
       g = new HashMap(13);
       e = new long[]{1301708283197147249L, -1541604716268540942L, 6379316386513373933L, 4355031182947347440L, 4165885267922111809L, 6434429687449019973L, -4802263111103286353L, 7726072117318443924L, 7157246289987260658L, 2471304832662197487L, -6871509033680594436L, 8276650313308325762L};
-      f = new Integer[12];
    }
 
    private FontUtil() {

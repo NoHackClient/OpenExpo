@@ -68,7 +68,7 @@ public class MiscHooks {
    }
 
    private static List<GuiButton> buttonList(GuiScreen var0) throws Exception, IllegalAccessException {
-      return (List<GuiButton>)readField(var0, GuiScreen.class, "buttonList", "buttonList", "n");
+      return (List<GuiButton>)readField(var0, GuiScreen.class, "buttonList", "field_146292_n", "n");
    }
 
    public static boolean entityPlayerSPIsUsingItem(EntityPlayerSP var0) {
@@ -109,9 +109,9 @@ public class MiscHooks {
          }
 
          MainMenuTheme.r(var0.width, var0.height, 3666, (byte)89, var12, 4438180);
-         synchronized (readField(var0, GuiMainMenu.class, "threadLock", "threadLock", "w")) {
-            String var19 = (String)readField(var0, GuiMainMenu.class, "openGLWarning1", "openGLWarning1", "x");
-            String var20 = (String)readField(var0, GuiMainMenu.class, "openGLWarning2", "openGLWarning2", "y");
+         synchronized (readField(var0, GuiMainMenu.class, "threadLock", "field_104025_t", "w")) {
+            String var19 = (String)readField(var0, GuiMainMenu.class, "openGLWarning1", "field_92025_p", "x");
+            String var20 = (String)readField(var0, GuiMainMenu.class, "openGLWarning2", "field_146972_A", "y");
             int var21 = var13.fontRendererObj.getStringWidth(var19);
             int var22 = var13.fontRendererObj.getStringWidth(var20);
             int var23 = Math.max(var21, var22);
@@ -199,10 +199,10 @@ public class MiscHooks {
             return;
          }
 
-         Minecraft var4 = (Minecraft)readField(var0, ItemRenderer.class, "mc", "mc", "c");
-         float var5 = (Float)readField(var0, ItemRenderer.class, "equippedProgress", "equippedProgress", "e");
-         ItemStack var6 = (ItemStack)readField(var0, ItemRenderer.class, "itemToRender", "itemToRender", "d");
-         int var7 = (Integer)readField(var0, ItemRenderer.class, "equippedItemSlot", "equippedItemSlot", "i");
+         Minecraft var4 = (Minecraft)readField(var0, ItemRenderer.class, "mc", "field_78455_a", "c");
+         float var5 = (Float)readField(var0, ItemRenderer.class, "equippedProgress", "field_78454_c", "e");
+         ItemStack var6 = (ItemStack)readField(var0, ItemRenderer.class, "itemToRender", "field_78453_b", "d");
+         int var7 = (Integer)readField(var0, ItemRenderer.class, "equippedItemSlot", "field_78450_g", "i");
          writeField(var0, ItemRenderer.class, var5, "prevEquippedProgress", "prevEquippedProgress", "f");
          EntityPlayerSP var8 = var4.thePlayer;
          ItemStack var9 = ItemRendererHooks.spoofScaffoldItemStack(var4, var8.inventory.getCurrentItem());

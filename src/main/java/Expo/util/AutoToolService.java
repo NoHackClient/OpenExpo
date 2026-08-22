@@ -26,7 +26,6 @@ import net.minecraft.util.MovingObjectPosition;
 public class AutoToolService implements EventSubscriber {
    private boolean U;
    public static AutoToolService K;
-   private static Integer[] c;
    private static long a;
    private static Minecraft f;
 

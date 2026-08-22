@@ -24,7 +24,6 @@ public class MiningState {
    private static Color r;
    private final Set<BlockPos> p;
    private static long T;
-   private static Integer[] c;
    private static long[] b;
    private boolean m;
    private static long a;
@@ -284,7 +283,6 @@ public class MiningState {
       M = MinecraftRef.c((byte)0, 0L);
       d = new HashMap(13);
       b = new long[]{-9168688596242034574L, 5080095703702614037L, 6758059678884188576L, -8075456693886047355L, -3848150705027385449L, 5000693850285147339L, 2022900836229366566L, 8832399447815106992L, 2774359402930372078L, -1941175905964506652L, -769374932895943680L, -5736450801476679465L, -8253828617825589297L};
-      c = new Integer[13];
       e = 3000L;
    }
 

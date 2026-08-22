@@ -58,7 +58,6 @@ public class ItemUtil {
    private static String[] b;
    private static Minecraft z;
    private static long[] e;
-   private static Integer[] f;
    private static Object[] h;
    private static Map d;
 

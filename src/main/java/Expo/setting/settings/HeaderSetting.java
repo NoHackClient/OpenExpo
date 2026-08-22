@@ -30,6 +30,39 @@ public class HeaderSetting extends Setting {
       return this.I;
    }
 
+   // add code
+   public static java.util.List<Setting> prune(java.util.List<Setting> var0) {
+      java.util.ArrayList<Setting> var1 = new java.util.ArrayList<Setting>(var0.size());
+
+      for (int var2 = 0; var2 < var0.size(); var2++) {
+         Setting var3 = var0.get(var2);
+         if (!(var3 instanceof HeaderSetting) || occupied(var0, var2)) {
+            var1.add(var3);
+         }
+      }
+
+      return var1;
+   }
+
+   // add code
+   // A section band with nothing under it is noise, and the settings list is
+   // reordered by ExpoModuleSettings after construction, so this has to be asked
+   // at render time rather than filtered out of the list.
+   public static boolean occupied(java.util.List<Setting> var0, int var1) {
+      if (var0 == null) {
+         return false;
+      }
+
+      for (int var2 = var1 + 1; var2 < var0.size(); var2++) {
+         Setting var3 = var0.get(var2);
+         if (var3 != null) {
+            return !(var3 instanceof HeaderSetting);
+         }
+      }
+
+      return false;
+   }
+
    static {
       a = 109733489650987L;
    }

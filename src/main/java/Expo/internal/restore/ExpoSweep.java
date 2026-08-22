@@ -870,7 +870,6 @@ public final class ExpoSweep {
       }
 
       b.append(TAG).append(" ==== end of sweep ====");
-      System.out.println(b);
    }
 
    private static String rowLine(Row r) {
@@ -907,6 +906,5 @@ public final class ExpoSweep {
    private static final String BETWEEN_OPS = "<between ops>";
 
    private static void say(String s) {
-      System.out.println(TAG + ' ' + s);
    }
 }

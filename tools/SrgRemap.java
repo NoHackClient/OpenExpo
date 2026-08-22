@@ -12,6 +12,81 @@ public class SrgRemap {
     static final Map<String, String> CL = new HashMap<String, String>();
     static final Map<String, String> FD = new HashMap<String, String>();
     static final Map<String, String> MD = new HashMap<String, String>();
+    // add code
+    // Names that resolve to more than one target are unusable as an owner-blind
+    // fallback: WorldClient.getScoreboard picked func_147192_d off a colliding
+    // entry instead of the inherited World one.
+    static final Set<String> AMBIG = new HashSet<String>();
+    // add code
+    // owner -> [superclass, interfaces...] in the SAME namespace as the mapping's
+    // source side. The srg only lists a member on its declaring class, but javac
+    // emits the static type at the reference site, so EntityPlayerSP.onGround has
+    // to be resolved by walking up to Entity.
+    static final Map<String, List<String>> SUP = new HashMap<String, List<String>>();
+
+    static String walkField(String owner, String name) {
+        for (String o = owner; o != null; ) {
+            String r = FD.get(o + "/" + name);
+            if (r != null) return r;
+            List<String> up = SUP.get(o);
+            if (up == null || up.isEmpty()) return null;
+            for (int i = 1; i < up.size(); i++) {
+                String r2 = walkField(up.get(i), name);
+                if (r2 != null) return r2;
+            }
+            o = up.get(0);
+        }
+        return null;
+    }
+
+    static String walkMethod(String owner, String name, String desc) {
+        for (String o = owner; o != null; ) {
+            String r = MD.get(o + "/" + name + " " + desc);
+            if (r != null) return r;
+            List<String> up = SUP.get(o);
+            if (up == null || up.isEmpty()) return null;
+            for (int i = 1; i < up.size(); i++) {
+                String r2 = walkMethod(up.get(i), name, desc);
+                if (r2 != null) return r2;
+            }
+            o = up.get(0);
+        }
+        return null;
+    }
+
+    static void hierarchy(File jar) throws IOException {
+        if (jar == null || !jar.isFile()) return;
+        ZipFile zf = new ZipFile(jar);
+        try {
+            Enumeration<? extends ZipEntry> en = zf.entries();
+            while (en.hasMoreElements()) {
+                ZipEntry e = en.nextElement();
+                if (!e.getName().endsWith(".class")) continue;
+                InputStream in = zf.getInputStream(e);
+                try {
+                    ClassReader cr = new ClassReader(in);
+                    List<String> up = new ArrayList<String>();
+                    up.add(cr.getSuperName());
+                    String[] itf = cr.getInterfaces();
+                    if (itf != null) up.addAll(Arrays.asList(itf));
+                    SUP.put(cr.getClassName(), up);
+                } finally {
+                    in.close();
+                }
+            }
+        } finally {
+            zf.close();
+        }
+    }
+
+    // add code
+    // The owner-blind fallbacks exist so an inherited member still resolves when the
+    // reference names a subclass, but on a mod jar they also matched unrelated owners
+    // -- java/lang/System.getProperty came out as func_71328_a. Only let them fire for
+    // owners the mapping actually knows about.
+    static boolean mapped(String owner) {
+        return owner != null && (owner.startsWith("net/minecraft/") || CL.containsKey(owner));
+    }
 
     public static void main(String[] args) throws Exception {
         if (args.length < 4) {
@@ -28,18 +103,21 @@ public class SrgRemap {
                 return r != null ? r : t;
             }
             @Override public String mapFieldName(String owner, String name, String desc) {
-                String r = FD.get(owner + "/" + name);
-                if (r == null) r = FD.get(name);
+                String r = walkField(owner, name);
+                if (r == null && mapped(owner) && !AMBIG.contains("F:" + name)) r = FD.get(name);
                 return r != null ? r : name;
             }
             @Override public String mapMethodName(String owner, String name, String desc) {
-                String r = MD.get(owner + "/" + name + " " + desc);
-                if (r == null) r = MD.get(name + " " + desc);
-                if (r == null) r = MD.get(name);
+                String r = walkMethod(owner, name, desc);
+                if (r == null && mapped(owner) && !AMBIG.contains("M:" + name + " " + desc)) r = MD.get(name + " " + desc);
+                if (r == null && mapped(owner) && !AMBIG.contains("M:" + name)) r = MD.get(name);
                 return r != null ? r : name;
             }
         };
 
+        // add code
+        hierarchy(new File(args[0]));
+        if (args.length > 4) hierarchy(new File(args[4]));
         ZipFile zf = new ZipFile(args[0]);
         ZipOutputStream zos = new ZipOutputStream(
                 new BufferedOutputStream(new FileOutputStream(args[1])));
@@ -111,13 +189,24 @@ public class SrgRemap {
                 String a = p[0], b = p[1];
                 String from = reverse ? b : a, to = reverse ? a : b;
                 FD.put(from, simple(to));
-                FD.put(simple(from), simple(to));
+                // add code
+                String fk = simple(from);
+                String prevF = FD.get(fk);
+                if (prevF != null && !prevF.equals(simple(to))) AMBIG.add("F:" + fk);
+                FD.put(fk, simple(to));
             } else if ("MD".equals(kind) && p.length == 4) {
                 String a = p[0], ad = p[1], b = p[2], bd = p[3];
                 String from = reverse ? b : a, fd = reverse ? bd : ad, to = reverse ? a : b;
                 MD.put(from + " " + fd, simple(to));
-                MD.put(simple(from) + " " + fd, simple(to));
-                MD.put(simple(from), simple(to));
+                // add code
+                String mk = simple(from) + " " + fd;
+                String prevM = MD.get(mk);
+                if (prevM != null && !prevM.equals(simple(to))) AMBIG.add("M:" + mk);
+                MD.put(mk, simple(to));
+                String nk = simple(from);
+                String prevN = MD.get(nk);
+                if (prevN != null && !prevN.equals(simple(to))) AMBIG.add("M:" + nk);
+                MD.put(nk, simple(to));
             }
         }
         r.close();

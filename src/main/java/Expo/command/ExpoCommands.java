@@ -173,7 +173,6 @@ public final class ExpoCommands {
          return true;
       } catch (Throwable var6) {
          chat("§cCommand failed: " + var6);
-         var6.printStackTrace();
          return true;
       }
    }
@@ -238,7 +237,6 @@ public final class ExpoCommands {
 
          ConfigManagerWindow.D.add(var0);
       } catch (Throwable var2) {
-         System.out.println("[EXPOCMD] " + var0);
       }
    }
 

@@ -15,7 +15,6 @@ public class RiddleJokerMenuButton extends GuiButton {
    public int g;
    private boolean p;
    private static String b;
-   private static Integer[] d;
    private static long[] c;
 
 
@@ -62,7 +61,6 @@ public class RiddleJokerMenuButton extends GuiButton {
       b = "/assets/minecraft/mainmenu/option.ogg";
       e = new HashMap(13);
       c = new long[]{-6108108481085390217L, -5152194304845228098L, -4593200023364279790L, -8218568827744828237L, 3085352055472297028L, -1837421424127876107L, -8233674725960633202L, -4813340029029197693L, -7459030310650241238L};
-      d = new Integer[9];
    }
 
    public void n(int var1) {

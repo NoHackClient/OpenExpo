@@ -30,6 +30,10 @@ public class MiningConstants {
    public static boolean r;
    public static boolean z;
    public static boolean q;
+   // update new version
+   public static boolean gapAltOnlyStone;
+   // update new version
+   public static boolean userManualScreenMove;
    public static float X;
    public static int w;
    public static boolean A;

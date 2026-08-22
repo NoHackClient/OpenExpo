@@ -61,7 +61,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
    public static Map<UUID, CheaterRegistry> R;
    public static Map<UUID, EntityPlayer> c;
    private static String[] d;
-   private static Long[] n;
    private static long[] g;
    private static long[] m;
    private static String[] b;
@@ -1108,7 +1107,6 @@ public class CheaterDetector extends Module implements EventSubscriber {
                                           var40[var45] = var62;
                                           if (var2 >= var5) {
                                              m = var6;
-                                             n = new Long[11];
                                              return;
                                           }
                                           break;

@@ -33,7 +33,6 @@ import net.minecraft.client.gui.GuiChat;
 
 public class ChatInputHandler implements EventSubscriber {
    private static Map e;
-   private static Integer[] d;
    private static boolean k;
    private static long[] c;
    private static long a;
@@ -166,7 +165,6 @@ public class ChatInputHandler implements EventSubscriber {
       b = "\u00a7b\u00a7lAUTOCOMPLETE\u00a7r: ";
       e = new HashMap(13);
       c = new long[]{-2394404294513042523L, 1683432911221615452L, 9045198900964769424L, -8656514580352376674L, -2173930181571335424L, 75138827731708389L, -9019545282253747357L, 5102263365140684918L};
-      d = new Integer[8];
    }
 
    private void X(long var1, String var3) {

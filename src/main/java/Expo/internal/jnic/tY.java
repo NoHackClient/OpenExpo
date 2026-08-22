@@ -8,7 +8,6 @@ public class tY {
    private static long a;
    private static String[] c;
    private static Map g;
-   private static Integer[] f;
    private static String[] b;
    private static Map d;
    public static boolean $skidonion$1876635293;

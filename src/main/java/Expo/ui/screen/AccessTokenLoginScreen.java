@@ -36,7 +36,6 @@ public class AccessTokenLoginScreen extends GuiScreen {
    private GuiButton C;
    private static Pattern V;
    private static String[] b;
-   private static Integer[] g;
    private String D;
    private final GuiScreen W;
    private static long[] e;
@@ -75,7 +74,6 @@ public class AccessTokenLoginScreen extends GuiScreen {
                            );
                         this.mc.displayGuiScreen(new AccountManagerScreen(var5x, this.W, new TimedStatusMessage(ChatFormatting.y(var10), j)));
                         if (!var2.isEmpty()) {
-                           System.err.println("Failed account details:");
                            var2.forEach(System.err::println);
                         }
                      }
@@ -109,7 +107,6 @@ public class AccessTokenLoginScreen extends GuiScreen {
       c = new String[40];
       h = new HashMap(13);
       e = new long[]{-6179178860364192126L, -4115508186449270523L, -8344684637995672757L, -3102215640195162597L, 3437161096464223226L, 4087559869772570548L, -6742336212447138074L, -2954776816750629725L, 8086583128158658561L, 620766257088394773L, -7612866976290492898L, 8239844019441514443L, -2341318659144379299L, -1168087349002653694L, 148759182871054105L, -1412249561140564675L, -514634316045331755L, 2284500278605410940L, 3447497351858921391L, 1928326603251773153L};
-      g = new Integer[20];
       j = 5000L;
    }
 
@@ -182,7 +179,6 @@ public class AccessTokenLoginScreen extends GuiScreen {
 
             String var7x = var7.length() > 30 ? var7.substring(0, 30) + "..." : var7;
             var5.add("§cFailed (" + var5x + ") for token: " + var7x + "§r");
-            System.err.println("Error processing token: " + var7x + " - " + var5x);
             return null;
          });
          var2.add(var8);
@@ -283,7 +279,6 @@ public class AccessTokenLoginScreen extends GuiScreen {
                }
 
                var5.add("§cFailed (" + var6x + ") for: " + (var18 != null ? var18 : "Unknown Username/Invalid Token") + "§r");
-               System.err.println("Error processing account: " + var1 + " - " + var6x);
                return null;
             });
             var4.add(var15);

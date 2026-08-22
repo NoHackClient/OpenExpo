@@ -24,7 +24,6 @@ import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 
 
 public class AutoTool extends PriorityModule implements EventSubscriber {
-   private static Integer[] e;
    private int J;
    private boolean I;
    private static Map g;
@@ -82,7 +81,6 @@ public class AutoTool extends PriorityModule implements EventSubscriber {
       k = new String[10];
       g = new HashMap(13);
       d = new long[]{6204913656527195237L, -3535756269773128318L, -8377926795496370906L, -3172277969201009195L, 8119325576134456104L, 4460089624490024534L};
-      e = new Integer[6];
    }
 
    public final void x(long var1, EventBus var3) {

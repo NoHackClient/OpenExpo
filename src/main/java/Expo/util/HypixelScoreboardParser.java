@@ -39,7 +39,6 @@ public class HypixelScoreboardParser {
    private boolean X;
    private boolean u;
    private boolean L;
-   private static Integer[] k;
    private static Map l;
    private static Pattern f;
    private boolean J;

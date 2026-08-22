@@ -103,6 +103,12 @@ public class AutoBlock extends Module implements EventSubscriber {
    public static HeaderSetting targetSettings;
    private static Map bb;
    public static BooleanSetting allowNoSlow;
+   // update new version
+   public static BooleanSetting onlyUnblockWithoutNoSlow;
+   // update new version
+   public static BooleanSetting disableNoSlowInRange;
+   // update new version
+   public static NumberSetting noSlowDisableRange;
    public static PercentageSetting smartUnblockChance;
    private static int I;
    public static BooleanSetting friends;
@@ -177,7 +183,29 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private static boolean s(int var0, int var1) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-      return allowNoSlow.c() && Modules.J(NoSlow.class).o() && NoSlow.swordMode.R("VANILLA") && NoSlow.slowDown.k() < 100;
+      return noSlowLive();
+   }
+
+   // update new version
+   private static boolean noSlowLive() {
+      return allowNoSlow.c()
+         && Modules.J(NoSlow.class).o()
+         && NoSlow.swordMode.R("VANILLA")
+         && NoSlow.slowDown.k() < 100
+         && !noSlowInRange();
+   }
+
+   // update new version
+   private static boolean noSlowInRange() {
+      if (!disableNoSlowInRange.c()) {
+         return false;
+      } else {
+         AutoBlock var0 = Modules.J(AutoBlock.class);
+         return var0 != null
+            && var0.F != null
+            && f.thePlayer != null
+            && f.thePlayer.getDistanceToEntity(var0.F) <= noSlowDisableRange.L();
+      }
    }
 
    public static boolean f$r2() {
@@ -1338,6 +1366,11 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private void n() {
+      // update new version
+      if (onlyUnblockWithoutNoSlow.c() && noSlowLive()) {
+         return;
+      }
+
       PacketManager.M(false);
    }
 
@@ -1630,7 +1663,7 @@ public class AutoBlock extends Module implements EventSubscriber {
    }
 
    private static boolean X(long var0, short var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
-      return Modules.J(KeepSprint.class).o() && KeepSprint.mode.R("RESTRICT");
+      return Modules.J(KeepSprint.class).o() && KeepSprint.mode.R("PREDICTION");
    }
 
    private static int a(long var0, long var2) {
@@ -1886,7 +1919,12 @@ public class AutoBlock extends Module implements EventSubscriber {
       requireRightClick = new BooleanSetting("Require-right-click", false);
       requireKillAura = new BooleanSetting("Require-KillAura", true);
       smartUnblock = new BooleanSetting("Smart-unblock", false);
-      allowNoSlow = new BooleanSetting("Allow-no-slow", true);
+      // update new version
+      allowNoSlow = new BooleanSetting("Allow-NoSlow", true);
+      // update new version
+      onlyUnblockWithoutNoSlow = new BooleanSetting("Only-unblock-without-NoSlow", true);
+      // update new version
+      disableNoSlowInRange = new BooleanSetting("Disable-NoSlow-in-range", true);
       visualBlocking = new BooleanSetting("Visual-blocking", true);
       players = new BooleanSetting("Players", true);
       mobs = new BooleanSetting("Mobs", false);
@@ -1904,6 +1942,8 @@ public class AutoBlock extends Module implements EventSubscriber {
       fov = new NumberSetting("FOV", 360.0F, 1.0F, 360.0F, 1.0F);
       targetRange = new NumberSetting("Target-range", 5.0F, 1.0F, 8.0F, 0.01F);
       smartUnblockTicks = new NumberSetting("Smart-unblock-ticks", 8.0F, 0.0F, 15.0F, 1.0F);
+      // update new version
+      noSlowDisableRange = new NumberSetting("NoSlow-disable-range", 3.5F, 0.0F, 8.0F, 0.01F);
    }
    static {
       // add code

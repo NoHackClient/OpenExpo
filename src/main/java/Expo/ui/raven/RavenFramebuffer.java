@@ -39,7 +39,6 @@ public class RavenFramebuffer {
    private int D;
    private int H;
    private static long d;
-   private static Integer[] k;
    private int b;
    private int S;
 
@@ -249,7 +248,6 @@ public class RavenFramebuffer {
       d = 111385426594014L;
       l = new HashMap(13);
       g = new long[]{-634123079903718284L, -449954504354636044L, -5448260739223382033L, 2332538861600869028L, -5339800790329183928L, 7122341011747045817L, 775259053441777127L, -997511244557585255L, 6140130801574930532L, 524137214210370194L, -2300091152783046003L, -5054703763100788379L};
-      k = new Integer[12];
    }
 
 }

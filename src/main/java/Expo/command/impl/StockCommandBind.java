@@ -17,7 +17,6 @@ public class StockCommandBind extends Command {
    private static long[] c;
    private static String[] b;
    private static String[] a;
-   private static Integer[] d;
 
    public native List g(String[] var1, int var2, long var3);
 

@@ -32,7 +32,6 @@ public class LoginWindow {
    private static String[] d;
    private static long b;
    private JPasswordField u;
-   private static Integer[] g;
    private static Map h;
    public static boolean $skidonion$891820663;
 

@@ -23,7 +23,6 @@ public class ShaderRenderer {
    private static String[] c;
    private static long[] f;
    private static long b;
-   private static Integer[] g;
    private static String[] d;
    private static ShaderProgram N;
    private static String a;
@@ -196,7 +195,6 @@ public class ShaderRenderer {
                                     var31[var10001] = var48;
                                     if (var2 >= var5) {
                                        f = var6;
-                                       g = new Integer[7];
                                        N = new ShaderProgram(
                                           var22,
                                           "#version 120\nuniform vec2 u_size;\nuniform float u_radius;\nuniform vec4 u_color;\nuniform vec4 u_edges;\n\nvoid main(void)\n{\n    vec2 tex_coord = gl_TexCoord[0].st;\n\n    if (tex_coord.x < 0.5 && tex_coord.y < 0.5 && u_edges.x == 0.0 ||\n        tex_coord.x > 0.5 && tex_coord.y < 0.5 && u_edges.y == 0.0 ||\n        tex_coord.x > 0.5 && tex_coord.y > 0.5 && u_edges.z == 0.0 ||\n        tex_coord.x < 0.5 && tex_coord.y > 0.5 && u_edges.w == 0.0) {\n        gl_FragColor = u_color;\n    } else {\n        gl_FragColor = vec4(u_color.rgb, u_color.a * smoothstep(1.0, 0.0, length(max((abs(tex_coord - 0.5) + 0.5) * u_size - u_size + u_radius, 0.0)) - u_radius + 0.5));\n    }\n}\n"

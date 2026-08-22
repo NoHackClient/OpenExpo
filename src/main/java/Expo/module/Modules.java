@@ -11,7 +11,6 @@ public class Modules {
    private static String b;
    private static long[] c;
    private static boolean G;
-   private static Integer[] d;
 
 
 
@@ -62,7 +61,6 @@ public class Modules {
       b = "current";
       e = new HashMap(13);
       c = new long[]{-7749740435155550923L, -7864304823227945179L, 3071478632644015716L};
-      d = new Integer[3];
    }
 
 }

@@ -46,7 +46,6 @@ import net.minecraft.util.EnumFacing;
 public class BedESP extends Module implements EventSubscriber {
    private static String[] c;
    public static ColorSetting customColor;
-   private static Integer[] h;
    private static Map k;
    private static long[] g;
    public static ModeSetting color;
@@ -403,7 +402,6 @@ public class BedESP extends Module implements EventSubscriber {
                            var26[var10001] = var39;
                            if (var2 >= var5) {
                               g = var6;
-                              h = new Integer[4];
                               return;
                            }
                            break;

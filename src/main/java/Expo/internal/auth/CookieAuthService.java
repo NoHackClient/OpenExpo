@@ -65,7 +65,6 @@ public class CookieAuthService {
    private static long a;
    private static List<String> N;
    private static Map g;
-   private static Long[] i;
    private static Map k;
    private static String[] c;
    private static Map d;
@@ -125,7 +124,6 @@ public class CookieAuthService {
             }
          } catch (Exception var24) {
             System.err.println("[CookieAuth] Authentication failed: " + var24.getMessage());
-            var24.printStackTrace();
             var1.x("&cAuthentication failed: " + var24.getMessage() + "&r");
             return false;
          }
@@ -409,7 +407,6 @@ public class CookieAuthService {
             R(var9, var1).whenComplete((var2xx, var3x) -> {
                if (var3x != null) {
                   System.err.println("[CookieAuth] Authentication failed: " + var3x.getMessage());
-                  var3x.printStackTrace();
                   var1.x("&cAuthentication failed: " + var3x.getMessage() + "&r");
                   var2.complete(false);
                } else {
@@ -418,7 +415,6 @@ public class CookieAuthService {
             });
          } catch (Exception var10) {
             var1.x("&cError processing cookie file: " + var10.getMessage() + "&r");
-            var10.printStackTrace();
             var2.complete(false);
          }
       } catch (Throwable zkm$t) { throw Sneaky.rethrow(zkm$t); } });
@@ -994,7 +990,6 @@ public class CookieAuthService {
                                        } while (var2 < var5);
 
                                        h = var6;
-                                       i = new Long[2];
                                        j = Executors.newFixedThreadPool(4);
                                        P = new Gson();
                                        K = RequestConfig.custom()

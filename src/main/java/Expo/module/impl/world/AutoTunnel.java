@@ -41,9 +41,11 @@ public class AutoTunnel extends Module {
    public static PercentageSetting unsneakChance;
    public static BooleanSetting autoTool;
    public static NumberSetting turnSpeed;
-   public static BooleanSetting o;
+   // update new version
+   public static BooleanSetting userManualScreenMove;
    public static NumberSetting unsneakDuration;
-   public static BooleanSetting g2;
+   // update new version
+   public static BooleanSetting gapAltOnlyStone;
    public static ModeSetting sneakMode;
    public static PercentageSetting rotationSmoothing;
 
@@ -111,7 +113,9 @@ public class AutoTunnel extends Module {
    }
    static {
       // add code
-      g2 = new BooleanSetting("G", false);
-      o = new BooleanSetting("O", false);
+      // update new version
+      gapAltOnlyStone = new BooleanSetting("GapAlt-only-stone", false);
+      // update new version
+      userManualScreenMove = new BooleanSetting("User-manual-screen-move", true);
    }
 }

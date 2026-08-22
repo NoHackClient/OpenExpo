@@ -129,11 +129,9 @@ public final class ExpoConfig {
          }
       } catch (Throwable t) {
          note = "Expo.config FAILED (" + t + ") -- every module keeps its factory state";
-         t.printStackTrace();
       }
 
       pending.add(note);
-      System.out.println("[EXPODIAG] " + note);
       return note;
    }
 
@@ -402,7 +400,6 @@ public final class ExpoConfig {
          } catch (Throwable t) {
             r.ok = false;
             r.note = "THREW " + t;
-            t.printStackTrace();
          }
 
          lastResult = r;
@@ -715,7 +712,6 @@ public final class ExpoConfig {
 
          return tmp.renameTo(f);
       } catch (Throwable t) {
-         t.printStackTrace();
          return false;
       } finally {
          if (w != null) {

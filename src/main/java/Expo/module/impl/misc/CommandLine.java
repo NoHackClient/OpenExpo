@@ -47,7 +47,6 @@ public class CommandLine extends Module implements EventSubscriber {
    private static Map d;
    private static Object[] e;
    public static BooleanSetting autoFill;
-   private static Integer[] c;
    private static String[] g;
 
    static {
@@ -114,7 +113,6 @@ public class CommandLine extends Module implements EventSubscriber {
          } while (var4 < var7);
 
          b = var8;
-         c = new Integer[3];
       } catch (UnsupportedEncodingException | InvalidAlgorithmParameterException | InvalidKeyException | NoSuchAlgorithmException | InvalidKeySpecException | BadPaddingException | IllegalBlockSizeException | NoSuchPaddingException var13) {
          throw new RuntimeException(var13);
       }

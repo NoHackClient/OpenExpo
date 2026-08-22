@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class tM {
    private static long[] e;
-   private static Integer[] f;
    private static String[] b;
    private static Map d;
    private static Map g;

@@ -20,7 +20,6 @@ import net.minecraft.util.BlockPos;
 
 public class CaveXray extends Module {
    public static BooleanSetting reloadRenderer;
-   private static Integer[] c;
    private static long[] b;
    private static long a;
    public static PercentageSetting opacity;

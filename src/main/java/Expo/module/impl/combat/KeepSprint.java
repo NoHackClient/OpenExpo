@@ -38,7 +38,6 @@ public class KeepSprint extends Module implements EventSubscriber {
    private static long b;
    private static long[] g;
    private static Minecraft S;
-   private static Integer[] k;
    public static ModeSetting mode;
    private static String[] d;
    private boolean h;
@@ -52,7 +51,7 @@ public class KeepSprint extends Module implements EventSubscriber {
 
 
 
-      if (mode.R("RESTRICT") && ScoreboardReader.v(0L)) {
+      if (mode.R("PREDICTION") && ScoreboardReader.v(0L)) {
          if (!this.h) {
             if (var3.O() instanceof EntityPlayer) {
                switch (t) {
@@ -86,7 +85,7 @@ public class KeepSprint extends Module implements EventSubscriber {
 
    public static void k(long var0) {
       switch (mode.Y()) {
-         case "RESTRICT":
+         case "PREDICTION":
             if (S.thePlayer.isSprinting()) {
                if (t == 2) {
                   S.thePlayer.motionX = S.thePlayer.motionX * (1.0 - 0.4 * slowdown.k() / 100.0);
@@ -121,7 +120,7 @@ public class KeepSprint extends Module implements EventSubscriber {
    public void onPreUpdate(PreUpdateEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
 
 
-      if (mode.R("RESTRICT") && ScoreboardReader.v(0L)) {
+      if (mode.R("PREDICTION") && ScoreboardReader.v(0L)) {
          if (a > 5) {
             this.J((short)0);
          }
@@ -132,16 +131,14 @@ public class KeepSprint extends Module implements EventSubscriber {
                a++;
                break;
             case 2:
-               if (S.thePlayer.isUsingItem()) {
-                  if (Sprint.U(0L)) {
-                     S.thePlayer.setSprinting(true);
-                  }
-               } else {
+               // update new version
+               if (!S.thePlayer.isUsingItem() || Sprint.U(0L)) {
                   S.thePlayer.setSprinting(true);
+                  a = 0;
+                  t = 0;
+               } else {
+                  a++;
                }
-
-               a = 0;
-               t = 0;
          }
       } else {
          this.J((short)0);
@@ -175,7 +172,7 @@ public class KeepSprint extends Module implements EventSubscriber {
    public void onPreSuperLivingUpdate(PreSuperLivingUpdateEvent var1, long var2) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
 
 
-      if (mode.R("RESTRICT") && ScoreboardReader.v(0L)) {
+      if (mode.R("PREDICTION") && ScoreboardReader.v(0L)) {
          switch (t) {
             case 1:
                S.thePlayer.setSprinting(false);

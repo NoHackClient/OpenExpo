@@ -37,7 +37,6 @@ public class Notifications extends Module implements EventSubscriber {
    private static List<NotificationToast> s;
    private static int F;
    private static Minecraft Y;
-   private static Integer[] t;
    public static ModeSetting stripColor;
    private static final float N = 2.0F;
    public static NumberSetting leaveTime;
@@ -159,7 +158,6 @@ public class Notifications extends Module implements EventSubscriber {
       h = new String[24];
       u = new HashMap(13);
       r = new long[]{2966946584198201996L, -5404648118911198893L, -8470739123547187686L, 1677113841768690543L, 4283053398555877610L, -7662428232398007713L, 4506934344420597124L, -3325439409045599548L, -6260022984373518689L, 2630741561568766778L, -302759479584201442L, -908384258933398582L, 644954613818694405L, -8163367185621506862L};
-      t = new Integer[14];
    }
 
    static {

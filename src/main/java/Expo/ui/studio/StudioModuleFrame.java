@@ -238,7 +238,11 @@ public class StudioModuleFrame {
 
       this.t.clear();
 
-      for (Setting var19 : this.M.w()) {
+      // add code
+      java.util.List<Setting> var30 = this.M.w();
+
+      for (int var31 = 0; var31 < var30.size(); var31++) {
+         Setting var19 = var30.get(var31);
          if (var19 instanceof BooleanSetting) {
             this.t.add(new BooleanSettingComponent(this.d, 42526367563304L, this, (BooleanSetting)var19));
          } else if (var19 instanceof ModeSetting) {
@@ -251,7 +255,7 @@ public class StudioModuleFrame {
             this.t.add(new ColorSettingComponent(109847924827530L, this.d, this, (ColorSetting)var19));
          } else if (var19 instanceof TextSetting) {
             this.t.add(new TextSettingComponent(this.d, this, 57160869329594L, (TextSetting)var19));
-         } else if (var19 instanceof HeaderSetting) {
+         } else if (var19 instanceof HeaderSetting && HeaderSetting.occupied(var30, var31)) {
             this.t.add(new HeaderSettingComponent(this.d, this, 63975352640112L, (HeaderSetting)var19));
          }
       }

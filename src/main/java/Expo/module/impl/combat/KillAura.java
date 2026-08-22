@@ -61,7 +61,6 @@ import org.lwjgl.opengl.GL11;
 public class KillAura extends PriorityModule implements EventSubscriber {
    public static ModeSetting mode;
    public static TimerUtil I;
-   private static Integer[] nb;
    private long C;
    private static Minecraft e;
    private double O;
@@ -745,7 +744,6 @@ public class KillAura extends PriorityModule implements EventSubscriber {
       hb = new String[24];
       ob = new HashMap(13);
       mb = new long[]{4222651748112354234L, 1358759797698752134L, 6027566444030759557L, 6531994159110063519L, 4352892789842412532L, 4215198685318417151L, 4265623248262754419L, -8484462168072695861L, -4975961977512736667L, 5684919308909557051L, -4714451467247381270L, -7242730324709650935L, -1859447380455794541L, -5814833442236119007L, 8426417971733715765L, -3487626619764442578L, -8826877039400193592L, 2162156720661625334L, 2895595605367363828L, 3335883105485980950L, -1828796396622648081L, 5888032080245728409L, 4083632905029626501L};
-      nb = new Integer[23];
       rb = new HashMap(13);
       pb = new long[]{8087929143410548367L, 4563174337710790695L, -8179287428373695482L, -5236949487611815791L, -2593048032935943668L, 7859560633349231800L};
       qb = new Long[6];
@@ -815,6 +813,10 @@ public class KillAura extends PriorityModule implements EventSubscriber {
    static {
       // add code
       showReachRing = new BooleanSetting("Show-reach-ring", false);
+      // update new version
+      G = new HeaderSetting("Blink autoblocks only works in Hypixel");
+      // update new version
+      h = new HeaderSetting("Target settings");
       legit = new BooleanSetting("Legit", false);
       requireClick = new BooleanSetting("Require-click", false);
       requireSword = new BooleanSetting("Require-Sword", true);

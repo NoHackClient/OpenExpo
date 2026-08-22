@@ -66,7 +66,6 @@ public class BlocksESP extends Module implements EventSubscriber {
    private static Object[] o;
    public static BooleanSetting redstone;
    private static Minecraft s;
-   private static Integer[] m;
    private static long[] e;
    public static BooleanSetting lapis;
    public static BooleanSetting coal;
@@ -348,7 +347,6 @@ public class BlocksESP extends Module implements EventSubscriber {
                      var18[var10001] = var27;
                      if (var2 >= var5) {
                         e = var6;
-                        m = new Integer[30];
                         L = ConcurrentHashMap.newKeySet();
                         x = ConcurrentHashMap.newKeySet();
                         Vec3i[] var23 = new Vec3i[6];

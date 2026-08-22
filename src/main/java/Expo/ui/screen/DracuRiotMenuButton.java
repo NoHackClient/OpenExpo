@@ -11,7 +11,6 @@ import net.minecraft.client.renderer.GlStateManager;
 
 public class DracuRiotMenuButton extends GuiButton {
    private static String b;
-   private static Integer[] d;
    public int v;
    private boolean o;
    private static long a;
@@ -101,6 +100,5 @@ public class DracuRiotMenuButton extends GuiButton {
       b = "/assets/minecraft/mainmenu/option.ogg";
       e = new HashMap(13);
       c = new long[]{-1264485471761501984L, 6215361741798071984L, 5107200575086882811L, -7531211150311414439L, 5782579429849861360L, 189833895540201679L, 6008160011562758701L, 6417825392000962573L, 8675782347306971290L, -6815582354269240955L, 753185595500222673L};
-      d = new Integer[11];
    }
 }

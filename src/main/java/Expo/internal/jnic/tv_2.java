@@ -8,7 +8,6 @@ public class tv_2 {
    private static long a;
    private static Map d;
    private static String[] c;
-   private static Integer[] f;
    private static String[] b;
    private static Map g;
    public static boolean $skidonion$1876635264;

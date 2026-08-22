@@ -32,7 +32,6 @@ public class ScoreBoard extends Module {
    public static PercentageSetting backgroundOpacity;
    private static long[] d;
    public static NumberSetting scale;
-   private static Integer[] g;
    public static NumberSetting offsetY;
    public static BooleanSetting roundedRectangle;
    private static long a;
@@ -44,7 +43,6 @@ public class ScoreBoard extends Module {
       b = ": ";
       h = new HashMap(13);
       d = new long[]{3694946831705732335L, -1892344913047605889L, -6692344859849378204L, -712116554178381252L};
-      g = new Integer[4];
    }
 
    public ScoreBoard(long var1) {

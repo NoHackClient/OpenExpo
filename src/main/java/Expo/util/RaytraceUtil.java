@@ -33,7 +33,6 @@ public class RaytraceUtil {
    private static final double k = 1.0E-6;
    private static List<Vec3> q;
    private static List<Vec3> p;
-   private static Integer[] h;
    private static Map f;
 
    private static double D(AxisAlignedBB var0, Vec3 var1, boolean var2, double var3) {

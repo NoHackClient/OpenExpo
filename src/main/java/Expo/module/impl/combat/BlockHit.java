@@ -9,7 +9,9 @@ import Expo.event.events.PostUpdateEvent;
 import Expo.event.events.PreMouseInputEvent;
 import Expo.event.events.PreUpdateEvent;
 import Expo.event.events.ReceivePacketEvent;
+import Expo.event.events.UpdateCameraAndRenderEvent;
 import Expo.module.Module;
+import Expo.module.Modules;
 import Expo.setting.settings.BooleanSetting;
 import Expo.setting.settings.HeaderSetting;
 import Expo.setting.settings.ModeSetting;
@@ -84,13 +86,16 @@ public class BlockHit extends Module implements EventSubscriber {
    public static BooleanSetting animals;
    public static ModeSetting lagAfterBlockMode;
    public static NumberSetting predictRandomEarlyTicks;
-   private static Long[] mb;
    public static BooleanSetting requireLeftClick;
    public static NumberSetting predictHurtResistTicks;
    private boolean x;
    public static ModeSetting mode;
    private boolean E;
    public static BooleanSetting onlyAutoClicker;
+   // update new version
+   public static BooleanSetting allowNoSlow;
+   // update new version
+   public static BooleanSetting visualBlocking;
    private long H;
    public static BooleanSetting teammates;
    public static BooleanSetting requireRightClick;
@@ -170,7 +175,8 @@ public class BlockHit extends Module implements EventSubscriber {
       int var7 = Math.round(predictEarlyTicks.L());
       int var8 = Math.round(predictRandomEarlyTicks.L());
       int var9 = var8 > 0 ? this.d(0, var8) : 0;
-      int var10 = var6 - var7 - var9 - this.a();
+      // update new version
+      int var10 = var6 - var7 - var9;
       return Math.max(0, var10);
    }
 
@@ -466,7 +472,14 @@ public class BlockHit extends Module implements EventSubscriber {
    }
 
    private int f$r3() {
-      return Math.max(1, Math.round(predictBlockTicks.L()));
+      // update new version
+      return Math.max(1, Math.round(predictBlockTicks.L()) + this.blockHoldLatencyTicks());
+   }
+
+   // update new version
+   private int blockHoldLatencyTicks() {
+      int var1 = CombatUtil.q();
+      return var1 <= 0 ? 0 : MathUtil.k((int)Math.ceil(var1 / 50.0), 0, 2);
    }
 
    private void L(long var1) {
@@ -777,6 +790,19 @@ public class BlockHit extends Module implements EventSubscriber {
       return mode.Y();
    }
 
+   // update new version
+   public static boolean noSlowLive() {
+      BlockHit var0 = Modules.J(BlockHit.class);
+      return allowNoSlow.c() && var0 != null && var0.o() && var0.k;
+   }
+
+   // update new version
+   public void onUpdateCameraAndRender(long var1, UpdateCameraAndRenderEvent var3) {
+      if (this.k && visualBlocking.c()) {
+         var3.W(17984, 996510524L);
+      }
+   }
+
    private void q(long var1) {
       if (this.O && this.h <= 0L) {
          PacketManager.j();
@@ -1085,7 +1111,6 @@ public class BlockHit extends Module implements EventSubscriber {
                                        } while (var2 < var5);
 
                                        ib = var6;
-                                       mb = new Long[3];
                                        return;
                                     }
                                     break;
@@ -1144,6 +1169,10 @@ public class BlockHit extends Module implements EventSubscriber {
 
    static {
       // add code
+      // update new version
+      allowNoSlow = new BooleanSetting("Allow-NoSlow", true);
+      // update new version
+      visualBlocking = new BooleanSetting("Visual-blocking", true);
       requireLeftClick = new BooleanSetting("Require-left-click", true);
       requireRightClick = new BooleanSetting("Require-right-click", false);
       onlyAutoClicker = new BooleanSetting("Only-AutoClicker", true);

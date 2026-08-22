@@ -26,7 +26,6 @@ import net.minecraft.world.World;
 
 public class LightningRenderer {
    private static Minecraft E;
-   private static Integer[] f;
    private static String[] c;
    private static String[] b;
    private static long a;

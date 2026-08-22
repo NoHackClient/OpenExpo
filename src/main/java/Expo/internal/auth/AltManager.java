@@ -59,7 +59,6 @@ public class AltManager {
          var9.println(J.toJson(var4));
          var9.close();
       } catch (IOException var7) {
-         System.err.print("Couldn't save accounts.json!");
       }
    }
 
@@ -77,7 +76,6 @@ public class AltManager {
             }
          }
       } catch (FileNotFoundException var12) {
-         System.err.print("Couldn't find accounts.json!");
       } catch (JsonSyntaxException var13) {
          System.err.println("Error parsing accounts.json: " + var13.getMessage());
       }
@@ -88,11 +86,9 @@ public class AltManager {
       long var6 = var4 ^ 83831605235907L;
       Optional var8 = Q.stream().filter(var1x -> var1x.h().equalsIgnoreCase(var3) && var1x.v() == AccountType.OFFLINE).findFirst();
       if (var8.isPresent()) {
-         System.out.println("Offline account " + var3 + " already exists. Skipping add.");
       } else {
          Q.add(new Account("", "accessToken", var3, "", 0L, AccountType.OFFLINE));
          O(var6);
-         System.out.println("Offline account " + var3 + " added successfully!");
       }
    }
 
@@ -104,10 +100,8 @@ public class AltManager {
          if (!i.exists()) {
             try {
                if ((i.getParentFile().exists() || i.getParentFile().mkdirs()) && i.createNewFile()) {
-                  System.out.print("Successfully created accounts.json!");
                }
             } catch (IOException var5) {
-               System.err.print("Couldn't create accounts.json!");
             }
          }
 

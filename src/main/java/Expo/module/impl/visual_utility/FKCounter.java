@@ -55,7 +55,6 @@ public class FKCounter extends Module implements EventSubscriber {
    private final String[] J;
    public static PercentageSetting backgroundOpacity;
    private boolean Y;
-   private static Integer[] s;
    private final int[] D;
    private static long[] r;
    private static Map o;
@@ -479,7 +478,6 @@ public class FKCounter extends Module implements EventSubscriber {
                                     var30[var10001] = var48;
                                     if (var2 >= var5) {
                                        r = var6;
-                                       s = new Integer[85];
                                        x = 4;
                                        R = new String[]{"[R]", "[G]", "[Y]", "[B]"};
                                        c = new String[]{"c", "a", "e", "9"};

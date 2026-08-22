@@ -279,7 +279,8 @@ public final class ExpoGuiModules extends JPanel {
          c.gridy++;
          this.grid.add(new JLabel(ExpoGuiText.NO_SETTINGS), c);
       } else {
-         for (Setting s : settings) {
+         for (int si = 0; si < settings.size(); si++) {
+            Setting s = settings.get(si);
             if (s == null) {
                continue;
             }
@@ -287,7 +288,9 @@ public final class ExpoGuiModules extends JPanel {
             if (s instanceof Expo.setting.settings.HeaderSetting) {
                String text = ((Expo.setting.settings.HeaderSetting)s).L();
 
-               if (text != null && text.length() > 0) {
+               // add code
+               if (text != null && text.length() > 0
+                     && Expo.setting.settings.HeaderSetting.occupied(settings, si)) {
                   c.gridy++;
                   c.gridx = 0;
                   c.gridwidth = 2;

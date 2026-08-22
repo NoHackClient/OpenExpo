@@ -69,6 +69,10 @@ public class TunnelEngine {
          MiningConstants.x = AutoTunnel.autoBack != null && AutoTunnel.autoBack.c();
          MiningConstants.k = AutoTunnel.ownedChestsOnly != null && AutoTunnel.ownedChestsOnly.c();
          MiningConstants.q = AutoTunnel.sideOffsetScan != null && AutoTunnel.sideOffsetScan.c();
+         // update new version
+         MiningConstants.gapAltOnlyStone = AutoTunnel.gapAltOnlyStone != null && AutoTunnel.gapAltOnlyStone.c();
+         // update new version
+         MiningConstants.userManualScreenMove = AutoTunnel.userManualScreenMove == null || AutoTunnel.userManualScreenMove.c();
          MiningConstants.C = AutoTunnel.turnSpeed == null ? MiningConstants.C : AutoTunnel.turnSpeed.L();
          MiningConstants.X = AutoTunnel.stuckTimeout == null ? MiningConstants.X : AutoTunnel.stuckTimeout.L();
          MiningConstants.s = AutoTunnel.noBreakTimeout == null ? MiningConstants.s : AutoTunnel.noBreakTimeout.L();

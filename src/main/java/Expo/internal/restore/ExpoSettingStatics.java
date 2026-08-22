@@ -73,12 +73,10 @@ public final class ExpoSettingStatics {
       } catch (Throwable t) {
          note = "Expo.statics FAILED (" + t + ") -- the modules that read a null Setting "
                 + "static will still throw NullPointerException";
-         t.printStackTrace();
       }
 
       pending.add(note);
       pending.addAll(notes);
-      System.out.println("[EXPODIAG] " + note);
       return note;
    }
 

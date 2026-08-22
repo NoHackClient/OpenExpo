@@ -100,7 +100,7 @@ public class GuiEventHooks {
 
    private static Field findButtonListField() throws NoSuchFieldException {
       try {
-         return findField(GuiScreen.class, "buttonList", "buttonList", "n");
+         return findField(GuiScreen.class, "buttonList", "field_146292_n", "n");
       } catch (Throwable var6) {
          for (Class<?> var0 = GuiScreen.class; var0 != null; var0 = var0.getSuperclass()) {
             Field[] var1 = var0.getDeclaredFields();
@@ -138,7 +138,7 @@ public class GuiEventHooks {
 
          try {
             if (G == null) {
-               G = findField(GuiDisconnected.class, "message", "message", "f");
+               G = findField(GuiDisconnected.class, "message", "field_146304_f", "f");
             }
 
             post(new DisconnectedInitEvent(var0, (IChatComponent)G.get(var0)));

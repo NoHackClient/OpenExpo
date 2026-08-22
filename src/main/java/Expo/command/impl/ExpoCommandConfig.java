@@ -418,7 +418,6 @@ public final class ExpoCommandConfig extends Command {
 
          return var2.renameTo(var0);
       } catch (Throwable var5) {
-         var5.printStackTrace();
          return false;
       } finally {
          if (var3 != null) {

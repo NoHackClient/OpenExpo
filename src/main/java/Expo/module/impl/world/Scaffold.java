@@ -237,7 +237,10 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
          float[] var11 = this.T(
             new BlockPos(f.thePlayer.posX, f.thePlayer.posY - 1.0, f.thePlayer.posZ), EnumFacing.UP, true, 10744777957284L
          );
-         RotationManager.L( var11[0], var11[1], var1, rotationSmoothing.k() / 100.0F);
+         // update new version
+         float var12 = rotationSmoothing.k() / 100.0F;
+         RotationManager.v(var11[0], var1, 0L, var12);
+         RotationManager.f(var11[1], 39.0F, var12, 0L);
          this.d2 = true;
       }
    }
@@ -1058,6 +1061,8 @@ public class Scaffold extends PriorityModule implements EventSubscriber {
       keepYBlinkRotation = new BooleanSetting("Keep-Y-blink-rotation", false);
       downPlace = new BooleanSetting("Down-place", false);
       dontRenderRotation = new BooleanSetting("Dont-render-rotation", false);
+      // update new version
+      fakeItem = new BooleanSetting("Fake-item", true);
       showTargetShade = new BooleanSetting("Show-target-shade", false);
       showTargetOutline = new BooleanSetting("Show-target-outline", true);
       outlineFadeOut = new BooleanSetting("Outline-fade-out", true);

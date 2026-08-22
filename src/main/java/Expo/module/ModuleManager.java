@@ -68,17 +68,6 @@ public class ModuleManager {
       r = new HitBox(0L);
       v = new ItemScale(0L);
 
-      if (Scaffold.fakeItem == null) {
-         Scaffold.fakeItem = new BooleanSetting("Fake-item", true);
-      }
-
-      if (ChestStealer.silent == null) {
-         ChestStealer.silent = new BooleanSetting("Silent", false);
-      }
-
-      if (ChestStealer.chestIntegrityCheck == null) {
-         ChestStealer.chestIntegrityCheck = new BooleanSetting("Chest-integrity-check", true);
-      }
    }
 
    private static native String a(int var0, long var1);

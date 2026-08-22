@@ -31,7 +31,6 @@ class OggStreamPlayer implements Runnable {
    private static Map f;
    private static long a;
    private final float p;
-   private static Integer[] e;
    private static long g;
 
    public void L() {
@@ -339,7 +338,6 @@ class OggStreamPlayer implements Runnable {
       b = "OggPlayer-Thread";
       f = new HashMap(13);
       d = new long[]{4083265199998620853L, -7804156243392218070L, -5450520617468154535L, -3206907126933529369L, -2007018012284532477L, -5091787317120875423L, -5512749978260152769L, 2390692812596265243L, -7667186462599823788L, 9069488050007130747L, 5934094339055260779L, -983851958378323050L, 7096782722566740143L, 7599962049540685148L, 2899210336350044887L, -6552084433110130406L, -4140279938191877032L};
-      e = new Integer[17];
       g = 10L;
    }
 

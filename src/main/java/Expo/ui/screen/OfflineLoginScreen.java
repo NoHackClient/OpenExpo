@@ -50,7 +50,6 @@ public class OfflineLoginScreen extends GuiScreen {
                this.mc.displayGuiScreen(this.B);
                break;
             default:
-               System.err.println("Unknown button ID: " + var1.id);
          }
       }
    }
@@ -129,14 +128,11 @@ public class OfflineLoginScreen extends GuiScreen {
 
       String var7 = this.b.getText().trim();
       if (var7.isEmpty()) {
-         System.out.println("Username cannot be empty!");
       } else {
          boolean var8 = SessionSwapper.D(var7, 14635617689442L);
          if (var8) {
-            System.out.println("Logged in successfully as: " + var7);
             this.mc.displayGuiScreen(new AccountManagerScreen(81800336346822L, this.B));
          } else {
-            System.out.println("Failed to log in!");
          }
       }
    }

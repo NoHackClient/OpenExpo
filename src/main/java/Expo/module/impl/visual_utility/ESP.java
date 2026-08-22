@@ -44,7 +44,6 @@ import org.lwjgl.opengl.GL11;
 
 public class ESP extends Module implements EventSubscriber {
    private static long a;
-   private static Integer[] m;
    public static BooleanSetting friends;
    public static ModeSetting mode;
    public static ModeSetting healthBar;
@@ -74,7 +73,8 @@ public class ESP extends Module implements EventSubscriber {
       ESPBinder.Y(var3, this);
    }
 
-   public void l(EntityLivingBase var1, long var2, int var4, double var5, float var7, ScaledResolution var8) {
+   // update new version
+   public void l(EntityLivingBase var1, long var2, int var4, double var5, float var7, ScaledResolution var8, boolean var9) {
 
       if (Expo.util.render.RenderUtil.l(var1)) {
          EntityRendererAccessor.k(f.entityRenderer, var7, 0);
@@ -127,6 +127,17 @@ public class ESP extends Module implements EventSubscriber {
             GL11.glBlendFunc(770, 771);
             GL11.glEnable(2848);
             GL11.glHint(3154, 4354);
+            // update new version
+            if (var9) {
+               GL11.glColor4f(var38, var39, var40, 0.25F);
+               GL11.glBegin(7);
+               GL11.glVertex2d(var19, var21);
+               GL11.glVertex2d(var23, var21);
+               GL11.glVertex2d(var23, var25);
+               GL11.glVertex2d(var19, var25);
+               GL11.glEnd();
+            }
+
             GL11.glLineWidth(2.5F);
             GL11.glColor4f(0.0F, 0.0F, 0.0F, 0.95F);
             GL11.glBegin(2);
@@ -179,15 +190,28 @@ public class ESP extends Module implements EventSubscriber {
                   var24 = customColor.k(96531491288662L);
             }
 
+            // update new version
             switch (mode.Y()) {
-               case "BOX":
-                  this.l(var1, 138240708914945L, var24, 0.0, var5, var4);
-                  break;
                case "2D":
                   Expo.util.render.RenderUtil.N(17533, var1, var24, var5);
                   break;
+               case "2D_BOX":
+                  this.l(var1, 138240708914945L, var24, 0.0, var5, var4, false);
+                  break;
+               case "2D_BOX_FILL":
+                  this.l(var1, 138240708914945L, var24, 0.0, var5, var4, true);
+                  break;
                case "3D":
                   Expo.util.render.RenderUtil.A(var1, 9401974101981L, var24, 1.5F, 0.0);
+                  break;
+               case "3D_BIG":
+                  Expo.util.render.RenderUtil.A(var1, 9401974101981L, var24, 1.5F, 0.2);
+                  break;
+               case "3D_BIG_FILL":
+                  Expo.util.render.RenderUtil.A$fill(var1, 9401974101981L, var24, 1.5F, 0.2);
+                  break;
+               case "OUTLINE":
+                  Expo.util.render.RenderUtil.A(var1, 9401974101981L, var24, 3.0F, 0.0);
             }
          }
       }
@@ -309,7 +333,8 @@ public class ESP extends Module implements EventSubscriber {
       long var5 = ((long)var1 << 48 | (long)var2 << 32 >>> 16 | (long)var4 << 48 >>> 48) ^ a;
       long var7 = var5 ^ 83461070758662L;
       long var9 = var5 ^ 80498493049726L;
-      boolean var11 = mode.R("BOX");
+      // update new version
+      boolean var11 = mode.R("2D_BOX") || mode.R("2D_BOX_FILL");
       ArrayList var12 = new ArrayList(this.L.size());
       int var13 = 0;
 
@@ -440,7 +465,6 @@ public class ESP extends Module implements EventSubscriber {
                                     var29[var10001] = var46;
                                     if (var2 >= var5) {
                                        h = var6;
-                                       m = new Integer[20];
                                        return;
                                     }
                                     break;
@@ -519,7 +543,8 @@ public class ESP extends Module implements EventSubscriber {
    }
    static {
       // add code
-      mode = new ModeSetting("Mode", "BOX", "2D", "3D", "NONE");
+      // update new version
+      mode = new ModeSetting("Mode", "2D", "2D_BOX", "2D_BOX_FILL", "3D", "3D_BIG", "3D_BIG_FILL", "OUTLINE");
       color = new ModeSetting("Color", "TEAM", "THEME", "THEME_CUSTOM", "CUSTOM");
       healthBar = new ModeSetting("Health-bar", "NORMAL", "THIN", "NONE");
    }

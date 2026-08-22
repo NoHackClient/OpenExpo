@@ -23,7 +23,6 @@ public class AutoGG extends Module implements EventSubscriber {
    private static long a;
    private static Map h;
    private int n;
-   private static Integer[] g;
    public static NumberSetting delay;
    private static String[] b;
    public static TextSetting message;
@@ -73,7 +72,6 @@ public class AutoGG extends Module implements EventSubscriber {
       c = new String[25];
       h = new HashMap(13);
       e = new long[]{-2151922435200353583L, -8279202450184245935L, -6475109688606198226L, 4494679829890085873L, -1154803948413799610L, -918253929724060708L, -6589840715578548978L, -9200510788189266124L, 7943506415201044508L, -599409001875817093L, -2046901117726950726L, 7045785301876574998L, -2094175608500896152L, -4714171101425195379L, 4554011011412359149L, 6348845955047375926L, 8739742978303232721L, -790053421033085814L, -6122089842336133979L, 4584775445241900503L, -2486954344856815119L, 5431467995136885703L};
-      g = new Integer[22];
       H = new ArrayList<>();
    }
 

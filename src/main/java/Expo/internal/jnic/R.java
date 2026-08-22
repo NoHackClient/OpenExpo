@@ -7,7 +7,6 @@ public class R {
    private static String[] c;
    private static Map g;
    private static long a;
-   private static Integer[] f;
    private static long[] e;
    private static String[] b;
    private static Map d;

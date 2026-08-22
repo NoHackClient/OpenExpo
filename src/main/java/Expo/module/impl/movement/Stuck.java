@@ -18,7 +18,6 @@ import net.minecraft.client.entity.EntityPlayerSP;
 
 
 public class Stuck extends Module implements EventSubscriber {
-   private static Integer[] d;
    private static Object[] g;
    private static Map e;
    private static long[] c;
@@ -100,7 +99,6 @@ public class Stuck extends Module implements EventSubscriber {
       b = "PULSE";
       e = new HashMap(13);
       c = new long[]{-3466031898384909254L, 5021153881801915561L, -1966682088493162257L, -9193661644592037382L, 8391141268143262382L};
-      d = new Integer[5];
    }
 
    public void A(long var1) {

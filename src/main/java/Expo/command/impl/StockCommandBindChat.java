@@ -14,7 +14,6 @@ import java.util.List;
 
 
 public class StockCommandBindChat extends Command {
-   private static Integer[] d;
    private static String[] a;
    private static String[] b;
    private static long[] c;

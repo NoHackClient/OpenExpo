@@ -45,10 +45,11 @@ public class EntityUtil {
 
       for (int var17 = var0.size(); var16 < var17; var16++) {
          EntityLivingBase var18 = (EntityLivingBase)var0.get(var16);
-         if (var11 && var18 instanceof EntitySilverfish) {
-            var15.add(var18);
-         } else if (var12 && var18 instanceof EntityGolem) {
-            var15.add(var18);
+         // update new version
+         if (var11 && var18 instanceof EntitySilverfish || var12 && var18 instanceof EntityGolem) {
+            if (var9 || !Expo.module.impl.configuration.Teams.g(0L, var18)) {
+               var15.add(var18);
+            }
          } else if (q(var18, var1, var2, var3, var4, var7, var8, var9, var10, var13)) {
             var15.add(var18);
          }

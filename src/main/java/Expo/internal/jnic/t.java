@@ -9,7 +9,6 @@ public class t {
    private static Map d;
    private static long a;
    private static String[] b;
-   private static Integer[] f;
    private static String[] c;
    public static boolean $skidonion$891820618;
 

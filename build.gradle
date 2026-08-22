@@ -383,6 +383,42 @@ tasks.named('jar') {
                     file('build/classes/java/main').absolutePath,
                     project.ext.drmForbiddenMinimum.toString()]
         }
+
+        // add code
+        // The tree is compiled against MCP member names, but launchwrapper hands the
+        // game to us with SRG names, so the artifact has to be reobfuscated or every
+        // Minecraft access dies with NoSuchFieldError at runtime.
+        def prod = archiveFile.get().asFile
+        def reobf = new File(temporaryDir, 'reobf.jar')
+        javaexec {
+            classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+            executable = java8.get().executablePath.asFile.absolutePath
+            mainClass = 'SrgRemap'
+            args = [prod.absolutePath, reobf.absolutePath,
+                    file('mappings/mcp-srg.srg').absolutePath, 'forward',
+                    project.ext.mappedMinecraft.absolutePath]
+        }
+        if (!reobf.isFile() || reobf.length() <= 0) {
+            throw new GradleException('reobf produced no jar')
+        }
+        def probe = new java.util.zip.ZipFile(reobf)
+        try {
+            def ent = probe.getEntry('Expo/module/impl/combat/BlockHit.class')
+            if (ent == null) throw new GradleException('reobf: probe class missing')
+            def bytes = probe.getInputStream(ent).bytes
+            def text = new String(bytes, 'ISO-8859-1')
+            if (text.contains('thePlayer')) {
+                throw new GradleException('reobf left MCP names in the artifact')
+            }
+            if (!text.contains('field_71439_g')) {
+                throw new GradleException('reobf did not produce SRG names')
+            }
+        } finally {
+            probe.close()
+        }
+        prod.delete()
+        reobf.renameTo(prod)
+        logger.lifecycle('[REOBF] artifact remapped MCP -> SRG and verified')
     }
 }
 

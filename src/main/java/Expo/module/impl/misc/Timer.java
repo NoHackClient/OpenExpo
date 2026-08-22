@@ -21,7 +21,6 @@ public class Timer extends Module implements EventSubscriber {
    private boolean a;
    private static long[] c;
    private float s;
-   private static Integer[] e;
    private static long b;
    private static String[] k;
    private static Object[] h;
@@ -52,7 +51,6 @@ public class Timer extends Module implements EventSubscriber {
       k = new String[7];
       g = new HashMap(13);
       c = new long[]{-221930958687381324L, 1319250214599420535L, 4199866987675195430L};
-      e = new Integer[3];
    }
 
    public void onRender2D(long var1, Render2DEvent var3) {

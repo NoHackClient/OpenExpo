@@ -42,7 +42,6 @@ public class Teams extends Module {
    private static String[] b;
    public static TextSetting customPatternRegex;
    private static long a;
-   private static Integer[] g;
    private static String[] c;
    private static LinkedHashSet<String> s;
    private static Map d;

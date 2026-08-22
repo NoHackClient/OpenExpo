@@ -2126,7 +2126,9 @@ public class MiningEngine implements EventSubscriber {
    private boolean t(long var1, BlockPos var3) {
       long var4 = var1 ^ 15035500670815L;
       Block var6 = F.theWorld.getBlockState(var3).getBlock();
-      return var6 == Blocks.stone || this.Q(var3) || this.G() && this.B(var6) ? this.i(var3, var4) : false;
+      // update new version
+      boolean var7 = var6 == Blocks.stone || this.Q(var3) || !MiningConstants.gapAltOnlyStone && this.G() && this.B(var6);
+      return var7 ? this.i(var3, var4) : false;
    }
 
    static {

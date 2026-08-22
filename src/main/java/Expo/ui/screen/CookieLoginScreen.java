@@ -73,7 +73,6 @@ public class CookieLoginScreen extends GuiScreen {
                try {
                   UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                } catch (Exception var5) {
-                  var5.printStackTrace();
                }
 
                this.x("&aOpening file picker...&r");
@@ -114,7 +113,6 @@ public class CookieLoginScreen extends GuiScreen {
                this.mc.displayGuiScreen(this.a);
                break;
             default:
-               System.err.println("Unknown button ID: " + var1.id);
          }
       }
    }

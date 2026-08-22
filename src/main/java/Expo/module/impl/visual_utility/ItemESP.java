@@ -43,7 +43,6 @@ import net.minecraft.util.AxisAlignedBB;
 public class ItemESP extends Module implements EventSubscriber {
    public static NumberSetting scale;
    public static BooleanSetting emeralds;
-   private static Integer[] d;
    public static BooleanSetting golds;
    private static long b;
    public static PercentageSetting opacity;

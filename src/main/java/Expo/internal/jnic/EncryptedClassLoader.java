@@ -18,7 +18,6 @@ public class EncryptedClassLoader {
    private static Map d;
    private static AtomicBoolean A;
    private static String[] b;
-   private static Integer[] f;
    private static long a;
    private static long[] e;
    private static volatile int p;

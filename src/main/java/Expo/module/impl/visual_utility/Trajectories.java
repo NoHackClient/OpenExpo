@@ -57,7 +57,6 @@ public class Trajectories extends Module implements EventSubscriber {
    private static Object[] e;
    private static long[] b;
    public static ColorSetting enemyColor;
-   private static Integer[] c;
    private static String[] k;
 
    private void p(Vector3d var1, double var2, double var4, double var6) {
@@ -225,7 +224,6 @@ public class Trajectories extends Module implements EventSubscriber {
       k = new String[12];
       d = new HashMap(13);
       b = new long[]{1885610206048317227L, -6062832488464918740L, 1199991079690601516L, -7825559100591298828L, 5120067646296097688L};
-      c = new Integer[5];
    }
 
    private double Q(TrajectoryStep var1) {

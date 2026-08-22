@@ -40,7 +40,6 @@ public final class ExpoTableDump {
             try {
                dump(new File(OUT));
             } catch (Throwable t) {
-               System.out.println("[EXPODUMP] failed: " + t);
             }
          }
       }, "expo-table-dump"));
@@ -75,7 +74,6 @@ public final class ExpoTableDump {
       // behind it. The property value is printed either way, because a silent
       // no-op is exactly how this failed to run three times in a row.
       final String force = System.getProperty("expo.tabledump.force");
-      System.out.println("[EXPODUMP] expo.tabledump.force=" + force);
       if (force != null) {
          Thread ft = new Thread(new Runnable() {
             public void run() {
@@ -128,7 +126,6 @@ public final class ExpoTableDump {
       try {
          java.net.URL u = ExpoTableDump.class.getProtectionDomain()
                               .getCodeSource().getLocation();
-         System.out.println("[EXPODUMP] code source = " + u);
          // Under Forge's loader this is not the archive but a jar: URL naming the
          // class inside it --
          //   jar:file:/D:/.../expo.jar!/Expo/internal/restore/ExpoTableDump.class
@@ -166,7 +163,6 @@ public final class ExpoTableDump {
             z.close();
          }
       } catch (Throwable t) {
-         System.out.println("[EXPODUMP] force-init scan failed: " + t);
       }
 
       ClassLoader cl = ExpoTableDump.class.getClassLoader();

@@ -32,13 +32,11 @@ public class Denick extends Module implements EventSubscriber {
    private static long[] g;
    private static long m;
    private static long a;
-   private static Long[] r;
    private final Set<UUID> c;
    private static String[] b;
    private static long E;
    private static ExecutorService J;
    public static NumberSetting refreshRate;
-   private static Integer[] h;
    private final Map<UUID, Long> x;
    private volatile int O;
    private final Set<UUID> u;

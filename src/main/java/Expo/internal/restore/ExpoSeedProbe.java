@@ -779,6 +779,5 @@ public final class ExpoSeedProbe {
    }
 
    private static void say(String s) {
-      System.out.println("[EXPOSEED] " + s);
    }
 }

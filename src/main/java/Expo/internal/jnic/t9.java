@@ -4,7 +4,6 @@ import java.util.Map;
 
 
 public class t9 {
-   private static Integer[] f;
    private static Map d;
    private static long[] e;
    private static String[] b;

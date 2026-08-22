@@ -54,7 +54,6 @@ public enum ChatFormatting {
    private final int b;
    public static char COLOR_CHAR;
    private final String e;
-   private static Integer[] h;
    private static Map i;
    private static Map f;
    private static long a;
@@ -241,7 +240,6 @@ public enum ChatFormatting {
                                     var32[var10001] = var49;
                                     if (var2 >= var5) {
                                        g = var6;
-                                       h = new Integer[74];
                                        COLOR_CHAR = (char)167;
                                        zkm$v20 = var20;
                                        zkm$v22 = var22;

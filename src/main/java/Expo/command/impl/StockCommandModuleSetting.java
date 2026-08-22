@@ -19,7 +19,6 @@ public class StockCommandModuleSetting extends Command {
    private static String[] b;
    private static Map d;
    private static long a;
-   private static Integer[] f;
 
    public native String[] e(long var1);
 

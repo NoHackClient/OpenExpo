@@ -53,7 +53,6 @@ public class FallIndicator extends Module implements EventSubscriber {
    private String O;
    public static BooleanSetting onlyWhileSneaking;
    private static long b;
-   private static Integer[] m;
    private final ItemStack[] Y;
    private static Map n;
    private final ItemStack[] K;
@@ -433,7 +432,6 @@ public class FallIndicator extends Module implements EventSubscriber {
                                     var29[var10001] = var46;
                                     if (var2 >= var5) {
                                        k = var6;
-                                       m = new Integer[15];
                                        d = -1;
                                        t = new float[]{1.0F, 10.0F, 100.0F, 1000.0F};
                                        return;

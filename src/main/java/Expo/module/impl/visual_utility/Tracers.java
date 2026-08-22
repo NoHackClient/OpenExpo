@@ -12,6 +12,7 @@ import Expo.module.Module;
 import Expo.module.impl.configuration.Teams;
 import Expo.module.impl.misc.AntiBot;
 import Expo.setting.settings.BooleanSetting;
+import Expo.setting.settings.HeaderSetting;
 import Expo.setting.settings.ColorSetting;
 import Expo.setting.settings.ModeSetting;
 import Expo.util.EntityUtil;
@@ -36,6 +37,10 @@ import net.minecraft.util.Vec3;
 public class Tracers extends Module implements EventSubscriber {
    public static ColorSetting animalsColor;
    public static BooleanSetting enemies;
+   // update new version
+   public static HeaderSetting colorSettings;
+   // update new version
+   public static HeaderSetting targetSettings2;
    public static BooleanSetting animals;
    public static ColorSetting friendsColor;
    public static ColorSetting playersColor;
@@ -279,6 +284,10 @@ public class Tracers extends Module implements EventSubscriber {
       enemiesColor = new ColorSetting("Enemies-color", "FF0000");
       botsColor = new ColorSetting("Bots-color", "FFFFFF");
       animals = new BooleanSetting("Animals", false);
+      // update new version
+      colorSettings = new HeaderSetting("Color settings");
+      // update new version
+      targetSettings2 = new HeaderSetting("Target settings");
       mobs = new BooleanSetting("Mobs", false);
       players = new BooleanSetting("Players", true);
       enemies = new BooleanSetting("Enemies", true);

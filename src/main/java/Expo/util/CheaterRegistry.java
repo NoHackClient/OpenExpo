@@ -32,7 +32,6 @@ public class CheaterRegistry {
    public long Y;
    public float J;
    public int f;
-   private static Integer[] g;
    public boolean j;
 
 

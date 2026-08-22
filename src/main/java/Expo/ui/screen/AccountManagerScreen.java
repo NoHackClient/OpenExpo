@@ -30,11 +30,9 @@ public class AccountManagerScreen extends GuiScreen {
    private int G;
    private GuiButton Q;
    private GuiButton i;
-   private static Integer[] f;
    private AccountListSlot P;
    private static Map d;
    public static TimedStatusMessage q;
-   private static Long[] j;
    private CompletableFuture<Void> I;
    private static Map g;
    private ExecutorService K;
@@ -430,9 +428,7 @@ public class AccountManagerScreen extends GuiScreen {
       d = new HashMap(13);
       c = new String[20];
       g = new HashMap(13);
-      f = new Integer[15];
       k = new HashMap(13);
-      j = new Long[4];
    }
 
 }

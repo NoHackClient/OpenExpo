@@ -40,7 +40,6 @@ public class LeapModeHUD extends Module implements EventSubscriber {
    private static Map d;
    public static NumberSetting scale;
    private static String[] b;
-   private static Integer[] g;
    private static Map k;
    private static long[] e;
    public static NumberSetting offsetX;
@@ -161,7 +160,6 @@ public class LeapModeHUD extends Module implements EventSubscriber {
       D = "Your primary Leap skill switched to Arrow mode.";
       k = new HashMap(13);
       e = new long[]{-3107896629969578717L, -3044017662710845743L, 1183114144443129644L};
-      g = new Integer[3];
    }
 
    private static String b(byte[] var0) {

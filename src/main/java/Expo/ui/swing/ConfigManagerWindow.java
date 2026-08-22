@@ -30,7 +30,6 @@ import javax.swing.event.ListSelectionEvent;
 
 
 public class ConfigManagerWindow {
-   private static Integer[] g;
    public static List<String> D;
    private static Module M;
    private static Map h;

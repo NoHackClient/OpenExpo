@@ -45,7 +45,6 @@ public class ChestAura extends PriorityModule implements EventSubscriber {
    private long g;
    private final TimerUtil O;
    private static long b;
-   private static Integer[] m;
    private boolean J;
    public static NumberSetting range;
    public static BooleanSetting throughWall;
@@ -54,7 +53,6 @@ public class ChestAura extends PriorityModule implements EventSubscriber {
    private BlockPos N;
    private static Map n;
    private long Y;
-   private static Long[] r;
    private static long[] h;
    private static String[] B;
    public static NumberSetting disableWhenPlayersInRange;
@@ -269,9 +267,7 @@ public class ChestAura extends PriorityModule implements EventSubscriber {
       d = new String[3];
       n = new HashMap(13);
       h = new long[]{-8449384215971602076L, -8875789389776584978L, -8344971114425550018L, 2371771012195526087L};
-      m = new Integer[4];
       u = new HashMap(13);
-      r = new Long[3];
    }
 
    public String g(long var1) {

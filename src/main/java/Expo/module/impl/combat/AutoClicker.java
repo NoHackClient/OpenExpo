@@ -34,7 +34,6 @@ public class AutoClicker extends Module implements EventSubscriber {
    public static NumberSetting maxcps;
    public static NumberSetting sagBlockingTicks;
    private static long a;
-   private static Integer[] d;
    public static BooleanSetting sag;
    private boolean J;
    private long M;

@@ -42,7 +42,6 @@ public class FontGlyphPage {
    private static String d;
    private static final float e = 8.2F;
    private static Map k;
-   private static Integer[] j;
    private int c;
    private final List<String> F;
    private static Map g;

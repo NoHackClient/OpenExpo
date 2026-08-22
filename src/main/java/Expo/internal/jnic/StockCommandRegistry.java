@@ -15,7 +15,6 @@ public class StockCommandRegistry {
    private static String[] c;
    private static String[] b;
    private static Map d;
-   private static Integer[] f;
    private static long[] e;
    private static Logger u;
    public static Set<Command> L;

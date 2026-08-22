@@ -55,7 +55,6 @@ public class KeyStrokes extends Module implements EventSubscriber {
    private final float D;
    public static PercentageSetting backgroundOpacity;
    private static Map<KeyBinding, Long> h;
-   private static Long[] r;
    private static Minecraft I;
    private static long[] g;
    private static Integer[] k;
@@ -522,7 +521,6 @@ public class KeyStrokes extends Module implements EventSubscriber {
                                        } while (var2 < var5);
 
                                        o = var6;
-                                       r = new Long[3];
                                        return;
                                     }
                                     break;

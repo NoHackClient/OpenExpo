@@ -9,7 +9,6 @@ public class q_2 {
    private static String[] c;
    private static long a;
    private static String[] b;
-   private static Integer[] f;
    private static Map d;
    public static boolean $skidonion$891820621;
 

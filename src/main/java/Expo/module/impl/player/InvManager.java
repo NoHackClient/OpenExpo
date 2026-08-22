@@ -88,7 +88,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
    public static BooleanSetting toolsAreTrash;
    public static ModeSetting silentMode;
    public static NumberSetting fireballSlot;
-   private static Integer[] mb;
    public static HeaderSetting M;
    private boolean L;
    public static NumberSetting foodSlot;
@@ -310,7 +309,6 @@ public class InvManager extends PriorityModule implements EventSubscriber {
       gb = new String[7];
       nb = new HashMap(13);
       ib = new long[]{-2670471100074826616L, -5966574634042417658L, -7277742583667841876L, -3369840771532992298L, -2466407860972894568L, -3491299397836251658L, -2251256513271661673L, -4997704363658310359L, 5609941588006067246L, 624057533236308340L, 7343629218183677455L, 4974517030527135104L};
-      mb = new Integer[12];
       ob = 10L;
    }
 
@@ -633,6 +631,12 @@ public class InvManager extends PriorityModule implements EventSubscriber {
    static {
       // add code
       fireballSlot = new NumberSetting("Fireball-slot", 0.0F, 0.0F, 9.0F, 1.0F);
+      // update new version
+      D = new HeaderSetting("Trash settings");
+      // update new version
+      h = new HeaderSetting("Slots settings (0 = no sort)");
+      // update new version
+      M = new HeaderSetting("Max item slots settings");
       pickaxeSlot = new NumberSetting("Pickaxe-slot", 5.0F, 0.0F, 9.0F, 1.0F);
       shovelSlot = new NumberSetting("Shovel-slot", 7.0F, 0.0F, 9.0F, 1.0F);
       normalFoodIsTrash = new BooleanSetting("Normal-food-is-trash", true);

@@ -37,7 +37,6 @@ public class ReconnectHandler implements EventSubscriber {
    private static long[] h;
    private static long a;
    private static String[] b;
-   private static Integer[] f;
    private static Map j;
    private static Map g;
    private static String[] c;

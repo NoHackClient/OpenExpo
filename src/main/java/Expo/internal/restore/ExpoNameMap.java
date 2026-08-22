@@ -1098,8 +1098,6 @@ public final class ExpoNameMap {
       m.put("Expo.Protected.ExpoGuiTerminal", "Expo.internal.restore.ExpoGuiTerminal");
       m.put("Expo.Protected.ExpoGuiText", "Expo.internal.restore.ExpoGuiText");
       m.put("Expo.Protected.ExpoGuiWindow", "Expo.internal.restore.ExpoGuiWindow");
-      m.put("Expo.Protected.ExpoModuleCategories", "Expo.internal.restore.ExpoModuleCategories");
-      m.put("Expo.Protected.ExpoModuleDescriptions", "Expo.internal.restore.ExpoModuleDescriptions");
       m.put("Expo.Protected.ExpoModuleRegistry", "Expo.internal.restore.ExpoModuleRegistry");
       m.put("Expo.Protected.ExpoModuleSettings", "Expo.internal.restore.ExpoModuleSettings");
       m.put("Expo.Protected.ExpoNameMap", "Expo.internal.restore.ExpoNameMap");

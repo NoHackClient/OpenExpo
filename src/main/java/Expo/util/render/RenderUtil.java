@@ -74,7 +74,6 @@ public class RenderUtil {
    private static long[] i;
    private static FloatBuffer Y;
    private static int n;
-   private static Integer[] g;
 
    public static void s(EntityLivingBase var0, double var1, int var3, float var4, int var5, int var6, char var7, char var8) {
       long var9 = ((long)var6 << 32 | (long)var7 << 48 >>> 32 | (long)var8 << 48 >>> 48) ^ b;
@@ -579,6 +578,66 @@ public class RenderUtil {
          ColorUtil.d(0L, var3),
          var4
       );
+   }
+
+   // update new version
+   public static void A$fill(Entity var0, long var1, int var3, float var4, double var5) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
+      A(var0, var1, var3, var4, var5);
+      int var8 = (int)((var1 ^ b ^ 50841124698123L) >>> 32);
+      double var9 = MathUtil.h(var0.posX, var0.lastTickPosX, ClientUtil.H(0L));
+      double var11 = MathUtil.h(var0.posY, var0.lastTickPosY, ClientUtil.H(0L));
+      double var13 = MathUtil.h(var0.posZ, var0.lastTickPosZ, ClientUtil.H(0L));
+      AxisAlignedBB var15 = var0.getEntityBoundingBox()
+         .expand(var5, var5, var5)
+         .offset(var9 - var0.posX, var11 - var0.posY, var13 - var0.posZ)
+         .offset(
+            -RenderManagerAccessor.k(0L, T.getRenderManager()),
+            -RenderManagerAccessor.y(var8, T.getRenderManager()),
+            -RenderManagerAccessor.W(0L, T.getRenderManager())
+         );
+      GL11.glPushMatrix();
+      GL11.glDisable(3553);
+      GL11.glDisable(2929);
+      GL11.glEnable(3042);
+      GL11.glBlendFunc(770, 771);
+      GL11.glDepthMask(false);
+      GL11.glColor4f(ColorUtil.l(var3, 0L) / 255.0F, ColorUtil.U(0L, var3) / 255.0F, ColorUtil.d(0L, var3) / 255.0F, 0.25F);
+      GL11.glBegin(7);
+      double[][] var16 = {
+         {var15.minX, var15.minY, var15.minZ, var15.maxX, var15.maxY, var15.minZ},
+         {var15.minX, var15.minY, var15.maxZ, var15.maxX, var15.maxY, var15.maxZ}
+      };
+
+      for (double[] var20 : var16) {
+         GL11.glVertex3d(var20[0], var20[1], var20[2]);
+         GL11.glVertex3d(var20[3], var20[1], var20[2]);
+         GL11.glVertex3d(var20[3], var20[4], var20[5]);
+         GL11.glVertex3d(var20[0], var20[4], var20[5]);
+      }
+
+      GL11.glVertex3d(var15.minX, var15.minY, var15.minZ);
+      GL11.glVertex3d(var15.minX, var15.minY, var15.maxZ);
+      GL11.glVertex3d(var15.minX, var15.maxY, var15.maxZ);
+      GL11.glVertex3d(var15.minX, var15.maxY, var15.minZ);
+      GL11.glVertex3d(var15.maxX, var15.minY, var15.minZ);
+      GL11.glVertex3d(var15.maxX, var15.minY, var15.maxZ);
+      GL11.glVertex3d(var15.maxX, var15.maxY, var15.maxZ);
+      GL11.glVertex3d(var15.maxX, var15.maxY, var15.minZ);
+      GL11.glVertex3d(var15.minX, var15.minY, var15.minZ);
+      GL11.glVertex3d(var15.maxX, var15.minY, var15.minZ);
+      GL11.glVertex3d(var15.maxX, var15.minY, var15.maxZ);
+      GL11.glVertex3d(var15.minX, var15.minY, var15.maxZ);
+      GL11.glVertex3d(var15.minX, var15.maxY, var15.minZ);
+      GL11.glVertex3d(var15.maxX, var15.maxY, var15.minZ);
+      GL11.glVertex3d(var15.maxX, var15.maxY, var15.maxZ);
+      GL11.glVertex3d(var15.minX, var15.maxY, var15.maxZ);
+      GL11.glEnd();
+      GL11.glDepthMask(true);
+      GL11.glDisable(3042);
+      GL11.glEnable(2929);
+      GL11.glEnable(3553);
+      GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+      GL11.glPopMatrix();
    }
 
    public static void K(CustomFont var0, String var1, long var2, float var4, float var5, int var6) throws UnsupportedEncodingException, InvalidAlgorithmParameterException, InvalidKeyException, InvalidKeySpecException, BadPaddingException, IllegalBlockSizeException {
@@ -1813,7 +1872,6 @@ public class RenderUtil {
       d = new String[2];
       h = new HashMap(13);
       f = new long[]{-5088694070550099896L, 8155316329243142677L, -7422892396150652391L, 742474754744504564L, -8729608455096803099L, 2470290002738801662L, 6239973166703145587L, 8030495419858915825L, -1298946361898594236L, -1545267937410721481L, 1419340624431703604L, -5476428765416965539L, -7003657242432300719L, -2495216312109787061L, 2343146126028375485L, -4478592037699991809L, -6488717641568478588L, -1744428310593751694L, 8324249328261687948L, 7812365694904717541L, 6917391024997969355L, -3175613616820735565L, 7312472316776562945L, -4558771325751885656L, 4347900262008322153L, 6498785137216718408L, 6616957481526128662L, -9202409458979254657L, 7588322063655537140L, -779626535569165101L, -5512695679228330404L, -7092401608600228187L, 2306158580603804895L, -4596565801282309343L, 8812805725538072174L, 7497747270486841069L, 6417900034124518443L, 2374880926906000685L, 2160321411613336491L, 3103534474377545248L, 6517086263121659013L, 2019193806670065591L, 4978688397698424480L, 8029601312073824740L, 4122547359624308305L, 3963083747440586265L, 4914873387444537348L, 6356898738722732384L, -5846833725223146037L, 7317652451318471854L, 5466057205853538398L, -1884582349168091766L, 5895617322528213452L, 7367905349025222830L, -1037739916195323074L, 6188277999662890523L, 4857569544702086880L, -5519463796391533552L, -7526714701279271715L, -330132507026886760L, -9034445706494238907L, 517012506083509977L, 4476265700608652599L, 6810216486767436539L, 4850569218703218001L, -965043872831246782L, 2979301730645324363L, -4404520798714946088L, 5440983928867488244L, 331685453876583593L, 6339265489527405045L, -5381969615694432066L, 6175778928660765973L, -3297697833550516828L, -2459954745810165526L, 3062878923982220060L};
-      g = new Integer[76];
       k = new HashMap(13);
       i = new long[]{5653317873009865945L, 1291119500788730589L, 6010980468042206603L, -5828199305021914624L};
       j = new Long[4];

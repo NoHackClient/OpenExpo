@@ -42,7 +42,6 @@ public enum MinecraftColor {
 
    public static char COLOR_CHAR;
    private static long[] e;
-   private static Integer[] f;
    private static Map g;
    private static String[] c;
    private final char G;
@@ -232,7 +231,6 @@ public enum MinecraftColor {
                                     var29[var10001] = var46;
                                     if (var2 >= var5) {
                                        e = var6;
-                                       f = new Integer[74];
                                        COLOR_CHAR = (char)167;
                                        zkm$v20 = var20;
                                        return;

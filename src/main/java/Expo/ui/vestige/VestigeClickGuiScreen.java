@@ -49,7 +49,6 @@ import org.lwjgl.opengl.GL11;
 public class VestigeClickGuiScreen extends GuiScreen {
    private static int c;
    private static Color k;
-   private static Long[] n;
    private static String[] d;
    private static Map<Module, Boolean> p;
    private static long[] m;
@@ -60,7 +59,6 @@ public class VestigeClickGuiScreen extends GuiScreen {
    private Module o;
    private static Map i;
    private static String[] b;
-   private static Integer[] g;
    private VestigeSelectedSetting s;
    private static Map r;
    private static Color q;
@@ -542,7 +540,8 @@ public class VestigeClickGuiScreen extends GuiScreen {
          }
       }
 
-      return var2;
+      // add code
+      return HeaderSetting.prune(var2);
    }
 
    public void onGuiClosed() {

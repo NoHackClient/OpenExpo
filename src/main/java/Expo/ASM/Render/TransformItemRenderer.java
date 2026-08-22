@@ -26,7 +26,6 @@ public class TransformItemRenderer extends TransformerBase {
    private static long d;
    private static Map G;
    private static String[] l;
-   private static Integer[] y;
    private static String[] P;
    private static long[] w;
    private static Object[] O;
@@ -277,7 +276,6 @@ public class TransformItemRenderer extends TransformerBase {
                         } while (var17 < var16);
 
                         w = var13;
-                        y = new Integer[2];
                         return;
                      }
 
