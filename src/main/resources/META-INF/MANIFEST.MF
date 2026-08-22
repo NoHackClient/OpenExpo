@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+ModSide: CLIENT
+FMLCorePluginContainsFMLMod: true
+Expo-Injection-Enabled: false
+Expo-Build-Kind: forgemod
+Expo-Build-Target: FORGEMOD
+ForceLoadAsMod: true
+Expo-Forge-Mod-Enabled: true
+FMLCorePlugin: Expo.ASM.CoreMod
+Main-Class: Expo.Notification
+

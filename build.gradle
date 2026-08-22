@@ -1,0 +1,592 @@
+plugins {
+    id 'java'
+}
+
+group = project.property('mod_group')
+version = project.property('mod_version')
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+def java8 = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(8) }
+
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.minecraftforge.net/' }
+    maven { url = 'https://libraries.minecraft.net/' }
+}
+
+// add code
+ext.expoSha256 = { java.io.File f ->
+    if (f == null || !f.isFile()) return 'absent'
+    def md = java.security.MessageDigest.getInstance('SHA-256')
+    f.withInputStream { s ->
+        byte[] buf = new byte[1 << 16]
+        int r
+        while ((r = s.read(buf)) > 0) md.update(buf, 0, r)
+    }
+    md.digest().encodeHex().toString()
+}
+
+// add code
+ext.expoRunSnapshot = {
+    def prodJar = tasks.jar.archiveFile.get().asFile
+    def prodSha = expoSha256(prodJar)
+    if (prodSha == 'absent') throw new GradleException("no jar at ${prodJar}")
+    def snapDir = file("${layout.buildDirectory.get().asFile}/run-jar")
+    snapDir.mkdirs()
+    def snapJar = new File(snapDir, "expo-${project.version}-${prodSha.substring(0, 16)}.jar")
+    if (!snapJar.isFile() || snapJar.length() != prodJar.length()) {
+        def tmp = new File(snapDir, snapJar.name + '.' + UUID.randomUUID().toString().substring(0, 8) + '.tmp')
+        tmp.withOutputStream { o -> prodJar.withInputStream { i -> o << i } }
+        if (!tmp.renameTo(snapJar) && !snapJar.isFile())
+            throw new GradleException("cannot materialise run snapshot ${snapJar}")
+        tmp.delete()
+    }
+    def snapSha = expoSha256(snapJar)
+    if (snapSha != prodSha) throw new GradleException(
+        "run snapshot ${snapJar.name} content sha256 ${snapSha} != jar ${prodSha}; refusing to launch")
+    def keep = System.currentTimeMillis() - 6L * 3600 * 1000
+    snapDir.listFiles()?.each {
+        if (it != snapJar && it.name.startsWith('expo-') && it.lastModified() < keep) it.delete()
+    }
+    project.ext.expoRunSnapshotFile = snapJar
+    project.ext.expoRunSnapshotSha = snapSha
+    project.ext.expoRunSourceSha = prodSha
+    logger.lifecycle("[EXPORUN] class source = ${snapJar.name}")
+    logger.lifecycle("[EXPORUN] sha256       = ${prodSha}")
+    return snapJar
+}
+
+def resolveGameDir() {
+    if (project.hasProperty('game_dir')) return file(project.property('game_dir'))
+    def local = file('local.properties')
+    if (local.isFile()) {
+        def p = new Properties()
+        local.withInputStream { p.load(it) }
+        def v = p.getProperty('game_dir')
+        if (v) return file(v)
+    }
+    def appdata = System.getenv('APPDATA')
+    if (appdata) {
+        def guess = new File(appdata, '.minecraft')
+        if (guess.isDirectory()) return guess
+    }
+    def home = new File(System.getProperty('user.home'), '.minecraft')
+    return home.isDirectory() ? home : null
+}
+
+ext.gameDir = resolveGameDir()
+ext.mappedMinecraft = file("$buildDir/mapped/minecraft-srg.jar")
+ext.mappedForge = file("$buildDir/mapped/forge-srg.jar")   // add code
+
+sourceSets {
+    tools {
+        java.srcDirs = ['tools']
+        resources.srcDirs = []
+    }
+    main {
+        java.srcDirs += 'src/stubs/java'
+        java.exclude 'loader_forgemod/___/**'
+    }
+}
+
+// add code
+configurations {
+    forgeRaw
+    bundled
+    compileOnly.extendsFrom bundled
+}
+
+dependencies {
+    toolsImplementation 'org.ow2.asm:asm-debug-all:5.0.3'
+
+    forgeRaw "net.minecraftforge:forge:${project.property('forge_version')}:universal"   // add code
+
+    // add code
+    bundled 'com.formdev:flatlaf:3.2'
+
+    compileOnly 'org.ow2.asm:asm-debug-all:5.0.3'
+    compileOnly 'com.google.code.gson:gson:2.8.9'
+    compileOnly 'org.apache.logging.log4j:log4j-api:2.0-beta9'
+    compileOnly 'org.apache.logging.log4j:log4j-core:2.0-beta9'
+    compileOnly 'org.apache.httpcomponents:httpclient:4.3.3'
+    compileOnly 'org.apache.httpcomponents:httpcore:4.3.2'
+    compileOnly 'org.apache.commons:commons-lang3:3.3.2'
+    compileOnly 'commons-io:commons-io:2.4'
+    compileOnly files(project.ext.mappedForge)   // add code
+    compileOnly 'net.minecraft:launchwrapper:1.12'
+    compileOnly files(project.ext.mappedMinecraft)
+}
+
+tasks.register('remapMinecraft', JavaExec) {
+    group = 'build setup'
+    description = 'produce an SRG-named Minecraft jar from the vanilla notch-named one'
+    dependsOn tasks.named('compileToolsJava')
+    outputs.file project.ext.mappedMinecraft
+    classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+    javaLauncher = java8
+    mainClass = 'SrgRemap'
+    doFirst {
+        if (project.ext.gameDir == null) {
+            throw new GradleException('Minecraft directory not found. ' +
+                'Use -Pgame_dir=<path> or set game_dir in local.properties')
+        }
+        def v = project.property('mc_version')
+        def mc = new File(project.ext.gameDir, "versions/$v/${v}.jar")
+        if (!mc.isFile()) throw new GradleException("not found: $mc")
+        project.ext.mappedMinecraft.parentFile.mkdirs()
+        args = [mc.absolutePath,
+                project.ext.mappedMinecraft.absolutePath,
+                file('mappings/joined-mcp.srg').absolutePath,
+                'forward']
+    }
+    doLast {
+        def cfg = new File(temporaryDir, 'forge_at.cfg')
+        def forgeJar = configurations.forgeRaw.singleFile
+        copy {
+            from(zipTree(forgeJar)) { include 'forge_at.cfg' }
+            into temporaryDir
+        }
+        if (!cfg.isFile()) throw new GradleException("forge_at.cfg not found in $forgeJar")
+        // add code
+        // forge_at.cfg names its members by searge, but the jar is now remapped
+        // to MCP names, so every entry would miss and the widened members stay
+        // protected/private. Translate the config with the same csvs.
+        def mcpNames = [:]
+        ['methods.csv', 'fields.csv'].each { csvName ->
+            def f = file("mappings/$csvName")
+            if (!f.isFile()) throw new GradleException("not found: $f")
+            f.eachLine('UTF-8') { line, n ->
+                if (n == 1) return
+                def col = line.split(',')
+                if (col.length >= 2 && col[0] && col[1] && col[0] != col[1]) {
+                    mcpNames[col[0]] = col[1]
+                }
+            }
+        }
+        def translated = new File(temporaryDir, 'forge_at_mcp.cfg')
+        translated.withWriter('UTF-8') { out ->
+            cfg.eachLine('UTF-8') { line ->
+                out.writeLine(line.replaceAll(/\b((?:func|field)_\d+_[0-9A-Za-z_]+)\b/) { m ->
+                    mcpNames.containsKey(m[1]) ? mcpNames[m[1]] : m[1]
+                })
+            }
+        }
+        cfg = translated
+        def widened = new File(temporaryDir, 'minecraft-srg-at.jar')
+        javaexec {
+            classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+            executable = java8.get().executablePath.asFile.absolutePath
+            mainClass = 'ApplyAT'
+            args = [project.ext.mappedMinecraft.absolutePath, widened.absolutePath,
+                    cfg.absolutePath]
+        }
+        // 原地替换：ApplyAT 不能读写同一个文件（ZipFile 还开着）
+        project.ext.mappedMinecraft.delete()
+        if (!widened.renameTo(project.ext.mappedMinecraft)) {
+            throw new GradleException('could not replace ' + project.ext.mappedMinecraft)
+        }
+    }
+}
+
+// add code
+tasks.register('remapForge', JavaExec) {
+    group = 'build setup'
+    description = 'produce an SRG-named Forge jar for the compile classpath'
+    dependsOn tasks.named('compileToolsJava')
+    inputs.files configurations.forgeRaw
+    outputs.file project.ext.mappedForge
+    classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+    javaLauncher = java8
+    mainClass = 'SrgRemap'
+    doFirst {
+        project.ext.mappedForge.parentFile.mkdirs()
+        args = [configurations.forgeRaw.singleFile.absolutePath,
+                project.ext.mappedForge.absolutePath,
+                file('mappings/joined-mcp.srg').absolutePath,
+                'forward']
+    }
+}
+
+tasks.named('compileJava') {
+    dependsOn 'remapMinecraft'
+    dependsOn 'remapForge'   // add code
+    doFirst {
+        def gd = project.ext.gameDir
+        if (gd != null) {
+            def libs = new File(gd, 'libraries')
+            if (libs.isDirectory()) {
+                classpath += fileTree(dir: libs, include: '**/*.jar',
+                                      exclude: '**/net/minecraftforge/**')
+            }
+        }
+    }
+}
+
+// add code
+tasks.register('carrierEdges') {
+    group = 'verification'
+    description = 'carrier call graph: every long/int argument as const, param^const, or unknown'
+    dependsOn tasks.named('compileToolsJava'), tasks.named('compileJava')
+    doLast {
+        javaexec {
+            classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+            executable = java8.get().executablePath.asFile.absolutePath
+            mainClass = 'CarrierEdges'
+            args = [layout.buildDirectory.dir('classes/java/main').get().asFile.absolutePath,
+                    new File(projectDir, 'work/carrier-edges.tsv').absolutePath]
+        }
+    }
+}
+
+tasks.register('carrierScan') {
+    group = 'verification'
+    description = 'which long parameters arrive as one constant, read off the bytecode'
+    dependsOn tasks.named('compileToolsJava'), tasks.named('compileJava')
+    doLast {
+        javaexec {
+            classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+            executable = java8.get().executablePath.asFile.absolutePath
+            mainClass = 'CarrierScan'
+            args = [layout.buildDirectory.dir('classes/java/main').get().asFile.absolutePath,
+                    new File(projectDir, 'work/carriers.tsv').absolutePath]
+        }
+    }
+}
+
+// add code
+tasks.register('strPool') {
+    group = 'verification'
+    description = 'decrypt the ZKM string pools offline out of the compiled classes'
+    dependsOn tasks.named('compileToolsJava'), tasks.named('compileJava')
+    doLast {
+        javaexec {
+            classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+            executable = java8.get().executablePath.asFile.absolutePath
+            mainClass = 'StringPoolCrack'
+            args = [layout.buildDirectory.dir('classes/java/main').get().asFile.absolutePath,
+                    new File(projectDir, 'work/strpool.tsv').absolutePath]
+        }
+    }
+}
+
+tasks.register('checkNoExcludedSources') {
+    group = 'verification'
+    description = 'every .java under src/main/java must take part in compileJava'
+    def srcDir = file('src/main/java')
+    def compiled = layout.buildDirectory.dir('classes/java/main')
+    doLast {
+        def all = fileTree(srcDir) { include '**/*.java' }.files
+        if (all.isEmpty()) throw new GradleException("src/main/java 下 0 个 .java，无法判断")
+        def missing = all.findAll {
+            def rel = srcDir.toPath().relativize(it.toPath()).toString().replace('\\', '/')
+            !new File(compiled.get().asFile, rel.replaceAll(/\.java$/, '.class')).isFile()
+        }
+        if (missing) {
+            throw new GradleException(
+                "这些 .java 没有对应的 .class —— 它们没有参与编译，对它们的编辑是静默无效的：\n  " +
+                missing.take(20).collect {
+                    srcDir.toPath().relativize(it.toPath()).toString().replace('\\', '/')
+                }.join('\n  ') +
+                (missing.size() > 20 ? "\n  ... 共 ${missing.size()} 个" : '') +
+                "\n\n产物里不再有任何 prebuilt 字节码兜底，编不过就是真的没进产物。")
+        }
+        logger.lifecycle("[SRCGATE] ${all.size()} 个 .java 全部有对应 .class（0 个源文件被排除）")
+    }
+}
+tasks.named('jar') { dependsOn 'checkNoExcludedSources' }
+tasks.named('checkNoExcludedSources') { dependsOn 'compileJava' }
+ext.nameMapPassClasses = [
+        'Expo/module/impl/combat/AutoBlock', 'Expo/module/impl/combat/BlockHit',
+        'Expo/util/RotationManager', 'Expo/module/impl/world/BridgeAssist',
+        'Expo/module/impl/combat/JumpReset',
+]
+
+ext.boolNarrowFormB = [
+        'Expo/ASM/Hooks/CallbackInfo p',
+        'Expo/util/packet/IncomingPacketHold g',
+        'Expo/util/AttackTracker s',
+        'Expo/event/events/SafeWalkEvent S',
+        'Expo/module/ModulePriorityEntry j',
+        'Expo/event/events/UpdateCameraAndRenderEvent K',
+        'Expo/util/MiningConstants A',
+        'Expo/util/MiningConstants G',
+        'Expo/util/MiningConstants T',
+        'Expo/util/MiningConstants Z',
+        'Expo/util/MiningConstants j',
+        'Expo/util/MiningConstants k',
+        'Expo/util/MiningConstants o',
+        'Expo/util/MiningConstants q',
+        'Expo/util/MiningConstants r',
+        'Expo/util/MiningConstants v',
+        'Expo/util/MiningConstants x',
+        'Expo/util/MiningConstants z',
+        'Expo/util/HypixelGameState A',
+        'Expo/util/HypixelGameState E',
+        'Expo/util/HypixelGameState G',
+        'Expo/util/HypixelGameState H',
+        'Expo/util/HypixelGameState N',
+        'Expo/util/HypixelGameState e',
+        'Expo/util/HypixelGameState j',
+        'Expo/util/HypixelGameState r',
+        'Expo/util/Animator U',
+]
+
+// add code
+// was 5 while loader_forgemod/___ still had a source file and had to be stripped
+// at jar time; the class is deleted at source now, so discovery legitimately sees
+// four.  Lowering this is only safe because the fifth is gone from the tree, not
+// because discovery stopped recognising it.
+ext.drmForbiddenMinimum = 4
+
+tasks.named('jar') {
+    dependsOn tasks.named('compileToolsJava')
+    doLast {
+        javaexec {
+            classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+            executable = java8.get().executablePath.asFile.absolutePath
+            mainClass = 'NameMapPass'
+            args = [archiveFile.get().asFile.absolutePath,
+                    project.ext.nameMapPassClasses.size().toString()] +
+                    project.ext.nameMapPassClasses
+        }
+        javaexec {
+            classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+            executable = java8.get().executablePath.asFile.absolutePath
+            mainClass = 'BoolNarrowPass'
+            // add code
+            args = [archiveFile.get().asFile.absolutePath, '0',
+                    project.ext.boolNarrowFormB.size().toString()] +
+                    project.ext.boolNarrowFormB
+        }
+        // add code
+        if (project.hasProperty('carrierprobe')) {
+            javaexec {
+                classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+                executable = java8.get().executablePath.asFile.absolutePath
+                mainClass = 'CarrierProbePass'
+                args = [archiveFile.get().asFile.absolutePath]
+            }
+        }
+        // add code
+        javaexec {
+            classpath = sourceSets.tools.output + configurations.toolsRuntimeClasspath
+            executable = java8.get().executablePath.asFile.absolutePath
+            mainClass = 'DrmAbsenceGate'
+            args = [archiveFile.get().asFile.absolutePath,
+                    file('build/classes/java/main').absolutePath,
+                    project.ext.drmForbiddenMinimum.toString()]
+        }
+    }
+}
+
+jar {
+    // add code
+    from({ configurations.bundled.collect { zipTree(it) } }) { include 'com/formdev/**' }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    exclude 'loader_forgemod/PhantomShieldX64.diy'   // 37,754,896
+    exclude 'loader_forgemod/native_jvm.lib'         //      5,414
+    exclude 'expodll/**'                             //  3,962,368  expoantidump.dll
+    exclude 'dev/jnic/lib/**'                        //  3,552,118  JNIC
+
+    exclude 'loader_forgemod/z.class'      // tech.skidonion.verification.VerificationPanel
+    exclude 'loader_forgemod/E.class'      //   z 的 MouseAdapter
+    exclude 'loader_forgemod/K.class'      //   z 的 MouseAdapter
+    exclude 'loader_forgemod/x.class'      //   z 的 MouseAdapter
+    exclude 'loader_forgemod/b_2.class'    //   z 的 KeyAdapter
+    exclude 'loader_forgemod/___.class'    // PhantomShield DLL 解包 + System.load
+    exclude 'loader_forgemod/A.class'      // native r a() —— 登录请求 JSON payload
+    exclude 'loader_forgemod/B.class'      // 传输分组密码
+    exclude 'loader_forgemod/F.class'      // native int a()
+    exclude 'loader_forgemod/c_2.class'    // $skidonion$ 水印壳（0 方法）
+    exclude 'loader_forgemod/k_2.class'    // $skidonion$ 水印壳（0 方法）
+    exclude 'loader_forgemod/h_2.class'    // Base64
+    exclude 'loader_forgemod/j_2.class'    // percent-encoding
+
+    exclude 'loader_forgemod/y.class'      // native 授权校验（登录/HWID/订阅/版本）
+    exclude 'loader_forgemod/p.class'      // 授权上下文
+
+    exclude 'tech/skidonion/verification/lang.properties'
+    exclude 'tech/skidonion/verification/lang_zh.properties'
+    exclude 'tech/skidonion/verification/skidonion.png'
+    exclude 'XiaoShadiaoStuff'
+
+    exclude 'Expo/internal/drm/LoginWindow.class'
+    exclude 'Expo/internal/drm/LoginWindow$*.class'
+    exclude 'Expo/internal/drm/LoginWindowTimer.class'
+    exclude 'Expo/internal/drm/VerifyFailHandler.class'
+    exclude 'Expo/internal/drm/SkidonionLoginClient.class'
+
+    // add code
+    exclude 'META-INF/expo-class-encryption.idx'
+
+    manifest {
+        attributes(
+            'FMLCorePlugin'               : project.property('coremod_class'),
+            'FMLCorePluginContainsFMLMod' : 'true',
+            'ForceLoadAsMod'              : 'true',
+            'ModSide'                     : 'CLIENT',
+            'Main-Class'                  : project.property('main_class')
+        )
+    }
+}
+
+tasks.register('runClient', JavaExec) {
+    group = 'expo'
+    description = 'launch the game with the rebuilt jar through launchwrapper'
+    dependsOn 'jar'
+    doFirst {
+        def gd = project.ext.gameDir
+        if (gd == null) throw new GradleException(
+            'Minecraft directory not found. Use -Pgame_dir=<path> or set game_dir in local.properties')
+        def v = project.property('mc_version')
+        def natives = new File(gd, "versions/$v/natives-windows-x86_64")
+        if (!natives.isDirectory()) {
+            natives = new File(gd, "versions/$v").listFiles()?.find { it.isDirectory() && it.name.startsWith('natives') }
+        }
+        def runDir = file('run')
+        runDir.mkdirs()
+
+        def snapJar = expoRunSnapshot()
+
+        classpath = files(new File(gd, "versions/$v/${v}.jar")) +
+                    fileTree(dir: new File(gd, 'libraries'), include: '**/*.jar') +
+                    files(snapJar)
+
+        jvmArgs = ['-noverify',
+                   '-Xmx2G',
+                   "-Djava.library.path=${natives?.absolutePath}",
+                   '-Dfml.coreMods.load=' + project.property('coremod_class')]
+
+        if (project.hasProperty('debugClassLoading')) {
+            jvmArgs += ['-Dlegacy.debugClassLoading=true']
+            logger.lifecycle('[EXPORUN] legacy.debugClassLoading=true -- every class-load failure will be logged at ERROR')
+        }
+
+        if (project.hasProperty('selftest')) {
+            jvmArgs += ['-Dexpo.selftest=1']
+        }
+
+        // add code
+        if (project.hasProperty('carrierprobe')) {
+            jvmArgs += ['-Dexpo.carrierlog=' + new File(projectDir, 'work/carriers-runtime.tsv').absolutePath]
+            logger.lifecycle('[EXPORUN] carrier log -> work/carriers-runtime.tsv')
+        }
+
+        // add code
+        if (project.hasProperty('handleprobe')) {
+            jvmArgs += ['-Dexpo.handleprobe=' + new File(projectDir, 'work/handles.tsv').absolutePath]
+            logger.lifecycle('[EXPORUN] handle probe -> work/handles.tsv')
+        }
+
+        // add code
+        if (project.hasProperty('tabledump')) {
+            def dumpTo = project.property('tabledump').toString()
+            if (dumpTo == 'true' || dumpTo.isEmpty()) {
+                dumpTo = new File(projectDir, 'work/tables.tsv').absolutePath
+            }
+            jvmArgs += ['-Dexpo.tabledump=' + dumpTo]
+            if (project.hasProperty('tabledumpEvery')) {
+                jvmArgs += ['-Dexpo.tabledump.every=' + project.property('tabledumpEvery')]
+            }
+            if (project.hasProperty('tabledumpForce')) {
+                jvmArgs += ['-Dexpo.tabledump.force=1']   // add code
+                logger.lifecycle('[EXPORUN] table dump forces class init')
+            }
+            logger.lifecycle("[EXPORUN] table dump -> ${dumpTo}")
+        }
+
+
+        if (project.hasProperty('selftestSweep')) {
+            jvmArgs += ['-Dexpo.selftest.sweep=' + project.property('selftestSweep')]
+            logger.lifecycle("[EXPORUN] selftest sweep = ${project.property('selftestSweep')}")
+        }
+
+        if (project.hasProperty('selftestWorld')) {
+            jvmArgs += ['-Dexpo.selftest.world=' + project.property('selftestWorld')]
+            logger.lifecycle("[EXPORUN] selftest world = ${project.property('selftestWorld')}")
+        }
+
+        def tweakers = ['net.minecraftforge.fml.common.launcher.FMLTweaker']
+        def wantOptifine = !project.hasProperty('optifine') ||
+                           project.property('optifine').toString() != 'false'
+        if (wantOptifine) {
+            def ofDir = new File(gd, 'libraries/optifine/OptiFine')
+            def ofJar = ofDir.isDirectory() ? fileTree(dir: ofDir, include: '**/*.jar')
+                    .files.find { !it.name.contains('installer') } : null
+            if (ofJar == null && ofDir.isDirectory()) {
+                ofJar = fileTree(dir: ofDir, include: '**/*.jar').files.find { true }
+            }
+            if (ofJar != null) {
+                tweakers += 'optifine.OptiFineForgeTweaker'
+                logger.lifecycle("OptiFine: ${ofJar.name} (tweaker only, not prepended)")
+            } else {
+                logger.lifecycle('OptiFine not found under libraries/optifine/OptiFine, skipping')
+            }
+        }
+
+        args = tweakers.collectMany { ['--tweakClass', it] } + [
+                '--username', 'Player',
+                '--version', v,
+                '--gameDir', runDir.absolutePath,
+                '--assetsDir', new File(gd, 'assets').absolutePath,
+                '--assetIndex', '1.8',
+                '--uuid', '00000000000000000000000000000000',
+                '--accessToken', '0',
+                '--userType', 'legacy',
+                '--versionType', 'release']
+    }
+    javaLauncher = java8
+    mainClass = 'net.minecraft.launchwrapper.Launch'
+    workingDir = file('run')
+    finalizedBy 'runClientAudit'
+}
+
+// add code
+tasks.register('runClientSnapshot') {
+    group = 'expo'
+    description = 'materialise the immutable jar snapshot runClient launches from (no game)'
+    dependsOn 'jar'
+    doLast { expoRunSnapshot() }
+}
+
+// add code
+tasks.register('runClientAudit') {
+    group = 'expo'
+    description = 'verify the class source the client ran from was immutable for the whole run'
+    doLast {
+        def snap = project.ext.has('expoRunSnapshotFile') ? project.ext.expoRunSnapshotFile : null
+        if (snap == null) { logger.lifecycle('[EXPORUN] no snapshot recorded, nothing to audit'); return }
+        if (project.hasProperty('auditNegative')) project.ext.expoRunSnapshotSha = 'de' * 32
+        def now = expoSha256(snap)
+        if (now != project.ext.expoRunSnapshotSha) throw new GradleException(
+            "[EXPORUN] FATAL: run snapshot ${snap.name} changed under the live client " +
+            "(${project.ext.expoRunSnapshotSha} -> ${now}). Every class not yet loaded would have " +
+            'failed with NoClassDefFoundError; this run proves nothing.')
+        def prodNow = expoSha256(tasks.jar.archiveFile.get().asFile)
+        if (prodNow != project.ext.expoRunSourceSha) {
+            logger.lifecycle('[EXPORUN] note: build/libs jar was rebuilt during the run ' +
+                "(${project.ext.expoRunSourceSha.substring(0, 16)} -> ${prodNow.substring(0, 16)}); " +
+                'the client kept running the snapshot, so class loading was unaffected, ' +
+                'but the run tested the OLDER artifact.')
+        }
+        logger.lifecycle("[EXPORUN] snapshot immutable for the whole run: ${snap.name}")
+    }
+}
+
+tasks.register('resolveDeps') {
+    group = 'build setup'
+    description = 'download every compile dependency so the project builds offline afterwards'
+    doLast {
+        def files = configurations.compileClasspath.files
+        println "[*] compile classpath jar 数: ${files.size()}"
+        files.findAll { it.name.contains('forge') || it.name.contains('launchwrapper') }
+             .each { println "    ${it.name}  ${it.length()} bytes" }
+    }
+}

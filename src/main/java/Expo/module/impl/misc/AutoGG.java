@@ -1,0 +1,100 @@
+package Expo.module.impl.misc;
+
+import Expo.module.Category;
+
+import Expo.event.EventBus;
+import Expo.event.EventSubscriber;
+import Expo.event.binder.AutoGGBinder;
+import Expo.event.events.HandleChatEvent;
+import Expo.event.events.PostTickEvent;
+import Expo.module.Module;
+import Expo.setting.settings.NumberSetting;
+import Expo.setting.settings.TextSetting;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.regex.Pattern;
+
+
+public class AutoGG extends Module implements EventSubscriber {
+   private static Map d;
+   private static long[] e;
+   private static long a;
+   private static Map h;
+   private int n;
+   private static Integer[] g;
+   public static NumberSetting delay;
+   private static String[] b;
+   public static TextSetting message;
+   private static List<Pattern> H;
+   private static String[] c;
+
+   public AutoGG(long var1) {
+      super(((a ^ (var1)) ^ 19575684994774L));
+      // add code
+      this.declare("AutoGG", Category.Misc, "Send a \"GG\" message when a Hypixel game ends");
+      var1 = a ^ var1;
+      this.n = -1;
+   }
+
+   private void t(long var1) {
+
+
+      if (this.n < 0) {
+         this.n = t((short)0,(int)delay.L());
+      }
+   }
+
+
+
+   public void onPostTick(short var1, PostTickEvent var2, char var3, int var4) {
+      if (this.n >= 0) {
+         if (--this.n <= 0) {
+            f.thePlayer.sendChatMessage("/ac " + message.X());
+            this.n = -1;
+         }
+      }
+   }
+
+   private static int t(short var0,int var3) {
+      return Math.max(1, var3 / 50);
+   }
+
+   public final void x(long var1, EventBus var3) {
+      AutoGGBinder.X(var3, this);
+   }
+
+
+   static {
+      a = 58515000138946L;
+      d = new HashMap(13);
+      b = new String[]{"\u00d7\u00cfN3\u0003\u00ad\u00a0H\u00bd\u00cb\u0014\u00e3\u008b4/'", "\u00fe.\u001f\u0002\u00a1\u00b7\u00ac#X\u00bdi\u00dd\u00b0\u0087\u00e3\u00e9\u0017\u00f5W\u00dfR\u00c1\u00cb\u00fe\u0017\u00d2\u0085 \u00cb\u00b8F8\u00bf\u0017\u00fd\u00a4U\u00f3\u00a4\u0018\u00f5\u00f8\u001d\u00ca\u00e27\u0096\u00a5\u00ceG\u0099n 7\u00a5\u007fA\u0081\u0080\u00c8\u0005\u0001\u00b2\u00e1J\u0086\u0007\u00c9R\u000f\u00cfo\u007f$\u001bA3\u00e4f\u009bXlV\u0095\u00eaa|A\u00fa\u0018T\u00d1gEP\u00ce:\u0014~w'!\u00fd~\u0098\u0008\u0016\u00b9\u00bf\u00a2%\u00bf\u00f9\u00bcy_\u00ea[\"\u0008\u0082\u0019:M\u00ea\u00f7E\u000b\u00df\u0003LO\u00c7\u0099\u001c7\u0001\u00e4\u0087V\u000e\r\u00b5\u00a0\u00fa3m\u00ca\u001c\u00e8W\u0013\u00a7\u00e7\u00ca\u00c6\u008ao\u0092\u007f\u00c2\u00be\u00f3\u0004\n\u008e\u001b\u001d\u000c1b\u00bf\u0095\u00b5\u00b7\u00c4\u00be\u008c84\u00b1*\u000b\u008a[\u00dd1;,E\u00e8\u00e0G\u00fb\u009fi\u00d7A \u00ab\u00d7\u009f\u00c6\u00b2\u00cem,\u008f\u0081?P\u00de\u00ff\u0004+\u0091\u0087\u00d0W\u00da\u00c1\u00f7\u00b3\u0019\u00f8\u00ea\u00f0\u0094\u009cs\u00db\u00d0u\u0005K{Q\u00dfY`\u00a9#\u00fb\u00c6\u00efiK\u00ea\u00ca\u00a8\u009c\u0094j96\u00fc\u0010\"\u00bb\u00ecxS\u0087\u00dd\u0088>\u0082\u0019(\u0088\u00d9m\u0098\u00ee\u00a9z\u001eY\u00a1\n", "\u00ed\u00db\u000bA\u008e\u0098\u00e9k~N\u00f2\u0095\u00bd\u00fc\u0089\u00133p)\u00de \u00fd\u0014\u000bz>\u0089\u0001,Uu\u0096\u009df\u00f0\u00b2\u00f9\u00fc\u00c4\u0006", "\u00e5\u00e0=\n\u0094\u00c4\u00bc\u009f\u0018\u00d8\u00ecW\u00ecP\u001arIjP\u00d0hNM\"\u0005\u0093\u00adx\u008e\u00d7g\u00c9", "\u0085\u00e9\u00a3\u00ad\u00f7\u00b8\u00e5\u00a8\u00b7\u00b4\u00c8\u00c4t|\u001f\u000e8d\u00b8bIw\u00ac\u0012", "\u007f\u001a\u0092\u00a3P\u00cd\u00f7\u001c\u000c(\u00e2\u008c\u00f0\u00f3XT]\u001e\u00ee$\u0088KR\u00b5", "\u00b0\u00e1n\u00d6: \u00e0H\u0010@\u00e8\u00ba\u00a7vm\u00ec\u00b2\u0081\u00ac\u00fab\u0095\u00fe\u008c\u00ef\u0005EWK\u0019\u009b*9\u00bd\u0017\u00d7\u00a7F\u00ba\u00c1\u009fd\u001b4\\u\u0099H", "#\u00ca\u00aeE)\u00c4\u00cf\u00b7\u0097\u00ef\u0085!\u00dd\u00bf\u00faN\u000e#\u001b\u009dTb\u00e7\u0004\u00afR\u000e\u0017\u009fl\u00d8?", "\u00fe<^B\u009b8\u00c8\u00db\u00921\u00c1\u0083\u001c\u001d>\u00f2Y{\u009b ]\u00d5\u00a61", "\u001c\u00e9\u00da\u0097\u00a1!\u00dfj\u00da\u00f1h\u00e5\u00e6\u00f6:\u00ab\u009b\u00e8\u00fc\u00885\t\u0095\u00f6", "+\u00ac\u00a2\u0008\u001f\u00ca\u00da5\u00c6HW\u00d3\u00ea(?\u0088\u0093x\u00f9U\u00a8\u00b6\u008cl\u00b2\u00bdN<m\u0014}\u00ee", "\u0097\u00a13\u00a4\u00fa\u009e\u00a3n\u00a2\u00da\u00cb\u00c7\u0080s\u00dc\u00ec\u00a3\u00e5p\u00c5\u0010R\u00c6-", "2R\u0083\u0008K\u00db\u00e3\u00a9\u00e8\u0017\u0017\u00f6\u00af\u001b\u0098\u00a27\u00e5\u009c\u00ca\u00ea\u0002Q\u0001\u00f8ZQ\u0003\u000fJ^v\u00a9A.\u00ef\u00ecz\u00bf\u0093", "\u00fe\u001c?4\u0098\u0000\u00f7\u0006\u0084\u00f6\u00d3\u00c1\u00fdU}\u00bf\u007f\u00ebN8\u00b8yv\u00f3\u0094\u009b\u00a4@$~\u00da\u00a2\u00d7\u00b8\u009a\u0000\u008b\u0008E,\u00c7\u001d+\u00a6\u008c\u00c0\u00fe\u00ac", "\u000f\u00f4|\u00f0\u009f\u0088\u00c6\u00cfo\u00e2^B\u0016f\u009f\u00e2", "\u00f5\u0019\u008e#\u00f5Y\u009e\u00f2", "\u00db\u00d5\u009d\u0002\u0084m!PRS\u009d\u00e7\u0090\u00b9pq\u00d7wQ\u0088\u00bc\u00b9!\u00e5", "\u00b9\u00abVd\u00bfE\u00b0=\u0099\u00ce\u00d9\u00b9D\u00a5Z@E]\r\n\u00fcw/%~\u00a2C\u00b6=j7\u00c6E\u00edM\u00c3\u00e1toa:\u001c\u0006\u0097\u0095\u009e\u00ea\u00a6\u00c2{\u00cc%\u0094qj\u0012", "6i\u0096\u00fa\u0014\u00ac\u00c3\u00ef\u00a5\u00995\u0080\n\u00b1\u00ab\u0086\u00b1c\u00ae\u00fd\u00e9h\u00camo^\u008b\u0090\u00d1\u00b7\u009b\u008c\u009c\u001d\u00c9V\u00a4\n\u00cdRT\u00d7|\u00d3Ti\u0000\u0096\u00dd\u009el\u00e5\u00fb\u00d7\u0088fj\u00d4\u00e5\u00f6TG\u00a7x$\u00e4\u00ab\u000b\u00cf\u00d5\u00bb\r\u00c1\u00e9\u0093z\u00f8\u00c5R\u0098M\u00d1\u000e\u0087\u008e\\ i{4s0\u0080\u000e\u00ed.\u00c7J\u001c\u00b3)\u00da\u0089fUQ\u00d0\\\u0006\u001b\u00d74\u008e\u00fc\u00f2\u0000\u00e9\u00afS\u00cd\u00ac\u00dfO\u0011\u00fbB)=\u00a4\\\u0001\"x\u00c9x\u00aa\u00ada(\u008e%f\u00ec\u00df\u0095$\u0016\u0087_\n\u00e7w\u00d6\u0090\u00da\u00f3\n+\u0087\u00ca6g'\u00b6\u00b5\u00d3a\u008f1\u00e5\u00f2\u00c5\u00aceo\u00c8\u0097\"M\u00fdEW\u000fl\u00cb$\u009c\u0092\u00d9\u009c\u00fa\u0016\u00bc\u00d6(\u0010\u00c5\u00a0\u00a8\u000e", "\u00a1Y\u00f0\u00b1\u0094GO\u00b7\u00bf\u0015=\u00fe\u0000N\u0099\u00b6\u00f6\u00abK\u00c1\u009d\u000b\u001e\u00e5\u0085\u0013E\u00fe\u0091k\u000f\u009d?6\r1\u0092\u001ak\u009et\u008b\u00a3\u00e5\u0000\u0002\u0082\u001a\u0001\u00fd2\u00fa\u0003`\u00a9\u0015\u00f8X\u00f6\u00b2\u00d05\u00e1?\u00dd~\u0017\u00eb`\u00fay=E\u00ebm\u00e4\u0092\u00a1\u00ba\u00fe\u00ac_\u0008\u00b0\u008f\u00eb\u00d5\u00c1\u0086\u008e\u0099\u0098S\u00d4\u0096\u0019&\u001a\u00b5Pk\u0083h\u00fa\u00d4\u0004&\u00d05u5\t\u0093\u00dc{yE\u0095\u00fd\u00fa\u0080\u00b6\u00fb\u00b4\u00179:\u0004\u00e0\u00ff\u000c\u00ea\u00eb\u00ee\u0098\u00e0\u0099P\u00a1\u008c9\u00d4\u00cc8C\u00f5\u00c9VP=\u0005m\u00b9\u001c-3\u00cf\u00e78\rpsxKcMU)w\u0081\u001f\u00d6\u00e9'\u00a3/", "t\u0086\u00f3\u0092%\u00a8\u00dco\u0093s\u00e4t\u009b;\u00c9\u008f\u00a7\u00ec\u00f3+~]^\u00b2\u00e4\\\u00f44&6}\u0001\u00e1A\u00e7\u0006\u00c33\u0013\u00cd", "\u0097\u00d9_`\u0005L\u008d\u00e0\u0082+\u00f5g\u00a3~-\u00b2\u00ab\u00ef\u00a0\u00e9\u00a6\u00cf_\u009b\u00a8\u00bb6+rc:\u00e2\u0086\u00a6\u00e7V1N!c", "w\u00a9\u00a2\u00c3Asa\u009f\u0013\u009e\u00b36\u00fc\u008a\u008a\u00c0\u00cd\u00f7\u00ff\u00d7\u00f4\u00e7O\u009f\u00ccU\u00c9\u00aa\u0085\u00a0\u00f7M.4$\u008a\u0093T,2\u0017vq\u009cz\u00a1\u00b2{", "z<\u00e7\t$\u000c\u008cCi.\u008d\u00f6@]u\u00a7\u001a\u00da\\<\u001a'\u00ac\u0016Z\u00eb1\u00ac\u00bf9\u001a\u00ce\u0003\u009bA\u001a\u00d9\u00b5\u001a\u0000\u001bz \u000em\t\u00fa\u0001", "\u00cb\u009b\u0094\u00cb\u0098\u00eb\u0081V\u00b5z\u009d\u00f4\u00b4\u00dd3\u00e5\u00ff[x\u009fn\u00e87\u00a6\u008a\u00d7S\u00a1\u00dfn\u00c1\u0012\u00e9\u00da\u00dbU\u00bc\u008d\u00da\u009e"};
+      c = new String[25];
+      h = new HashMap(13);
+      e = new long[]{-2151922435200353583L, -8279202450184245935L, -6475109688606198226L, 4494679829890085873L, -1154803948413799610L, -918253929724060708L, -6589840715578548978L, -9200510788189266124L, 7943506415201044508L, -599409001875817093L, -2046901117726950726L, 7045785301876574998L, -2094175608500896152L, -4714171101425195379L, 4554011011412359149L, 6348845955047375926L, 8739742978303232721L, -790053421033085814L, -6122089842336133979L, 4584775445241900503L, -2486954344856815119L, 5431467995136885703L};
+      g = new Integer[22];
+      H = new ArrayList<>();
+   }
+
+   private static void a() {
+   }
+
+
+   public void onHandleChat(long var1, HandleChatEvent var3) {
+
+      String var6 = var3.A.getUnformattedText();
+
+      for (Pattern var8 : H) {
+         if (var8.matcher(var6).matches()) {
+            this.t(101896778740626L);
+            return;
+         }
+      }
+   }
+   static {
+      // add code
+      message = new TextSetting("Message", "GG");
+      delay = new NumberSetting("Delay", 1000.0F, 0.0F, 5000.0F, 10.0F);
+   }
+}

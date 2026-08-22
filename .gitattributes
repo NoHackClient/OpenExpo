@@ -1,0 +1,33 @@
+* text=auto eol=lf
+
+*.java       text eol=lf
+*.gradle     text eol=lf
+*.md         text eol=lf
+*.txt        text eol=lf
+*.srg        text eol=lf
+*.csv        text eol=lf
+*.tsv        text eol=lf
+*.json       text eol=lf
+*.properties text eol=lf
+*.xml        text eol=lf
+*.html       text eol=lf
+
+*.bat    text eol=crlf
+gradlew  text eol=lf
+
+*.jar    binary
+*.jks    binary
+*.dll    binary
+*.so     binary
+*.lib    binary
+*.dat    binary
+*.diy    binary
+*.png    binary
+*.jpg    binary
+*.ogg    binary
+*.wav    binary
+*.ttf    binary
+XiaoShadiaoStuff binary
+
+mappings/**   linguist-generated
+src/main/resources/com/formdev/** linguist-vendored
