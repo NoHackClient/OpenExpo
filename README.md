@@ -19,6 +19,10 @@
 
 ## 细节
 
+<h2 align="center">
+  <a href="./dlc.md">关于对蔡子豪新视频的回应</a>
+</h2>
+
 <p align="center">
   <strong>简体中文</strong> |
   <a href="./README.en.md">Idiomatic American English™</a>
@@ -86,7 +90,13 @@ ExpoClient 是由来自**美利坚留学生**蔡子豪(又称精神美利坚人)
   <img src="./img/jiyan2.png" alt="1" width="60%" />
 </p>
 <p align="center">
+  <img src="./img/javaa.png" alt="1" width="50%" />
+</p>
+<p align="center">
   <img src="./img/question.jpg" alt="1" width="50%" />
+</p>
+<p align="center">
+  <img src="./img/how2enablemyaubps.png" alt="1" width="50%" />
 </p>
 
 ### 蔡子豪之阴谋论
