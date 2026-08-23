@@ -17,6 +17,8 @@
   <img src="./img/fuck.jpg" alt="3" width="16%">
 </p>
 
+Join Discord：https://discord.gg/eSFUUp7wW
+
 ## 细节
 
 <h2 align="center">
